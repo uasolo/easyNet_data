@@ -1,3 +1,3 @@
 create trial mini_trial
 mini_trial add_stimulus_event stimulus lc_input START +$duration $stimulus
-ldt set_cap 30
+mini_trial set_cap 30
