@@ -1,0 +1,50 @@
+ <eNelements>
+   <map label="x" >
+     <string label="type" value="dataframe" />
+     <parameter label="levels" type="dataframe" value="levels" />
+     <object label="value" value="" />
+     <string label="comment" value="Dataframe" />
+     <string label="choice" value="single" />
+     <string label="pretty name" value="First dataframe" />
+     <bool label="useRFormat" value="false"/>
+   </map >
+   <map label="y" >
+     <string label="type" value="dataframe" />
+     <parameter label="levels" type="dataframe" value="levels" />
+     <string label="value" value="" />
+     <string label="comment" value="Dataframe" />
+     <string label="choice" value="single" />
+     <string label="pretty name" value="Second dataframe" />
+     <bool label="useRFormat" value="false"/>
+   </map >
+   <map label="x_key" >
+     <string label="type" value="factor" />
+     <command label="levels"  expand_to_fill="true" value="level_command" >
+       <object label="$x" value="" />
+       <string label="method" value="get_colnames" />
+     </command>
+     <string label="value" value="" />
+     <list label="dependencies" >
+       <string value="x" />
+     </list >
+     <string label="comment" value="Column to be used as merge key" />
+     <string label="choice" value="multiple" />
+     <string label="pretty name" value="First dataframe" />
+     <bool label="useRFormat" value="true"/>
+   </map >
+   <map label="y_key" >
+     <string label="type" value="factor" />
+     <command label="levels"  expand_to_fill="true" value="level_command" >
+         <object label="$y" value="" />
+         <string label="method" value="get_colnames" />
+     </command>
+     <string label="value" value="" />
+     <list label="dependencies" >
+       <string value="y" />
+     </list >
+     <string label="comment" value="Column to be used as merge key" />
+     <string label="choice" value="multiple" />
+     <string label="pretty name" value="Second dataframe" />
+      <bool label="useRFormat" value="true" />
+   </map >
+   </eNelements>
