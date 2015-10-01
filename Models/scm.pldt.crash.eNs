@@ -1,0 +1,17 @@
+include Models/SCM.eNs
+(scm parameters) load Databases/Parameter_Sets/SCM/SCM.eNp
+include Trials/Lexical_Decision.eNs
+include Trials/Primed_Lexical_Decision.eNs
+include Trials/Sandwich_Primed_Lexical_Decision.eNs
+((ldt default_observer) default_dataframe) copy ldt.table
+((ldt default_observer) default_dataframe) copy ldt.table
+((spldt default_observer) default_dataframe) copy spldt.table
+((pldt default_observer) default_dataframe) copy pldt.table
+create stimulus_set Davis_Lupker_06_Exp1_4LWs
+Davis_Lupker_06_Exp1_4LWs load Databases/Stimulus_files/Davis_Lupker_06_Exp1_4LWs.eNd
+xml ((pldt default_observer) default_dataframe) clear
+#loglevel debug
+set target=$Target
+pldt run_set Davis_Lupker_06_Exp1_4LWs 
+unset target
+

@@ -1,0 +1,85 @@
+{
+    "diagramItems": [
+        {
+            "lazyNutType": "representation",
+            "name": "feat_rep",
+            "x": 788.14955884254255,
+            "y": -1262.1633899792175
+        },
+        {
+            "lazyNutType": "representation",
+            "name": "(feature_level rep)",
+            "x": 803.96185861300989,
+            "y": -374.1146276297082
+        },
+        {
+            "lazyNutType": "representation",
+            "name": "letter_rep",
+            "x": 64.949558842542558,
+            "y": -1268.7113308702612
+        },
+        {
+            "lazyNutType": "representation",
+            "name": "(letter_level rep)",
+            "x": 690.4020040337208,
+            "y": -678.45882815333709
+        },
+        {
+            "lazyNutType": "representation",
+            "name": "(features_db column_rep letter keyed_representation)",
+            "x": 53.014652143395622,
+            "y": 298.18018578902655
+        },
+        {
+            "lazyNutType": "representation",
+            "name": "(vocab column_rep Rest vector_representation)",
+            "x": -522.52148000878856,
+            "y": -604.58065709538857
+        },
+        {
+            "lazyNutType": "representation",
+            "name": "(vocab column_rep Word string_representation)",
+            "x": 219.83284257407112,
+            "y": -688.76201672922787
+        },
+        {
+            "lazyNutType": "representation",
+            "name": "(vocab column_rep Word keyed_representation)",
+            "x": -184.01943196713154,
+            "y": -889.17892656386823
+        },
+        {
+            "lazyNutType": "representation",
+            "name": "(word_level rep)",
+            "x": 1052.0020040337208,
+            "y": -943.34648870049989
+        },
+        {
+            "lazyNutType": "representation",
+            "name": "(features_db column_rep letter string_representation)",
+            "x": 467.00124989974131,
+            "y": 298.81606154389317
+        },
+        {
+            "lazyNutType": "representation",
+            "name": "(features_db column_rep features keyed_representation)",
+            "x": -174.35274297246337,
+            "y": -47.613204518675332
+        },
+        {
+            "lazyNutType": "representation",
+            "name": "(orth_str get_target)",
+            "x": 426.54955884254258,
+            "y": -1070.1657213502574
+        },
+        {
+            "lazyNutType": "representation",
+            "name": "(orth_str inner)",
+            "x": 239.90063882975318,
+            "y": -47.613204518675332
+        }
+    ],
+    "zoomDx": 0,
+    "zoomDy": 0,
+    "zoomScale": 0.39986756385382211
+}

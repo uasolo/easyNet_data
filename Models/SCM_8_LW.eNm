@@ -1,0 +1,11 @@
+include Models/SCM_8_LW.eNs
+
+(scm parameters) load Databases/Parameter_Sets/SCM/SCM.eNp
+
+
+include Trials/Lexical_Decision.eNs
+include Trials/Primed_Lexical_Decision.eNs
+include Trials/Sandwich_Primed_Lexical_Decision.eNs
+
+
+

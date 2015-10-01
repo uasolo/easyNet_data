@@ -1,0 +1,22 @@
+{
+    "diagramItems": [
+        {
+            "lazyNutType": "layer",
+            "name": "letter_level",
+            "x": 20.149581316788129,
+            "y": -201.59999999999994
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "word_level",
+            "x": 15.930076156347127,
+            "y": -485.24735378750665
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "feature_level",
+            "x": 20.149581316788158,
+            "y": 101.73837786956366
+        }
+    ]
+}

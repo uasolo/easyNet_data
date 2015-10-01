@@ -1,0 +1,11 @@
+RowCount: 	10
+ColCount: 	9
+ColWidths: 	0.114319	0.114319	0.162818	0.162818	0.162818	0.162818	0.114319	0.114319	0.114319	
+RowHeights: 	15	88	88	88	88	88	88	88	88	88	
+GridText: 	col,row
+aw	5,3
+sw	3,4
+alu	5,5
+slu	3,6
+fl	3,8
+
