@@ -1,0 +1,21 @@
+create model mini_uc
+
+
+create dataframe_for_reps lc2uc_db
+lc2uc_db load Databases/lc2uc.eNd
+
+create iac_layer lc_layer
+lc_layer represent (lc2uc_db column_rep lower_case keyed_representation)
+
+create iac_layer uc_layer
+uc_layer represent (lc2uc_db column_rep upper_case keyed_representation)
+
+create connection lc_uc_connection
+lc_uc_connection autoconnect lc_layer uc_layer
+
+mini_uc define_input lc_input  (lc2uc_db column_rep lower_case string_representation)
+
+(mini_uc parameters) load Databases/Parameter_Sets/MINI/mini_uc.eNp
+
+include Trials/mini_trial.eNs
+
