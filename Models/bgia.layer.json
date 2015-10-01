@@ -1,0 +1,40 @@
+{
+    "diagramItems": [
+        {
+            "lazyNutType": "layer",
+            "name": "string",
+            "x": -259.51840570455863,
+            "y": -198.2698591970134
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "thr_let",
+            "x": -259.9752427125415,
+            "y": -116.3410927299519
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "bigrams",
+            "x": -335.17975779986341,
+            "y": -459.23703406477097
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "words",
+            "x": -517.61173202809391,
+            "y": -598.01043355129843
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "letters",
+            "x": -506.05551615004151,
+            "y": 64.499251046394278
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "features",
+            "x": -507.09243021254161,
+            "y": 319.02022561169895
+        }
+    ]
+}
