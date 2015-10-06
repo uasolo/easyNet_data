@@ -98,8 +98,8 @@ flat set_target inter
 create binary_layer thr_let
 thr_let represent letter_rep
 
-create string_layer string
-string represent inter
+#create string_layer string
+#string represent inter
 
 create iac_layer bigrams
 bigrams represent (bigramf column_rep bigram)
@@ -114,8 +114,8 @@ ltc set_inner_type best_above_threshold_connection
 ltc set_target_inner_rep (features_db column_rep letter)
 thr_let attach ltc
 
-create connection tsc
-tsc autoconnect thr_let string
+#create connection tsc
+#tsc autoconnect thr_let string
 
 create string_representation bgstring
 create string_split bgsplit
@@ -134,8 +134,14 @@ bgc set_source (bgsplit get_target)
 bgc set_target (bigramf column_rep bigram string_representation) 
 
 
-create connection b1
-b1 autoconnect string bigrams
+#create connection b1
+#b1 autoconnect string bigrams
+
+create arbitrary_conversion_connection bb
+bb set_autoconnect 0
+bb attach thr_let 
+bigrams attach bb
+
 
 create connection b4
 b4 autoconnect bigrams words
