@@ -1,0 +1,70 @@
+create model mini_uc
+
+create dataframe_for_reps lc2uc_df
+lc2uc_df load C:/Users/mm14722/Dropbox/scambio_temp/work/easyNet_data/Databases/lc2uc.eNd
+
+create iac_layer lc_layer
+lc_layer represent (lc2uc_df column_rep lower_case keyed_representation)
+
+create iac_layer uc_layer
+uc_layer represent (lc2uc_df column_rep upper_case keyed_representation)
+
+create connection lc_uc_connection
+lc_uc_connection autoconnect lc_layer uc_layer
+
+(mini_uc parameters) load C:/Users/mm14722/Dropbox/scambio_temp/work/easyNet_data/Databases/Parameter_Sets/MINI/mini_uc.eNp
+
+mini_uc define_input lc_input  (lc2uc_df column_rep lower_case string_representation) lc_layer
+
+
+include C:/Users/mm14722/Dropbox/scambio_temp/work/easyNet_data/Trials/mini_trial.eNs
+
+# example run
+mini_trial step stimulus=a duration=5
+
+
+######### add input string x that activates all lc letters
+create pattern x_keyed
+x_keyed set (lc2uc_df column_rep lower_case keyed_representation) a b c
+
+create pattern x_string
+x_string set (lc2uc_df column_rep lower_case string_representation) x
+
+create manual_conversion extras
+extras set_auto_use 0
+extras set_source (lc2uc_df column_rep lower_case string_representation)
+extras set_target (lc2uc_df column_rep lower_case keyed_representation)
+extras add x_string x_keyed
+
+((lc2uc_df column_rep lower_case keyed_representation) find_conversion (lc2uc_df column_rep lower_case string_representation)) add_fallback extras
+((lc2uc_df column_rep lower_case keyed_representation) find_conversion (lc2uc_df column_rep lower_case string_representation))  set_weight -1
+
+# example run
+mini_trial step stimulus=x duration=5
+
+
+
+######### add input string ab that activates a and b
+create pattern ab_keyed
+ab_keyed set (lc2uc_df column_rep lower_case keyed_representation) a b 
+
+create pattern ab_string
+ab_string set (lc2uc_df column_rep lower_case string_representation) ab
+
+extras add ab_string ab_keyed
+
+# example run
+mini_trial step stimulus=ab duration=5
+
+
+
+########### add selfloop on uc_layer
+
+create connection uc_loop
+uc_loop autoconnect uc_layer uc_layer
+
+# play with parameters in mini_uc.eNp, e.g.
+# uc_loop::excitation 0.07
+# uc_loop::inhibition -0.3
+
+
