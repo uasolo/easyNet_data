@@ -275,4 +275,5 @@ drc define_input orthographic (vocab column_rep orthography string_representatio
 
 #vo target ll
 
+drc add thresholded_best_phonemes
 

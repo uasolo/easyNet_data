@@ -85,14 +85,16 @@ lopc2 set_source (orth_str get_target)
 lopc2 set_target letter_rep
 
 
+create connection olc
+olc autoconnect words letters
 
 #loglevel debug
 
-create string_representation inter
+#create string_representation inter
 
 create flatten_string_conversion flat
 flat set_source (orth_str get_target)
-flat set_target inter
+flat set_target (vocab column_rep Word string_representation)
 
 
 create binary_layer thr_let
@@ -123,7 +125,7 @@ bgsplit set_source bgstring
 bgsplit set_chunk 2
 
 create regex_conversion splat
-splat set_source inter
+splat set_source (vocab column_rep Word string_representation)
 splat set_target bgstring
 splat add ^(.)(.)(.)(.) \2\3\4 \1\2\1\3\1\4
 splat add ^(.)(.)(.) \2\3 \1\2\1\3
@@ -148,9 +150,8 @@ b4 autoconnect bigrams words
 
 
 #loc details
-
-create connection olc
-olc autoconnect words letters
+create connection obc
+obc autoconnect words bigrams
 
 
 # ## ORTH-ORTH
