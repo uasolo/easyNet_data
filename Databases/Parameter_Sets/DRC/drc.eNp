@@ -24,7 +24,7 @@ pml::decay 0.0002
 thresholded_best_phonemes::threshold .6
 lexical_decider::threshold .5
 bester::threshold 0.0
-nlpl::excitation .1
+nlpl::excitation .025
 bester::first 5
 bester::step 17
 min_act 0
