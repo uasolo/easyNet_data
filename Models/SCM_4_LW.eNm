@@ -1,4 +1,7 @@
-include Models/SCM_4_LW.eNs
+create dataframe_for_reps vocab
+vocab load Databases/Vocab_files/SCM_4_LW.eNd
+
+include Models/SCM.eNs
 
 (scm parameters) load Databases/Parameter_Sets/SCM/SCM.eNp
 

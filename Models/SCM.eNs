@@ -11,14 +11,6 @@ create dataframe_for_reps features_db
 features_db load Databases/letter_features_no_blank.eNd
 
 
-# ## LEXICON + FREQUENCIES
-create dataframe_for_reps vocab
-#vocab load Databases/Vocab_files/clam.eNd
-#vocab load Databases/Vocab_files/SCM.eNd
-#vocab load Databases/Vocab_files/ia-SCM.eNd
-#vocab load Databases/Vocab_files/SCM-4LPerms.eNd
-#vocab load Databases/Vocab_files/SCM_8LW.eNd
-vocab load Databases/Vocab_files/SCM_4_5_LW.eNd
 
 create dataframe_for_reps decisions
 decisions load Databases/decisions.eNd
@@ -307,8 +299,6 @@ most_letter set_lag 0
 decision_layer set_use_hard_cap 0
 id_layer set_lag 0
 flc set_lag 0
-words set_lag 0
-letters set_lag 0
 
 # SET PARAMETERS
 
@@ -317,9 +307,8 @@ words set_resting_level (vocab column_rep Rest)
 
 # CREATE CYCLE TO RUN THE MODEL
 
-create pattern mask_letter
-mask_letter set (orth_str inner) #
-
+include Models/extras.eNs
 scm define_input orthographic (vocab column_rep Word string_representation) features letcount
 scm define_output lexical_decision decision_obs
+((features_db column_rep features) find_conversion (orth_str inner)) add_fallback extras
 (feat_rep find_conversion (orth_str get_target)) set_weight -1

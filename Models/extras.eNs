@@ -1,0 +1,38 @@
+# Useful extra conversions from non letter-characters to features
+
+#creates extras
+# assumes orth_str and features_db are set up in the typical manner
+
+create pattern rk_letter
+rk_letter set (orth_str inner) *
+
+create pattern rk_feats
+rk_feats set (features_db column_rep features) 2P 3A 4A 7P 9P 10A 11A 12P 13A 14A
+
+create pattern mask_letter
+mask_letter set (orth_str inner) #
+
+create pattern mask_feats
+mask_feats set (features_db column_rep features) 1P 2P 3P 4A 5P 6P 7A 8A 9P 10P 11A 12P 13P 14P
+
+create pattern blank_letter
+blank_letter set (orth_str inner) _ 
+
+create pattern blank_feats
+blank_feats set (features_db column_rep features)
+
+create pattern space_letter
+space_letter set (orth_str inner) "
+
+create pattern space_feats 1A 2A 3A 4A 5A 6A 7A 8A 9A 10A 11A 12A 13A 14A
+space_feats set (features_db column_rep features)
+
+
+create manual_conversion extras
+extras set_auto_use 0
+extras set_source (orth_str inner)
+extras set_target (features_db column_rep features)
+extras add rk_letter rk_feats
+extras add mask_letter mask_feats
+extras add blank_letter blank_feats
+extras add space_letter space_feats
