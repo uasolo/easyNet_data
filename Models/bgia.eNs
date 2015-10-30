@@ -84,6 +84,9 @@ create parallel_conversion lopc2
 lopc2 set_source (orth_str get_target)
 lopc2 set_target letter_rep
 
+include Models/lowerupper.eNs
+((features_db column_rep letter) find_conversion (orth_str inner)) add_fallback caser
+
 
 create connection olc
 olc autoconnect words letters
@@ -172,7 +175,7 @@ ia define_input orthographic (vocab column_rep Word string_representation) featu
 words set_resting_level (vocab column_rep Rest)
 
 include Models/extras.eNs
-
-((features_db column_rep features) find_conversion (orth_str inner)) add_fallback extras
+caser_plus add_fallback extras
+((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
 ((features_db column_rep features) find_conversion (orth_str inner)) set_weight -1
 

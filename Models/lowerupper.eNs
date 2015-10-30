@@ -1,0 +1,30 @@
+create dataframe_for_reps uplow
+uplow load Databases/uplow.eNd
+
+create equiv_conversion ortho_is_lower_b
+ortho_is_lower_b set_source (uplow column_rep lower string_representation)
+ortho_is_lower_b set_target (orth_str inner)
+create equiv_conversion ortho_is_lower_f
+ortho_is_lower_f set_target (uplow column_rep lower string_representation)
+ortho_is_lower_f set_source (orth_str inner)
+
+create equiv_conversion features_are_upper_f
+features_are_upper_f set_source (features_db column_rep letter)
+features_are_upper_f set_target (uplow column_rep upper)
+create equiv_conversion features_are_upper_b
+features_are_upper_b set_target (features_db column_rep letter)
+features_are_upper_b set_source (uplow column_rep upper)
+
+
+
+create conversion_chain caser
+caser set_manual 1
+caser add_link_back ortho_is_lower_f
+caser add_link_back ((uplow column_rep lower) conversion_key)
+caser add_link_back (uplow conversion lower upper)
+caser add_link_back features_are_upper_b
+
+create conversion_chain caser_plus
+caser_plus set_manual 1
+caser_plus add_link_back caser
+caser_plus add_link_back (features_db conversion letter features)
