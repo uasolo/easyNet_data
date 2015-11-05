@@ -286,6 +286,7 @@ decision_obs target decision_layer
 
 create reset_nobserver resetter
 resetter add_trigger (features state)
+resetter add_sync features
 resetter add_target letters
 resetter add_target words
 resetter add_target decision_layer
