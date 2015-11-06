@@ -1,0 +1,34 @@
+{
+    "diagramItems": [
+        {
+            "lazyNutType": "layer",
+            "name": "letters",
+            "x": -2.3140743384315527,
+            "y": 102.04836301585223
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "dutch_words",
+            "x": 188.31436503436538,
+            "y": -65.968594392334666
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "english_words",
+            "x": -208.1125308201712,
+            "y": -65.968594392334666
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "features",
+            "x": -2.3140743384315527,
+            "y": 263.81284138369767
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "languages",
+            "x": -2.3140743384315527,
+            "y": -234.95253440580686
+        }
+    ]
+}
