@@ -11,14 +11,6 @@ create dataframe_for_reps features_db
 features_db load Databases/letter_features_no_blank.eNd
 
 
-# ## LEXICON + FREQUENCIES
-create dataframe_for_reps vocab
-#vocab load Databases/Vocab_files/clam.eNd
-#vocab load Databases/Vocab_files/SCM.eNd
-#vocab load Databases/Vocab_files/ia-SCM.eNd
-#vocab load Databases/Vocab_files/SCM-4LPerms.eNd
-#vocab load Databases/Vocab_files/SCM_8LW.eNd
-vocab load Databases/Vocab_files/SCM_4_5_LW.eNd
 
 create dataframe_for_reps decisions
 decisions load Databases/decisions.eNd
@@ -138,6 +130,8 @@ lopc2 set_source (orth_str get_target)
 lopc2 set_target letter_rep
 
 (letter_rep find_conversion (vocab column_rep Word)) set_weight -1
+include Models/lowerupper.eNs
+((features_db column_rep letter) find_conversion (orth_str inner)) add_fallback caser
 
 create blocked_localist_to_spatial_conversion llspco
 llspco set_source letter_rep
@@ -292,6 +286,7 @@ decision_obs target decision_layer
 
 create reset_nobserver resetter
 resetter add_trigger (features state)
+resetter add_sync features
 resetter add_target letters
 resetter add_target words
 resetter add_target decision_layer
@@ -307,8 +302,6 @@ most_letter set_lag 0
 decision_layer set_use_hard_cap 0
 id_layer set_lag 0
 flc set_lag 0
-words set_lag 0
-letters set_lag 0
 
 # SET PARAMETERS
 
@@ -317,9 +310,9 @@ words set_resting_level (vocab column_rep Rest)
 
 # CREATE CYCLE TO RUN THE MODEL
 
-create pattern mask_letter
-mask_letter set (orth_str inner) #
-
 scm define_input orthographic (vocab column_rep Word string_representation) features letcount
 scm define_output lexical_decision decision_obs
+include Models/extras.eNs
+caser_plus add_fallback extras
+((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
 (feat_rep find_conversion (orth_str get_target)) set_weight -1

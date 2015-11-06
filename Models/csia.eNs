@@ -194,17 +194,7 @@ csiam define_output lexical_decision lexical_decider
 
 
 
-create pattern mask_letter
-mask_letter set (cs_orth_str inner) #
-
-create pattern mask_feats
-mask_feats set (features_db column_rep features) 1P 2P 3P 4A 5P 6P 7A 8A 9P 10P 11A 12P 13P 14P
-
-create manual_conversion extras
-extras set_auto_use 0
-extras set_source (cs_orth_str inner)
-extras set_target (features_db column_rep features)
-extras add mask_letter mask_feats
+include Models/extras.eNs
 
 ((features_db column_rep features) find_conversion (cs_orth_str inner)) add_fallback extras
 ((features_db column_rep features) find_conversion (cs_orth_str inner)) set_weight -10
