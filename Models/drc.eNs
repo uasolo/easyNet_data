@@ -18,7 +18,7 @@ feat_rep type blocked_representation
 feat_rep set_element (features_db column_rep features)
 feat_rep number 8
 
-Ocreate iac_layer fl
+create iac_layer fl
 fl represent feat_rep
 
 
