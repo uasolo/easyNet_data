@@ -53,6 +53,14 @@ phon_str set_source (vocab column_rep phonology string_representation)
 #orth_str set_min 8
 phon_str create_block_keyed phon_str_bk
 
+create string_split phon_str_no_blank
+phon_str_no_blank set_source (vocab column_rep phonology string_representation)
+#orth_str set_min 8
+
+create equiv_conversion phonstrbl
+phonstrbl set_source (phon_str_no_blank get_target)
+phonstrbl set_target (phon_str get_target)
+
 create iac_layer pml
 #pml represent phoneme_chars
 pml represent phon_str_bk
@@ -217,7 +225,7 @@ create string_layer graph
 graph represent graphemes
 
 create string_layer phone
-phone represent (phon_str get_target)
+phone represent (phon_str_no_blank get_target)
 
 create binary_layer phone_bin
 phone_bin represent phon_str_bk
@@ -342,3 +350,10 @@ include Models/extras.eNs
 caser_plus add_fallback extras
 ((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
 ((features_db column_rep features) find_conversion (orth_str inner)) set_weight -1
+
+graph set_lag 0
+phone set_lag 0
+phone_bin set_lag 0
+best_letters_bin set_lag 0
+best_letters_str set_lag 0
+pregl set_lag 0
