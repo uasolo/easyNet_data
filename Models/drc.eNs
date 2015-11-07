@@ -8,7 +8,12 @@ features_db load Databases/letter_features.eNd
 
 # ## ORTHOGRAPHY, PHONOLOGY, FREQUENCIES
 create dataframe_for_reps vocab
-vocab load Databases/Vocab_files/vocabulary_full.eNd
+create dataframe_for_reps orth_freq
+create dataframe_for_reps phon_freq
+#vocab load Databases/Vocab_files/vocabulary_full.eNd
+vocab load Databases/Vocab_files/drc.op.eNd
+orth_freq load Databases/Vocab_files/drc.orth.eNd
+phon_freq load Databases/Vocab_files/drc.phon.eNd
 
 # LEXICAL ROUTE LAYERS
 
@@ -35,16 +40,16 @@ ll represent letter_rep
 
 # ## ORTHOGRAPHIC LEXICON (LAYER)
 create iac_layer ol
-ol represent (vocab column_rep orthography)
+ol represent (vocab column_rep orth)
 
 # ## PHONOLOGICAL LEXICON (LAYER)
 create iac_layer pl
-pl represent (vocab column_rep phonology)
+pl represent (vocab column_rep phon)
 
 # ## PHONEME LAYER (OUTPUT BUFFER)
 create string_split phon_str
 phon_str set_blank "
-phon_str set_source (vocab column_rep phonology string_representation)
+phon_str set_source (vocab column_rep phon string_representation)
 #orth_str set_min 8
 phon_str create_block_keyed phon_str_bk
 
@@ -53,10 +58,12 @@ create iac_layer pml
 pml represent phon_str_bk
 
 create bias_layer freql
-freql represent (vocab column_rep orth_freq)
+#freql represent (vocab column_rep orth_freq)
+freql represent (orth_freq column_rep bias)
 
 create bias_layer pfreql
-pfreql represent (vocab column_rep phon_freq)
+#pfreql represent (vocab column_rep phon_freq)
+pfreql represent (phon_freq column_rep bias)
 
 # LEXICAL ROUTE CONNECTIONS
 
@@ -71,7 +78,7 @@ lfpc set_target feat_rep
 # ## LETTER-ORTH
 create string_split orth_str
 orth_str set_blank "
-orth_str set_source (vocab column_rep orthography string_representation)
+orth_str set_source (vocab column_rep orth string_representation)
 #orth_str set_min 8
 
 
@@ -129,6 +136,14 @@ latp autoconnect pl pl
 # ## PHONEME-PHONEME
 create connection latpm
 latpm autoconnect pml pml
+
+create equiv_conversion fconv1
+fconv1 set_source (vocab column_rep orth string_representation)
+fconv1 set_target (orth_freq column_rep orth string_representation)
+
+create equiv_conversion fconv2
+fconv2 set_source (vocab column_rep phon string_representation)
+fconv2 set_target (phon_freq column_rep phon string_representation)
 
 create connection freqb
 freqb autoconnect freql ol
@@ -244,7 +259,7 @@ bestlls autoconnect best_letters_bin best_letters_str
 create connection blspg
 blspg autoconnect best_letters_str pregl
 
-drc define_input orthographic (vocab column_rep orthography string_representation) fl
+drc define_input orthographic (vocab column_rep orth string_representation) fl
 
 
 #create steps cycle
