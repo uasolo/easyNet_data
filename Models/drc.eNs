@@ -8,7 +8,12 @@ features_db load Databases/letter_features.eNd
 
 # ## ORTHOGRAPHY, PHONOLOGY, FREQUENCIES
 create dataframe_for_reps vocab
-vocab load Databases/Vocab_files/vocabulary_full.eNd
+create dataframe_for_reps orth_freq
+create dataframe_for_reps phon_freq
+#vocab load Databases/Vocab_files/vocabulary_full.eNd
+vocab load Databases/Vocab_files/drc.op.eNd
+orth_freq load Databases/Vocab_files/drc.orth.eNd
+phon_freq load Databases/Vocab_files/drc.phon.eNd
 
 # LEXICAL ROUTE LAYERS
 
@@ -61,10 +66,10 @@ create iac_layer pml
 pml represent phon_str_bk
 
 create bias_layer freql
-freql represent (vocab column_rep orth_freq)
-
+freql represent (orth_freq column_rep bias)
 create bias_layer pfreql
-pfreql represent (vocab column_rep orth_freq)
+pfreql represent (phon_freq column_rep bias)
+
 
 # LEXICAL ROUTE CONNECTIONS
 
@@ -137,6 +142,16 @@ latp autoconnect pl pl
 # ## PHONEME-PHONEME
 create connection latpm
 latpm autoconnect pml pml
+
+
+create equiv_conversion fconv1
+fconv1 set_source (vocab column_rep orthography string_representation)
+fconv1 set_target (orth_freq column_rep orthography string_representation)
+
+create equiv_conversion fconv2
+fconv2 set_source (vocab column_rep phonology string_representation)
+fconv2 set_target (phon_freq column_rep phonology string_representation)
+
 
 create connection freqb
 freqb autoconnect freql ol
@@ -228,35 +243,62 @@ create binary_layer phone_bin
 phone_bin represent phon_str_bk
 
 create regex_side_effect_conversion graphemize
+
 graphemize set_source pregraphemic
+
 graphemize set_target graphemes
+
 create dataframe parse_graphemes_db
+
 parse_graphemes_db load Databases/Vocab_files/RC99_parse_graphemes.eNd
+
 parse_graphemes_db for_each_row graphemize add $search $replace $grapheme
+
+ 
 
 create string_representation amphons
 
+ 
+
 create string_representation flatamphons
 
+ 
+
 create flatten_string_conversion pflat
+
 pflat set_source amphons
+
 pflat set_target flatamphons
 
+ 
+
 create regex_conversion phonotactic
+
 phonotactic set_target (vocab column_rep phonology string_representation)
+
 phonotactic set_source flatamphons
+
 create dataframe phonotactic_db
+
 phonotactic_db load Databases/Vocab_files/DRC_phonotac.eNd
+
 phonotactic_db for_each_row phonotactic add $search $replace
 
+ 
+
+ 
 
 create regex_side_effect_conversion gpc
-gpc set_target amphons
-gpc set_source graphemes
-create dataframe grapheme_phoneme_db
-grapheme_phoneme_db load Databases/Vocab_files/RC99_grapheme_phoneme.eNd
-grapheme_phoneme_db for_each_row gpc add $search $replace $phoneme
 
+gpc set_target amphons
+
+gpc set_source graphemes
+
+create dataframe grapheme_phoneme_db
+
+grapheme_phoneme_db load Databases/Vocab_files/RC99_grapheme_phoneme.eNd
+
+grapheme_phoneme_db for_each_row gpc add $search $replace $phoneme
 create connection graphemizer
 graphemizer autoconnect pregl graph
 
