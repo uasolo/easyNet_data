@@ -125,7 +125,7 @@ search replace phoneme
 ^RR$ _ r
 ^SE:E$ _ s
 ^SH$ _ S
-^SS$ _ s
+^SS$ _ !
 ^TE:E$ _ t
 ^TH$ _ T
 ^TT$ _ t
@@ -138,7 +138,7 @@ search replace phoneme
 ^VV$ _ v
 ^WH:B$ _ w
 ^WR:B$ _ r
-^2X$ _ s
+^2X$ _ !
 ^X$ _ k
 ^YE:ME$ _ 2
 ^ZE:E$ _ z
@@ -165,7 +165,7 @@ search replace phoneme
 ^P$ _ p
 ^Q$ _ k
 ^R$ _ r
-^S$ _ s
+^S$ _ !
 ^T$ _ t
 ^U:BM$ _ V
 ^U:E$ _ u
