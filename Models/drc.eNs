@@ -190,7 +190,7 @@ flat set_source (orth_str get_target)
 flat set_target pregraphemic
 
 
-create strength_layer best_letters_bin
+create binary_layer best_letters_bin
 best_letters_bin represent letter_rep
 
 create staggered_blocked_connection bester
