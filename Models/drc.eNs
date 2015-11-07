@@ -190,7 +190,7 @@ flat set_source (orth_str get_target)
 flat set_target pregraphemic
 
 
-create binary_layer best_letters_bin
+create strength_layer best_letters_bin
 best_letters_bin represent letter_rep
 
 create staggered_blocked_connection bester
@@ -200,8 +200,20 @@ bester set_target_inner_rep (features_db column_rep letter)
 best_letters_bin attach bester
 
 
-create string_layer best_letters_str
-best_letters_str represent (orth_str get_target)
+create blocked_representation osgt
+create wtstring_representation osgt_inner
+osgt set_element osgt_inner
+osgt set_number 8
+
+
+
+create wtstring_layer best_letters_str
+best_letters_str represent osgt
+
+create wtunkey_conversion osgt_unkey
+osgt_unkey set_source (features_db column_rep letter)
+osgt_unkey set_target osgt_inner
+
 
 create string_layer pregl
 pregl represent pregraphemic
@@ -258,12 +270,9 @@ phonbin autoconnect phone phone_bin
 create connection nlpl
 nlpl autoconnect phone_bin pml
 
-create connection bestlls
+
+create blocked_connection bestlls
 bestlls autoconnect best_letters_bin best_letters_str
-#bestlls set_inner_type 
-#bestlls set_target_inner_rep (orth_str inner)
-#bestlls attach best_letters_bin
-#best_letters_str attach best_letters_bin
 
 create connection blspg
 blspg autoconnect best_letters_str pregl
