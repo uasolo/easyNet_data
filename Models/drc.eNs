@@ -50,12 +50,11 @@ pl represent (vocab column_rep phonology)
 create string_split phon_str
 phon_str set_blank "
 phon_str set_source (vocab column_rep phonology string_representation)
-#orth_str set_min 8
+#phon_str set_min 8
 phon_str create_block_keyed phon_str_bk
 
 create string_split phon_str_no_blank
 phon_str_no_blank set_source (vocab column_rep phonology string_representation)
-#orth_str set_min 8
 
 create equiv_conversion phonstrbl
 phonstrbl set_source (phon_str_no_blank get_target)
@@ -212,7 +211,7 @@ best_letters_bin attach bester
 
 
 create blocked_representation osgt
-create wtstring_representation osgt_inner
+create string_representation osgt_inner
 osgt set_element osgt_inner
 osgt set_number 8
 create flatten_string_conversion flat
@@ -220,7 +219,7 @@ flat set_source osgt
 flat set_target pregraphemic
 
 
-
+load wtstring_representation wtstring_representation.so
 
 create wtstring_layer best_letters_str
 best_letters_str represent osgt
@@ -229,20 +228,24 @@ create wtunkey_conversion osgt_unkey
 osgt_unkey set_source (features_db column_rep letter)
 osgt_unkey set_target osgt_inner
 
+create wtkey_conversion psgt_key
+psgt_key set_target (phon_str_bk element)
+psgt_key set_source (phon_str_no_blank inner)
+psgt_key set_weight 0.1
 
-create string_layer pregl
+create wtstring_layer pregl
 pregl represent pregraphemic
 
-create string_layer graph
+create wtstring_layer graph
 graph represent graphemes
 
-create string_layer phone
+create wtstring_layer phone
 phone represent (phon_str_no_blank get_target)
 
-create binary_layer phone_bin
+create strength_layer phone_bin
 phone_bin represent phon_str_bk
 
-create regex_side_effect_conversion graphemize
+create wtregex_side_effect_conversion graphemize
 graphemize set_source pregraphemic
 graphemize set_target graphemes
 
@@ -266,10 +269,8 @@ create dataframe phonotactic_db
 phonotactic_db load Databases/Vocab_files/DRC_phonotac.eNd
 phonotactic_db for_each_row phonotactic add $search $replace
 
-create regex_side_effect_conversion gpc
-
+create wtregex_side_effect_conversion gpc
 gpc set_target amphons
-
 gpc set_source graphemes
 
 create dataframe grapheme_phoneme_db
