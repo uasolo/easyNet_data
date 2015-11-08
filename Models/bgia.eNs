@@ -75,6 +75,12 @@ create parallel_conversion bananas
 bananas set_source (orth_str get_target)
 bananas set_target feat_rep
 
+load wtstring_representation wtstring_representation.so
+create wtunkey_conversion inwtc
+inwtc set_source (features_db column_rep letter)
+inwtc set_target (orth_str inner) 
+inwtc set_weight 0.1
+
 # these are the old solution to the problem of ensuring we can map from the string_rep to the feature
 #    binary patterns; I suspect unnecessary with the above [UPDATE: CD -- tested script without the following, and conversions failed]
 create parallel_conversion lopc
@@ -93,18 +99,18 @@ olc autoconnect words letters
 
 #loglevel debug
 
-#create string_representation inter
+create string_representation inter
 
 create flatten_string_conversion flat
 flat set_source (orth_str get_target)
-flat set_target (vocab column_rep Word string_representation)
+#flat set_target (vocab column_rep Word string_representation)
+flat set_target inter
 
-
-create binary_layer thr_let
+create strength_layer thr_let
 thr_let represent letter_rep
 
-#create string_layer string
-#string represent inter
+create wtstring_layer string
+string represent inter
 
 create iac_layer bigrams
 bigrams represent (bigramf column_rep bigram)
@@ -119,16 +125,19 @@ ltc set_inner_type best_above_threshold_connection
 ltc set_target_inner_rep (features_db column_rep letter)
 thr_let attach ltc
 
-#create connection tsc
-#tsc autoconnect thr_let string
+create connection tsc
+tsc autoconnect thr_let string
 
 create string_representation bgstring
 create string_split bgsplit
 bgsplit set_source bgstring
 bgsplit set_chunk 2
 
-create regex_side_effect_conversion splat
-splat set_source (vocab column_rep Word string_representation)
+
+
+create wtregex_side_effect_conversion splat
+splat set_source inter
+#splat set_source (vocab column_rep Word string_representation)
 splat set_target bgstring
 splat add ^(.)(.)(.)(.) \2\3\4 \1\2\1\3\1\4
 splat add ^(.)(.)(.) \2\3 \1\2\1\3
@@ -138,18 +147,23 @@ create equiv_conversion bgc
 bgc set_source (bgsplit get_target)
 bgc set_target (bigramf column_rep bigram string_representation) 
 
-
-#create connection b1
-#b1 autoconnect string bigrams
-
-create arbitrary_conversion_connection bb
-bb set_autoconnect 0
-bb attach thr_let 
-bigrams attach bb
-
-
 create connection b4
 b4 autoconnect bigrams words
+
+
+#create arbitrary_conversion_connection bb
+#bb set_autoconnect 0
+#bb attach thr_let 
+#bigrams attach bb
+
+create wtkey_conversion bgwtc
+bgwtc set_target (bigramf column_rep bigram)
+#bgwtc set_source (bigramf column_rep bigram string_representation) 
+bgwtc set_source (bgsplit get_target)
+bgwtc set_weight 0.1
+
+create connection b1
+b1 autoconnect string bigrams
 
 
 #loc details
