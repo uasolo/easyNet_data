@@ -18,6 +18,7 @@ input represent letter_rep
 input set_lag 0
 
 create fire_layer attention
+attention add_facet ltrs_block_attention_weight_transfer
 attention represent letter_rep
 attention set_lag 0
 
@@ -76,7 +77,9 @@ ltrs define_output lexical_decision no_decider
 (ltrs parameters) set matcher::inhibition -1000
 (ltrs parameters) set builder::excitation 1
 (ltrs parameters) set attend::excitation 1
-(ltrs parameters) set attention::rate .02
+(ltrs parameters) set attention::rate 1
+(ltrs parameters) set attention::total_attention .198
+(ltrs parameters) set attention::initial_advantage .362
 (ltrs parameters) set word_id::threshold 100
 (ltrs parameters) set word_ok::threshold -.9
 
