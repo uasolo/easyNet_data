@@ -13,9 +13,16 @@ create latch_layer what
 what represent letter_rep 
 what set_lag 0
 
-create fire_layer input
+create latch_layer input
 input represent letter_rep
 input set_lag 0
+
+create fire_layer attention
+attention represent letter_rep
+attention set_lag 0
+
+create connection attend
+attend autoconnect input attention
 
 create latch_layer checker
 checker represent (vocab column_rep Word)
@@ -27,7 +34,7 @@ lexicon represent (vocab column_rep Word)
 lexicon set_lag 0
 
 create connection perception
-perception autoconnect input what
+perception autoconnect attention what
 
 create connection matcher
 matcher autoconnect what checker
@@ -48,15 +55,17 @@ create above_threshold_observer word_ok
 word_ok target checker
 ltrs add word_ok
 
-create regex_observer no_decider
-no_decider target word_ok
-no_decider add [^\?]*
-no_decider add \? no
+#create regex_observer no_decider
+#no_decider target word_ok
+#no_decider add [^\?]*
+#no_decider add \? no
 
 create reset_nobserver reset
 reset add_trigger (input state)
 reset add_sync input
+reset add_target attention
 reset add_target what
+reset add_target checker 
 
 ltrs define_input orthographic (vocab column_rep Word string_representation) input
 ltrs define_output lexical_decision yes_decider
@@ -66,7 +75,8 @@ ltrs define_output lexical_decision no_decider
 (ltrs parameters) set matcher::excitation 1
 (ltrs parameters) set matcher::inhibition -1000
 (ltrs parameters) set builder::excitation 1
-(ltrs parameters) set input::rate .2
+(ltrs parameters) set attend::excitation 1
+(ltrs parameters) set attention::rate .02
 (ltrs parameters) set word_id::threshold 100
 (ltrs parameters) set word_ok::threshold -.9
 
