@@ -11,7 +11,7 @@ create dataframe_for_reps dutch_vocab
 create dataframe_for_reps english_vocab
 create dataframe_for_reps languages_df
 english_vocab load Databases/Vocab_files/english4U.eNd
-dutch_vocab load Databases/Vocab_files/dutch4.eNd
+dutch_vocab load Databases/Vocab_files/dutch4U.eNd
 languages_df load Databases/Vocab_files/languages.eNd
 #vocab load Databases/Vocab_files/clam.eNd
 #vocab load Databases/Vocab_files/iaBLP.eNd
@@ -90,11 +90,11 @@ english_lettersc2 set_source (uplow column_rep upper string_representation)
 english_lettersc2 set_target (english_orth_str inner)
 
 create equiv_conversion dutch_lettersc
-dutch_lettersc set_target (features_db column_rep letter string_representation)
+dutch_lettersc set_target (uplow column_rep upper string_representation)
 dutch_lettersc set_source (dutch_orth_str inner)
 
 create equiv_conversion dutch_lettersc2
-dutch_lettersc2 set_source (features_db column_rep letter string_representation)
+dutch_lettersc2 set_source (uplow column_rep upper string_representation)
 dutch_lettersc2 set_target (dutch_orth_str inner)
 
 # these are the old solution to the problem of ensuring we can map from the string_rep to the feature
