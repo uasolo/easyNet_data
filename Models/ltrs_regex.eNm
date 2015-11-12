@@ -1,0 +1,123 @@
+create model ltrs
+
+create dataframe_for_reps vocab
+vocab load Databases/Vocab_files/SCM.eNd
+
+create string_split orth_str
+orth_str set_source (vocab column_rep Word string_representation)
+orth_str create_block_keyed letter_rep
+
+load wtstring_representation wtstring_representation.so
+create wtunkey_conversion wunk
+wunk set_source (letter_rep element)
+wunk set_target (orth_str inner)
+wunk set_weight .1
+
+create string_representation approx_wrep
+create string_representation approx_rep
+
+create flatten_string_conversion flat
+flat set_source (orth_str get_target)
+flat set_target (vocab column_rep Word string_representation)
+
+create parallel_conversion bananas
+bananas set_source letter_rep
+bananas set_target (orth_str get_target)
+
+create regex_side_effect_conversion approx_rc
+approx_rc set_target approx_wrep
+approx_rc set_source (vocab column_rep Word string_representation)
+approx_rc add ([^"]) " .*\1.*
+
+create flatten_string_conversion aflat
+aflat set_source approx_wrep
+aflat set_target approx_rep
+
+
+create latch_layer what
+what represent letter_rep 
+what set_lag 0
+
+create latch_layer input
+input represent letter_rep
+input set_lag 0
+
+create fire_layer attention
+attention add_facet ltrs_block_attention_weight_transfer
+attention represent letter_rep
+attention set_lag 0
+
+create connection attend
+attend autoconnect input attention
+
+
+
+create connection perception
+perception autoconnect attention what
+
+create string_layer approx
+approx represent approx_rep
+approx set_lag 0
+
+create connection stringer
+stringer autoconnect what approx
+
+create latch_layer checker
+checker represent (vocab column_rep Word)
+checker set_lag 0
+checker add_facet clip_out
+create accumulator_layer lexicon
+lexicon represent (vocab column_rep Word)
+lexicon set_lag 0
+
+create grep_connection matcher
+matcher set_autoconnect 0
+matcher attach approx
+checker attach matcher
+
+create connection builder
+builder autoconnect checker lexicon
+
+create above_threshold_observer word_id
+word_id target lexicon
+ltrs add word_id
+
+create regex_observer yes_decider
+yes_decider target word_id
+yes_decider add \?
+yes_decider add .+ yes
+
+create above_threshold_observer word_ok
+word_ok target checker
+ltrs add word_ok
+
+#create regex_observer no_decider
+#no_decider target word_ok
+#no_decider add [^\?]*
+#no_decider add \? no
+
+create reset_nobserver reset
+reset add_trigger (input state)
+reset add_sync input
+reset add_target attention
+reset add_target what
+reset add_target checker 
+
+ltrs define_input orthographic (vocab column_rep Word string_representation) input
+ltrs define_output lexical_decision yes_decider
+ltrs define_output lexical_decision no_decider
+
+(ltrs parameters) set perception::excitation 1
+(ltrs parameters) set matcher::excitation 1
+(ltrs parameters) set matcher::inhibition -1000
+(ltrs parameters) set builder::excitation 1
+(ltrs parameters) set attend::excitation 1
+(ltrs parameters) set attention::rate 1
+(ltrs parameters) set attention::total_attention .198
+(ltrs parameters) set attention::initial_advantage .362
+(ltrs parameters) set word_id::threshold 100
+(ltrs parameters) set word_ok::threshold -.9
+
+include Trials/Presentation_No_Task.eNs
+include Trials/Lexical_Decision.eNs
+include Trials/Primed_Lexical_Decision.eNs
