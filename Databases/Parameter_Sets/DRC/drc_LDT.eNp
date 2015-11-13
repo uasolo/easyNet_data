@@ -3,7 +3,7 @@ rate 0.2
 flc::excitation 0.005
 flc::inhibition -0.15
 loc::excitation 0.07
-loc::inhibition -0.435
+loc::inhibition -0.300
 opc::excitation 0.20
 poc::excitation 0.20
 ppmc::excitation 0.14
