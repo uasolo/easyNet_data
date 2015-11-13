@@ -15,12 +15,11 @@ olc::inhibition -0.0
 lato::inhibition -0.06
 latp::inhibition -0.07
 latpm::inhibition  -0.15
-freql::scale 0.05
-pfreql::scale 0.05
-ll::decay 0.0
-ol::decay 0.0
-pl::decay 0.0
-pml::decay 0.0
+orth_freq::scale 0.05
+letters::decay 0.0
+orth_lex::decay 0.0
+phon_lex::decay 0.0
+phoneme_out::decay 0.0
 thresholded_best_phonemes::threshold .43
 bester::threshold 0.0
 nlpl::excitation .055

@@ -193,5 +193,3 @@ caser_plus add_fallback extras
 ((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
 ((features_db column_rep features) find_conversion (orth_str inner)) set_weight -1
 
-thr_let set_lag 0
-string set_lag 0
