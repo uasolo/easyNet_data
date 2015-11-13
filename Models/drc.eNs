@@ -4,8 +4,8 @@ create model drc
 
 # ## LETTER FEATURE REPRESENTATION
 create dataframe_for_reps features_db
-create dataframe_for_reps no
 features_db load Databases/letter_features.eNd
+create dataframe_for_reps no
 no load Databases/no.eNd
 
 # ## ORTHOGRAPHY, PHONOLOGY, FREQUENCIES
