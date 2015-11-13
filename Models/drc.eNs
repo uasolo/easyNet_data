@@ -5,6 +5,8 @@ create model drc
 # ## LETTER FEATURE REPRESENTATION
 create dataframe_for_reps features_db
 features_db load Databases/letter_features.eNd
+create dataframe_for_reps no
+no load Databases/no.eNd
 
 # ## ORTHOGRAPHY, PHONOLOGY, FREQUENCIES
 create dataframe_for_reps vocab
@@ -160,6 +162,25 @@ pfreqb autoconnect phon_freq phon_lex
 
 #freqb details
 
+create strength_layer total
+total represent (no column_rep no)
+
+create pattern no_pat
+no_pat set (no column_rep no) no
+
+create summate_connection sum
+sum set_autoconnect 0
+sum attach orth_lex
+total attach sum
+sum answer_pattern no_pat
+total set_lag 0
+
+create mrom_yes_observer tla_yes
+tla_yes target total
+
+create mrom_no_observer mrom_no
+mrom_no target total
+
 # DECISION RULE
 
 create serialize_blocks_observer thresholded_best_phonemes
@@ -185,10 +206,18 @@ drc define_output pronunciation pronouncer
 
 # LDT
 
-create above_threshold_observer lexical_decider
-lexical_decider target orth_lex
-drc define_output lexical_decision lexical_decider
+create above_threshold_observer unit_decider
+unit_decider target orth_lex
+drc add unit_decider
 
+create regex_observer word_yes
+word_yes target unit_decider
+word_yes add \?
+word_yes add .+ yes
+
+drc define_output lexical_decision word_yes
+drc define_output lexical_decision tla_yes
+drc define_output lexical_decision mrom_no
 
 
 

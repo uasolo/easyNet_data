@@ -3,7 +3,7 @@ rate 0.2
 flc::excitation 0.005
 flc::inhibition -0.15
 loc::excitation 0.07
-loc::inhibition -0.435
+loc::inhibition -0.300
 opc::excitation 0.20
 poc::excitation 0.20
 ppmc::excitation 0.14
@@ -15,11 +15,12 @@ olc::inhibition -0.0
 lato::inhibition -0.06
 latp::inhibition -0.07
 latpm::inhibition  -0.15
-orth_freq::scale 0.05
-letters::decay 0.0
-orth_lex::decay 0.0
-phon_lex::decay 0.0
-phoneme_out::decay 0.0
+freql::scale 0.05
+pfreql::scale 0.05
+ll::decay 0.0
+ol::decay 0.0
+pl::decay 0.0
+pml::decay 0.0
 thresholded_best_phonemes::threshold .43
 bester::threshold 0.0
 nlpl::excitation .055
