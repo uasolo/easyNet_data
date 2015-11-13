@@ -170,7 +170,7 @@ no_pat set (no column_rep no) no
 
 create summate_connection sum
 sum set_autoconnect 0
-sum attach ol
+sum attach orth_lex
 total attach sum
 sum answer_pattern no_pat
 total set_lag 0
