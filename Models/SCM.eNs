@@ -85,8 +85,8 @@ freql represent (vocab column_rep Rest)
 create binary_layer id_layer
 id_layer represent (vocab column_rep Word)
 
-create iac_layer_extended decision_layer
-decision_layer represent (decisions column_rep Decision)
+create iac_layer_extended decision
+decision represent (decisions column_rep Decision)
 
 # letters rename_parameter min_act letters_min_act
 
@@ -218,8 +218,8 @@ lettering set_target (letterlist column_rep letter)
 
 create selfweight_diag_connection decision_lat
 decision_lat set_autoconnect 0
-decision_lat attach decision_layer 
-decision_layer attach decision_lat unshunted
+decision_lat attach decision 
+decision attach decision_lat unshunted
 
 create best_above_threshold_connection id_conn
 id_conn set_autoconnect 0
@@ -232,20 +232,20 @@ yes_patt set (decisions column_rep Decision) yes
 create summate_connection id_yes_conn
 id_yes_conn set_autoconnect 0
 id_yes_conn attach id_layer
-decision_layer attach id_yes_conn
+decision attach id_yes_conn
 id_yes_conn answer_pattern yes_patt
-#id_yes_conn autoconnect id_layer decision_layer
+#id_yes_conn autoconnect id_layer decision
 
 create summate_connection word_yes_conn
 word_yes_conn set_autoconnect 0
 word_yes_conn attach words 
-decision_layer attach word_yes_conn
+decision attach word_yes_conn
 word_yes_conn answer_pattern yes_patt
 #create connection word_yes_conn
-#word_yes_conn autoconnect words decision_layer
+#word_yes_conn autoconnect words decision
 
 create connection mostletno
-mostletno autoconnect most_letter decision_layer
+mostletno autoconnect most_letter decision
 
 create connection freqb
 freqb attach freql 
@@ -280,7 +280,7 @@ letcounter set_fixed 1
 # DECISION RULE
 
 create above_threshold_observer decision_obs
-decision_obs target decision_layer
+decision_obs target decision
 
 # ASSEMBLE MODEL
 
@@ -289,7 +289,7 @@ resetter add_trigger (features state)
 resetter add_sync features
 resetter add_target letters
 resetter add_target words
-resetter add_target decision_layer
+resetter add_target decision
 
 initial set_lag 0
 spatial_code set_lag 0
@@ -299,7 +299,7 @@ most_letter set_lag 0
 #best_letters_str set_lag 0
 #letcount set_lag 0
 #fast_letters set_lag 0
-decision_layer set_use_hard_cap 0
+decision set_use_hard_cap 0
 id_layer set_lag 0
 flc set_lag 0
 
