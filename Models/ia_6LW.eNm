@@ -1,4 +1,4 @@
-include Models/ia_5LW.eNs
+include Models/ia_6LW.eNs
 
 (ia parameters) load Databases/Parameter_Sets/IA/ia.eNp
 
