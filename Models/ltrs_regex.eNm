@@ -1,42 +1,90 @@
 create model ltrs
 
 create dataframe_for_reps vocab
-vocab load Databases/Vocab_files/SCM.eNd
+#vocab load Databases/Vocab_files/SCM.eNd
+vocab load Databases/Vocab_files/ia.eNd
 
 create string_split orth_str
 orth_str set_source (vocab column_rep Word string_representation)
 orth_str create_block_keyed letter_rep
 
+create string_representation constraint_rep
+create string_split chunk_spl
+chunk_spl set_source constraint_rep
+
+create string_representation prechunk
+create string_split prechunk_spl
+prechunk_spl set_source prechunk
+
+
+
+
 load wtstring_representation wtstring_representation.so
 create wtunkey_conversion wunk
 wunk set_source (letter_rep element)
-wunk set_target (orth_str inner)
-wunk set_weight .1
-
-create string_representation approx_wrep
-create string_representation approx_rep
+wunk set_target (prechunk_spl inner)
 
 create flatten_string_conversion flat
 flat set_source (orth_str get_target)
 flat set_target (vocab column_rep Word string_representation)
 
+create regex_side_effect_conversion fillin
+fillin set_source (prechunk_spl inner) 
+fillin set_target (chunk_spl inner)
+fillin add ^$ _ _
+fillin add ([a-z]) _ \1
+
+create string_representation normal
+create string_representation normalw
+
+create flatten_string_conversion nflat
+nflat set_source normalw
+nflat set_target normal
+
+create regex_side_effect_conversion normalize
+normalize set_source (chunk_spl get_target) 
+normalize set_target normalw
+normalize add __ ~ #
+normalize add (.)\1 ~ \1
+normalize add (.)_ ~ .*\1.*
+
+create string_representation regex
+create regex_conversion regexize
+regexize set_source normal
+regexize set_target regex
+regexize add ([a-z])#+([a-z]) \1.+\2
+regexize add \*# *
+regexize add #\. .  
+regexize add \.\*\.\* \.\*
+regexize add \.\+\.\* \.\+
+regexize add \.\*\.\+ \.\+
+regexize add ^#+$ 
+regexize add ^#+ .*
+regexize add #+$ .*
+
 create parallel_conversion bananas
 bananas set_source letter_rep
 bananas set_target (orth_str get_target)
 
-create regex_side_effect_conversion approx_rc
-approx_rc set_target approx_wrep
-approx_rc set_source (vocab column_rep Word string_representation)
-approx_rc add ([^"]) " .*\1.*
+create parallel_conversion bananas2
+bananas2 set_source letter_rep
+bananas2 set_target (prechunk_spl get_target)
 
-create flatten_string_conversion aflat
-aflat set_source approx_wrep
-aflat set_target approx_rep
+#create parallel_conversion bananas3
+#bananas3 set_source (prechunk_spl get_target)
+#bananas3 set_target (chunk_spl get_target)
+
+xmllint 1
+xml bananas2
 
 
 create latch_layer what
 what represent letter_rep 
 what set_lag 0
+
+create latch_layer where
+where represent letter_rep 
+where set_lag 0
 
 create latch_layer input
 input represent letter_rep
@@ -51,32 +99,55 @@ create connection attend
 attend autoconnect input attention
 
 
+create fire_layer locable
+locable represent letter_rep
+locable set_lag 0
 
 create connection perception
 perception autoconnect attention what
 
-create string_layer approx
-approx represent approx_rep
-approx set_lag 0
+create connection perception2
+perception2 autoconnect attention locable
+
+create connection locating
+locating autoconnect locable where
+
+
+create string_layer chunks
+chunks represent (chunk_spl get_target)
+chunks set_lag 0
+
+create string_layer constraint
+constraint represent regex
+constraint set_lag 0
 
 create connection stringer
-stringer autoconnect what approx
+stringer autoconnect what chunks
 
-create latch_layer checker
-checker represent (vocab column_rep Word)
-checker set_lag 0
-checker add_facet clip_out
+xml stringer
+
+create connection stringer2
+stringer2 autoconnect where chunks
+
+create connection dechunk
+dechunk autoconnect chunks constraint
+
+#create latch_layer checker
+#checker represent (vocab column_rep Word)
+#checker set_lag 0
+#checker add_facet clip_out
+
 create accumulator_layer lexicon
 lexicon represent (vocab column_rep Word)
 lexicon set_lag 0
 
 create grep_connection matcher
 matcher set_autoconnect 0
-matcher attach approx
-checker attach matcher
+matcher attach constraint
+lexicon attach matcher
 
-create connection builder
-builder autoconnect checker lexicon
+#create connection builder
+#builder autoconnect checker lexicon
 
 create above_threshold_observer word_id
 word_id target lexicon
@@ -87,9 +158,9 @@ yes_decider target word_id
 yes_decider add \?
 yes_decider add .+ yes
 
-create above_threshold_observer word_ok
-word_ok target checker
-ltrs add word_ok
+#create above_threshold_observer word_ok
+#word_ok target checker
+#ltrs add word_ok
 
 #create regex_observer no_decider
 #no_decider target word_ok
@@ -99,24 +170,32 @@ ltrs add word_ok
 create reset_nobserver reset
 reset add_trigger (input state)
 reset add_sync input
-reset add_target attention
+#reset add_target attention
 reset add_target what
+reset add_target where
+reset add_target reset
 reset add_target checker 
+reset add_target locable
 
 ltrs define_input orthographic (vocab column_rep Word string_representation) input
 ltrs define_output lexical_decision yes_decider
-ltrs define_output lexical_decision no_decider
+#ltrs define_output lexical_decision no_decider
 
 (ltrs parameters) set perception::excitation 1
+(ltrs parameters) set perception2::excitation 1
+(ltrs parameters) set locating::excitation 1
 (ltrs parameters) set matcher::excitation 1
 (ltrs parameters) set matcher::inhibition -1000
 (ltrs parameters) set builder::excitation 1
 (ltrs parameters) set attend::excitation 1
 (ltrs parameters) set attention::rate 1
-(ltrs parameters) set attention::total_attention .198
-(ltrs parameters) set attention::initial_advantage .362
+(ltrs parameters) set total_attention .198
+(ltrs parameters) set initial_advantage .362
 (ltrs parameters) set word_id::threshold 100
 (ltrs parameters) set word_ok::threshold -.9
+(ltrs parameters) set locable::rate 3.530
+(ltrs parameters) set locable::keep_value 1
+(ltrs parameters) set matcher::low_value 0
 
 include Trials/Presentation_No_Task.eNs
 include Trials/Lexical_Decision.eNs

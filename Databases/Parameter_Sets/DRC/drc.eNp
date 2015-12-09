@@ -16,6 +16,7 @@ lato::inhibition -0.06
 latp::inhibition -0.07
 latpm::inhibition  -0.15
 orth_freq::scale 0.05
+phon_freq::scale 0.05
 letters::decay 0.0
 orth_lex::decay 0.0
 phon_lex::decay 0.0
