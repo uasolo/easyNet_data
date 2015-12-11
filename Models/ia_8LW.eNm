@@ -1,0 +1,9 @@
+set numslots=8 
+create dataframe_for_reps vocab
+vocab load Databases/Vocab_files/ia_8LW.eNd
+
+include Models/ia.eNs
+
+(ia parameters) load Databases/Parameter_Sets/IA/ia.eNp
+
+include Trials/Brief_Masked_No_Task.eNs
