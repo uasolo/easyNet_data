@@ -1,4 +1,8 @@
-include Models/ia_6LW.eNs
+set numslots=6 
+create dataframe_for_reps vocab
+vocab load Databases/Vocab_files/ia_6LW.eNd
+
+include Models/ia.eNs
 
 (ia parameters) load Databases/Parameter_Sets/IA/ia.eNp
 

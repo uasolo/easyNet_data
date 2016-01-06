@@ -7,11 +7,12 @@ create dataframe_for_reps features_db
 features_db load Databases/letter_features_no_blank.eNd
 
 # ## ORTHOGRAPHY, PHONOLOGY, FREQUENCIES
-create dataframe_for_reps vocab
-vocab load Databases/Vocab_files/ia.eNd
+#create dataframe_for_reps vocab
+#vocab load Databases/Vocab_files/ia.eNd
 #vocab load Databases/Vocab_files/clam.eNd
 #vocab load Databases/Vocab_files/iaBLP.eNd
 #vocab load Databases/Vocab_files/ia_AoA1.eNd
+#vocab load Databases/Vocab_files/ia_WVH.eNd
 
 
 # LEXICAL ROUTE LAYERS
@@ -20,7 +21,7 @@ vocab load Databases/Vocab_files/ia.eNd
 create representation feat_rep
 feat_rep type blocked_representation
 feat_rep set_element (features_db column_rep features)
-feat_rep number 4
+feat_rep number $numslots 
 create iac_layer features
 features represent feat_rep
 
@@ -31,7 +32,7 @@ features represent feat_rep
 create representation letter_rep
 letter_rep type blocked_representation
 letter_rep set_element (features_db column_rep letter)
-letter_rep number 4
+letter_rep number $numslots 
 
 create iac_layer letters
 letters represent letter_rep
