@@ -35,12 +35,12 @@ ia define_output lexical_decision mrom_no
 
 include Trials/Lexical_Decision.eNs
 (ia parameters) set sum::excitation 1
-(ia parameters) set unit_decider::threshold 0.75
-(ia parameters) set tla_yes::threshold_low 1.25
+(ia parameters) set unit_decider::threshold .68
+(ia parameters) set tla_yes::threshold_low .95
 (ia parameters) set tla_yes::threshold_high 1.5
-(ia parameters) set tla_yes::check_time 10
-(ia parameters) set tla_yes::check_threshold .200
-(ia parameters) set mrom_no::early_timeout 24
-(ia parameters) set mrom_no::late_timeout 32
-(ia parameters) set mrom_no::check_time 10
-(ia parameters) set mrom_no::check_threshold .15
+(ia parameters) set tla_yes::check_time 7
+(ia parameters) set tla_yes::check_threshold .38
+(ia parameters) set mrom_no::early_timeout 20
+(ia parameters) set mrom_no::late_timeout 22
+(ia parameters) set mrom_no::check_time 7
+(ia parameters) set mrom_no::check_threshold .22
