@@ -7,11 +7,12 @@ create dataframe_for_reps features_db
 features_db load Databases/letter_features_no_blank.eNd
 
 # ## ORTHOGRAPHY, PHONOLOGY, FREQUENCIES
-create dataframe_for_reps vocab
-vocab load Databases/Vocab_files/ia.eNd
+#create dataframe_for_reps vocab
+#vocab load Databases/Vocab_files/ia.eNd
 #vocab load Databases/Vocab_files/clam.eNd
 #vocab load Databases/Vocab_files/iaBLP.eNd
 #vocab load Databases/Vocab_files/ia_AoA1.eNd
+#vocab load Databases/Vocab_files/ia_WVH.eNd
 
 
 # LEXICAL ROUTE LAYERS
@@ -20,7 +21,7 @@ vocab load Databases/Vocab_files/ia.eNd
 create representation feat_rep
 feat_rep type blocked_representation
 feat_rep set_element (features_db column_rep features)
-feat_rep number 4
+feat_rep number $numslots 
 create iac_layer features
 features represent feat_rep
 
@@ -31,7 +32,7 @@ features represent feat_rep
 create representation letter_rep
 letter_rep type blocked_representation
 letter_rep set_element (features_db column_rep letter)
-letter_rep number 4
+letter_rep number $numslots 
 
 create iac_layer letters
 letters represent letter_rep
@@ -84,6 +85,9 @@ create parallel_conversion lopc2
 lopc2 set_source (orth_str get_target)
 lopc2 set_target letter_rep
 
+include Models/lowerupper.eNs
+((features_db column_rep letter) find_conversion (orth_str inner)) add_fallback caser
+
 #loglevel debug
 create connection loc
 loc autoconnect letters words
@@ -111,40 +115,9 @@ ia define_input orthographic (vocab column_rep Word string_representation) featu
 
 words set_resting_level (vocab column_rep Rest)
 
-create pattern rk_letter
-rk_letter set (orth_str inner) *
 
-create pattern rk_feats
-rk_feats set (features_db column_rep features) 2P 3A 4A 7P 9P 10A 11A 12P 13A 14A
-
-create pattern mask_letter
-mask_letter set (orth_str inner) #
-
-create pattern mask_feats
-mask_feats set (features_db column_rep features) 1P 2P 3P 4A 5P 6P 7A 8A 9P 10P 11A 12P 13P 14P
-
-create pattern blank_letter
-blank_letter set (orth_str inner) _ 
-
-create pattern blank_feats
-blank_feats set (features_db column_rep features)
-
-create pattern space_letter
-space_letter set (orth_str inner) "
-
-create pattern space_feats 1A 2A 3A 4A 5A 6A 7A 8A 9A 10A 11A 12A 13A 14A
-space_feats set (features_db column_rep features)
-
-
-create manual_conversion extras
-extras set_auto_use 0
-extras set_source (orth_str inner)
-extras set_target (features_db column_rep features)
-extras add rk_letter rk_feats
-extras add mask_letter mask_feats
-extras add blank_letter blank_feats
-extras add space_letter space_feats
-
-((features_db column_rep features) find_conversion (orth_str inner)) add_fallback extras
+include Models/extras.eNs
+caser_plus add_fallback extras
+((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
 ((features_db column_rep features) find_conversion (orth_str inner)) set_weight -1
 

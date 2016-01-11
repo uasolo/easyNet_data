@@ -1,0 +1,5 @@
+include Models/bia.eNs
+
+(bia parameters) load Databases/Parameter_Sets/BIA/bia.eNp
+
+include Trials/Presentation_No_Task.eNs

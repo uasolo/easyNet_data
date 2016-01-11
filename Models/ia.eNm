@@ -1,3 +1,5 @@
+set numslots=4 
+
 include Models/ia.eNs
 
 (ia parameters) load Databases/Parameter_Sets/IA/ia.eNp

@@ -1,0 +1,7 @@
+include Models/drc.eNs
+
+(drc parameters) load Databases/Parameter_Sets/DRC/drc.eNp
+
+include Trials/Lexical_Decision.eNs
+include Trials/Read_Aloud.eNs
+

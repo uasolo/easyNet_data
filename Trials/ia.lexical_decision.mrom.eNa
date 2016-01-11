@@ -1,0 +1,46 @@
+create dataframe_for_reps no
+no load Databases/no.eNd
+create strength_layer total
+total represent (no column_rep no)
+
+create pattern no_pat
+no_pat set (no column_rep no) no
+
+create summate_connection sum
+sum set_autoconnect 0
+sum attach words
+total attach sum
+sum answer_pattern no_pat
+total set_lag 0
+
+create mrom_yes_observer tla_yes
+tla_yes target total
+
+create mrom_no_observer mrom_no
+mrom_no target total
+
+create above_threshold_observer unit_decider
+unit_decider target words
+ia add unit_decider
+
+create regex_observer word_yes
+word_yes target unit_decider
+word_yes add \?
+word_yes add .+ yes
+
+
+ia define_output lexical_decision word_yes
+ia define_output lexical_decision tla_yes
+ia define_output lexical_decision mrom_no
+
+include Trials/Lexical_Decision.eNs
+(ia parameters) set sum::excitation 1
+(ia parameters) set unit_decider::threshold 0.75
+(ia parameters) set tla_yes::threshold_low 1.25
+(ia parameters) set tla_yes::threshold_high 1.5
+(ia parameters) set tla_yes::check_time 10
+(ia parameters) set tla_yes::check_threshold .200
+(ia parameters) set mrom_no::early_timeout 24
+(ia parameters) set mrom_no::late_timeout 32
+(ia parameters) set mrom_no::check_time 10
+(ia parameters) set mrom_no::check_threshold .15

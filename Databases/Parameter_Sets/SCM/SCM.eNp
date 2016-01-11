@@ -26,8 +26,8 @@ sigmak .12
 power 2.5
 initialolc::excitation 1
 finalolc::excitation 1
-decision_layer::min_act 0
-decision_layer::max_act 1
+decision::min_act 0
+decision::max_act 1
 decision_lat::inhibition -.06
 extra_inhibition -.06
 mostletno::excitation .36
