@@ -1,0 +1,25 @@
+set numslots=4
+#set numslots=5
+#set numslots=8
+create dataframe_for_reps vocab
+#vocab load Databases/Vocab_files/ia.eNd
+vocab load Databases/Vocab_files/ew4.eNd
+#vocab load Databases/Vocab_files/ew5.eNd
+#vocab load Databases/Vocab_files/ia_5LW.eNd
+#vocab load Databases/Vocab_files/ia_8LW.eNd
+
+include Models/rpm-ia.eNs
+
+(ia parameters) load Databases/Parameter_Sets/IA/ia.eNp
+(ia parameters) set b4::excitation .035
+(ia parameters) set b4::inhibition -.015
+(ia parameters) set bbt::excitation 1
+(ia parameters) set bbt::inhibition 0
+(ia parameters) set obc::excitation .3
+(ia parameters) set obc::inhibition 0
+(ia parameters) set bigrams::rate 1
+(ia parameters) set bigrams::decay 0
+(ia parameters) set bigrams2::rate .07
+(ia parameters) set bigrams2::decay .07
+
+include Trials/Brief_Masked_No_Task.eNs

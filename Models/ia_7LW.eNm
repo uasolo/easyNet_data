@@ -1,6 +1,6 @@
-set numslots=6 
+set numslots=7 
 create dataframe_for_reps vocab
-vocab load Databases/Vocab_files/ia_6LW.eNd
+vocab load Databases/Vocab_files/ia_7LW.eNd
 
 include Models/ia.eNs
 
