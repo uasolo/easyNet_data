@@ -1,4 +1,6 @@
 set numslots=4 
+create dataframe_for_reps vocab
+vocab load Databases/Vocab_files/ia.eNd
 
 include Models/ia.eNs
 
