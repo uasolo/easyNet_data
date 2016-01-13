@@ -59,7 +59,6 @@ orth_str set_source (vocab column_rep Word string_representation)
 #   (vocab column_rep Word string_representation) is the "dog" string_rep rather than the binary keyed_rep
 
 
-
 create equiv_conversion lettersc
 lettersc set_target (features_db column_rep letter string_representation)
 lettersc set_source (orth_str inner)
@@ -192,6 +191,12 @@ include Models/extras.eNs
 caser_plus add_fallback extras
 ((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
 ((features_db column_rep features) find_conversion (orth_str inner)) set_weight -1
+
+create const_conversion blank_fallback
+blank_fallback set_source (features_db column_rep letter)
+blank_fallback set_target (orth_str inner)
+blank_fallback set blank_letter
+inwtc add_fallback blank_fallback
 
 thr_let set_lag 0
 string set_lag 0

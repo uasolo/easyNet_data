@@ -214,6 +214,11 @@ include Models/extras.eNs
 caser_plus add_fallback extras
 ((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
 ((features_db column_rep features) find_conversion (orth_str inner)) set_weight -1
+create const_conversion blank_fallback
+blank_fallback set_source (features_db column_rep letter)
+blank_fallback set_target (orth_str inner)
+blank_fallback set blank_letter
+inwtc add_fallback blank_fallback
 
 thr_let set_lag 0
 string set_lag 0
