@@ -1,0 +1,15 @@
+create model string.model
+# investigate effect with/out dataframe_for_reps 
+# question: role? e.g. with = only strings in df are allowed? 
+create dataframe_for_reps words_small.df
+words_small.df load Databases/words_small.eNd
+
+create string_layer string.lay
+string.lay represent (words_small.df column_rep Word string_representation)
+
+string.model define_input orthographic (words_small.df column_rep Word string_representation) string.lay
+
+include Trials/Presentation_No_Task.eNs
+
+
+
