@@ -46,6 +46,7 @@ feat_rep number 10
 
 create iac_layer features
 features represent feat_rep
+features add_hint plot_type plot_features.R
 
 # ## LETTER LAYER
 

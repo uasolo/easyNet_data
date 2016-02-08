@@ -27,6 +27,7 @@ feat_rep set_element (features_db column_rep features)
 feat_rep number 4
 create iac_layer features
 features represent feat_rep
+features add_hint plot_type plot_features.R
 
 #create pattern _mask
 #_mask set feat_rep 1P/0 2P/0 3P/0 4A/0 5P/0 6P/0  7A/0 8A/0 9P/0 10P/0 11A/0 12P/0 13P/0 14P/0 1P/1 2P/1 3P/1 4A/1 5P/1 6P/1 7A/1 8A/1 9P/1 10P/1 11A/1 12P/1 13P/1 14P/1 1P/2 2P/2 3P/2 4A/2 5P/2 6P/2 7A/2 8A/2 9P/2 10P/2 11A/2 12P/2 13P/2 14P/2 1P/3 2P/3 3P/3 4A/3 5P/3 6P/3 7A/3 8A/3 9P/3 10P/3 11A/3 12P/3 13P/3 14P/3
