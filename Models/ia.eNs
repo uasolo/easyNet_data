@@ -1,4 +1,3 @@
-create model ia
 
 # LOAD DATABASES
 
@@ -7,7 +6,8 @@ create dataframe_for_reps features_db
 features_db load Databases/letter_features_no_blank.eNd
 
 # ## ORTHOGRAPHY, PHONOLOGY, FREQUENCIES
-#create dataframe_for_reps vocab
+create dataframe_for_reps vocab
+vocab load $vocabulary_file
 #vocab load Databases/Vocab_files/ia.eNd
 #vocab load Databases/Vocab_files/clam.eNd
 #vocab load Databases/Vocab_files/iaBLP.eNd
@@ -122,3 +122,4 @@ caser_plus add_fallback extras
 ((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
 ((features_db column_rep features) find_conversion (orth_str inner)) set_weight -1
 
+(ia parameters) load $parameter_file
