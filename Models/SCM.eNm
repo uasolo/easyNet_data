@@ -1,8 +1,8 @@
 create model scm
 scm add_setting vocabulary_file Databases/Vocab_files/scm.eNd
-ia change_setting_type vocabulary_file filename
+scm change_setting_type vocabulary_file filename
 scm add_setting parameter_file Databases/Parameter_Sets/SCM/SCM.eNp
-ia change_setting_type parameter_file filename
+scm change_setting_type parameter_file filename
 scm add_script Models/SCM.eNs
 scm add_script Trials/Lexical_Decision.eNs
 scm add_script Trials/Primed_Lexical_Decision.eNs
