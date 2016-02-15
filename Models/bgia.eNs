@@ -1,5 +1,3 @@
-create model ia
-
 # LOAD DATABASES
 
 # ## LETTER FEATURE REPRESENTATION
@@ -8,7 +6,7 @@ features_db load Databases/letter_features_no_blank.eNd
 
 # ## ORTHOGRAPHY, PHONOLOGY, FREQUENCIES
 create dataframe_for_reps vocab
-vocab load Databases/Vocab_files/ia.eNd
+vocab load $vocabulary_file
 
 create dataframe_for_reps bigramf
 bigramf load Databases/bigrams.eNd
@@ -19,7 +17,7 @@ bigramf load Databases/bigrams.eNd
 create representation feat_rep
 feat_rep type blocked_representation
 feat_rep set_element (features_db column_rep features)
-feat_rep number 4
+feat_rep number $numslots
 create iac_layer features
 features represent feat_rep
 features add_hint plot_type plot_features.R
@@ -31,7 +29,7 @@ features add_hint plot_type plot_features.R
 create representation letter_rep
 letter_rep type blocked_representation
 letter_rep set_element (features_db column_rep letter)
-letter_rep number 4
+letter_rep number $numslots
 
 create iac_layer letters
 letters represent letter_rep
@@ -184,7 +182,7 @@ lato autoconnect words words
 # MODEL GROUP
 
 
-ia define_input orthographic (vocab column_rep Word string_representation) features
+bgia define_input orthographic (vocab column_rep Word string_representation) features
 
 words set_resting_level (vocab column_rep Rest)
 
@@ -201,3 +199,6 @@ inwtc add_fallback blank_fallback
 
 thr_let set_lag 0
 string set_lag 0
+
+(bgia parameters) load $parameter_file
+
