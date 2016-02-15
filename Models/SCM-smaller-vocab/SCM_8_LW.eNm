@@ -1,0 +1,10 @@
+create model scm
+scm add_setting vocabulary_file Databases/Vocab_files/SCM_8_LW.eNd
+scm add_setting parameter_file Databases/Parameter_Sets/SCM/SCM.eNp
+scm add_script Models/SCM.eNs
+scm add_script Trials/Lexical_Decision.eNs
+scm add_script Trials/Primed_Lexical_Decision.eNs
+scm add_script Trials/Sandwich_Primed_Lexical_Decision.eNs
+
+
+

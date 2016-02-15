@@ -2,7 +2,8 @@ load spatial_hub_connection spatial_hub_connection.so
 
 # LOAD LIBRARY FILES
 
-create model scm
+create dataframe_for_reps vocab
+vocab load $vocabulary_file
 
 # LOAD DATABASES
 
@@ -317,3 +318,5 @@ include Models/extras.eNs
 caser_plus add_fallback extras
 ((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
 (feat_rep find_conversion (orth_str get_target)) set_weight -1
+
+(scm parameters) load $parameter_file
