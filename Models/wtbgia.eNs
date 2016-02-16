@@ -216,7 +216,10 @@ caser_plus add_fallback extras
 create const_conversion blank_fallback
 blank_fallback set_source (features_db column_rep letter)
 blank_fallback set_target (orth_str inner)
-blank_fallback set blank_letter
+create wtstring_representation osi 
+create pattern blank_letter2
+blank_letter2 set osi _
+blank_fallback set blank_letter2
 inwtc add_fallback blank_fallback
 
 thr_let set_lag 0
