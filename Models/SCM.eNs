@@ -66,6 +66,7 @@ create spatial_representation spo
 spo set_keys (features_db column_rep letter)
 create spatial_layer spatial_code
 spatial_code represent spo
+spatial_code add_hint plot_type signal.weight.difference.R
 
 create count_characters_conversion letcounter
 letcounter set_source (orth_str get_target)
