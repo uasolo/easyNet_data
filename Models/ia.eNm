@@ -1,7 +1,10 @@
-set numslots=4 
+create model ia 
+ia add_setting vocabulary_file Databases/Vocab_files/ia.eNd
+ia change_setting_type vocabulary_file filename
+ia add_setting parameter_file Databases/Parameter_Sets/IA/ia.eNp
+ia change_setting_type parameter_file filename
+ia add_setting numslots 4
+ia change_setting_type numslots numeric
 
-include Models/ia.eNs
-
-(ia parameters) load Databases/Parameter_Sets/IA/ia.eNp
-
-include Trials/Brief_Masked_No_Task.eNs
+ia add_script Models/ia.eNs
+ia add_script Trials/Brief_Masked_No_Task.eNs

@@ -1,0 +1,4 @@
+include Models/SCM.eNm
+scm setting vocabulary_file Databases/Vocab_files/SCM_4_LW.eNd
+
+
