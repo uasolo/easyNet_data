@@ -79,9 +79,13 @@ input_split set_source input_string_rep
 create string_layer input_string_layer
 input_string_layer represent (input_split get_target)
 
+#create equiv_conversion lc_split_inner_equiv
+#lc_split_inner_equiv set_source   (lc2uc_df column_rep lower_case string_representation)
+#lc_split_inner_equiv set_target (input_split inner)
+
 create equiv_conversion lc_split_inner_equiv
-lc_split_inner_equiv set_source   (lc2uc_df column_rep lower_case string_representation)
-lc_split_inner_equiv set_target (input_split inner)
+lc_split_inner_equiv set_source (input_split get_target)  
+lc_split_inner_equiv set_target (lc2uc_df column_rep lower_case string_representation)
 
 create connection input_string_lc_conn
 input_string_lc_conn  autoconnect input_string_layer lc_layer 
