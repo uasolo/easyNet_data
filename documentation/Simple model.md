@@ -1,7 +1,7 @@
 #A simple model
 
 We are going to build a very simple model that represents the mapping between lower case (LC) letters and corresponding upper case (UC) letters. The model will consist of two layers and one connection between the two. One layer holds a localist representation of (a subset of) all LC letters of the English alphabet, i.e. one node for each letter, the other layer holds the same type of representation for UC ones, and a connection from the former to the latter links every LC letter node to its corresponding UC letter node with an excitatory link. 
-The LC letters layer will serve as input. This model expresses the idea that whenever a representation of a LC letter gets activated then the representation of its corresponding UC gets activated too, even though no UC letter was sent as input to the model.   
+The LC letters layer will serve as input. This model expresses the idea that whenever a representation of a LC letter gets activated then the representation of its corresponding UC gets activated too, even though no UC letter was sent as input to the model. Here we are not taking any position on this theory, but rather we are using it to illustrate the steps involved in modelling it using *lazyNut*.
 
 In order to build the above architecture with *lazyNut* we will not use only layers and connections, but also other types of objects, such as  representations and conversions, which make it possible to automate the model construction and to determine its behaviour at run time. 
 

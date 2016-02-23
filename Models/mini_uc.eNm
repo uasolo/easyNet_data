@@ -14,8 +14,23 @@ lc_uc_connection autoconnect lc_layer uc_layer
 
 (mini_uc parameters) load Databases/Parameter_Sets/MINI/mini_uc.eNp
 
-mini_uc define_input lc_input  (lc2uc_df column_rep lower_case string_representation) lc_layer
+#mini_uc define_input lc_input  (lc2uc_df column_rep lower_case string_representation) lc_layer
 
+
+################### add conversion that allows one to specify a concatenation of small letters and obtain superposition in lc_layer
+# e.g. ba activates both a and b in lc_layer
+
+
+create string_representation input_string_rep
+create string_split input_split
+input_split set_source input_string_rep
+(input_split get_target) number 3
+
+create equiv_conversion lc_split_target_equiv
+lc_split_target_equiv set_source (input_split get_target)  
+lc_split_target_equiv set_target (lc2uc_df column_rep lower_case string_representation)
+
+mini_uc define_input lc_input  input_string_rep lc_layer
 
 include Trials/mini_trial.eNs
 
