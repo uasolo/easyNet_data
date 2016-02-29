@@ -24,6 +24,13 @@ create wtunkey_conversion wunk
 wunk set_source (letter_rep element)
 wunk set_target (prechunk_spl inner)
 
+create pattern underscore
+underscore set (prechunk_spl inner) =
+
+create const_conversion underscore_cc
+underscore_cc set underscore
+wunk add_fallback underscore_cc
+
 create flatten_string_conversion flat
 flat set_source (orth_str get_target)
 flat set_target (vocab column_rep Word string_representation)
@@ -32,6 +39,7 @@ create regex_side_effect_conversion fillin
 fillin set_source (prechunk_spl inner) 
 fillin set_target (chunk_spl inner)
 fillin add ^$ _ _
+fillin add ^=$ _ _
 fillin add ([a-z]) _ \1
 
 create string_representation normal
