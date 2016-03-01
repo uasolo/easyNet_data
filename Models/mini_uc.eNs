@@ -24,24 +24,24 @@ include Trials/mini_trial.eNs
 mini_trial step stimulus=a duration=5
 
 
-######### add input string x that activates all lc letters
-create pattern x_keyed
-x_keyed set (lc2uc_df column_rep lower_case keyed_representation) a b c
+######### add input string all that activates all lc letters
+create pattern all_keyed
+all_keyed set (lc2uc_df column_rep lower_case keyed_representation) a b c
 
-create pattern x_string
-x_string set (lc2uc_df column_rep lower_case string_representation) x
+create pattern all_string
+all_string set (lc2uc_df column_rep lower_case string_representation) all
 
 create manual_conversion extras
 extras set_auto_use 0
 extras set_source (lc2uc_df column_rep lower_case string_representation)
 extras set_target (lc2uc_df column_rep lower_case keyed_representation)
-extras add x_string x_keyed
+extras add all_string all_keyed
 
 ((lc2uc_df column_rep lower_case keyed_representation) find_conversion (lc2uc_df column_rep lower_case string_representation)) add_fallback extras
-((lc2uc_df column_rep lower_case keyed_representation) find_conversion (lc2uc_df column_rep lower_case string_representation))  set_weight -1
+#((lc2uc_df column_rep lower_case keyed_representation) find_conversion (lc2uc_df column_rep lower_case string_representation))  set_weight -1
 
 # example run
-mini_trial step stimulus=x duration=5
+mini_trial step stimulus=all duration=5
 
 
 
