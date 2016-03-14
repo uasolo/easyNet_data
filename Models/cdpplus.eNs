@@ -1,0 +1,335 @@
+# LOAD DATABASES
+
+# ## LETTER FEATURE REPRESENTATION
+create dataframe_for_reps features_db
+features_db load Databases/letter_features.eNd
+create dataframe_for_reps no
+no load Databases/no.eNd
+
+# ## ORTHOGRAPHY, PHONOLOGY, FREQUENCIES
+create dataframe_for_reps vocab
+create dataframe_for_reps orth_freq_db
+create dataframe_for_reps phon_freq_db
+vocab load Databases/Vocab_files/cdp.op.eNd
+orth_freq_db load Databases/Vocab_files/drc.orth.eNd
+phon_freq_db load Databases/Vocab_files/cdp.phon.eNd
+
+# LEXICAL ROUTE LAYERS
+
+# ## FEATURE LAYER
+create representation feat_rep
+feat_rep type blocked_representation
+feat_rep set_element (features_db column_rep features)
+feat_rep number 8
+
+create iac_layer features
+features represent feat_rep
+features add_hint plot_type plot_features.R
+
+
+
+# ## LETTER LAYER
+
+create representation letter_rep
+letter_rep type blocked_representation
+letter_rep set_element (features_db column_rep letter)
+letter_rep number 8
+
+create conrad_layer letters 
+letters represent letter_rep
+
+# ## ORTHOGRAPHIC LEXICON (LAYER)
+create conrad_layer orth_lex
+orth_lex represent (vocab column_rep orthography)
+
+# ## PHONOLOGICAL LEXICON (LAYER)
+create conrad_layer phon_lex
+phon_lex represent (vocab column_rep phonology)
+
+create dataframe_for_reps phoneme_db
+phoneme_db load Databases/Vocab_files/CDP_phonemes.eNd
+
+create pattern blank_ph
+blank_ph set (phoneme_db column_rep phoneme)
+
+create const_conversion ph_back
+ph_back set blank_ph
+
+((phoneme_db column_rep phoneme) conversion_key) add_fallback ph_back
+
+create blocked_representation spaced_phonology
+spaced_phonology set_element (phoneme_db column_rep phoneme string_representation)
+spaced_phonology number 8
+
+# ## PHONEME LAYER (OUTPUT BUFFER)
+create regex_side_effect_conversion phon_str_conv
+phon_str_conv set_source (vocab column_rep phonology string_representation)
+phon_str_conv set_target spaced_phonology
+phon_str_conv add ^([^123456789EIQUViu#{_0]) 0 \1
+phon_str_conv add ^0([^123456789EIQUViu#{_0]) 00 \1
+phon_str_conv add ^00([^123456789EIQUViu#{_0]) 000 \1
+phon_str_conv add ^0000([^123456789EIQUViu#{_0]) 00000 \1
+phon_str_conv add ^00000([^123456789EIQUViu#{_0]) 000000 \1
+phon_str_conv add ^000000([^123456789EIQUViu#{_0]) 0000000 \1
+phon_str_conv add ^0000000([^123456789EIQUViu#{_0]) 00000000 \1
+phon_str_conv add ^([123456789EIQUViu#{_]) 0\1 >
+phon_str_conv add ^0([123456789EIQUViu#{_]) 00\1 >
+phon_str_conv add ^00([123456789EIQUViu#{_]) 000\1 >
+phon_str_conv add ^000([123456789EIQUViu#{_]) 0000 \1 >
+
+
+
+create blocked_representation phon_str_bk
+phon_str_bk set_element (phoneme_db column_rep phoneme)
+phon_str_bk number 8
+
+create parallel_conversion phono
+phono set_source spaced_phonology
+phono set_target phon_str_bk
+
+create iac_layer phoneme_out
+phoneme_out represent phon_str_bk
+
+create bias_layer orth_freq 
+orth_freq represent (orth_freq_db column_rep bias)
+create bias_layer phon_freq
+phon_freq represent (phon_freq_db column_rep bias)
+
+
+# LEXICAL ROUTE CONNECTIONS
+
+# ## FEATURE-LETTER
+create connection flc
+flc autoconnect features letters 
+
+create parallel_conversion lfpc
+lfpc set_source letter_rep
+lfpc set_target feat_rep
+
+# ## LETTER-ORTH
+create string_split orth_str
+orth_str set_source (vocab column_rep orthography string_representation)
+orth_str set_min 8
+orth_str set_blank "
+
+create equiv_conversion letters_conv
+letters_conv set_target (features_db column_rep letter string_representation)
+letters_conv set_source (orth_str inner) 
+
+create equiv_conversion letters2
+letters2 set_source (features_db column_rep letter string_representation)
+letters2 set_target (orth_str inner) 
+
+create parallel_conversion lopc
+lopc set_source letter_rep
+lopc set_target (orth_str get_target)
+
+create parallel_conversion lopc2
+lopc2 set_source (orth_str get_target)
+lopc2 set_target letter_rep
+
+include Models/lowerupper.eNs
+((features_db column_rep letter) find_conversion (orth_str inner)) add_fallback caser
+
+create connection loc
+loc autoconnect letters orth_lex
+#loc parameter_info
+
+# ## ORTH-LETTER
+create connection olc
+olc autoconnect orth_lex letters 
+
+# ## ORTH-PHON
+create connection opc
+opc autoconnect orth_lex phon_lex
+ 
+# ## PHON-ORTH
+create connection poc
+poc autoconnect phon_lex orth_lex
+
+# ## PHON-PHONEME
+create connection ppmc
+ppmc autoconnect phon_lex phoneme_out
+
+# ## PHONEME-PHON
+create connection pmpc
+pmpc autoconnect phoneme_out phon_lex
+
+# ## ORTH-ORTH
+create connection lato
+lato autoconnect orth_lex orth_lex
+
+# ## PHON-PHON
+create connection latp
+latp autoconnect phon_lex phon_lex
+
+# ## PHONEME-PHONEME
+create connection latpm
+latpm autoconnect phoneme_out phoneme_out
+
+
+create equiv_conversion fconv1
+fconv1 set_source (vocab column_rep orthography string_representation)
+fconv1 set_target (orth_freq_db column_rep orthography string_representation)
+
+create equiv_conversion fconv2
+fconv2 set_source (vocab column_rep phonology string_representation)
+fconv2 set_target (phon_freq_db column_rep phonology string_representation)
+
+
+create connection freqb
+freqb autoconnect orth_freq orth_lex
+
+create connection pfreqb
+pfreqb autoconnect phon_freq phon_lex
+
+#freqb details
+
+
+# DECISION RULE
+
+create serialize_blocks_observer thresholded_best_phonemes
+thresholded_best_phonemes inner_type above_threshold_observer
+thresholded_best_phonemes target phoneme_out
+thresholded_best_phonemes rename_parameter threshold thresholded_best_phonemes_inner_threshold
+
+create regex_observer pronouncer
+pronouncer target thresholded_best_phonemes
+pronouncer add ".* "
+pronouncer add .*\?.* 
+pronouncer add ^[^"]*$
+
+cdpplus define_output pronunciation pronouncer
+
+
+
+# ASSEMBLE MODEL
+
+
+create string_representation pregraphemic
+create string_representation grapheme_instr_reps
+create blocked_representation grapheme_str_reps
+grapheme_str_reps set_element grapheme_instr_reps
+grapheme_str_reps number 8
+
+create binary_layer best_letters
+best_letters represent letter_rep
+
+create threshold_staggered_blocked_connection bester
+bester attach letters 
+bester set_inner_type best_above_threshold_connection
+bester set_target_inner_rep (features_db column_rep letter)
+best_letters attach bester
+
+
+create blocked_representation osgt
+create string_representation osgt_inner
+osgt set_element osgt_inner
+osgt set_number 8
+
+create flatten_string_conversion flat
+flat set_source (orth_str get_target)
+flat set_target pregraphemic
+
+
+load wtstring_representation wtstring_representation.so
+
+create string_layer best_letters_str
+best_letters_str represent (orth_str get_target)
+
+create unkey_conversion osgt_unkey
+osgt_unkey set_source (features_db column_rep letter)
+osgt_unkey set_target osgt_inner
+
+create dataframe_for_reps graphemes_db
+graphemes_db load Databases/Vocab_files/CDP_graphemes.eNd
+
+create blocked_representation grapheme_reps
+grapheme_reps set_element (graphemes_db column_rep grapheme)
+grapheme_reps number 8
+
+create equiv_conversion gr_ec
+gr_ec set_source grapheme_instr_reps
+gr_ec set_target (graphemes_db column_rep grapheme string_representation)
+
+create parallel_conversion gr_pc
+gr_pc set_source grapheme_str_reps
+gr_pc set_target grapheme_reps
+
+create string_layer graphemes_str
+graphemes_str represent grapheme_str_reps
+
+create strength_layer graphemes
+graphemes represent grapheme_reps
+
+
+create strength_layer phonemes
+phonemes represent phon_str_bk
+
+create string_representation onset_parsed
+create string_representation vowel_parsed
+create string_representation coda_parsed
+
+create dataframe graphemize_onsets_db
+graphemize_onsets_db load Databases/Vocab_files/CDP_parse_onsets.eNd
+create regex_conversion graphemize_onsets
+graphemize_onsets set_source pregraphemic
+graphemize_onsets set_target onset_parsed
+graphemize_onsets_db for_each_row graphemize_onsets add $search $replace
+
+create dataframe graphemize_vowel_db
+graphemize_vowel_db load Databases/Vocab_files/CDP_parse_vowel.eNd
+create regex_conversion graphemize_vowel
+graphemize_vowel set_source onset_parsed
+graphemize_vowel set_target vowel_parsed
+graphemize_vowel_db for_each_row graphemize_vowel add $search $replace
+
+create dataframe graphemize_codas_db
+graphemize_codas_db load Databases/Vocab_files/CDP_parse_codas.eNd
+create regex_conversion graphemize_codas
+graphemize_codas set_source vowel_parsed
+graphemize_codas set_target coda_parsed
+graphemize_codas_db for_each_row graphemize_codas add $search $replace
+
+create regex_side_effect_conversion split_on_slash
+split_on_slash set_source coda_parsed
+split_on_slash set_target grapheme_str_reps
+split_on_slash add =([^/]*)/ = \1
+
+create connection grbin
+grbin autoconnect graphemes_str graphemes
+
+create connection graphemizer
+graphemizer autoconnect best_letters_str graphemes_str
+
+create dataframe EZW
+EZW load Databases/EZW.eNd
+create matrix_connection gpcer
+gpcer set_autoconnect 0
+gpcer attach graphemes 
+phonemes attach gpcer
+gpcer fill_from_dataframe EZW
+
+create blocked_connection bestlls
+bestlls autoconnect best_letters best_letters_str
+
+create connection gpc_apply
+gpc_apply autoconnect phonemes phoneme_out
+
+cdpplus define_input orthographic (vocab column_rep orthography string_representation) features
+
+cdpplus add thresholded_best_phonemes
+
+include Models/extras.eNs
+caser_plus add_fallback extras
+((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
+((features_db column_rep features) find_conversion (orth_str inner)) set_weight -1
+
+graphemes set_lag 0
+graphemes_str set_lag 0
+phonemes set_lag 0
+best_letters set_lag 0
+best_letters_str set_lag 0
+
+(cdpplus parameters) load $parameter_file
+

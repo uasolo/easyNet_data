@@ -1,0 +1,6 @@
+search replace
+^([^=]*)$ =//_\1
+^=([^/]*)_([^/]*)$ =\1//_\2
+^=([^/]*/[^/]*)_([^/]*)$ =\1/_\2
+_(AIR|AI|AR|AU|AW|AY|EAR|EAU|EIR|EER|EA|EE|EI|ER|EU|EW|EY|IER|IEU|IEW|IE|IR|OAR|OOR|OUR|OA|OE|OI|OO|OU|OR|OW|OY|UAR|UA|UE|UI|UR|UY|YE|YR|[A-Z]) /\1-
+_ /-

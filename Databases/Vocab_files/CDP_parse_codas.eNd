@@ -1,0 +1,4 @@
+search replace
+-([^"]*)"*$ _\1/////
+_(QQQ|GHT|TCH|QUE|CH|CK|DD|DG|FF|GH|GN|LL|MB|NG|PH|SH|SS|TH|TT|ZZ|[A-Z])([^/]*)/ /\1_\2
+(.)_/ \1

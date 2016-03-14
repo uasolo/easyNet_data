@@ -1,0 +1,8 @@
+create model cdpplus
+
+cdpplus add_script Models/cdpplus.eNs
+
+cdpplus add_script Trials/Read_Aloud.eNs
+
+cdpplus add_setting parameter_file Databases/Parameter_Sets/CDP/cdpplus.eNp
+cdpplus change_setting_type parameter_file filename
