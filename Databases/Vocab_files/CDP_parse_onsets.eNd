@@ -1,4 +1,7 @@
 search replace 
+^([^<][^<][^<])([^<]*)$ \1<\2
+^([^<][^<])([^<]*)$ \1<\2
+^([^<])([^<]*)$ \1<\2
 ^(CH|GH|GN|KN|PH|QU|SH|TH|WH|WR|[B-DF-HJ-NP-TV-Z]) =\1_
 _(CH|GH|GN|KN|PH|QU|SH|TH|WH|WR|[B-DF-HJ-NP-TVWXZ]) /\1_
 =([^/_][^/_])/ =\1~o/
