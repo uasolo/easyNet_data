@@ -188,16 +188,13 @@ pfreqb autoconnect phon_freq phon_lex
 
 # DECISION RULE
 
-create serialize_blocks_observer thresholded_best_phonemes
-thresholded_best_phonemes inner_type above_threshold_observer
-thresholded_best_phonemes target phoneme_out
-thresholded_best_phonemes rename_parameter threshold thresholded_best_phonemes_inner_threshold
+create serialize_blocks_observer cdp_naming
+cdp_naming inner_type cdp_naming_observer
+cdp_naming target phoneme_out
 
 create regex_observer pronouncer
-pronouncer target thresholded_best_phonemes
-pronouncer add ".* "
+pronouncer target cdp_naming
 pronouncer add .*\?.* 
-pronouncer add ^[^"]*$
 
 cdpplus define_output pronunciation pronouncer
 
@@ -318,7 +315,7 @@ gpc_apply autoconnect phonemes phoneme_out
 
 cdpplus define_input orthographic (vocab column_rep orthography string_representation) features
 
-cdpplus add thresholded_best_phonemes
+cdpplus add cdp_naming
 
 include Models/extras.eNs
 caser_plus add_fallback extras
