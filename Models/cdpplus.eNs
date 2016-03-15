@@ -260,7 +260,7 @@ create strength_layer graphemes
 graphemes represent grapheme_reps
 
 
-create strength_layer phonemes
+create zorzi_layer phonemes
 phonemes represent phon_str_bk
 
 create string_representation onset_parsed

@@ -28,3 +28,8 @@ min_act 0
 max_act 1
 cdp_naming::active .67
 cdp_naming::inactive .0023
+phonemes::temp 3
+phonemes::shift -1
+phonemes::gap_max .05
+phonemes::gap_min 0
+phonemes::gap_reassign 0
