@@ -11,7 +11,7 @@ create dataframe_for_reps vocab
 create dataframe_for_reps orth_freq_db
 create dataframe_for_reps phon_freq_db
 vocab load Databases/Vocab_files/cdp.op.eNd
-orth_freq_db load Databases/Vocab_files/drc.orth.eNd
+orth_freq_db load Databases/Vocab_files/cdp.orth.eNd
 phon_freq_db load Databases/Vocab_files/cdp.phon.eNd
 
 # LEXICAL ROUTE LAYERS
