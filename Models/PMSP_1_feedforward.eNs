@@ -80,6 +80,15 @@ thresholded_phonemes target phonemes
 (pmsp1 parameters) set shift 0
 (pmsp1 parameters) set temp 1
 
+pmsp1 add thresholded_phonemes
+create regex_observer drop_onset_tag
+drop_onset_tag target thresholded_phonemes
+drop_onset_tag add (.)~o \1
+drop_onset_tag add (.)~o \1
+drop_onset_tag add (.)~o \1
+drop_onset_tag add (.)~o \1
+drop_onset_tag add (.)~o \1
 
-pmsp1 define_output pronunciation thresholded_phonemes
+
+pmsp1 define_output pronunciation drop_onset_tag
 

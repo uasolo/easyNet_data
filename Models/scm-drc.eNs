@@ -431,7 +431,7 @@ pfreqb autoconnect phon_freq phon_lex
 # NAMING DECISION RULE
 
 create serialize_blocks_observer thresholded_best_phonemes
-thresholded_best_phonemes inner_type above_threshold_observer
+thresholded_best_phonemes inner_type best_above_threshold_observer
 thresholded_best_phonemes target phoneme_out
 thresholded_best_phonemes rename_parameter threshold thresholded_best_phonemes_inner_threshold
 

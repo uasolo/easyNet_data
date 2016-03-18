@@ -207,7 +207,7 @@ drc define_output pronunciation pronouncer
 
 # LDT
 
-create above_threshold_observer unit_decider
+create best_above_threshold_observer unit_decider
 unit_decider target orth_lex
 drc add unit_decider
 
