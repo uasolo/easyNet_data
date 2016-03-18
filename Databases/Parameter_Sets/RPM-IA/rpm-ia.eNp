@@ -1,0 +1,15 @@
+parameter value
+bigrams::rate 0.070000000
+words::rate 1
+decay 0.070000000
+min_act -0.2000000
+max_act 1
+moving_average 0.0500000
+bwc::excitation 0.28
+bwc::inhibition -0.015
+wbc::excitation 0
+wbc::inhibition 0
+ext_inhib::scale 0
+words::resting_multiplier 0.05000
+lato::inhibition -0.21
+lexical_decider::threshold 0.35

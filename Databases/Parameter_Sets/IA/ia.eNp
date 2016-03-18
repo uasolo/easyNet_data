@@ -11,7 +11,7 @@ leto::inhibition 0
 words::resting_multiplier 0.05
 letters::decay 0.07
 words::decay 0.07
-lexical_decider::threshold 0.35
+identifier::threshold 0.35
 min_act -0.2
 max_act 1.0
 letter_chooser::discrimination 10
