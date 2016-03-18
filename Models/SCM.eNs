@@ -282,7 +282,7 @@ letcounter set_fixed 1
 
 # DECISION RULE
 
-create above_threshold_observer decision_obs
+create best_above_threshold_observer decision_obs
 decision_obs target decision
 
 # ASSEMBLE MODEL

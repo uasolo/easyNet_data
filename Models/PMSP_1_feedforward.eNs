@@ -74,9 +74,9 @@ bias_phon_conn fill_from_dataframe bpc_mat
 
 pmsp1 define_input orthographic unparsed_mixed_orthography graphemes
 
-create above_threshold_observer thresholded_phonemes
+create all_above_threshold_observer thresholded_phonemes
 thresholded_phonemes target phonemes
-(pmsp1 parameters) set threshold .501
+(pmsp1 parameters) set threshold .50001
 (pmsp1 parameters) set shift 0
 (pmsp1 parameters) set temp 1
 

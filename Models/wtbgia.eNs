@@ -205,6 +205,9 @@ lato autoconnect words words
 # MODEL GROUP
 
 
+create best_above_threshold_observer identifier
+identifier target words
+wtbgia define_output identification identifier
 wtbgia define_input orthographic (vocab column_rep Word string_representation) features
 
 words set_resting_level (vocab column_rep Rest)

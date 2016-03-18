@@ -43,7 +43,7 @@ matcher autoconnect what checker
 create connection builder
 builder autoconnect checker lexicon
 
-create above_threshold_observer word_id
+create best_above_threshold_observer word_id
 word_id target lexicon
 ltrs add word_id
 

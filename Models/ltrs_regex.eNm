@@ -124,6 +124,8 @@ locating autoconnect locable where
 create string_layer chunks
 chunks represent (chunk_spl get_target)
 chunks set_lag 0
+chunks add_hint plot_type LTRS_chunk_layer.R
+chunks add_hint plot_type LTRS_chunk_layer_2.R
 
 create string_layer constraint
 constraint represent regex
@@ -157,7 +159,7 @@ lexicon attach matcher
 #create connection builder
 #builder autoconnect checker lexicon
 
-create above_threshold_observer word_id
+create best_above_threshold_observer word_id
 word_id target lexicon
 ltrs add word_id
 

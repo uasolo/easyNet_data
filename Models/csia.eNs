@@ -178,7 +178,7 @@ create time_observer time
 time target aw
 
 
-create above_threshold_observer lexical_decider
+create best_above_threshold_observer lexical_decider
 lexical_decider target aw
 
 # SET PARAMETERS
