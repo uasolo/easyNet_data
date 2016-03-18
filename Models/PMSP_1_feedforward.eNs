@@ -1,0 +1,85 @@
+create dataframe_for_reps graphemes_db
+graphemes_db load Databases/Vocab_files/PMSP_graphemes.eNd
+create dataframe_for_reps phonemes_db
+phonemes_db load Databases/Vocab_files/PMSP_phonemes.eNd
+
+create string_representation unparsed_mixed_orthography
+create string_representation unparsed_upper_orthography
+
+create regex_conversion to_upper
+to_upper set_source unparsed_mixed_orthography
+to_upper set_target unparsed_upper_orthography 
+create dataframe_for_reps uplow
+uplow load Databases/uplow.eNd
+uplow for_each_row to_upper add $lower $upper
+
+
+create regex_side_effect_conversion parse_graphemes
+parse_graphemes set_source unparsed_upper_orthography
+parse_graphemes set_target (graphemes_db column_rep grapheme string_representation)
+create dataframe parse_db
+parse_db load Databases/Vocab_files/PMSP_parse_graphemes.eNd
+parse_db for_each_row parse_graphemes add $search $replace $output
+parse_graphemes set_restart 2
+
+create strength_layer graphemes
+graphemes represent (graphemes_db column_rep grapheme)
+
+create logistic_layer phonemes
+phonemes represent (phonemes_db column_rep phoneme)
+
+create vector_representation hidden_rep
+hidden_rep add_dimensions hidden 100
+
+create logistic_layer hidden
+hidden represent hidden_rep
+
+create vector_representation bias_r
+bias_r add_dimension bias
+
+create bias_layer bias
+bias represent bias_r
+
+create matrix_connection graph_hid_conn
+graph_hid_conn set_autoconnect 0
+graph_hid_conn attach graphemes
+hidden attach graph_hid_conn
+create dataframe ghc_mat
+ghc_mat load Databases/PMSP_1_ghc.eNd
+graph_hid_conn fill_from_dataframe ghc_mat
+
+create matrix_connection hid_phon_conn
+hid_phon_conn set_autoconnect 0
+hid_phon_conn attach hidden
+phonemes attach hid_phon_conn
+create dataframe hpc_mat
+hpc_mat load Databases/PMSP_1_hpc.eNd
+hid_phon_conn fill_from_dataframe hpc_mat
+
+create matrix_connection bias_hid_conn
+bias_hid_conn set_autoconnect 0
+bias_hid_conn attach bias
+hidden attach bias_hid_conn
+create dataframe bhc_mat
+bhc_mat load Databases/PMSP_1_bhc.eNd
+bias_hid_conn fill_from_dataframe bhc_mat
+
+create matrix_connection bias_phon_conn
+bias_phon_conn set_autoconnect 0
+bias_phon_conn attach bias
+phonemes attach bias_phon_conn
+create dataframe bpc_mat
+bpc_mat load Databases/PMSP_1_bpc.eNd
+bias_phon_conn fill_from_dataframe bpc_mat
+
+pmsp1 define_input orthographic unparsed_mixed_orthography graphemes
+
+create above_threshold_observer thresholded_phonemes
+thresholded_phonemes target phonemes
+(pmsp1 parameters) set threshold .501
+(pmsp1 parameters) set shift 0
+(pmsp1 parameters) set temp 1
+
+
+pmsp1 define_output pronunciation thresholded_phonemes
+
