@@ -199,6 +199,7 @@ pronouncer target thresholded_best_phonemes
 pronouncer add ".* "
 pronouncer add .*\?.* 
 pronouncer add ^[^"]*$
+pronouncer add " 
 
 drc define_output pronunciation pronouncer
 
