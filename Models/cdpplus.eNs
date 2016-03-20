@@ -222,7 +222,6 @@ best_letters attach bester
 create blocked_representation osgt
 create string_representation osgt_inner
 osgt set_element osgt_inner
-osgt set_number 8
 
 create flatten_string_conversion flat
 flat set_source (orth_str get_target)

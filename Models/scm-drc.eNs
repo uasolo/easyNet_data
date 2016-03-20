@@ -433,7 +433,6 @@ pfreqb autoconnect phon_freq phon_lex
 create serialize_blocks_observer thresholded_best_phonemes
 thresholded_best_phonemes inner_type best_above_threshold_observer
 thresholded_best_phonemes target phoneme_out
-thresholded_best_phonemes rename_parameter threshold thresholded_best_phonemes_inner_threshold
 
 
 create regex_observer pronouncer
@@ -454,7 +453,7 @@ create string_representation grapheme_reps
 create blocked_representation osgt
 create string_representation osgt_inner
 osgt set_element osgt_inner
-osgt set_number 8
+osgt number 8
 create flatten_string_conversion flat
 flat set_source osgt
 flat set_target pregraphemic

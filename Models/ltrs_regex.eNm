@@ -184,7 +184,7 @@ reset add_sync input
 reset add_target what
 reset add_target where
 reset add_target reset
-reset add_target checker 
+#reset add_target checker 
 reset add_target locable
 
 ltrs define_input orthographic (vocab column_rep Word string_representation) input
