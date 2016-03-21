@@ -1,14 +1,11 @@
-set numslots=4
-#set numslots=5
-#set numslots=8
-create dataframe_for_reps vocab
-#vocab load Databases/Vocab_files/ia.eNd
-vocab load Databases/Vocab_files/ew4.eNd
-#vocab load Databases/Vocab_files/ew5.eNd
-#vocab load Databases/Vocab_files/ia_5LW.eNd
-#vocab load Databases/Vocab_files/ia_8LW.eNd
+create model ia 
+ia add_setting vocabulary_file Databases/Vocab_files/ew4.eNd
+ia change_setting_type vocabulary_file filename
+ia add_setting numslots 4
+ia change_setting_type numslots numeric
 
-include Models/rpm-ia.eNs
+ia add_script Models/rpm-ia.eNs
+ia add_script Trials/Brief_Masked_No_Task.eNs
 
 (ia parameters) load Databases/Parameter_Sets/IA/ia.eNp
 (ia parameters) set b4::excitation .035
@@ -22,4 +19,3 @@ include Models/rpm-ia.eNs
 (ia parameters) set bigrams2::rate .07
 (ia parameters) set bigrams2::decay .07
 
-include Trials/Brief_Masked_No_Task.eNs

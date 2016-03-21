@@ -1,5 +1,3 @@
-create model ia
-
 #LAYERS AND CONNECTIONS
 create string_layer in_layer
 create iac_layer bigrams
@@ -15,7 +13,7 @@ create connection lato
 create dataframe_for_reps bigramf
 bigramf load Databases/bigrams_lowercase.eNd
 create dataframe_for_reps vocab
-vocab load Databases/Vocab_files/ew4.eNd
+vocab load $vocabulary_file
 #vocab load Databases/Vocab_files/ia_8LW.eNd
 
 #REPRESENTATIONS
