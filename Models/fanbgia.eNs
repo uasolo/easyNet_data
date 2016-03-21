@@ -70,7 +70,7 @@ lettersc2 set_target (orth_str inner)
 
 
 # this section is to ensure that we can use our special non-letter letters (ambiguous R/K stimulus: *)
-((features_db column_rep features) find_conversion (orth_str inner)) set_auto 1
+((features_db column_rep features) find_conversion (orth_str inner)) set_auto_use 1
 create parallel_conversion bananas
 bananas set_source (orth_str get_target)
 bananas set_target feat_rep
