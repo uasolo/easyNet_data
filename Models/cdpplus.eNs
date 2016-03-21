@@ -51,11 +51,10 @@ phoneme_db load Databases/Vocab_files/CDP_phonemes.eNd
 
 create pattern blank_ph
 blank_ph set (phoneme_db column_rep phoneme)
-
 create const_conversion ph_back
 ph_back set blank_ph
-
 ((phoneme_db column_rep phoneme) conversion_key) add_fallback ph_back
+
 
 create blocked_representation spaced_phonology
 spaced_phonology set_element (phoneme_db column_rep phoneme string_representation)
@@ -239,6 +238,11 @@ osgt_unkey set_target osgt_inner
 
 create dataframe_for_reps graphemes_db
 graphemes_db load Databases/Vocab_files/CDP_graphemes.eNd
+create pattern blank_gr
+blank_gr set (graphemes_db column_rep grapheme)
+create const_conversion gr_back
+gr_back set blank_gr
+((graphemes_db column_rep grapheme) conversion_key) add_fallback gr_back
 
 create blocked_representation grapheme_reps
 grapheme_reps set_element (graphemes_db column_rep grapheme)
@@ -252,8 +256,8 @@ create parallel_conversion gr_pc
 gr_pc set_source grapheme_str_reps
 gr_pc set_target grapheme_reps
 
-create string_layer graphemes_str
-graphemes_str represent grapheme_str_reps
+#create string_layer graphemes_str
+#graphemes_str represent grapheme_str_reps
 
 create strength_layer graphemes
 graphemes represent grapheme_reps
@@ -292,11 +296,12 @@ split_on_slash set_source coda_parsed
 split_on_slash set_target grapheme_str_reps
 split_on_slash add =([^/]*)/ = \1
 
-create connection grbin
-grbin autoconnect graphemes_str graphemes
+#create connection grbin
+#grbin autoconnect graphemes_str graphemes
 
 create connection graphemizer
-graphemizer autoconnect best_letters_str graphemes_str
+graphemizer autoconnect best_letters_str graphemes
+#graphemizer autoconnect best_letters_str graphemes_str
 
 create dataframe EZW
 EZW load Databases/EZW.eNd
@@ -322,7 +327,7 @@ caser_plus add_fallback extras
 ((features_db column_rep features) find_conversion (orth_str inner)) set_weight -1
 
 graphemes set_lag 0
-graphemes_str set_lag 0
+#graphemes_str set_lag 0
 phonemes set_lag 0
 best_letters set_lag 0
 best_letters_str set_lag 0
