@@ -119,13 +119,13 @@ create equiv_conversion cs_lequiv2
 cs_lequiv2 set_target (cs_orth_str inner)
 cs_lequiv2 set_source (letters_db column_rep letters string_representation)
 
-create parallel_conversion csalpc
-csalpc set_source cs_letter_rep
-csalpc set_target letter_rep
+#create parallel_conversion csalpc
+#csalpc set_source cs_letter_rep
+#csalpc set_target letter_rep
 
-create parallel_conversion csalpc2
-csalpc2 set_source letter_rep
-csalpc2 set_target cs_letter_rep
+#create parallel_conversion csalpc2
+#csalpc2 set_source letter_rep
+#csalpc2 set_target cs_letter_rep
 
 #############
 # CONNECTIONS
