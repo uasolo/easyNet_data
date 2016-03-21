@@ -229,8 +229,8 @@ flat set_target pregraphemic
 
 load wtstring_representation wtstring_representation.so
 
-create string_layer best_letters_str
-best_letters_str represent (orth_str get_target)
+#create string_layer best_letters_str
+#best_letters_str represent (orth_str get_target)
 
 create unkey_conversion osgt_unkey
 osgt_unkey set_source (features_db column_rep letter)
@@ -299,8 +299,12 @@ split_on_slash add =([^/]*)/ = \1
 #create connection grbin
 #grbin autoconnect graphemes_str graphemes
 
-create connection graphemizer
-graphemizer autoconnect best_letters_str graphemes
+create arbitrary_conversion_connection graphemizer
+graphemizer set_autoconnect 0
+graphemizer attach best_letters 
+graphemes attach graphemizer
+graphemizer conv_fill (grapheme_reps find_conversion letter_rep)
+#graphemizer autoconnect best_letters_str graphemes
 #graphemizer autoconnect best_letters_str graphemes_str
 
 create dataframe EZW
@@ -311,8 +315,8 @@ gpcer attach graphemes
 phonemes attach gpcer
 gpcer fill_from_dataframe EZW
 
-create blocked_connection bestlls
-bestlls autoconnect best_letters best_letters_str
+#create blocked_connection bestlls
+#bestlls autoconnect best_letters best_letters_str
 
 create connection gpc_apply
 gpc_apply autoconnect phonemes phoneme_out
@@ -330,7 +334,7 @@ graphemes set_lag 0
 #graphemes_str set_lag 0
 phonemes set_lag 0
 best_letters set_lag 0
-best_letters_str set_lag 0
+#best_letters_str set_lag 0
 
 (cdpplus parameters) load $parameter_file
 
