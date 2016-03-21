@@ -445,9 +445,13 @@ scm-drc define_output pronunciation pronouncer
 
 # ASSEMBLE MODEL
 
-
+phon_str_conv set_auto_use 0
+(phon_str_conv parallel) set_auto_use 0
 create string_representation pregraphemic
-create string_representation grapheme_reps
+create blocked_representation grapheme_reps
+create string_representation grapheme_reps_in
+grapheme_reps set_element grapheme_reps_in
+grapheme_reps number 8
 
 
 create blocked_representation osgt
@@ -462,29 +466,31 @@ create strength_layer best_letters
 best_letters represent letter_repx
 
 
-create wtstring_layer best_letters_str
-best_letters_str represent osgt
+#create wtstring_layer best_letters_str
+#best_letters_str represent osgt
 
-create iac_layer mediator
-mediator represent (lh2 column_rep letter)
+#create iac_layer mediator
+#mediator represent (lh2 column_rep letter)
 
-create strength_layer mediator2
-mediator2 represent letter_repx
+(lh2 column_rep Rest) find_conversion letter_repx
+create iac_layer letters_with_blanks
+letters_with_blanks represent letter_repx
+#letters_with_blanks set_resting_level (lh2 column_rep Rest)
 
 create connection mediate
-mediate autoconnect letters mediator
+mediate autoconnect letters letters_with_blanks
 
 create bias_layer blank
 blank represent (lh2 column_rep Rest)
 
 create connection blanker
-blanker autoconnect blank mediator
+blanker autoconnect blank letters_with_blanks
 
-create connection mediate2
-mediate2 autoconnect mediator mediator2
+#create connection mediate2
+#mediate2 autoconnect mediator letters_with_blanks
 
 create staggered_blocked_connection bester
-bester attach mediator2
+bester attach letters_with_blanks
 bester set_inner_type best_above_threshold_connection
 bester set_target_inner_rep (features_dbx column_rep letter)
 best_letters attach bester
@@ -492,20 +498,28 @@ best_letters attach bester
 create wtunkey_conversion osgt_unkey
 osgt_unkey set_source (features_dbx column_rep letter)
 osgt_unkey set_target osgt_inner
+create parallel_conversion osgt_punkey
+osgt_punkey set_source letter_repx
+osgt_punkey set_target osgt
+osgt_punkey set_weight 0.1
 
 create wtkey_conversion psgt_key
 psgt_key set_target (phon_str_bk element)
 psgt_key set_source (phon_str_no_blank inner)
 psgt_key set_weight 0.1
+create parallel_conversion psgt_pkey
+psgt_pkey set_target phon_str_bk
+psgt_pkey set_source (phon_str_no_blank get_target)
+psgt_pkey set_weight 0.1
 
-create wtstring_layer pre_graph 
-pre_graph represent pregraphemic
+#create wtstring_layer pre_graph 
+#pre_graph represent pregraphemic
 
 create wtstring_layer graphemes
 graphemes represent grapheme_reps
 
-create wtstring_layer phon_str
-phon_str represent (phon_str_no_blank get_target)
+#create wtstring_layer phon_str
+#phon_str represent (phon_str_no_blank get_target)
 
 create strength_layer phonemes
 phonemes represent phon_str_bk
@@ -544,34 +558,34 @@ grapheme_phoneme_db load Databases/Vocab_files/RC99_grapheme_phoneme.eNd
 
 grapheme_phoneme_db for_each_row gpc add $search $replace $phoneme
 create connection graphemizer
-graphemizer autoconnect pre_graph graphemes
+graphemizer autoconnect best_letters graphemes
 
 create connection gpcer
-gpcer autoconnect graphemes phon_str
+gpcer autoconnect graphemes phonemes
 
-create connection phonbin
-phonbin autoconnect phon_str phonemes
+#create connection phonbin
+#phonbin autoconnect phon_str phonemes
 
 
 create connection nlpl
 nlpl autoconnect phonemes phoneme_out
 
 
-create blocked_connection bestlls
-bestlls autoconnect best_letters best_letters_str
+#create blocked_connection bestlls
+#bestlls autoconnect best_letters best_letters_str
 
-create connection blspg
-blspg autoconnect best_letters_str pre_graph 
+#create connection blspg
+#blspg autoconnect best_letters_str pre_graph 
 
 scm-drc add thresholded_best_phonemes
 graphemes set_lag 0
-phon_str set_lag 0
+#phon_str set_lag 0
 phonemes set_lag 0
 best_letters set_lag 0
-best_letters_str set_lag 0
-pre_graph set_lag 0
+#best_letters_str set_lag 0
+#pre_graph set_lag 0
+#blank set_lag 0
 
 
-
-mediator set_lag 0
-mediator2 set_lag 0
+#mediator set_lag 0
+letters_with_blanks set_lag 0
