@@ -1,89 +1,71 @@
 {
-    "boxWidth": 166.79999999999998,
+    "boxWidth": 120,
     "diagramItems": [
         {
             "lazyNutType": "layer",
             "name": "total",
-            "x": 187.76276768247675,
-            "y": -896.40916567551517
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "best_letters",
-            "x": 470.56276768247665,
-            "y": -332.51403847758888
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "phon_str",
-            "x": 470.56276768247665,
-            "y": -1208.8749779089853
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "pre_graph",
-            "x": 470.56276768247665,
-            "y": -770.6945081932879
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "best_letters_str",
-            "x": 470.56276768247665,
-            "y": -551.60427333543862
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "phonemes",
-            "x": 470.56276768247665,
-            "y": -1427.9652127668346
+            "x": 60,
+            "y": -450
         },
         {
             "lazyNutType": "layer",
             "name": "graphemes",
-            "x": 470.56276768247665,
-            "y": -989.78474305113571
+            "x": 200,
+            "y": -340
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "phonemes",
+            "x": 200,
+            "y": -500
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "best_letters",
+            "x": 200,
+            "y": -220
         },
         {
             "lazyNutType": "layer",
             "name": "phoneme_out",
-            "x": -95.037232317523262,
-            "y": -1539.7664371238006
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "orth_lex",
-            "x": -95.037232317523262,
-            "y": -727.39972412087809
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "phon_lex",
-            "x": -95.037232317523262,
-            "y": -1103.0090277214786
+            "x": -80,
+            "y": -660
         },
         {
             "lazyNutType": "layer",
             "name": "letters",
-            "x": -95.037232317523262,
-            "y": -255.32502383905444
+            "x": -80,
+            "y": -180
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "phon_lex",
+            "x": -80,
+            "y": -500
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "orth_lex",
+            "x": -80,
+            "y": -340
         },
         {
             "lazyNutType": "layer",
             "name": "features",
-            "x": -95.037232317523262,
-            "y": -36.234788981205554
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "phon_freq",
-            "x": -377.83723231752322,
-            "y": -1103.0090277214786
+            "x": -80,
+            "y": -20
         },
         {
             "lazyNutType": "layer",
             "name": "orth_freq",
-            "x": -377.83723231752322,
-            "y": -727.39972412087809
+            "x": -360,
+            "y": -340
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "phon_freq",
+            "x": -360,
+            "y": -500
         }
     ]
 }

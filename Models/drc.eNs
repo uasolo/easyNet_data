@@ -255,12 +255,17 @@ flat set_target pregraphemic
 
 load wtstring_representation wtstring_representation.so
 
-create wtstring_layer best_letters_str
-best_letters_str represent osgt
+#create wtstring_layer best_letters_str
+#best_letters_str represent osgt
 
 create wtunkey_conversion osgt_unkey
 osgt_unkey set_source (features_db column_rep letter)
 osgt_unkey set_target osgt_inner
+
+create parallel_conversion osgt_punkey
+osgt_punkey set_source letter_rep
+osgt_punkey set_target osgt
+osgt_punkey set_weight 0.1
 
 create wtkey_conversion psgt_key
 psgt_key set_target (phon_str_bk element)
@@ -318,7 +323,7 @@ grapheme_phoneme_db load Databases/Vocab_files/RC99_grapheme_phoneme.eNd
 
 grapheme_phoneme_db for_each_row gpc add $search $replace $phoneme
 create connection graphemizer
-graphemizer autoconnect best_letters_str graphemes
+graphemizer autoconnect best_letters graphemes
 
 create connection gpcer
 #gpcer autoconnect graphemes phon_str
@@ -332,8 +337,8 @@ create connection nlpl
 nlpl autoconnect phonemes phoneme_out
 
 
-create blocked_connection bestlls
-bestlls autoconnect best_letters best_letters_str
+#create blocked_connection bestlls
+#bestlls autoconnect best_letters best_letters_str
 
 #create connection blspg
 #blspg autoconnect best_letters_str pre_graph 
@@ -352,5 +357,5 @@ graphemes set_lag 0
 #phon_str set_lag 0
 phonemes set_lag 0
 best_letters set_lag 0
-best_letters_str set_lag 0
+#best_letters_str set_lag 0
 #pre_graph set_lag 0
