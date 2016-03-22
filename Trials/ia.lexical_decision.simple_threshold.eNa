@@ -1,6 +1,8 @@
 include Trials/Lexical_Decision.eNs
 
-create above_threshold_observer lexical_decider
-lexical_decider target words
+create regex_observer lexical_decider
+lexical_decider target identifier
+lexical_decider add [^?]+ yes
+
 ia define_output lexical_decision lexical_decider
 
