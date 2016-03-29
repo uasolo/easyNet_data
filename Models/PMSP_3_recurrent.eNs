@@ -83,21 +83,21 @@ bias_phon_conn fill_from_dataframe bpc_mat
 create matrix_connection phon_phon_conn
 phon_phon_conn set_autoconnect 0
 phon_phon_conn attach phonemes
-phonemes attach bias_phon_conn
+phonemes attach phon_phon_conn
 create dataframe ppc_mat
 ppc_mat load Databases/PMSP_4_ppc.eNd
 phon_phon_conn fill_from_dataframe ppc_mat
 
-pmsp4 define_input orthographic unparsed_mixed_orthography graphemes
+pmsp3 define_input orthographic unparsed_mixed_orthography graphemes
 
 create all_above_threshold_observer thresholded_phonemes
 thresholded_phonemes target phonemes
-(pmsp4 parameters) set threshold .50001
-(pmsp4 parameters) set shift 0
-(pmsp4 parameters) set temp 1
-(pmsp4 parameters) set rate .05
+(pmsp3 parameters) set threshold .999999999
+(pmsp3 parameters) set shift 0
+(pmsp3 parameters) set temp 1
+(pmsp3 parameters) set rate .01
 
-pmsp4 add thresholded_phonemes
+pmsp3 add thresholded_phonemes
 create regex_observer drop_onset_tag
 drop_onset_tag target thresholded_phonemes
 drop_onset_tag add (.)~o \1
@@ -107,5 +107,7 @@ drop_onset_tag add (.)~o \1
 drop_onset_tag add (.)~o \1
 
 
-pmsp1 define_output pronunciation drop_onset_tag
+pmsp3 define_output pronunciation drop_onset_tag
 
+phonemes set_lag .01
+hidden set_lag .01
