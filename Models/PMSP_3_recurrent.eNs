@@ -90,9 +90,14 @@ phon_phon_conn fill_from_dataframe ppc_mat
 
 pmsp3 define_input orthographic unparsed_mixed_orthography graphemes
 
-create all_above_threshold_observer thresholded_phonemes
+create pmsp_naming_observer thresholded_phonemes
 thresholded_phonemes target phonemes
-(pmsp3 parameters) set threshold .999999999
+thresholded_phonemes add_mark 3 19 23 37 38 39 42 45 48 50 54 55 61
+thresholded_phonemes add_exemption 37
+
+(pmsp3 parameters) set active .5
+(pmsp3 parameters) set inactive .00005
+
 (pmsp3 parameters) set shift 0
 (pmsp3 parameters) set temp 1
 (pmsp3 parameters) set rate .01
@@ -100,8 +105,10 @@ thresholded_phonemes target phonemes
 pmsp3 add thresholded_phonemes
 create regex_observer drop_onset_tag
 drop_onset_tag target thresholded_phonemes
-drop_onset_tag add (.)~o \1
-drop_onset_tag add (.)~o \1
+drop_onset_tag add _ps_sp ps
+drop_onset_tag add _ks_sk ks
+drop_onset_tag add _ts_st ts
+drop_onset_tag add _ts_s(.)t t\1s
 drop_onset_tag add (.)~o \1
 drop_onset_tag add (.)~o \1
 drop_onset_tag add (.)~o \1
