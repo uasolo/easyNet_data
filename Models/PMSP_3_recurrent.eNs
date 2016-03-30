@@ -109,6 +109,9 @@ drop_onset_tag add _ps_sp ps
 drop_onset_tag add _ks_sk ks
 drop_onset_tag add _ts_st ts
 drop_onset_tag add _ts_s(.)t t\1s
+drop_onset_tag add _ps_
+drop_onset_tag add _ks_
+drop_onset_tag add _ts_
 drop_onset_tag add (.)~o \1
 drop_onset_tag add (.)~o \1
 drop_onset_tag add (.)~o \1
