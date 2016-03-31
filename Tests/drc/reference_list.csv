@@ -1,0 +1,6 @@
+Test,ReferenceFile
+1,Tests/drc/word.letters.act.csv
+2,Tests/drc/word.orth.act.csv
+3,Tests/drc/word.phon.act.csv
+4,Tests/drc/word.phonemes.out.act.csv
+5,Tests/drc/word.total.act.csv

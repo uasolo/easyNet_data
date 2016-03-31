@@ -1,0 +1,5 @@
+Basic_word_activity_check,Case_insensitivity_check
+(words default_observer) enable,(words default_observer) enable
+(words default_observer) clear,(words default_observer) clear
+quietly brief_masked step mask_duration=1 stimulus=ABLE stimulus_duration=40,quietly brief_masked step mask_duration=1 stimulus=able stimulus_duration=40
+(words default_observer) disable,(words default_observer) disable

@@ -1,0 +1,2 @@
+R << source("Tests/test.R")
+R << run.tests("Tests/ia/cmd_list.csv","Tests/ia/reference_list.csv","Tests/ia/object_list.csv")

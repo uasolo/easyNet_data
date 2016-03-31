@@ -1,0 +1,4 @@
+Test,ReferenceFile
+1,Tests/scm/word.letters.csv
+2,Tests/scm/word.words.csv
+3,Tests/scm/word.decision.csv

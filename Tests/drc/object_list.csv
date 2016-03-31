@@ -1,0 +1,6 @@
+Test,Object
+1,(letters default_observer)
+2,(orth_lex default_observer)
+3,(phon_lex default_observer)
+4,(phoneme_out default_observer)
+5,(total default_observer)
