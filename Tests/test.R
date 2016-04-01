@@ -43,20 +43,20 @@ run.tests <- function(cmd.file, ref.file, object.file, tolerance = .000999, cuto
     for (x in names(ref.data)) { print (x); print (which(x == names(observed)))}
     #    print(head(eN[as.character(object.list[test])],1))
 
-    write.csv(observed,paste(as.character(object.list[test]),"observed1.csv"))
+#    write.csv(observed,paste(as.character(object.list[test]),"observed1.csv"))
     observed <- observed[,names(ref.data)]
     
     print(names(observed))
     print("Comparing observation with reference")
 #    eN["tmp"] <- merge(eN[as.character(object.list[test])],ref.data,by="time")
     tmp <- merge(observed,ref.data,by="time")
-    write.csv(tmp,paste(as.character(object.list[test]),"merged.csv"))
+#    write.csv(tmp,paste(as.character(object.list[test]),"merged.csv"))
     print(paste("nrow tmp after merge",nrow(tmp)))
 #    tmp <- tmp %>% distinct(time)
     tmp <- subset(tmp, !duplicated(time)) 
     print(paste("nrow tmp after removal of duplicate times",nrow(tmp)))
-    write.csv(observed,paste(as.character(object.list[test]),"observed.csv"))
-    write.csv(tmp,paste(as.character(object.list[test]),"filtered.csv"))
+#    write.csv(observed,paste(as.character(object.list[test]),"observed.csv"))
+    write.csv(tmp,paste0("test",idx,".",as.character(object.list[test]),"observed.and.target.csv"))
     
     results <- rbind(results,eval.fit(idx,names(cmd.list)[idx],ref.data,tmp,tolerance))
     idx <- idx+1
