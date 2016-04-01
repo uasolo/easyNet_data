@@ -1,0 +1,13 @@
+Basic_letter_activity_check,Basic_orth_lex_activity_check,Basic_phon_lex_activity_check,Basic_phoneme_out_activity_check
+loc lesion,(orth_lex default_observer) disable,(phon_lex default_observer) disable,(phoneme_out default_observer) disable
+(letters default_observer) enable,,,
+(letters default_observer) clear,,,
+(orth_lex default_observer) enable,,,
+(orth_lex default_observer) clear,,,
+(phon_lex default_observer) enable,,,
+(phon_lex default_observer) clear,,,
+(phoneme_out default_observer) enable,,,
+(phoneme_out default_observer) clear,,,
+quietly Read_Aloud step stimulus=ACE,,,
+(letters default_observer) disable,,,
+loc unlesion,,,

@@ -1,7 +1,5 @@
 run.tests <- function(cmd.file, ref.file, object.file, tolerance = .000999, cutoff = -99)
 {
-#  require(dplyr)
-
   eval.fit <- function(idx, name, ref.data, replic, tolerance=.00001)
   {
     test_results <- data.frame(Test=idx,Name=name,Error=NA,Result="")
@@ -48,11 +46,6 @@ run.tests <- function(cmd.file, ref.file, object.file, tolerance = .000999, cuto
     write.csv(observed,paste(as.character(object.list[test]),"observed1.csv"))
     observed <- observed[,names(ref.data)]
     
-    # eliminate any columns where the max never exceeds cutoff
-    print(paste("ncol before exclude:",ncol(observed)))
-#     exclude = which((colMax(observed))<cutoff)
-#     if (length(exclude)) observed <- observed[-c(exclude)]
-    print(paste("ncol after exclude:",ncol(observed)))
     print(names(observed))
     print("Comparing observation with reference")
 #    eN["tmp"] <- merge(eN[as.character(object.list[test])],ref.data,by="time")
