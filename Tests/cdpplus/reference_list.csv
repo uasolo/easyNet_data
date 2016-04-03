@@ -1,3 +1,5 @@
 Test,ReferenceFile
-1,Tests/cdpplus/word.no.phon.fb.letter.act.csv
-2,Tests/cdpplus/word.no.phon.fb.orth.act.csv
+1,Tests/cdpplus/word.letters.act.csv
+2,Tests/cdpplus/word.orth.act.csv
+3,Tests/cdpplus/word.phon.act.csv
+4,Tests/cdpplus/word.phoneme_out.act.csv
