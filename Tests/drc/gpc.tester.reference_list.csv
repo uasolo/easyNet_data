@@ -1,0 +1,17 @@
+Test,ReferenceFile
+1,Tests/drc/ace.ppmc.lesioned.letters.act.csv
+2,Tests/drc/ace.ppmc.lesioned.orth.act.csv
+3,Tests/drc/ace.ppmc.lesioned.phon.act.csv
+4,Tests/drc/ace.ppmc.lesioned.phoneme_out.act.csv
+5,Tests/drc/aced.ppmc.lesioned.letters.act.csv
+6,Tests/drc/aced.ppmc.lesioned.orth.act.csv
+7,Tests/drc/aced.ppmc.lesioned.phon.act.csv
+8,Tests/drc/aced.ppmc.lesioned.phoneme_out.act.csv
+9,Tests/drc/ace.ppmc.and.olc.lesioned.letters.act.csv
+10,Tests/drc/ace.ppmc.and.olc.lesioned.orth.act.csv
+11,Tests/drc/ace.ppmc.and.olc.lesioned.phon.act.csv
+12,Tests/drc/ace.ppmc.and.olc.lesioned.phoneme_out.act.csv
+13,Tests/drc/aced.ppmc.and.olc.lesioned.letters.act.csv
+14,Tests/drc/aced.ppmc.and.olc.lesioned.orth.act.csv
+15,Tests/drc/aced.ppmc.and.olc.lesioned.phon.act.csv
+16,Tests/drc/aced.ppmc.and.olc.lesioned.phoneme_out.act.csv

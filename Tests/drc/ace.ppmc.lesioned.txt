@@ -1,0 +1,3503 @@
+1 Assemble  
+2 Assemble  
+2 Letter 0 0 0.027804 A 
+2 Letter 1 2 0.027804 C 
+2 Letter 2 4 0.027804 E 
+2 Letter 3 26 0.027804 + 
+2 Letter 4 26 0.027804 + 
+2 Letter 5 26 0.027804 + 
+2 Letter 6 26 0.027804 + 
+2 Letter 7 26 0.027804 + 
+3 Assemble  
+3 Letter 0 0 0.041415 A 
+3 Letter 1 2 0.041415 C 
+3 Letter 2 4 0.041415 E 
+3 Letter 3 26 0.041415 + 
+3 Letter 4 26 0.041415 + 
+3 Letter 5 26 0.041415 + 
+3 Letter 6 26 0.041415 + 
+3 Letter 7 26 0.041415 + 
+4 Assemble  
+4 Letter 0 0 0.054835 A 
+4 Letter 1 2 0.054835 C 
+4 Letter 2 4 0.054835 E 
+4 Letter 3 26 0.054835 + 
+4 Letter 4 26 0.054835 + 
+4 Letter 5 26 0.054835 + 
+4 Letter 6 26 0.054835 + 
+4 Letter 7 26 0.054835 + 
+5 Assemble  
+5 Letter 0 0 0.068067 A 
+5 Letter 1 2 0.068067 C 
+5 Letter 2 4 0.068067 E 
+5 Letter 3 26 0.068067 + 
+5 Letter 4 26 0.068067 + 
+5 Letter 5 26 0.068067 + 
+5 Letter 6 26 0.068067 + 
+5 Letter 7 26 0.068067 + 
+6 Assemble  
+6 Letter 0 0 0.081114 A 
+6 Letter 1 2 0.081114 C 
+6 Letter 2 4 0.081114 E 
+6 Letter 3 26 0.081114 + 
+6 Letter 4 26 0.081114 + 
+6 Letter 5 26 0.081114 + 
+6 Letter 6 26 0.081114 + 
+6 Letter 7 26 0.081114 + 
+7 Assemble  
+7 Letter 0 0 0.094013 A 
+7 Letter 1 2 0.094013 C 
+7 Letter 2 4 0.094013 E 
+7 Letter 3 26 0.094013 + 
+7 Letter 4 26 0.094013 + 
+7 Letter 5 26 0.094013 + 
+7 Letter 6 26 0.094013 + 
+7 Letter 7 26 0.094013 + 
+8 Assemble  
+8 Letter 0 0 0.106844 A 
+8 Letter 1 2 0.106844 C 
+8 Letter 2 4 0.106844 E 
+8 Letter 3 26 0.106844 + 
+8 Letter 4 26 0.106844 + 
+8 Letter 5 26 0.106844 + 
+8 Letter 6 26 0.106844 + 
+8 Letter 7 26 0.106844 + 
+9 Assemble  
+9 Letter 0 0 0.119681 A 
+9 Letter 1 2 0.119681 C 
+9 Letter 2 4 0.119681 E 
+9 Letter 3 26 0.119681 + 
+9 Letter 4 26 0.119681 + 
+9 Letter 5 26 0.119681 + 
+9 Letter 6 26 0.119681 + 
+9 Letter 7 26 0.119681 + 
+10 Assemble { 0.119681 
+10 Letter 0 0 0.132595 A 
+10 Letter 1 2 0.132595 C 
+10 Letter 2 4 0.132595 E 
+10 Letter 3 26 0.132595 + 
+10 Letter 4 26 0.132595 + 
+10 Letter 5 26 0.132595 + 
+10 Letter 6 26 0.132595 + 
+10 Letter 7 26 0.132595 + 
+11 Assemble { 0.132595 
+11 Letter 0 0 0.145649 A 
+11 Letter 1 2 0.145649 C 
+11 Letter 2 4 0.145649 E 
+11 Letter 3 26 0.145649 + 
+11 Letter 4 26 0.145649 + 
+11 Letter 5 26 0.145649 + 
+11 Letter 6 26 0.145649 + 
+11 Letter 7 26 0.145649 + 
+11 Orth 0 0.025200 ACE+++++ 
+11 TotalSum  0.025200  
+12 Assemble { 0.145649 
+12 Letter 0 0 0.158902 A 
+12 Letter 1 2 0.158902 C 
+12 Letter 2 4 0.158902 E 
+12 Letter 3 26 0.158902 + 
+12 Letter 4 26 0.158902 + 
+12 Letter 5 26 0.158902 + 
+12 Letter 6 26 0.158902 + 
+12 Letter 7 26 0.158902 + 
+12 Orth 0 0.034277 ACE+++++ 
+12 TotalSum  0.034277  
+13 Assemble { 0.158902 
+13 Letter 0 0 0.172407 A 
+13 Letter 1 2 0.172407 C 
+13 Letter 2 4 0.172407 E 
+13 Letter 3 26 0.172407 + 
+13 Letter 4 26 0.172407 + 
+13 Letter 5 26 0.172407 + 
+13 Letter 6 26 0.172407 + 
+13 Letter 7 26 0.172407 + 
+13 Orth 0 0.044703 ACE+++++ 
+13 TotalSum  0.044703  
+14 Assemble { 0.172407 
+14 Letter 0 0 0.186213 A 
+14 Letter 1 2 0.186213 C 
+14 Letter 2 4 0.186213 E 
+14 Letter 3 26 0.186213 + 
+14 Letter 4 26 0.186213 + 
+14 Letter 5 26 0.186213 + 
+14 Letter 6 26 0.186213 + 
+14 Letter 7 26 0.186213 + 
+14 Orth 0 0.056461 ACE+++++ 
+14 TotalSum  0.056461  
+15 Assemble { 0.186213 
+15 Letter 0 0 0.200363 A 
+15 Letter 1 2 0.200363 C 
+15 Letter 2 4 0.200363 E 
+15 Letter 3 26 0.200363 + 
+15 Letter 4 26 0.200363 + 
+15 Letter 5 26 0.200363 + 
+15 Letter 6 26 0.200363 + 
+15 Letter 7 26 0.200363 + 
+15 Orth 0 0.069533 ACE+++++ 
+15 TotalSum  0.069533  
+16 Assemble { 0.200363 
+16 Letter 0 0 0.214894 A 
+16 Letter 1 2 0.214894 C 
+16 Letter 2 4 0.214894 E 
+16 Letter 3 26 0.214894 + 
+16 Letter 4 26 0.214894 + 
+16 Letter 5 26 0.214894 + 
+16 Letter 6 26 0.214894 + 
+16 Letter 7 26 0.214894 + 
+16 Orth 0 0.083898 ACE+++++ 
+16 TotalSum  0.083898  
+17 Assemble { 0.214894 
+17 Letter 0 0 0.229837 A 
+17 Letter 1 2 0.229837 C 
+17 Letter 2 4 0.229837 E 
+17 Letter 3 26 0.229837 + 
+17 Letter 4 26 0.229837 + 
+17 Letter 5 26 0.229837 + 
+17 Letter 6 26 0.229837 + 
+17 Letter 7 26 0.229837 + 
+17 Orth 0 0.099533 ACE+++++ 
+17 TotalSum  0.099533  
+18 Assemble { 0.229837 
+18 Letter 0 0 0.245219 A 
+18 Letter 1 2 0.245219 C 
+18 Letter 2 4 0.245219 E 
+18 Letter 3 26 0.245219 + 
+18 Letter 4 26 0.245219 + 
+18 Letter 5 26 0.245219 + 
+18 Letter 6 26 0.245219 + 
+18 Letter 7 26 0.245219 + 
+18 Orth 0 0.116408 ACE+++++ 
+18 TotalSum  0.116408  
+19 Assemble { 0.245219 
+19 Letter 0 0 0.261058 A 
+19 Letter 1 2 0.261058 C 
+19 Letter 2 4 0.261058 E 
+19 Letter 3 26 0.261058 + 
+19 Letter 4 26 0.261058 + 
+19 Letter 5 26 0.261058 + 
+19 Letter 6 26 0.261058 + 
+19 Letter 7 26 0.261058 + 
+19 Orth 0 0.134489 ACE+++++ 
+19 TotalSum  0.134489  
+20 Assemble { 0.261058 
+20 Letter 0 0 0.277366 A 
+20 Letter 1 2 0.277366 C 
+20 Letter 2 4 0.277366 E 
+20 Letter 3 26 0.277366 + 
+20 Letter 4 26 0.277366 + 
+20 Letter 5 26 0.277366 + 
+20 Letter 6 26 0.277366 + 
+20 Letter 7 26 0.277366 + 
+20 Orth 0 0.153736 ACE+++++ 
+20 TotalSum  0.153736  
+20 Phoneme 0 41 0.022503 { 
+21 Assemble { 0.277366 
+21 Letter 0 0 0.294148 A 
+21 Letter 1 2 0.294148 C 
+21 Letter 2 4 0.294148 E 
+21 Letter 3 26 0.294148 + 
+21 Letter 4 26 0.294148 + 
+21 Letter 5 26 0.294148 + 
+21 Letter 6 26 0.294148 + 
+21 Letter 7 26 0.294148 + 
+21 Orth 0 0.174100 ACE+++++ 
+21 TotalSum  0.174100  
+21 Phoneme 0 41 0.025485 { 
+22 Assemble { 0.294148 
+22 Letter 0 0 0.311404 A 
+22 Letter 1 2 0.311404 C 
+22 Letter 2 4 0.311404 E 
+22 Letter 3 26 0.311404 + 
+22 Letter 4 26 0.311404 + 
+22 Letter 5 26 0.311404 + 
+22 Letter 6 26 0.311404 + 
+22 Letter 7 26 0.311404 + 
+22 Orth 0 0.195526 ACE+++++ 
+22 TotalSum  0.195526  
+22 Phoneme 0 41 0.028638 { 
+23 Assemble { 0.311404 
+23 Letter 0 0 0.329122 A 
+23 Letter 1 2 0.329122 C 
+23 Letter 2 4 0.329122 E 
+23 Letter 3 26 0.329122 + 
+23 Letter 4 26 0.329122 + 
+23 Letter 5 26 0.329122 + 
+23 Letter 6 26 0.329122 + 
+23 Letter 7 26 0.329122 + 
+23 Orth 0 0.217952 ACE+++++ 
+23 TotalSum  0.217952  
+23 Phoneme 0 41 0.031966 { 
+24 Assemble { 0.329122 
+24 Letter 0 0 0.347288 A 
+24 Letter 1 2 0.347288 C 
+24 Letter 2 4 0.347288 E 
+24 Letter 3 26 0.347288 + 
+24 Letter 4 26 0.347288 + 
+24 Letter 5 26 0.347288 + 
+24 Letter 6 26 0.347288 + 
+24 Letter 7 26 0.347288 + 
+24 Orth 0 0.241304 ACE+++++ 
+24 TotalSum  0.241304  
+24 Phoneme 0 41 0.035470 { 
+25 Assemble { 0.347288 
+25 Letter 0 0 0.365876 A 
+25 Letter 1 2 0.365876 C 
+25 Letter 2 4 0.365876 E 
+25 Letter 3 26 0.365876 + 
+25 Letter 4 26 0.365876 + 
+25 Letter 5 26 0.365876 + 
+25 Letter 6 26 0.365876 + 
+25 Letter 7 26 0.365876 + 
+25 Orth 0 0.265524 ACE+++++ 
+25 TotalSum  0.265524  
+25 Phoneme 0 41 0.039155 { 
+26 Assemble { 0.365876 
+26 Letter 0 0 0.384856 A 
+26 Letter 1 2 0.384856 C 
+26 Letter 2 4 0.384856 E 
+26 Letter 3 26 0.384856 + 
+26 Letter 4 26 0.384856 + 
+26 Letter 5 26 0.384856 + 
+26 Letter 6 26 0.384856 + 
+26 Letter 7 26 0.384856 + 
+26 Orth 0 0.290543 ACE+++++ 
+26 TotalSum  0.290543  
+26 Phoneme 0 41 0.043022 { 
+27 Assemble {k 0.384856 0.384856 
+27 Letter 0 0 0.404192 A 
+27 Letter 1 2 0.404192 C 
+27 Letter 2 4 0.404192 E 
+27 Letter 3 26 0.404192 + 
+27 Letter 4 26 0.404192 + 
+27 Letter 5 26 0.404192 + 
+27 Letter 6 26 0.404192 + 
+27 Letter 7 26 0.404192 + 
+27 Orth 0 0.316286 ACE+++++ 
+27 TotalSum  0.316286  
+27 Phoneme 0 41 0.047073 { 
+28 Assemble {k 0.404192 0.404192 
+28 Letter 0 0 0.423840 A 
+28 Letter 1 2 0.423840 C 
+28 Letter 2 4 0.423840 E 
+28 Letter 3 26 0.423840 + 
+28 Letter 4 26 0.423840 + 
+28 Letter 5 26 0.423840 + 
+28 Letter 6 26 0.423840 + 
+28 Letter 7 26 0.423840 + 
+28 Orth 0 0.342664 ACE+++++ 
+28 TotalSum  0.342664  
+28 Phoneme 0 41 0.051310 { 
+29 Assemble {k 0.423840 0.423840 
+29 Letter 0 0 0.443752 A 
+29 Letter 1 2 0.443752 C 
+29 Letter 2 4 0.443752 E 
+29 Letter 3 26 0.443752 + 
+29 Letter 4 26 0.443752 + 
+29 Letter 5 26 0.443752 + 
+29 Letter 6 26 0.443752 + 
+29 Letter 7 26 0.443752 + 
+29 Orth 0 0.369575 ACE+++++ 
+29 TotalSum  0.369575  
+29 Phoneme 0 41 0.055733 { 
+30 Assemble {k 0.443752 0.443752 
+30 Letter 0 0 0.463874 A 
+30 Letter 1 2 0.463874 C 
+30 Letter 2 4 0.463874 E 
+30 Letter 3 26 0.463874 + 
+30 Letter 4 26 0.463874 + 
+30 Letter 5 26 0.463874 + 
+30 Letter 6 26 0.463874 + 
+30 Letter 7 26 0.463874 + 
+30 Orth 0 0.396910 ACE+++++ 
+30 TotalSum  0.396910  
+30 Phon 0 0.021986 1s++++++ 
+30 Phoneme 0 41 0.060342 { 
+31 Assemble {k 0.463874 0.463874 
+31 Letter 0 0 0.484147 A 
+31 Letter 1 2 0.484147 C 
+31 Letter 2 4 0.484147 E 
+31 Letter 3 26 0.484147 + 
+31 Letter 4 26 0.484147 + 
+31 Letter 5 26 0.484147 + 
+31 Letter 6 26 0.484147 + 
+31 Letter 7 26 0.484147 + 
+31 Orth 0 0.424550 ACE+++++ 
+31 TotalSum  0.424550  
+31 Phon 0 0.028211 1s++++++ 
+31 Phoneme 0 41 0.065137 { 
+31 Phoneme 1 27 0.023109 k 
+32 Assemble {k 0.484147 0.484147 
+32 Letter 0 0 0.504509 A 
+32 Letter 1 2 0.504509 C 
+32 Letter 2 4 0.504509 E 
+32 Letter 3 26 0.504509 + 
+32 Letter 4 26 0.504509 + 
+32 Letter 5 26 0.504509 + 
+32 Letter 6 26 0.504509 + 
+32 Letter 7 26 0.504509 + 
+32 Orth 0 0.452374 ACE+++++ 
+32 TotalSum  0.452374  
+32 Phon 0 0.035166 1s++++++ 
+32 Phoneme 0 41 0.070116 { 
+32 Phoneme 1 27 0.028312 k 
+33 Assemble {k 0.504509 0.504509 
+33 Letter 0 0 0.524895 A 
+33 Letter 1 2 0.524895 C 
+33 Letter 2 4 0.524895 E 
+33 Letter 3 26 0.524895 + 
+33 Letter 4 26 0.524895 + 
+33 Letter 5 26 0.524895 + 
+33 Letter 6 26 0.524895 + 
+33 Letter 7 26 0.524895 + 
+33 Orth 0 0.480254 ACE+++++ 
+33 TotalSum  0.480254  
+33 Phon 0 0.042831 1s++++++ 
+33 Phoneme 0 41 0.075276 { 
+33 Phoneme 1 27 0.033704 k 
+34 Assemble {k 0.524895 0.524895 
+34 Letter 0 0 0.545237 A 
+34 Letter 1 2 0.545237 C 
+34 Letter 2 4 0.545237 E 
+34 Letter 3 26 0.545237 + 
+34 Letter 4 26 0.545237 + 
+34 Letter 5 26 0.545237 + 
+34 Letter 6 26 0.545237 + 
+34 Letter 7 26 0.545237 + 
+34 Orth 0 0.508061 ACE+++++ 
+34 TotalSum  0.508061  
+34 Phon 0 0.051178 1s++++++ 
+34 Phoneme 0 41 0.080615 { 
+34 Phoneme 1 27 0.039284 k 
+35 Assemble {k 0.545237 0.545237 
+35 Letter 0 0 0.565466 A 
+35 Letter 1 2 0.565466 C 
+35 Letter 2 4 0.565466 E 
+35 Letter 3 26 0.565466 + 
+35 Letter 4 26 0.565466 + 
+35 Letter 5 26 0.565466 + 
+35 Letter 6 26 0.565466 + 
+35 Letter 7 26 0.565466 + 
+35 Orth 0 0.535664 ACE+++++ 
+35 TotalSum  0.535664  
+35 Phon 0 0.060177 1s++++++ 
+35 Phoneme 0 41 0.086130 { 
+35 Phoneme 1 27 0.045046 k 
+36 Assemble {k 0.565466 0.565466 
+36 Letter 0 0 0.585516 A 
+36 Letter 1 2 0.585516 C 
+36 Letter 2 4 0.585516 E 
+36 Letter 3 26 0.585516 + 
+36 Letter 4 26 0.585516 + 
+36 Letter 5 26 0.585516 + 
+36 Letter 6 26 0.585516 + 
+36 Letter 7 26 0.585516 + 
+36 Orth 0 0.562939 ACE+++++ 
+36 TotalSum  0.562939  
+36 Phon 0 0.069789 1s++++++ 
+36 Phoneme 0 41 0.091814 { 
+36 Phoneme 1 27 0.050985 k 
+37 Assemble {k 0.585516 0.585516 
+37 Letter 0 0 0.605318 A 
+37 Letter 1 2 0.605318 C 
+37 Letter 2 4 0.605318 E 
+37 Letter 3 26 0.605318 + 
+37 Letter 4 26 0.605318 + 
+37 Letter 5 26 0.605318 + 
+37 Letter 6 26 0.605318 + 
+37 Letter 7 26 0.605318 + 
+37 Orth 0 0.589760 ACE+++++ 
+37 TotalSum  0.589760  
+37 Phon 0 0.079972 1s++++++ 
+37 Phoneme 0 41 0.097663 { 
+37 Phoneme 1 27 0.057098 k 
+38 Assemble {k 0.605318 0.605318 
+38 Letter 0 0 0.624810 A 
+38 Letter 1 2 0.624810 C 
+38 Letter 2 4 0.624810 E 
+38 Letter 3 26 0.624810 + 
+38 Letter 4 26 0.624810 + 
+38 Letter 5 26 0.624810 + 
+38 Letter 6 26 0.624810 + 
+38 Letter 7 26 0.624810 + 
+38 Orth 0 0.616013 ACE+++++ 
+38 TotalSum  0.616013  
+38 Phon 0 0.090678 1s++++++ 
+38 Phoneme 0 41 0.103672 { 
+38 Phoneme 1 27 0.063376 k 
+39 Assemble {k 0.624810 0.624810 
+39 Letter 0 0 0.643930 A 
+39 Letter 1 2 0.643930 C 
+39 Letter 2 4 0.643930 E 
+39 Letter 3 26 0.643930 + 
+39 Letter 4 26 0.643930 + 
+39 Letter 5 26 0.643930 + 
+39 Letter 6 26 0.643930 + 
+39 Letter 7 26 0.643930 + 
+39 Orth 0 0.641588 ACE+++++ 
+39 TotalSum  0.641588  
+39 Phon 0 0.101857 1s++++++ 
+39 Phoneme 0 41 0.109832 { 
+39 Phoneme 1 27 0.069813 k 
+40 Assemble {k 0.643930 0.643930 
+40 Letter 0 0 0.662622 A 
+40 Letter 1 2 0.662622 C 
+40 Letter 2 4 0.662622 E 
+40 Letter 3 26 0.662622 + 
+40 Letter 4 26 0.662622 + 
+40 Letter 5 26 0.662622 + 
+40 Letter 6 26 0.662622 + 
+40 Letter 7 26 0.662622 + 
+40 Orth 0 0.666387 ACE+++++ 
+40 TotalSum  0.666387  
+40 Phon 0 0.113455 1s++++++ 
+40 Phoneme 0 41 0.116137 { 
+40 Phoneme 1 27 0.076402 k 
+41 Assemble {k 0.662622 0.662622 
+41 Letter 0 0 0.680835 A 
+41 Letter 1 2 0.680835 C 
+41 Letter 2 4 0.680835 E 
+41 Letter 3 26 0.680835 + 
+41 Letter 4 26 0.680835 + 
+41 Letter 5 26 0.680835 + 
+41 Letter 6 26 0.680835 + 
+41 Letter 7 26 0.680835 + 
+41 Orth 0 0.690324 ACE+++++ 
+41 TotalSum  0.690324  
+41 Phon 0 0.125417 1s++++++ 
+41 Phoneme 0 41 0.122580 { 
+41 Phoneme 1 27 0.083134 k 
+42 Assemble {k 0.680835 0.680835 
+42 Letter 0 0 0.698523 A 
+42 Letter 1 2 0.698523 C 
+42 Letter 2 4 0.698523 E 
+42 Letter 3 26 0.698523 + 
+42 Letter 4 26 0.698523 + 
+42 Letter 5 26 0.698523 + 
+42 Letter 6 26 0.698523 + 
+42 Letter 7 26 0.698523 + 
+42 Orth 0 0.713324 ACE+++++ 
+42 TotalSum  0.713324  
+42 Phon 0 0.137686 1s++++++ 
+42 Phoneme 0 41 0.129151 { 
+42 Phoneme 1 27 0.090001 k 
+43 Assemble {k 0.698523 0.698523 
+43 Letter 0 0 0.715646 A 
+43 Letter 1 2 0.715646 C 
+43 Letter 2 4 0.715646 E 
+43 Letter 3 26 0.715646 + 
+43 Letter 4 26 0.715646 + 
+43 Letter 5 26 0.715646 + 
+43 Letter 6 26 0.715646 + 
+43 Letter 7 26 0.715646 + 
+43 Orth 0 0.735323 ACE+++++ 
+43 TotalSum  0.735323  
+43 Phon 0 0.150206 1s++++++ 
+43 Phoneme 0 41 0.135842 { 
+43 Phoneme 1 27 0.096993 k 
+44 Assemble 1s 0.715646 0.715646 
+44 Letter 0 0 0.732173 A 
+44 Letter 1 2 0.732173 C 
+44 Letter 2 4 0.732173 E 
+44 Letter 3 26 0.732173 + 
+44 Letter 4 26 0.732173 + 
+44 Letter 5 26 0.732173 + 
+44 Letter 6 26 0.732173 + 
+44 Letter 7 26 0.732173 + 
+44 Orth 0 0.756275 ACE+++++ 
+44 TotalSum  0.756275  
+44 Phon 0 0.162920 1s++++++ 
+44 Phoneme 0 41 0.135842 { 
+44 Phoneme 1 27 0.096993 k 
+45 Assemble 1s 0.732173 0.732173 
+45 Letter 0 0 0.748075 A 
+45 Letter 1 2 0.748075 C 
+45 Letter 2 4 0.748075 E 
+45 Letter 3 26 0.748075 + 
+45 Letter 4 26 0.748075 + 
+45 Letter 5 26 0.748075 + 
+45 Letter 6 26 0.748075 + 
+45 Letter 7 26 0.748075 + 
+45 Orth 0 0.776143 ACE+++++ 
+45 TotalSum  0.776143  
+45 Phon 0 0.176203 1s++++++ 
+45 Phoneme 0 41 0.135827 { 
+45 Phoneme 1 27 0.096978 k 
+46 Assemble 1s 0.748075 0.748075 
+46 Letter 0 0 0.763334 A 
+46 Letter 1 2 0.763334 C 
+46 Letter 2 4 0.763334 E 
+46 Letter 3 26 0.763334 + 
+46 Letter 4 26 0.763334 + 
+46 Letter 5 26 0.763334 + 
+46 Letter 6 26 0.763334 + 
+46 Letter 7 26 0.763334 + 
+46 Orth 0 0.794909 ACE+++++ 
+46 TotalSum  0.794909  
+46 Phon 0 0.189991 1s++++++ 
+46 Phoneme 0 41 0.135795 { 
+46 Phoneme 1 27 0.096949 k 
+47 Assemble 1s 0.763334 0.763334 
+47 Letter 0 0 0.777935 A 
+47 Letter 1 2 0.777935 C 
+47 Letter 2 4 0.777935 E 
+47 Letter 3 26 0.777935 + 
+47 Letter 4 26 0.777935 + 
+47 Letter 5 26 0.777935 + 
+47 Letter 6 26 0.777935 + 
+47 Letter 7 26 0.777935 + 
+47 Orth 0 0.812566 ACE+++++ 
+47 TotalSum  0.812566  
+47 Phon 0 0.204219 1s++++++ 
+47 Phoneme 0 41 0.135747 { 
+47 Phoneme 1 27 0.096904 k 
+47 Phoneme 1 33 0.020751 s 
+48 Assemble 1s 0.777935 0.777935 
+48 Letter 0 0 0.791871 A 
+48 Letter 1 2 0.791871 C 
+48 Letter 2 4 0.791871 E 
+48 Letter 3 26 0.791871 + 
+48 Letter 4 26 0.791871 + 
+48 Letter 5 26 0.791871 + 
+48 Letter 6 26 0.791871 + 
+48 Letter 7 26 0.791871 + 
+48 Orth 0 0.829116 ACE+++++ 
+48 TotalSum  0.829116  
+48 Phon 0 0.218823 1s++++++ 
+48 Phoneme 0 0 0.020566 1 
+48 Phoneme 0 41 0.135681 { 
+48 Phoneme 1 27 0.096844 k 
+48 Phoneme 1 33 0.026284 s 
+49 Assemble 1s 0.791871 0.791871 
+49 Letter 0 0 0.805138 A 
+49 Letter 1 2 0.805138 C 
+49 Letter 2 4 0.805138 E 
+49 Letter 3 26 0.805138 + 
+49 Letter 4 26 0.805138 + 
+49 Letter 5 26 0.805138 + 
+49 Letter 6 26 0.805138 + 
+49 Letter 7 26 0.805138 + 
+49 Orth 0 0.844570 ACE+++++ 
+49 TotalSum  0.844570  
+49 Phon 0 0.233741 1s++++++ 
+49 Phoneme 0 0 0.025111 1 
+49 Phoneme 0 41 0.135597 { 
+49 Phoneme 1 27 0.096768 k 
+49 Phoneme 1 33 0.031936 s 
+50 Assemble 1s 0.805138 0.805138 
+50 Letter 0 0 0.817741 A 
+50 Letter 1 2 0.817741 C 
+50 Letter 2 4 0.817741 E 
+50 Letter 3 26 0.817741 + 
+50 Letter 4 26 0.817741 + 
+50 Letter 5 26 0.817741 + 
+50 Letter 6 26 0.817741 + 
+50 Letter 7 26 0.817741 + 
+50 Orth 0 0.858951 ACE+++++ 
+50 TotalSum  0.858951  
+50 Phon 0 0.248915 1s++++++ 
+50 Phoneme 0 0 0.029779 1 
+50 Phoneme 0 41 0.135495 { 
+50 Phoneme 1 27 0.096675 k 
+50 Phoneme 1 33 0.037700 s 
+51 Assemble 1s 0.817741 0.817741 
+51 Letter 0 0 0.829685 A 
+51 Letter 1 2 0.829685 C 
+51 Letter 2 4 0.829685 E 
+51 Letter 3 26 0.829685 + 
+51 Letter 4 26 0.829685 + 
+51 Letter 5 26 0.829685 + 
+51 Letter 6 26 0.829685 + 
+51 Letter 7 26 0.829685 + 
+51 Orth 0 0.872286 ACE+++++ 
+51 TotalSum  0.872286  
+51 Phon 0 0.264287 1s++++++ 
+51 Phoneme 0 0 0.034563 1 
+51 Phoneme 0 41 0.135374 { 
+51 Phoneme 1 27 0.096566 k 
+51 Phoneme 1 33 0.043565 s 
+52 Assemble 1s 0.829685 0.829685 
+52 Letter 0 0 0.840984 A 
+52 Letter 1 2 0.840984 C 
+52 Letter 2 4 0.840984 E 
+52 Letter 3 26 0.840984 + 
+52 Letter 4 26 0.840984 + 
+52 Letter 5 26 0.840984 + 
+52 Letter 6 26 0.840984 + 
+52 Letter 7 26 0.840984 + 
+52 Orth 0 0.884610 ACE+++++ 
+52 TotalSum  0.884610  
+52 Phon 0 0.279806 1s++++++ 
+52 Phoneme 0 0 0.039453 1 
+52 Phoneme 0 41 0.135234 { 
+52 Phoneme 1 27 0.096440 k 
+52 Phoneme 1 33 0.049523 s 
+53 Assemble 1s 0.840984 0.840984 
+53 Letter 0 0 0.851650 A 
+53 Letter 1 2 0.851650 C 
+53 Letter 2 4 0.851650 E 
+53 Letter 3 26 0.851650 + 
+53 Letter 4 26 0.851650 + 
+53 Letter 5 26 0.851650 + 
+53 Letter 6 26 0.851650 + 
+53 Letter 7 26 0.851650 + 
+53 Orth 0 0.895962 ACE+++++ 
+53 TotalSum  0.895962  
+53 Phon 0 0.295420 1s++++++ 
+53 Phoneme 0 0 0.044442 1 
+53 Phoneme 0 41 0.135073 { 
+53 Phoneme 1 27 0.096296 k 
+53 Phoneme 1 33 0.055566 s 
+54 Assemble 1s 0.851650 0.851650 
+54 Letter 0 0 0.861702 A 
+54 Letter 1 2 0.861702 C 
+54 Letter 2 4 0.861702 E 
+54 Letter 3 26 0.861702 + 
+54 Letter 4 26 0.861702 + 
+54 Letter 5 26 0.861702 + 
+54 Letter 6 26 0.861702 + 
+54 Letter 7 26 0.861702 + 
+54 Orth 0 0.906387 ACE+++++ 
+54 TotalSum  0.906387  
+54 Phon 0 0.311085 1s++++++ 
+54 Phoneme 0 0 0.049521 1 
+54 Phoneme 0 41 0.134893 { 
+54 Phoneme 1 27 0.096136 k 
+54 Phoneme 1 33 0.061685 s 
+55 Assemble 1s 0.861702 0.861702 
+55 Letter 0 0 0.871159 A 
+55 Letter 1 2 0.871159 C 
+55 Letter 2 4 0.871159 E 
+55 Letter 3 26 0.871159 + 
+55 Letter 4 26 0.871159 + 
+55 Letter 5 26 0.871159 + 
+55 Letter 6 26 0.871159 + 
+55 Letter 7 26 0.871159 + 
+55 Orth 0 0.915931 ACE+++++ 
+55 TotalSum  0.915931  
+55 Phon 0 0.326759 1s++++++ 
+55 Phoneme 0 0 0.054684 1 
+55 Phoneme 0 41 0.134693 { 
+55 Phoneme 1 27 0.095958 k 
+55 Phoneme 1 33 0.067873 s 
+56 Assemble 1s 0.871159 0.871159 
+56 Letter 0 0 0.880043 A 
+56 Letter 1 2 0.880043 C 
+56 Letter 2 4 0.880043 E 
+56 Letter 3 26 0.880043 + 
+56 Letter 4 26 0.880043 + 
+56 Letter 5 26 0.880043 + 
+56 Letter 6 26 0.880043 + 
+56 Letter 7 26 0.880043 + 
+56 Orth 0 0.924644 ACE+++++ 
+56 TotalSum  0.924644  
+56 Phon 0 0.342402 1s++++++ 
+56 Phoneme 0 0 0.059923 1 
+56 Phoneme 0 41 0.134472 { 
+56 Phoneme 1 27 0.095762 k 
+56 Phoneme 1 33 0.074122 s 
+57 Assemble 1s 0.880043 0.880043 
+57 Letter 0 0 0.888378 A 
+57 Letter 1 2 0.888378 C 
+57 Letter 2 4 0.888378 E 
+57 Letter 3 26 0.888378 + 
+57 Letter 4 26 0.888378 + 
+57 Letter 5 26 0.888378 + 
+57 Letter 6 26 0.888378 + 
+57 Letter 7 26 0.888378 + 
+57 Orth 0 0.932576 ACE+++++ 
+57 TotalSum  0.932576  
+57 Phon 0 0.357980 1s++++++ 
+57 Phoneme 0 0 0.065231 1 
+57 Phoneme 0 41 0.134230 { 
+57 Phoneme 1 27 0.095549 k 
+57 Phoneme 1 33 0.080425 s 
+58 Assemble 1s 0.888378 0.888378 
+58 Letter 0 0 0.896186 A 
+58 Letter 1 2 0.896186 C 
+58 Letter 2 4 0.896186 E 
+58 Letter 3 26 0.896186 + 
+58 Letter 4 26 0.896186 + 
+58 Letter 5 26 0.896186 + 
+58 Letter 6 26 0.896186 + 
+58 Letter 7 26 0.896186 + 
+58 Orth 0 0.939778 ACE+++++ 
+58 TotalSum  0.939778  
+58 Phon 0 0.373461 1s++++++ 
+58 Phoneme 0 0 0.070602 1 
+58 Phoneme 0 41 0.133968 { 
+58 Phoneme 1 27 0.095319 k 
+58 Phoneme 1 33 0.086775 s 
+59 Assemble 1s 0.896186 0.896186 
+59 Letter 0 0 0.903493 A 
+59 Letter 1 2 0.903493 C 
+59 Letter 2 4 0.903493 E 
+59 Letter 3 26 0.903493 + 
+59 Letter 4 26 0.903493 + 
+59 Letter 5 26 0.903493 + 
+59 Letter 6 26 0.903493 + 
+59 Letter 7 26 0.903493 + 
+59 Orth 0 0.946300 ACE+++++ 
+59 TotalSum  0.946300  
+59 Phon 0 0.388819 1s++++++ 
+59 Phoneme 0 0 0.076029 1 
+59 Phoneme 0 41 0.133684 { 
+59 Phoneme 1 27 0.095071 k 
+59 Phoneme 1 33 0.093166 s 
+60 Assemble 1s 0.903493 0.903493 
+60 Letter 0 0 0.910324 A 
+60 Letter 1 2 0.910324 C 
+60 Letter 2 4 0.910324 E 
+60 Letter 3 26 0.910324 + 
+60 Letter 4 26 0.910324 + 
+60 Letter 5 26 0.910324 + 
+60 Letter 6 26 0.910324 + 
+60 Letter 7 26 0.910324 + 
+60 Orth 0 0.952193 ACE+++++ 
+60 TotalSum  0.952193  
+60 Phon 0 0.404028 1s++++++ 
+60 Phoneme 0 0 0.081506 1 
+60 Phoneme 0 41 0.133379 { 
+60 Phoneme 1 27 0.094805 k 
+60 Phoneme 1 33 0.099592 s 
+61 Assemble 1s+ 0.910324 0.910324 0.910324 
+61 Letter 0 0 0.916703 A 
+61 Letter 1 2 0.916703 C 
+61 Letter 2 4 0.916703 E 
+61 Letter 3 26 0.916703 + 
+61 Letter 4 26 0.916703 + 
+61 Letter 5 26 0.916703 + 
+61 Letter 6 26 0.916703 + 
+61 Letter 7 26 0.916703 + 
+61 Orth 0 0.957506 ACE+++++ 
+61 TotalSum  0.957506  
+61 Phon 0 0.419066 1s++++++ 
+61 Phoneme 0 0 0.087028 1 
+61 Phoneme 0 41 0.133053 { 
+61 Phoneme 1 27 0.094522 k 
+61 Phoneme 1 33 0.106048 s 
+62 Assemble 1s+ 0.916703 0.916703 0.916703 
+62 Letter 0 0 0.922654 A 
+62 Letter 1 2 0.922654 C 
+62 Letter 2 4 0.922654 E 
+62 Letter 3 26 0.922654 + 
+62 Letter 4 26 0.922654 + 
+62 Letter 5 26 0.922654 + 
+62 Letter 6 26 0.922654 + 
+62 Letter 7 26 0.922654 + 
+62 Orth 0 0.962283 ACE+++++ 
+62 TotalSum  0.962283  
+62 Phon 0 0.433962 1s++++++ 
+62 Phoneme 0 0 0.092590 1 
+62 Phoneme 0 41 0.132705 { 
+62 Phoneme 1 27 0.094221 k 
+62 Phoneme 1 33 0.112527 s 
+63 Assemble 1s+ 0.922654 0.922654 0.922654 
+63 Letter 0 0 0.928203 A 
+63 Letter 1 2 0.928203 C 
+63 Letter 2 4 0.928203 E 
+63 Letter 3 26 0.928203 + 
+63 Letter 4 26 0.928203 + 
+63 Letter 5 26 0.928203 + 
+63 Letter 6 26 0.928203 + 
+63 Letter 7 26 0.928203 + 
+63 Orth 0 0.966572 ACE+++++ 
+63 TotalSum  0.966572  
+63 Phon 0 0.448695 1s++++++ 
+63 Phoneme 0 0 0.098187 1 
+63 Phoneme 0 41 0.132337 { 
+63 Phoneme 1 27 0.093903 k 
+63 Phoneme 1 33 0.119026 s 
+63 Phoneme 2 43 0.029943 + 
+64 Assemble 1s+ 0.928203 0.928203 0.928203 
+64 Letter 0 0 0.933372 A 
+64 Letter 1 2 0.933372 C 
+64 Letter 2 4 0.933372 E 
+64 Letter 3 26 0.933372 + 
+64 Letter 4 26 0.933372 + 
+64 Letter 5 26 0.933372 + 
+64 Letter 6 26 0.933372 + 
+64 Letter 7 26 0.933372 + 
+64 Orth 0 0.970413 ACE+++++ 
+64 TotalSum  0.970413  
+64 Phon 0 0.463249 1s++++++ 
+64 Phoneme 0 0 0.103814 1 
+64 Phoneme 0 41 0.131947 { 
+64 Phoneme 1 27 0.093568 k 
+64 Phoneme 1 33 0.125539 s 
+64 Phoneme 2 43 0.039847 + 
+65 Assemble 1s+ 0.933372 0.933372 0.933372 
+65 Letter 0 0 0.938184 A 
+65 Letter 1 2 0.938184 C 
+65 Letter 2 4 0.938184 E 
+65 Letter 3 26 0.938184 + 
+65 Letter 4 26 0.938184 + 
+65 Letter 5 26 0.938184 + 
+65 Letter 6 26 0.938184 + 
+65 Letter 7 26 0.938184 + 
+65 Orth 0 0.973847 ACE+++++ 
+65 TotalSum  0.973847  
+65 Phon 0 0.477608 1s++++++ 
+65 Phoneme 0 0 0.109468 1 
+65 Phoneme 0 41 0.131536 { 
+65 Phoneme 1 27 0.093215 k 
+65 Phoneme 1 33 0.132063 s 
+65 Phoneme 2 43 0.049705 + 
+66 Assemble 1s+ 0.938184 0.938184 0.938184 
+66 Letter 0 0 0.942661 A 
+66 Letter 1 2 0.942661 C 
+66 Letter 2 4 0.942661 E 
+66 Letter 3 26 0.942661 + 
+66 Letter 4 26 0.942661 + 
+66 Letter 5 26 0.942661 + 
+66 Letter 6 26 0.942661 + 
+66 Letter 7 26 0.942661 + 
+66 Orth 0 0.976911 ACE+++++ 
+66 TotalSum  0.976911  
+66 Phon 0 0.491760 1s++++++ 
+66 Phoneme 0 0 0.115144 1 
+66 Phoneme 0 41 0.131104 { 
+66 Phoneme 1 27 0.092846 k 
+66 Phoneme 1 33 0.138593 s 
+66 Phoneme 2 43 0.059512 + 
+67 Assemble 1s+ 0.942661 0.942661 0.942661 
+67 Letter 0 0 0.946825 A 
+67 Letter 1 2 0.946825 C 
+67 Letter 2 4 0.946825 E 
+67 Letter 3 26 0.946825 + 
+67 Letter 4 26 0.946825 + 
+67 Letter 5 26 0.946825 + 
+67 Letter 6 26 0.946825 + 
+67 Letter 7 26 0.946825 + 
+67 Orth 0 0.979642 ACE+++++ 
+67 TotalSum  0.979642  
+67 Phon 0 0.505693 1s++++++ 
+67 Phoneme 0 0 0.120839 1 
+67 Phoneme 0 41 0.130651 { 
+67 Phoneme 1 27 0.092460 k 
+67 Phoneme 1 33 0.145125 s 
+67 Phoneme 2 43 0.069264 + 
+68 Assemble 1s+ 0.946825 0.946825 0.946825 
+68 Letter 0 0 0.950695 A 
+68 Letter 1 2 0.950695 C 
+68 Letter 2 4 0.950695 E 
+68 Letter 3 26 0.950695 + 
+68 Letter 4 26 0.950695 + 
+68 Letter 5 26 0.950695 + 
+68 Letter 6 26 0.950695 + 
+68 Letter 7 26 0.950695 + 
+68 Orth 0 0.982070 ACE+++++ 
+68 TotalSum  0.982070  
+68 Phon 0 0.519399 1s++++++ 
+68 Phoneme 0 0 0.126550 1 
+68 Phoneme 0 41 0.130178 { 
+68 Phoneme 1 27 0.092057 k 
+68 Phoneme 1 33 0.151658 s 
+68 Phoneme 2 43 0.078958 + 
+69 Assemble 1s+ 0.950695 0.950695 0.950695 
+69 Letter 0 0 0.954291 A 
+69 Letter 1 2 0.954291 C 
+69 Letter 2 4 0.954291 E 
+69 Letter 3 26 0.954291 + 
+69 Letter 4 26 0.954291 + 
+69 Letter 5 26 0.954291 + 
+69 Letter 6 26 0.954291 + 
+69 Letter 7 26 0.954291 + 
+69 Orth 0 0.984226 ACE+++++ 
+69 TotalSum  0.984226  
+69 Phon 0 0.532869 1s++++++ 
+69 Phoneme 0 0 0.132273 1 
+69 Phoneme 0 41 0.129683 { 
+69 Phoneme 1 27 0.091639 k 
+69 Phoneme 1 33 0.158186 s 
+69 Phoneme 2 43 0.088590 + 
+70 Assemble 1s+ 0.954291 0.954291 0.954291 
+70 Letter 0 0 0.957630 A 
+70 Letter 1 2 0.957630 C 
+70 Letter 2 4 0.957630 E 
+70 Letter 3 26 0.957630 + 
+70 Letter 4 26 0.957630 + 
+70 Letter 5 26 0.957630 + 
+70 Letter 6 26 0.957630 + 
+70 Letter 7 26 0.957630 + 
+70 Orth 0 0.986138 ACE+++++ 
+70 TotalSum  0.986138  
+70 Phon 0 0.546097 1s++++++ 
+70 Phoneme 0 0 0.138006 1 
+70 Phoneme 0 41 0.129169 { 
+70 Phoneme 1 27 0.091204 k 
+70 Phoneme 1 33 0.164709 s 
+70 Phoneme 2 43 0.098157 + 
+71 Assemble 1s+ 0.957630 0.957630 0.957630 
+71 Letter 0 0 0.960730 A 
+71 Letter 1 2 0.960730 C 
+71 Letter 2 4 0.960730 E 
+71 Letter 3 26 0.960730 + 
+71 Letter 4 26 0.960730 + 
+71 Letter 5 26 0.960730 + 
+71 Letter 6 26 0.960730 + 
+71 Letter 7 26 0.960730 + 
+71 Orth 0 0.987830 ACE+++++ 
+71 TotalSum  0.987830  
+71 Phon 0 0.559078 1s++++++ 
+71 Phoneme 0 0 0.143746 1 
+71 Phoneme 0 41 0.128634 { 
+71 Phoneme 1 27 0.090753 k 
+71 Phoneme 1 33 0.171222 s 
+71 Phoneme 2 43 0.107657 + 
+72 Assemble 1s+ 0.960730 0.960730 0.960730 
+72 Letter 0 0 0.963607 A 
+72 Letter 1 2 0.963607 C 
+72 Letter 2 4 0.963607 E 
+72 Letter 3 26 0.963607 + 
+72 Letter 4 26 0.963607 + 
+72 Letter 5 26 0.963607 + 
+72 Letter 6 26 0.963607 + 
+72 Letter 7 26 0.963607 + 
+72 Orth 0 0.989327 ACE+++++ 
+72 TotalSum  0.989327  
+72 Phon 0 0.571808 1s++++++ 
+72 Phoneme 0 0 0.149490 1 
+72 Phoneme 0 41 0.128079 { 
+72 Phoneme 1 27 0.090287 k 
+72 Phoneme 1 33 0.177724 s 
+72 Phoneme 2 43 0.117087 + 
+73 Assemble 1s+ 0.963607 0.963607 0.963607 
+73 Letter 0 0 0.966277 A 
+73 Letter 1 2 0.966277 C 
+73 Letter 2 4 0.966277 E 
+73 Letter 3 26 0.966277 + 
+73 Letter 4 26 0.966277 + 
+73 Letter 5 26 0.966277 + 
+73 Letter 6 26 0.966277 + 
+73 Letter 7 26 0.966277 + 
+73 Orth 0 0.990648 ACE+++++ 
+73 TotalSum  0.990648  
+73 Phon 0 0.584285 1s++++++ 
+73 Phoneme 0 0 0.155238 1 
+73 Phoneme 0 41 0.127505 { 
+73 Phoneme 1 27 0.089806 k 
+73 Phoneme 1 33 0.184213 s 
+73 Phoneme 2 43 0.126446 + 
+74 Assemble 1s+ 0.966277 0.966277 0.966277 
+74 Letter 0 0 0.968754 A 
+74 Letter 1 2 0.968754 C 
+74 Letter 2 4 0.968754 E 
+74 Letter 3 26 0.968754 + 
+74 Letter 4 26 0.968754 + 
+74 Letter 5 26 0.968754 + 
+74 Letter 6 26 0.968754 + 
+74 Letter 7 26 0.968754 + 
+74 Orth 0 0.991813 ACE+++++ 
+74 TotalSum  0.991813  
+74 Phon 0 0.596506 1s++++++ 
+74 Phoneme 0 0 0.160985 1 
+74 Phoneme 0 41 0.126911 { 
+74 Phoneme 1 27 0.089309 k 
+74 Phoneme 1 33 0.190686 s 
+74 Phoneme 2 43 0.135731 + 
+75 Assemble 1s+ 0.968754 0.968754 0.968754 
+75 Letter 0 0 0.971051 A 
+75 Letter 1 2 0.971051 C 
+75 Letter 2 4 0.971051 E 
+75 Letter 3 26 0.971051 + 
+75 Letter 4 26 0.971051 + 
+75 Letter 5 26 0.971051 + 
+75 Letter 6 26 0.971051 + 
+75 Letter 7 26 0.971051 + 
+75 Orth 0 0.992839 ACE+++++ 
+75 TotalSum  0.992839  
+75 Phon 0 0.608470 1s++++++ 
+75 Phoneme 0 0 0.166732 1 
+75 Phoneme 0 41 0.126298 { 
+75 Phoneme 1 27 0.088798 k 
+75 Phoneme 1 33 0.197142 s 
+75 Phoneme 2 43 0.144941 + 
+76 Assemble 1s+ 0.971051 0.971051 0.971051 
+76 Letter 0 0 0.973180 A 
+76 Letter 1 2 0.973180 C 
+76 Letter 2 4 0.973180 E 
+76 Letter 3 26 0.973180 + 
+76 Letter 4 26 0.973180 + 
+76 Letter 5 26 0.973180 + 
+76 Letter 6 26 0.973180 + 
+76 Letter 7 26 0.973180 + 
+76 Orth 0 0.993742 ACE+++++ 
+76 TotalSum  0.993742  
+76 Phon 0 0.620177 1s++++++ 
+76 Phoneme 0 0 0.172475 1 
+76 Phoneme 0 41 0.125666 { 
+76 Phoneme 1 27 0.088273 k 
+76 Phoneme 1 33 0.203579 s 
+76 Phoneme 2 43 0.154074 + 
+77 Assemble 1s+ 0.973180 0.973180 0.973180 
+77 Letter 0 0 0.975155 A 
+77 Letter 1 2 0.975155 C 
+77 Letter 2 4 0.975155 E 
+77 Letter 3 26 0.975155 + 
+77 Letter 4 26 0.975155 + 
+77 Letter 5 26 0.975155 + 
+77 Letter 6 26 0.975155 + 
+77 Letter 7 26 0.975155 + 
+77 Orth 0 0.994536 ACE+++++ 
+77 TotalSum  0.994536  
+77 Phon 0 0.631626 1s++++++ 
+77 Phoneme 0 0 0.178214 1 
+77 Phoneme 0 41 0.125016 { 
+77 Phoneme 1 27 0.087734 k 
+77 Phoneme 1 33 0.209996 s 
+77 Phoneme 2 43 0.163130 + 
+78 Assemble 1s++ 0.975155 0.975155 0.975155 0.975155 
+78 Letter 0 0 0.976985 A 
+78 Letter 1 2 0.976985 C 
+78 Letter 2 4 0.976985 E 
+78 Letter 3 26 0.976985 + 
+78 Letter 4 26 0.976985 + 
+78 Letter 5 26 0.976985 + 
+78 Letter 6 26 0.976985 + 
+78 Letter 7 26 0.976985 + 
+78 Orth 0 0.995232 ACE+++++ 
+78 TotalSum  0.995232  
+78 Phon 0 0.642818 1s++++++ 
+78 Phoneme 0 0 0.183947 1 
+78 Phoneme 0 41 0.124348 { 
+78 Phoneme 1 27 0.087181 k 
+78 Phoneme 1 33 0.216391 s 
+78 Phoneme 2 43 0.172107 + 
+79 Assemble 1s++ 0.976985 0.976985 0.976985 0.976985 
+79 Letter 0 0 0.978682 A 
+79 Letter 1 2 0.978682 C 
+79 Letter 2 4 0.978682 E 
+79 Letter 3 26 0.978682 + 
+79 Letter 4 26 0.978682 + 
+79 Letter 5 26 0.978682 + 
+79 Letter 6 26 0.978682 + 
+79 Letter 7 26 0.978682 + 
+79 Orth 0 0.995843 ACE+++++ 
+79 TotalSum  0.995843  
+79 Phon 0 0.653785 1s++++++ 
+79 Phoneme 0 0 0.189673 1 
+79 Phoneme 0 41 0.123662 { 
+79 Phoneme 1 27 0.086615 k 
+79 Phoneme 1 33 0.222762 s 
+79 Phoneme 2 43 0.181004 + 
+79 Phoneme 3 43 0.021358 + 
+80 Assemble 1s++ 0.978682 0.978682 0.978682 0.978682 
+80 Letter 0 0 0.980254 A 
+80 Letter 1 2 0.980254 C 
+80 Letter 2 4 0.980254 E 
+80 Letter 3 26 0.980254 + 
+80 Letter 4 26 0.980254 + 
+80 Letter 5 26 0.980254 + 
+80 Letter 6 26 0.980254 + 
+80 Letter 7 26 0.980254 + 
+80 Orth 0 0.996379 ACE+++++ 
+80 TotalSum  0.996379  
+80 Phon 0 0.664526 1s++++++ 
+80 Phoneme 0 0 0.195390 1 
+80 Phoneme 0 41 0.122958 { 
+80 Phoneme 1 27 0.086037 k 
+80 Phoneme 1 33 0.229110 s 
+80 Phoneme 2 43 0.189821 + 
+80 Phoneme 3 43 0.031894 + 
+81 Assemble 1s++ 0.980254 0.980254 0.980254 0.980254 
+81 Letter 0 0 0.981711 A 
+81 Letter 1 2 0.981711 C 
+81 Letter 2 4 0.981711 E 
+81 Letter 3 26 0.981711 + 
+81 Letter 4 26 0.981711 + 
+81 Letter 5 26 0.981711 + 
+81 Letter 6 26 0.981711 + 
+81 Letter 7 26 0.981711 + 
+81 Orth 0 0.996847 ACE+++++ 
+81 TotalSum  0.996847  
+81 Phon 0 0.675038 1s++++++ 
+81 Phoneme 0 0 0.201098 1 
+81 Phoneme 0 41 0.122237 { 
+81 Phoneme 1 27 0.085445 k 
+81 Phoneme 1 33 0.235433 s 
+81 Phoneme 2 43 0.198557 + 
+81 Phoneme 3 43 0.042333 + 
+82 Assemble 1s++ 0.981711 0.981711 0.981711 0.981711 
+82 Letter 0 0 0.983061 A 
+82 Letter 1 2 0.983061 C 
+82 Letter 2 4 0.983061 E 
+82 Letter 3 26 0.983061 + 
+82 Letter 4 26 0.983061 + 
+82 Letter 5 26 0.983061 + 
+82 Letter 6 26 0.983061 + 
+82 Letter 7 26 0.983061 + 
+82 Orth 0 0.997257 ACE+++++ 
+82 TotalSum  0.997257  
+82 Phon 0 0.685322 1s++++++ 
+82 Phoneme 0 0 0.206795 1 
+82 Phoneme 0 41 0.121500 { 
+82 Phoneme 1 27 0.084842 k 
+82 Phoneme 1 33 0.241729 s 
+82 Phoneme 2 43 0.207212 + 
+82 Phoneme 3 43 0.052674 + 
+83 Assemble 1s++ 0.983061 0.983061 0.983061 0.983061 
+83 Letter 0 0 0.984312 A 
+83 Letter 1 2 0.984312 C 
+83 Letter 2 4 0.984312 E 
+83 Letter 3 26 0.984312 + 
+83 Letter 4 26 0.984312 + 
+83 Letter 5 26 0.984312 + 
+83 Letter 6 26 0.984312 + 
+83 Letter 7 26 0.984312 + 
+83 Orth 0 0.997615 ACE+++++ 
+83 TotalSum  0.997615  
+83 Phon 0 0.695377 1s++++++ 
+83 Phoneme 0 0 0.212482 1 
+83 Phoneme 0 41 0.120746 { 
+83 Phoneme 1 27 0.084226 k 
+83 Phoneme 1 33 0.247999 s 
+83 Phoneme 2 43 0.215785 + 
+83 Phoneme 3 43 0.062918 + 
+84 Assemble 1s++ 0.984312 0.984312 0.984312 0.984312 
+84 Letter 0 0 0.985470 A 
+84 Letter 1 2 0.985470 C 
+84 Letter 2 4 0.985470 E 
+84 Letter 3 26 0.985470 + 
+84 Letter 4 26 0.985470 + 
+84 Letter 5 26 0.985470 + 
+84 Letter 6 26 0.985470 + 
+84 Letter 7 26 0.985470 + 
+84 Orth 0 0.997927 ACE+++++ 
+84 TotalSum  0.997927  
+84 Phon 0 0.705203 1s++++++ 
+84 Phoneme 0 0 0.218156 1 
+84 Phoneme 0 41 0.119976 { 
+84 Phoneme 1 27 0.083600 k 
+84 Phoneme 1 33 0.254241 s 
+84 Phoneme 2 43 0.224276 + 
+84 Phoneme 3 43 0.073065 + 
+85 Assemble 1s++ 0.985470 0.985470 0.985470 0.985470 
+85 Letter 0 0 0.986544 A 
+85 Letter 1 2 0.986544 C 
+85 Letter 2 4 0.986544 E 
+85 Letter 3 26 0.986544 + 
+85 Letter 4 26 0.986544 + 
+85 Letter 5 26 0.986544 + 
+85 Letter 6 26 0.986544 + 
+85 Letter 7 26 0.986544 + 
+85 Orth 0 0.998200 ACE+++++ 
+85 TotalSum  0.998200  
+85 Phon 0 0.714801 1s++++++ 
+85 Phoneme 0 0 0.223817 1 
+85 Phoneme 0 41 0.119191 { 
+85 Phoneme 1 27 0.082962 k 
+85 Phoneme 1 33 0.260455 s 
+85 Phoneme 2 43 0.232685 + 
+85 Phoneme 3 43 0.083113 + 
+86 Assemble 1s++ 0.986544 0.986544 0.986544 0.986544 
+86 Letter 0 0 0.987538 A 
+86 Letter 1 2 0.987538 C 
+86 Letter 2 4 0.987538 E 
+86 Letter 3 26 0.987538 + 
+86 Letter 4 26 0.987538 + 
+86 Letter 5 26 0.987538 + 
+86 Letter 6 26 0.987538 + 
+86 Letter 7 26 0.987538 + 
+86 Orth 0 0.998438 ACE+++++ 
+86 TotalSum  0.998438  
+86 Phon 0 0.724172 1s++++++ 
+86 Phoneme 0 0 0.229465 1 
+86 Phoneme 0 41 0.118391 { 
+86 Phoneme 1 27 0.082314 k 
+86 Phoneme 1 33 0.266640 s 
+86 Phoneme 2 43 0.241011 + 
+86 Phoneme 3 43 0.093063 + 
+87 Assemble 1s++ 0.987538 0.987538 0.987538 0.987538 
+87 Letter 0 0 0.988459 A 
+87 Letter 1 2 0.988459 C 
+87 Letter 2 4 0.988459 E 
+87 Letter 3 26 0.988459 + 
+87 Letter 4 26 0.988459 + 
+87 Letter 5 26 0.988459 + 
+87 Letter 6 26 0.988459 + 
+87 Letter 7 26 0.988459 + 
+87 Orth 0 0.998645 ACE+++++ 
+87 TotalSum  0.998645  
+87 Phon 0 0.733318 1s++++++ 
+87 Phoneme 0 0 0.235098 1 
+87 Phoneme 0 41 0.117576 { 
+87 Phoneme 1 27 0.081655 k 
+87 Phoneme 1 33 0.272795 s 
+87 Phoneme 2 43 0.249256 + 
+87 Phoneme 3 43 0.102915 + 
+88 Assemble 1s++ 0.988459 0.988459 0.988459 0.988459 
+88 Letter 0 0 0.989312 A 
+88 Letter 1 2 0.989312 C 
+88 Letter 2 4 0.989312 E 
+88 Letter 3 26 0.989312 + 
+88 Letter 4 26 0.989312 + 
+88 Letter 5 26 0.989312 + 
+88 Letter 6 26 0.989312 + 
+88 Letter 7 26 0.989312 + 
+88 Orth 0 0.998825 ACE+++++ 
+88 TotalSum  0.998825  
+88 Phon 0 0.742238 1s++++++ 
+88 Phoneme 0 0 0.240717 1 
+88 Phoneme 0 41 0.116746 { 
+88 Phoneme 1 27 0.080987 k 
+88 Phoneme 1 33 0.278921 s 
+88 Phoneme 2 43 0.257419 + 
+88 Phoneme 3 43 0.112669 + 
+89 Assemble 1s++ 0.989312 0.989312 0.989312 0.989312 
+89 Letter 0 0 0.990102 A 
+89 Letter 1 2 0.990102 C 
+89 Letter 2 4 0.990102 E 
+89 Letter 3 26 0.990102 + 
+89 Letter 4 26 0.990102 + 
+89 Letter 5 26 0.990102 + 
+89 Letter 6 26 0.990102 + 
+89 Letter 7 26 0.990102 + 
+89 Orth 0 0.998982 ACE+++++ 
+89 TotalSum  0.998982  
+89 Phon 0 0.750935 1s++++++ 
+89 Phoneme 0 0 0.246321 1 
+89 Phoneme 0 41 0.115903 { 
+89 Phoneme 1 27 0.080310 k 
+89 Phoneme 1 33 0.285016 s 
+89 Phoneme 2 43 0.265500 + 
+89 Phoneme 3 43 0.122325 + 
+90 Assemble 1s++ 0.990102 0.990102 0.990102 0.990102 
+90 Letter 0 0 0.990834 A 
+90 Letter 1 2 0.990834 C 
+90 Letter 2 4 0.990834 E 
+90 Letter 3 26 0.990834 + 
+90 Letter 4 26 0.990834 + 
+90 Letter 5 26 0.990834 + 
+90 Letter 6 26 0.990834 + 
+90 Letter 7 26 0.990834 + 
+90 Orth 0 0.999118 ACE+++++ 
+90 TotalSum  0.999118  
+90 Phon 0 0.759412 1s++++++ 
+90 Phoneme 0 0 0.251908 1 
+90 Phoneme 0 41 0.115047 { 
+90 Phoneme 1 27 0.079623 k 
+90 Phoneme 1 33 0.291080 s 
+90 Phoneme 2 43 0.273500 + 
+90 Phoneme 3 43 0.131884 + 
+91 Assemble 1s++ 0.990834 0.990834 0.990834 0.990834 
+91 Letter 0 0 0.991512 A 
+91 Letter 1 2 0.991512 C 
+91 Letter 2 4 0.991512 E 
+91 Letter 3 26 0.991512 + 
+91 Letter 4 26 0.991512 + 
+91 Letter 5 26 0.991512 + 
+91 Letter 6 26 0.991512 + 
+91 Letter 7 26 0.991512 + 
+91 Orth 0 0.999237 ACE+++++ 
+91 TotalSum  0.999237  
+91 Phon 0 0.767669 1s++++++ 
+91 Phoneme 0 0 0.257480 1 
+91 Phoneme 0 41 0.114177 { 
+91 Phoneme 1 27 0.078928 k 
+91 Phoneme 1 33 0.297114 s 
+91 Phoneme 2 43 0.281418 + 
+91 Phoneme 3 43 0.141346 + 
+92 Assemble 1s++ 0.991512 0.991512 0.991512 0.991512 
+92 Letter 0 0 0.992140 A 
+92 Letter 1 2 0.992140 C 
+92 Letter 2 4 0.992140 E 
+92 Letter 3 26 0.992140 + 
+92 Letter 4 26 0.992140 + 
+92 Letter 5 26 0.992140 + 
+92 Letter 6 26 0.992140 + 
+92 Letter 7 26 0.992140 + 
+92 Orth 0 0.999340 ACE+++++ 
+92 TotalSum  0.999340  
+92 Phon 0 0.775709 1s++++++ 
+92 Phoneme 0 0 0.263035 1 
+92 Phoneme 0 41 0.113296 { 
+92 Phoneme 1 27 0.078224 k 
+92 Phoneme 1 33 0.303115 s 
+92 Phoneme 2 43 0.289255 + 
+92 Phoneme 3 43 0.150711 + 
+93 Assemble 1s++ 0.992140 0.992140 0.992140 0.992140 
+93 Letter 0 0 0.992721 A 
+93 Letter 1 2 0.992721 C 
+93 Letter 2 4 0.992721 E 
+93 Letter 3 26 0.992721 + 
+93 Letter 4 26 0.992721 + 
+93 Letter 5 26 0.992721 + 
+93 Letter 6 26 0.992721 + 
+93 Letter 7 26 0.992721 + 
+93 Orth 0 0.999429 ACE+++++ 
+93 TotalSum  0.999429  
+93 Phon 0 0.783535 1s++++++ 
+93 Phoneme 0 0 0.268573 1 
+93 Phoneme 0 41 0.112402 { 
+93 Phoneme 1 27 0.077513 k 
+93 Phoneme 1 33 0.309085 s 
+93 Phoneme 2 43 0.297012 + 
+93 Phoneme 3 43 0.159980 + 
+94 Assemble 1s++ 0.992721 0.992721 0.992721 0.992721 
+94 Letter 0 0 0.993259 A 
+94 Letter 1 2 0.993259 C 
+94 Letter 2 4 0.993259 E 
+94 Letter 3 26 0.993259 + 
+94 Letter 4 26 0.993259 + 
+94 Letter 5 26 0.993259 + 
+94 Letter 6 26 0.993259 + 
+94 Letter 7 26 0.993259 + 
+94 Orth 0 0.999506 ACE+++++ 
+94 TotalSum  0.999506  
+94 Phon 0 0.791150 1s++++++ 
+94 Phoneme 0 0 0.274094 1 
+94 Phoneme 0 41 0.111496 { 
+94 Phoneme 1 27 0.076794 k 
+94 Phoneme 1 33 0.315024 s 
+94 Phoneme 2 43 0.304689 + 
+94 Phoneme 3 43 0.169153 + 
+95 Assemble 1s+++ 0.993259 0.993259 0.993259 0.993259 0.993259 
+95 Letter 0 0 0.993758 A 
+95 Letter 1 2 0.993758 C 
+95 Letter 2 4 0.993758 E 
+95 Letter 3 26 0.993758 + 
+95 Letter 4 26 0.993758 + 
+95 Letter 5 26 0.993758 + 
+95 Letter 6 26 0.993758 + 
+95 Letter 7 26 0.993758 + 
+95 Orth 0 0.999573 ACE+++++ 
+95 TotalSum  0.999573  
+95 Phon 0 0.798555 1s++++++ 
+95 Phoneme 0 0 0.279597 1 
+95 Phoneme 0 41 0.110579 { 
+95 Phoneme 1 27 0.076068 k 
+95 Phoneme 1 33 0.320929 s 
+95 Phoneme 2 43 0.312286 + 
+95 Phoneme 3 43 0.178230 + 
+96 Assemble 1s+++ 0.993758 0.993758 0.993758 0.993758 0.993758 
+96 Letter 0 0 0.994220 A 
+96 Letter 1 2 0.994220 C 
+96 Letter 2 4 0.994220 E 
+96 Letter 3 26 0.994220 + 
+96 Letter 4 26 0.994220 + 
+96 Letter 5 26 0.994220 + 
+96 Letter 6 26 0.994220 + 
+96 Letter 7 26 0.994220 + 
+96 Orth 0 0.999632 ACE+++++ 
+96 TotalSum  0.999632  
+96 Phon 0 0.805772 1s++++++ 
+96 Phoneme 0 0 0.285082 1 
+96 Phoneme 0 41 0.109652 { 
+96 Phoneme 1 27 0.075336 k 
+96 Phoneme 1 33 0.326803 s 
+96 Phoneme 2 43 0.319803 + 
+96 Phoneme 3 43 0.187213 + 
+96 Phoneme 4 43 0.021738 + 
+97 Assemble 1s+++ 0.994220 0.994220 0.994220 0.994220 0.994220 
+97 Letter 0 0 0.994647 A 
+97 Letter 1 2 0.994647 C 
+97 Letter 2 4 0.994647 E 
+97 Letter 3 26 0.994647 + 
+97 Letter 4 26 0.994647 + 
+97 Letter 5 26 0.994647 + 
+97 Letter 6 26 0.994647 + 
+97 Letter 7 26 0.994647 + 
+97 Orth 0 0.999682 ACE+++++ 
+97 TotalSum  0.999682  
+97 Phon 0 0.812801 1s++++++ 
+97 Phoneme 0 0 0.290549 1 
+97 Phoneme 0 41 0.108714 { 
+97 Phoneme 1 27 0.074597 k 
+97 Phoneme 1 33 0.332644 s 
+97 Phoneme 2 43 0.327242 + 
+97 Phoneme 3 43 0.196102 + 
+97 Phoneme 4 43 0.032436 + 
+98 Assemble 1s+++ 0.994647 0.994647 0.994647 0.994647 0.994647 
+98 Letter 0 0 0.995043 A 
+98 Letter 1 2 0.995043 C 
+98 Letter 2 4 0.995043 E 
+98 Letter 3 26 0.995043 + 
+98 Letter 4 26 0.995043 + 
+98 Letter 5 26 0.995043 + 
+98 Letter 6 26 0.995043 + 
+98 Letter 7 26 0.995043 + 
+98 Orth 0 0.999725 ACE+++++ 
+98 TotalSum  0.999725  
+98 Phon 0 0.819643 1s++++++ 
+98 Phoneme 0 0 0.295997 1 
+98 Phoneme 0 41 0.107766 { 
+98 Phoneme 1 27 0.073853 k 
+98 Phoneme 1 33 0.338452 s 
+98 Phoneme 2 43 0.334603 + 
+98 Phoneme 3 43 0.204898 + 
+98 Phoneme 4 43 0.043023 + 
+99 Assemble 1s+++ 0.995043 0.995043 0.995043 0.995043 0.995043 
+99 Letter 0 0 0.995410 A 
+99 Letter 1 2 0.995410 C 
+99 Letter 2 4 0.995410 E 
+99 Letter 3 26 0.995410 + 
+99 Letter 4 26 0.995410 + 
+99 Letter 5 26 0.995410 + 
+99 Letter 6 26 0.995410 + 
+99 Letter 7 26 0.995410 + 
+99 Orth 0 0.999763 ACE+++++ 
+99 TotalSum  0.999763  
+99 Phon 0 0.826300 1s++++++ 
+99 Phoneme 0 0 0.301427 1 
+99 Phoneme 0 41 0.106809 { 
+99 Phoneme 1 27 0.073103 k 
+99 Phoneme 1 33 0.344227 s 
+99 Phoneme 2 43 0.341886 + 
+99 Phoneme 3 43 0.213601 + 
+99 Phoneme 4 43 0.053497 + 
+100 Assemble 1s+++ 0.995410 0.995410 0.995410 0.995410 0.995410 
+100 Letter 0 0 0.995750 A 
+100 Letter 1 2 0.995750 C 
+100 Letter 2 4 0.995750 E 
+100 Letter 3 26 0.995750 + 
+100 Letter 4 26 0.995750 + 
+100 Letter 5 26 0.995750 + 
+100 Letter 6 26 0.995750 + 
+100 Letter 7 26 0.995750 + 
+100 Orth 0 0.999796 ACE+++++ 
+100 TotalSum  0.999796  
+100 Phon 0 0.832774 1s++++++ 
+100 Phoneme 0 0 0.306837 1 
+100 Phoneme 0 41 0.105843 { 
+100 Phoneme 1 27 0.072348 k 
+100 Phoneme 1 33 0.349969 s 
+100 Phoneme 2 43 0.349092 + 
+100 Phoneme 3 43 0.222211 + 
+100 Phoneme 4 43 0.063861 + 
+101 Assemble 1s+++ 0.995750 0.995750 0.995750 0.995750 0.995750 
+101 Letter 0 0 0.996064 A 
+101 Letter 1 2 0.996064 C 
+101 Letter 2 4 0.996064 E 
+101 Letter 3 26 0.996064 + 
+101 Letter 4 26 0.996064 + 
+101 Letter 5 26 0.996064 + 
+101 Letter 6 26 0.996064 + 
+101 Letter 7 26 0.996064 + 
+101 Orth 0 0.999824 ACE+++++ 
+101 TotalSum  0.999824  
+101 Phon 0 0.839066 1s++++++ 
+101 Phoneme 0 0 0.312229 1 
+101 Phoneme 0 41 0.104869 { 
+101 Phoneme 1 27 0.071588 k 
+101 Phoneme 1 33 0.355679 s 
+101 Phoneme 2 43 0.356221 + 
+101 Phoneme 3 43 0.230731 + 
+101 Phoneme 4 43 0.074115 + 
+102 Assemble 1s+++ 0.996064 0.996064 0.996064 0.996064 0.996064 
+102 Letter 0 0 0.996355 A 
+102 Letter 1 2 0.996355 C 
+102 Letter 2 4 0.996355 E 
+102 Letter 3 26 0.996355 + 
+102 Letter 4 26 0.996355 + 
+102 Letter 5 26 0.996355 + 
+102 Letter 6 26 0.996355 + 
+102 Letter 7 26 0.996355 + 
+102 Orth 0 0.999848 ACE+++++ 
+102 TotalSum  0.999848  
+102 Phon 0 0.845177 1s++++++ 
+102 Phoneme 0 0 0.317601 1 
+102 Phoneme 0 41 0.103887 { 
+102 Phoneme 1 27 0.070825 k 
+102 Phoneme 1 33 0.361354 s 
+102 Phoneme 2 43 0.363275 + 
+102 Phoneme 3 43 0.239159 + 
+102 Phoneme 4 43 0.084259 + 
+103 Assemble 1s+++ 0.996355 0.996355 0.996355 0.996355 0.996355 
+103 Letter 0 0 0.996625 A 
+103 Letter 1 2 0.996625 C 
+103 Letter 2 4 0.996625 E 
+103 Letter 3 26 0.996625 + 
+103 Letter 4 26 0.996625 + 
+103 Letter 5 26 0.996625 + 
+103 Letter 6 26 0.996625 + 
+103 Letter 7 26 0.996625 + 
+103 Orth 0 0.999869 ACE+++++ 
+103 TotalSum  0.999869  
+103 Phon 0 0.851111 1s++++++ 
+103 Phoneme 0 0 0.322953 1 
+103 Phoneme 0 41 0.102897 { 
+103 Phoneme 1 27 0.070057 k 
+103 Phoneme 1 33 0.366997 s 
+103 Phoneme 2 43 0.370254 + 
+103 Phoneme 3 43 0.247498 + 
+103 Phoneme 4 43 0.094296 + 
+104 Assemble 1s+++ 0.996625 0.996625 0.996625 0.996625 0.996625 
+104 Letter 0 0 0.996875 A 
+104 Letter 1 2 0.996875 C 
+104 Letter 2 4 0.996875 E 
+104 Letter 3 26 0.996875 + 
+104 Letter 4 26 0.996875 + 
+104 Letter 5 26 0.996875 + 
+104 Letter 6 26 0.996875 + 
+104 Letter 7 26 0.996875 + 
+104 Orth 0 0.999887 ACE+++++ 
+104 TotalSum  0.999887  
+104 Phon 0 0.856869 1s++++++ 
+104 Phoneme 0 0 0.328285 1 
+104 Phoneme 0 41 0.101900 { 
+104 Phoneme 1 27 0.069285 k 
+104 Phoneme 1 33 0.372606 s 
+104 Phoneme 2 43 0.377157 + 
+104 Phoneme 3 43 0.255748 + 
+104 Phoneme 4 43 0.104225 + 
+105 Assemble 1s+++ 0.996875 0.996875 0.996875 0.996875 0.996875 
+105 Letter 0 0 0.997106 A 
+105 Letter 1 2 0.997106 C 
+105 Letter 2 4 0.997106 E 
+105 Letter 3 26 0.997106 + 
+105 Letter 4 26 0.997106 + 
+105 Letter 5 26 0.997106 + 
+105 Letter 6 26 0.997106 + 
+105 Letter 7 26 0.997106 + 
+105 Orth 0 0.999903 ACE+++++ 
+105 TotalSum  0.999903  
+105 Phon 0 0.862454 1s++++++ 
+105 Phoneme 0 0 0.333598 1 
+105 Phoneme 0 41 0.100896 { 
+105 Phoneme 1 27 0.068511 k 
+105 Phoneme 1 33 0.378182 s 
+105 Phoneme 2 43 0.383987 + 
+105 Phoneme 3 43 0.263909 + 
+105 Phoneme 4 43 0.114048 + 
+106 Assemble 1s+++ 0.997106 0.997106 0.997106 0.997106 0.997106 
+106 Letter 0 0 0.997320 A 
+106 Letter 1 2 0.997320 C 
+106 Letter 2 4 0.997320 E 
+106 Letter 3 26 0.997320 + 
+106 Letter 4 26 0.997320 + 
+106 Letter 5 26 0.997320 + 
+106 Letter 6 26 0.997320 + 
+106 Letter 7 26 0.997320 + 
+106 Orth 0 0.999916 ACE+++++ 
+106 TotalSum  0.999916  
+106 Phon 0 0.867869 1s++++++ 
+106 Phoneme 0 0 0.338890 1 
+106 Phoneme 0 41 0.099887 { 
+106 Phoneme 1 27 0.067734 k 
+106 Phoneme 1 33 0.383724 s 
+106 Phoneme 2 43 0.390744 + 
+106 Phoneme 3 43 0.271982 + 
+106 Phoneme 4 43 0.123765 + 
+107 Assemble 1s+++ 0.997320 0.997320 0.997320 0.997320 0.997320 
+107 Letter 0 0 0.997518 A 
+107 Letter 1 2 0.997518 C 
+107 Letter 2 4 0.997518 E 
+107 Letter 3 26 0.997518 + 
+107 Letter 4 26 0.997518 + 
+107 Letter 5 26 0.997518 + 
+107 Letter 6 26 0.997518 + 
+107 Letter 7 26 0.997518 + 
+107 Orth 0 0.999928 ACE+++++ 
+107 TotalSum  0.999928  
+107 Phon 0 0.873115 1s++++++ 
+107 Phoneme 0 0 0.344162 1 
+107 Phoneme 0 41 0.098871 { 
+107 Phoneme 1 27 0.066954 k 
+107 Phoneme 1 33 0.389233 s 
+107 Phoneme 2 43 0.397428 + 
+107 Phoneme 3 43 0.279969 + 
+107 Phoneme 4 43 0.133378 + 
+108 Assemble 1s+++ 0.997518 0.997518 0.997518 0.997518 0.997518 
+108 Letter 0 0 0.997702 A 
+108 Letter 1 2 0.997702 C 
+108 Letter 2 4 0.997702 E 
+108 Letter 3 26 0.997702 + 
+108 Letter 4 26 0.997702 + 
+108 Letter 5 26 0.997702 + 
+108 Letter 6 26 0.997702 + 
+108 Letter 7 26 0.997702 + 
+108 Orth 0 0.999938 ACE+++++ 
+108 TotalSum  0.999938  
+108 Phon 0 0.878196 1s++++++ 
+108 Phoneme 0 0 0.349413 1 
+108 Phoneme 0 41 0.097850 { 
+108 Phoneme 1 27 0.066172 k 
+108 Phoneme 1 33 0.394708 s 
+108 Phoneme 2 43 0.404040 + 
+108 Phoneme 3 43 0.287870 + 
+108 Phoneme 4 43 0.142887 + 
+109 Assemble 1s+++ 0.997702 0.997702 0.997702 0.997702 0.997702 
+109 Letter 0 0 0.997872 A 
+109 Letter 1 2 0.997872 C 
+109 Letter 2 4 0.997872 E 
+109 Letter 3 26 0.997872 + 
+109 Letter 4 26 0.997872 + 
+109 Letter 5 26 0.997872 + 
+109 Letter 6 26 0.997872 + 
+109 Letter 7 26 0.997872 + 
+109 Orth 0 0.999947 ACE+++++ 
+109 TotalSum  0.999947  
+109 Phon 0 0.883114 1s++++++ 
+109 Phoneme 0 0 0.354643 1 
+109 Phoneme 0 41 0.096825 { 
+109 Phoneme 1 27 0.065389 k 
+109 Phoneme 1 33 0.400149 s 
+109 Phoneme 2 43 0.410580 + 
+109 Phoneme 3 43 0.295685 + 
+109 Phoneme 4 43 0.152293 + 
+110 Assemble 1s+++ 0.997872 0.997872 0.997872 0.997872 0.997872 
+110 Letter 0 0 0.998030 A 
+110 Letter 1 2 0.998030 C 
+110 Letter 2 4 0.998030 E 
+110 Letter 3 26 0.998030 + 
+110 Letter 4 26 0.998030 + 
+110 Letter 5 26 0.998030 + 
+110 Letter 6 26 0.998030 + 
+110 Letter 7 26 0.998030 + 
+110 Orth 0 0.999954 ACE+++++ 
+110 TotalSum  0.999954  
+110 Phon 0 0.887873 1s++++++ 
+110 Phoneme 0 0 0.359852 1 
+110 Phoneme 0 41 0.095794 { 
+110 Phoneme 1 27 0.064604 k 
+110 Phoneme 1 33 0.405556 s 
+110 Phoneme 2 43 0.417050 + 
+110 Phoneme 3 43 0.303416 + 
+110 Phoneme 4 43 0.161598 + 
+111 Assemble 1s+++ 0.998030 0.998030 0.998030 0.998030 0.998030 
+111 Letter 0 0 0.998175 A 
+111 Letter 1 2 0.998175 C 
+111 Letter 2 4 0.998175 E 
+111 Letter 3 26 0.998175 + 
+111 Letter 4 26 0.998175 + 
+111 Letter 5 26 0.998175 + 
+111 Letter 6 26 0.998175 + 
+111 Letter 7 26 0.998175 + 
+111 Orth 0 0.999961 ACE+++++ 
+111 TotalSum  0.999961  
+111 Phon 0 0.892475 1s++++++ 
+111 Phoneme 0 0 0.365040 1 
+111 Phoneme 0 41 0.094760 { 
+111 Phoneme 1 27 0.063818 k 
+111 Phoneme 1 33 0.410930 s 
+111 Phoneme 2 43 0.423450 + 
+111 Phoneme 3 43 0.311063 + 
+111 Phoneme 4 43 0.170803 + 
+112 Assemble 1s++++ 0.998175 0.998175 0.998175 0.998175 0.998175 0.998175 
+112 Letter 0 0 0.998310 A 
+112 Letter 1 2 0.998310 C 
+112 Letter 2 4 0.998310 E 
+112 Letter 3 26 0.998310 + 
+112 Letter 4 26 0.998310 + 
+112 Letter 5 26 0.998310 + 
+112 Letter 6 26 0.998310 + 
+112 Letter 7 26 0.998310 + 
+112 Orth 0 0.999966 ACE+++++ 
+112 TotalSum  0.999966  
+112 Phon 0 0.896923 1s++++++ 
+112 Phoneme 0 0 0.370207 1 
+112 Phoneme 0 41 0.093723 { 
+112 Phoneme 1 27 0.063031 k 
+112 Phoneme 1 33 0.416270 s 
+112 Phoneme 2 43 0.429780 + 
+112 Phoneme 3 43 0.318628 + 
+112 Phoneme 4 43 0.179907 + 
+113 Assemble 1s++++ 0.998310 0.998310 0.998310 0.998310 0.998310 0.998310 
+113 Letter 0 0 0.998435 A 
+113 Letter 1 2 0.998435 C 
+113 Letter 2 4 0.998435 E 
+113 Letter 3 26 0.998435 + 
+113 Letter 4 26 0.998435 + 
+113 Letter 5 26 0.998435 + 
+113 Letter 6 26 0.998435 + 
+113 Letter 7 26 0.998435 + 
+113 Orth 0 0.999971 ACE+++++ 
+113 TotalSum  0.999971  
+113 Phon 0 0.901231 1s++++++ 
+113 Phoneme 0 0 0.375352 1 
+113 Phoneme 0 41 0.092682 { 
+113 Phoneme 1 27 0.062244 k 
+113 Phoneme 1 33 0.421577 s 
+113 Phoneme 2 43 0.436042 + 
+113 Phoneme 3 43 0.326110 + 
+113 Phoneme 4 43 0.188913 + 
+113 Phoneme 5 43 0.021841 + 
+114 Assemble 1s++++ 0.998435 0.998435 0.998435 0.998435 0.998435 0.998435 
+114 Letter 0 0 0.998551 A 
+114 Letter 1 2 0.998551 C 
+114 Letter 2 4 0.998551 E 
+114 Letter 3 26 0.998551 + 
+114 Letter 4 26 0.998551 + 
+114 Letter 5 26 0.998551 + 
+114 Letter 6 26 0.998551 + 
+114 Letter 7 26 0.998551 + 
+114 Orth 0 0.999975 ACE+++++ 
+114 TotalSum  0.999975  
+114 Phon 0 0.905399 1s++++++ 
+114 Phoneme 0 0 0.380476 1 
+114 Phoneme 0 41 0.091638 { 
+114 Phoneme 1 27 0.061456 k 
+114 Phoneme 1 33 0.426849 s 
+114 Phoneme 2 43 0.442236 + 
+114 Phoneme 3 43 0.333512 + 
+114 Phoneme 4 43 0.197821 + 
+114 Phoneme 5 43 0.032584 + 
+115 Assemble 1s++++ 0.998551 0.998551 0.998551 0.998551 0.998551 0.998551 
+115 Letter 0 0 0.998658 A 
+115 Letter 1 2 0.998658 C 
+115 Letter 2 4 0.998658 E 
+115 Letter 3 26 0.998658 + 
+115 Letter 4 26 0.998658 + 
+115 Letter 5 26 0.998658 + 
+115 Letter 6 26 0.998658 + 
+115 Letter 7 26 0.998658 + 
+115 Orth 0 0.999979 ACE+++++ 
+115 TotalSum  0.999979  
+115 Phon 0 0.909429 1s++++++ 
+115 Phoneme 0 0 0.385577 1 
+115 Phoneme 0 41 0.090592 { 
+115 Phoneme 1 27 0.060670 k 
+115 Phoneme 1 33 0.432088 s 
+115 Phoneme 2 43 0.448362 + 
+115 Phoneme 3 43 0.340832 + 
+115 Phoneme 4 43 0.206632 + 
+115 Phoneme 5 43 0.043210 + 
+116 Assemble 1s++++ 0.998658 0.998658 0.998658 0.998658 0.998658 0.998658 
+116 Letter 0 0 0.998758 A 
+116 Letter 1 2 0.998758 C 
+116 Letter 2 4 0.998758 E 
+116 Letter 3 26 0.998758 + 
+116 Letter 4 26 0.998758 + 
+116 Letter 5 26 0.998758 + 
+116 Letter 6 26 0.998758 + 
+116 Letter 7 26 0.998758 + 
+116 Orth 0 0.999982 ACE+++++ 
+116 TotalSum  0.999982  
+116 Phon 0 0.913325 1s++++++ 
+116 Phoneme 0 0 0.390657 1 
+116 Phoneme 0 41 0.089544 { 
+116 Phoneme 1 27 0.059883 k 
+116 Phoneme 1 33 0.437293 s 
+116 Phoneme 2 43 0.454422 + 
+116 Phoneme 3 43 0.348074 + 
+116 Phoneme 4 43 0.215348 + 
+116 Phoneme 5 43 0.053720 + 
+117 Assemble 1s++++ 0.998758 0.998758 0.998758 0.998758 0.998758 0.998758 
+117 Letter 0 0 0.998850 A 
+117 Letter 1 2 0.998850 C 
+117 Letter 2 4 0.998850 E 
+117 Letter 3 26 0.998850 + 
+117 Letter 4 26 0.998850 + 
+117 Letter 5 26 0.998850 + 
+117 Letter 6 26 0.998850 + 
+117 Letter 7 26 0.998850 + 
+117 Orth 0 0.999984 ACE+++++ 
+117 TotalSum  0.999984  
+117 Phon 0 0.917088 1s++++++ 
+117 Phoneme 0 0 0.395715 1 
+117 Phoneme 0 41 0.088495 { 
+117 Phoneme 1 27 0.059097 k 
+117 Phoneme 1 33 0.442464 s 
+117 Phoneme 2 43 0.460416 + 
+117 Phoneme 3 43 0.355236 + 
+117 Phoneme 4 43 0.223968 + 
+117 Phoneme 5 43 0.064117 + 
+118 Assemble 1s++++ 0.998850 0.998850 0.998850 0.998850 0.998850 0.998850 
+118 Letter 0 0 0.998935 A 
+118 Letter 1 2 0.998935 C 
+118 Letter 2 4 0.998935 E 
+118 Letter 3 26 0.998935 + 
+118 Letter 4 26 0.998935 + 
+118 Letter 5 26 0.998935 + 
+118 Letter 6 26 0.998935 + 
+118 Letter 7 26 0.998935 + 
+118 Orth 0 0.999986 ACE+++++ 
+118 TotalSum  0.999986  
+118 Phon 0 0.920720 1s++++++ 
+118 Phoneme 0 0 0.400750 1 
+118 Phoneme 0 41 0.087444 { 
+118 Phoneme 1 27 0.058313 k 
+118 Phoneme 1 33 0.447602 s 
+118 Phoneme 2 43 0.466345 + 
+118 Phoneme 3 43 0.362320 + 
+118 Phoneme 4 43 0.232495 + 
+118 Phoneme 5 43 0.074399 + 
+119 Assemble 1s++++ 0.998935 0.998935 0.998935 0.998935 0.998935 0.998935 
+119 Letter 0 0 0.999014 A 
+119 Letter 1 2 0.999014 C 
+119 Letter 2 4 0.999014 E 
+119 Letter 3 26 0.999014 + 
+119 Letter 4 26 0.999014 + 
+119 Letter 5 26 0.999014 + 
+119 Letter 6 26 0.999014 + 
+119 Letter 7 26 0.999014 + 
+119 Orth 0 0.999988 ACE+++++ 
+119 TotalSum  0.999988  
+119 Phon 0 0.924225 1s++++++ 
+119 Phoneme 0 0 0.405763 1 
+119 Phoneme 0 41 0.086393 { 
+119 Phoneme 1 27 0.057530 k 
+119 Phoneme 1 33 0.452705 s 
+119 Phoneme 2 43 0.472209 + 
+119 Phoneme 3 43 0.369327 + 
+119 Phoneme 4 43 0.240928 + 
+119 Phoneme 5 43 0.084570 + 
+120 Assemble 1s++++ 0.999014 0.999014 0.999014 0.999014 0.999014 0.999014 
+120 Letter 0 0 0.999087 A 
+120 Letter 1 2 0.999087 C 
+120 Letter 2 4 0.999087 E 
+120 Letter 3 26 0.999087 + 
+120 Letter 4 26 0.999087 + 
+120 Letter 5 26 0.999087 + 
+120 Letter 6 26 0.999087 + 
+120 Letter 7 26 0.999087 + 
+120 Orth 0 0.999990 ACE+++++ 
+120 TotalSum  0.999990  
+120 Phon 0 0.927604 1s++++++ 
+120 Phoneme 0 0 0.410753 1 
+120 Phoneme 0 41 0.085341 { 
+120 Phoneme 1 27 0.056749 k 
+120 Phoneme 1 33 0.457775 s 
+120 Phoneme 2 43 0.478009 + 
+120 Phoneme 3 43 0.376258 + 
+120 Phoneme 4 43 0.249270 + 
+120 Phoneme 5 43 0.094630 + 
+121 Assemble 1s++++ 0.999087 0.999087 0.999087 0.999087 0.999087 0.999087 
+121 Letter 0 0 0.999154 A 
+121 Letter 1 2 0.999154 C 
+121 Letter 2 4 0.999154 E 
+121 Letter 3 26 0.999154 + 
+121 Letter 4 26 0.999154 + 
+121 Letter 5 26 0.999154 + 
+121 Letter 6 26 0.999154 + 
+121 Letter 7 26 0.999154 + 
+121 Orth 0 0.999991 ACE+++++ 
+121 TotalSum  0.999991  
+121 Phon 0 0.930861 1s++++++ 
+121 Phoneme 0 0 0.415720 1 
+121 Phoneme 0 41 0.084290 { 
+121 Phoneme 1 27 0.055969 k 
+121 Phoneme 1 33 0.462811 s 
+121 Phoneme 2 43 0.483745 + 
+121 Phoneme 3 43 0.383112 + 
+121 Phoneme 4 43 0.257520 + 
+121 Phoneme 5 43 0.104580 + 
+122 Assemble 1s++++ 0.999154 0.999154 0.999154 0.999154 0.999154 0.999154 
+122 Letter 0 0 0.999217 A 
+122 Letter 1 2 0.999217 C 
+122 Letter 2 4 0.999217 E 
+122 Letter 3 26 0.999217 + 
+122 Letter 4 26 0.999217 + 
+122 Letter 5 26 0.999217 + 
+122 Letter 6 26 0.999217 + 
+122 Letter 7 26 0.999217 + 
+122 Orth 0 0.999993 ACE+++++ 
+122 TotalSum  0.999993  
+122 Phon 0 0.933998 1s++++++ 
+122 Phoneme 0 0 0.420664 1 
+122 Phoneme 0 41 0.083238 { 
+122 Phoneme 1 27 0.055192 k 
+122 Phoneme 1 33 0.467813 s 
+122 Phoneme 2 43 0.489419 + 
+122 Phoneme 3 43 0.389893 + 
+122 Phoneme 4 43 0.265680 + 
+122 Phoneme 5 43 0.114421 + 
+123 Assemble 1s++++ 0.999217 0.999217 0.999217 0.999217 0.999217 0.999217 
+123 Letter 0 0 0.999275 A 
+123 Letter 1 2 0.999275 C 
+123 Letter 2 4 0.999275 E 
+123 Letter 3 26 0.999275 + 
+123 Letter 4 26 0.999275 + 
+123 Letter 5 26 0.999275 + 
+123 Letter 6 26 0.999275 + 
+123 Letter 7 26 0.999275 + 
+123 Orth 0 0.999994 ACE+++++ 
+123 TotalSum  0.999994  
+123 Phon 0 0.937017 1s++++++ 
+123 Phoneme 0 0 0.425585 1 
+123 Phoneme 0 41 0.082188 { 
+123 Phoneme 1 27 0.054418 k 
+123 Phoneme 1 33 0.472781 s 
+123 Phoneme 2 43 0.495031 + 
+123 Phoneme 3 43 0.396598 + 
+123 Phoneme 4 43 0.273752 + 
+123 Phoneme 5 43 0.124155 + 
+124 Assemble 1s++++ 0.999275 0.999275 0.999275 0.999275 0.999275 0.999275 
+124 Letter 0 0 0.999328 A 
+124 Letter 1 2 0.999328 C 
+124 Letter 2 4 0.999328 E 
+124 Letter 3 26 0.999328 + 
+124 Letter 4 26 0.999328 + 
+124 Letter 5 26 0.999328 + 
+124 Letter 6 26 0.999328 + 
+124 Letter 7 26 0.999328 + 
+124 Orth 0 0.999995 ACE+++++ 
+124 TotalSum  0.999995  
+124 Phon 0 0.939923 1s++++++ 
+124 Phoneme 0 0 0.430483 1 
+124 Phoneme 0 41 0.081139 { 
+124 Phoneme 1 27 0.053646 k 
+124 Phoneme 1 33 0.477716 s 
+124 Phoneme 2 43 0.500582 + 
+124 Phoneme 3 43 0.403231 + 
+124 Phoneme 4 43 0.281735 + 
+124 Phoneme 5 43 0.133782 + 
+125 Assemble 1s++++ 0.999328 0.999328 0.999328 0.999328 0.999328 0.999328 
+125 Letter 0 0 0.999378 A 
+125 Letter 1 2 0.999378 C 
+125 Letter 2 4 0.999378 E 
+125 Letter 3 26 0.999378 + 
+125 Letter 4 26 0.999378 + 
+125 Letter 5 26 0.999378 + 
+125 Letter 6 26 0.999378 + 
+125 Letter 7 26 0.999378 + 
+125 Orth 0 0.999995 ACE+++++ 
+125 TotalSum  0.999995  
+125 Phon 0 0.942717 1s++++++ 
+125 Phoneme 0 0 0.435357 1 
+125 Phoneme 0 41 0.080091 { 
+125 Phoneme 1 27 0.052877 k 
+125 Phoneme 1 33 0.482617 s 
+125 Phoneme 2 43 0.506072 + 
+125 Phoneme 3 43 0.409791 + 
+125 Phoneme 4 43 0.289630 + 
+125 Phoneme 5 43 0.143304 + 
+126 Assemble 1s++++ 0.999378 0.999378 0.999378 0.999378 0.999378 0.999378 
+126 Letter 0 0 0.999424 A 
+126 Letter 1 2 0.999424 C 
+126 Letter 2 4 0.999424 E 
+126 Letter 3 26 0.999424 + 
+126 Letter 4 26 0.999424 + 
+126 Letter 5 26 0.999424 + 
+126 Letter 6 26 0.999424 + 
+126 Letter 7 26 0.999424 + 
+126 Orth 0 0.999996 ACE+++++ 
+126 TotalSum  0.999996  
+126 Phon 0 0.945402 1s++++++ 
+126 Phoneme 0 0 0.440207 1 
+126 Phoneme 0 41 0.079045 { 
+126 Phoneme 1 27 0.052111 k 
+126 Phoneme 1 33 0.487484 s 
+126 Phoneme 2 43 0.511502 + 
+126 Phoneme 3 43 0.416279 + 
+126 Phoneme 4 43 0.297439 + 
+126 Phoneme 5 43 0.152722 + 
+127 Assemble 1s++++ 0.999424 0.999424 0.999424 0.999424 0.999424 0.999424 
+127 Letter 0 0 0.999467 A 
+127 Letter 1 2 0.999467 C 
+127 Letter 2 4 0.999467 E 
+127 Letter 3 26 0.999467 + 
+127 Letter 4 26 0.999467 + 
+127 Letter 5 26 0.999467 + 
+127 Letter 6 26 0.999467 + 
+127 Letter 7 26 0.999467 + 
+127 Orth 0 0.999997 ACE+++++ 
+127 TotalSum  0.999997  
+127 Phon 0 0.947981 1s++++++ 
+127 Phoneme 0 0 0.445034 1 
+127 Phoneme 0 41 0.078001 { 
+127 Phoneme 1 27 0.051349 k 
+127 Phoneme 1 33 0.492317 s 
+127 Phoneme 2 43 0.516872 + 
+127 Phoneme 3 43 0.422697 + 
+127 Phoneme 4 43 0.305163 + 
+127 Phoneme 5 43 0.162037 + 
+128 Assemble 1s++++ 0.999467 0.999467 0.999467 0.999467 0.999467 0.999467 
+128 Letter 0 0 0.999506 A 
+128 Letter 1 2 0.999506 C 
+128 Letter 2 4 0.999506 E 
+128 Letter 3 26 0.999506 + 
+128 Letter 4 26 0.999506 + 
+128 Letter 5 26 0.999506 + 
+128 Letter 6 26 0.999506 + 
+128 Letter 7 26 0.999506 + 
+128 Orth 0 0.999997 ACE+++++ 
+128 TotalSum  0.999997  
+128 Phon 0 0.950458 1s++++++ 
+128 Phoneme 0 0 0.449837 1 
+128 Phoneme 0 41 0.076959 { 
+128 Phoneme 1 27 0.050591 k 
+128 Phoneme 1 33 0.497116 s 
+128 Phoneme 2 43 0.522184 + 
+128 Phoneme 3 43 0.429044 + 
+128 Phoneme 4 43 0.312802 + 
+128 Phoneme 5 43 0.171249 + 
+129 Assemble 1s+++++ 0.999506 0.999506 0.999506 0.999506 0.999506 0.999506 0.999506 
+129 Letter 0 0 0.999543 A 
+129 Letter 1 2 0.999543 C 
+129 Letter 2 4 0.999543 E 
+129 Letter 3 26 0.999543 + 
+129 Letter 4 26 0.999543 + 
+129 Letter 5 26 0.999543 + 
+129 Letter 6 26 0.999543 + 
+129 Letter 7 26 0.999543 + 
+129 Orth 0 0.999997 ACE+++++ 
+129 TotalSum  0.999997  
+129 Phon 0 0.952835 1s++++++ 
+129 Phoneme 0 0 0.454615 1 
+129 Phoneme 0 41 0.075921 { 
+129 Phoneme 1 27 0.049836 k 
+129 Phoneme 1 33 0.501882 s 
+129 Phoneme 2 43 0.527437 + 
+129 Phoneme 3 43 0.435321 + 
+129 Phoneme 4 43 0.320358 + 
+129 Phoneme 5 43 0.180361 + 
+130 Assemble 1s+++++ 0.999543 0.999543 0.999543 0.999543 0.999543 0.999543 0.999543 
+130 Letter 0 0 0.999577 A 
+130 Letter 1 2 0.999577 C 
+130 Letter 2 4 0.999577 E 
+130 Letter 3 26 0.999577 + 
+130 Letter 4 26 0.999577 + 
+130 Letter 5 26 0.999577 + 
+130 Letter 6 26 0.999577 + 
+130 Letter 7 26 0.999577 + 
+130 Orth 0 0.999998 ACE+++++ 
+130 TotalSum  0.999998  
+130 Phon 0 0.955119 1s++++++ 
+130 Phoneme 0 0 0.459370 1 
+130 Phoneme 0 41 0.074885 { 
+130 Phoneme 1 27 0.049086 k 
+130 Phoneme 1 33 0.506614 s 
+130 Phoneme 2 43 0.532633 + 
+130 Phoneme 3 43 0.441530 + 
+130 Phoneme 4 43 0.327830 + 
+130 Phoneme 5 43 0.189373 + 
+130 Phoneme 6 43 0.021869 + 
+131 Assemble 1s+++++ 0.999577 0.999577 0.999577 0.999577 0.999577 0.999577 0.999577 
+131 Letter 0 0 0.999608 A 
+131 Letter 1 2 0.999608 C 
+131 Letter 2 4 0.999608 E 
+131 Letter 3 26 0.999608 + 
+131 Letter 4 26 0.999608 + 
+131 Letter 5 26 0.999608 + 
+131 Letter 6 26 0.999608 + 
+131 Letter 7 26 0.999608 + 
+131 Orth 0 0.999998 ACE+++++ 
+131 TotalSum  0.999998  
+131 Phon 0 0.957312 1s++++++ 
+131 Phoneme 0 0 0.464100 1 
+131 Phoneme 0 41 0.073853 { 
+131 Phoneme 1 27 0.048340 k 
+131 Phoneme 1 33 0.511312 s 
+131 Phoneme 2 43 0.537772 + 
+131 Phoneme 3 43 0.447670 + 
+131 Phoneme 4 43 0.335221 + 
+131 Phoneme 5 43 0.198286 + 
+131 Phoneme 6 43 0.032624 + 
+132 Assemble 1s+++++ 0.999608 0.999608 0.999608 0.999608 0.999608 0.999608 0.999608 
+132 Letter 0 0 0.999637 A 
+132 Letter 1 2 0.999637 C 
+132 Letter 2 4 0.999637 E 
+132 Letter 3 26 0.999637 + 
+132 Letter 4 26 0.999637 + 
+132 Letter 5 26 0.999637 + 
+132 Letter 6 26 0.999637 + 
+132 Letter 7 26 0.999637 + 
+132 Orth 0 0.999998 ACE+++++ 
+132 TotalSum  0.999998  
+132 Phon 0 0.959417 1s++++++ 
+132 Phoneme 0 0 0.468805 1 
+132 Phoneme 0 41 0.072825 { 
+132 Phoneme 1 27 0.047599 k 
+132 Phoneme 1 33 0.515977 s 
+132 Phoneme 2 43 0.542854 + 
+132 Phoneme 3 43 0.453743 + 
+132 Phoneme 4 43 0.342531 + 
+132 Phoneme 5 43 0.207102 + 
+132 Phoneme 6 43 0.043261 + 
+133 Assemble 1s+++++ 0.999637 0.999637 0.999637 0.999637 0.999637 0.999637 0.999637 
+133 Letter 0 0 0.999664 A 
+133 Letter 1 2 0.999664 C 
+133 Letter 2 4 0.999664 E 
+133 Letter 3 26 0.999664 + 
+133 Letter 4 26 0.999664 + 
+133 Letter 5 26 0.999664 + 
+133 Letter 6 26 0.999664 + 
+133 Letter 7 26 0.999664 + 
+133 Orth 0 0.999999 ACE+++++ 
+133 TotalSum  0.999999  
+133 Phon 0 0.961435 1s++++++ 
+133 Phoneme 0 0 0.473485 1 
+133 Phoneme 0 41 0.071801 { 
+133 Phoneme 1 27 0.046862 k 
+133 Phoneme 1 33 0.520608 s 
+133 Phoneme 2 43 0.547881 + 
+133 Phoneme 3 43 0.459750 + 
+133 Phoneme 4 43 0.349760 + 
+133 Phoneme 5 43 0.215820 + 
+133 Phoneme 6 43 0.053781 + 
+134 Assemble 1s+++++ 0.999664 0.999664 0.999664 0.999664 0.999664 0.999664 0.999664 
+134 Letter 0 0 0.999689 A 
+134 Letter 1 2 0.999689 C 
+134 Letter 2 4 0.999689 E 
+134 Letter 3 26 0.999689 + 
+134 Letter 4 26 0.999689 + 
+134 Letter 5 26 0.999689 + 
+134 Letter 6 26 0.999689 + 
+134 Letter 7 26 0.999689 + 
+134 Orth 0 0.999999 ACE+++++ 
+134 TotalSum  0.999999  
+134 Phon 0 0.963370 1s++++++ 
+134 Phoneme 0 0 0.478141 1 
+134 Phoneme 0 41 0.070781 { 
+134 Phoneme 1 27 0.046130 k 
+134 Phoneme 1 33 0.525206 s 
+134 Phoneme 2 43 0.552853 + 
+134 Phoneme 3 43 0.465691 + 
+134 Phoneme 4 43 0.356911 + 
+134 Phoneme 5 43 0.224443 + 
+134 Phoneme 6 43 0.064186 + 
+135 Assemble 1s+++++ 0.999689 0.999689 0.999689 0.999689 0.999689 0.999689 0.999689 
+135 Letter 0 0 0.999712 A 
+135 Letter 1 2 0.999712 C 
+135 Letter 2 4 0.999712 E 
+135 Letter 3 26 0.999712 + 
+135 Letter 4 26 0.999712 + 
+135 Letter 5 26 0.999712 + 
+135 Letter 6 26 0.999712 + 
+135 Letter 7 26 0.999712 + 
+135 Orth 0 0.999999 ACE+++++ 
+135 TotalSum  0.999999  
+135 Phon 0 0.965223 1s++++++ 
+135 Phoneme 0 0 0.482772 1 
+135 Phoneme 0 41 0.069766 { 
+135 Phoneme 1 27 0.045403 k 
+135 Phoneme 1 33 0.529770 s 
+135 Phoneme 2 43 0.557770 + 
+135 Phoneme 3 43 0.471566 + 
+135 Phoneme 4 43 0.363982 + 
+135 Phoneme 5 43 0.232972 + 
+135 Phoneme 6 43 0.074476 + 
+136 Assemble 1s+++++ 0.999712 0.999712 0.999712 0.999712 0.999712 0.999712 0.999712 
+136 Letter 0 0 0.999733 A 
+136 Letter 1 2 0.999733 C 
+136 Letter 2 4 0.999733 E 
+136 Letter 3 26 0.999733 + 
+136 Letter 4 26 0.999733 + 
+136 Letter 5 26 0.999733 + 
+136 Letter 6 26 0.999733 + 
+136 Letter 7 26 0.999733 + 
+136 Orth 0 0.999999 ACE+++++ 
+136 TotalSum  0.999999  
+136 Phon 0 0.966998 1s++++++ 
+136 Phoneme 0 0 0.487377 1 
+136 Phoneme 0 41 0.068755 { 
+136 Phoneme 1 27 0.044681 k 
+136 Phoneme 1 33 0.534301 s 
+136 Phoneme 2 43 0.562633 + 
+136 Phoneme 3 43 0.477377 + 
+136 Phoneme 4 43 0.370977 + 
+136 Phoneme 5 43 0.241407 + 
+136 Phoneme 6 43 0.084654 + 
+137 Assemble 1s+++++ 0.999733 0.999733 0.999733 0.999733 0.999733 0.999733 0.999733 
+137 Letter 0 0 0.999753 A 
+137 Letter 1 2 0.999753 C 
+137 Letter 2 4 0.999753 E 
+137 Letter 3 26 0.999753 + 
+137 Letter 4 26 0.999753 + 
+137 Letter 5 26 0.999753 + 
+137 Letter 6 26 0.999753 + 
+137 Letter 7 26 0.999753 + 
+137 Orth 0 0.999999 ACE+++++ 
+137 TotalSum  0.999999  
+137 Phon 0 0.968695 1s++++++ 
+137 Phoneme 0 0 0.491957 1 
+137 Phoneme 0 41 0.067750 { 
+137 Phoneme 1 27 0.043965 k 
+137 Phoneme 1 33 0.538798 s 
+137 Phoneme 2 43 0.567443 + 
+137 Phoneme 3 43 0.483125 + 
+137 Phoneme 4 43 0.377894 + 
+137 Phoneme 5 43 0.249749 + 
+137 Phoneme 6 43 0.094720 + 
+138 Assemble 1s+++++ 0.999753 0.999753 0.999753 0.999753 0.999753 0.999753 0.999753 
+138 Letter 0 0 0.999771 A 
+138 Letter 1 2 0.999771 C 
+138 Letter 2 4 0.999771 E 
+138 Letter 3 26 0.999771 + 
+138 Letter 4 26 0.999771 + 
+138 Letter 5 26 0.999771 + 
+138 Letter 6 26 0.999771 + 
+138 Letter 7 26 0.999771 + 
+138 Orth 0 0.999999 ACE+++++ 
+138 TotalSum  0.999999  
+138 Phon 0 0.970318 1s++++++ 
+138 Phoneme 0 0 0.496511 1 
+138 Phoneme 0 41 0.066750 { 
+138 Phoneme 1 27 0.043255 k 
+138 Phoneme 1 33 0.543261 s 
+138 Phoneme 2 43 0.572199 + 
+138 Phoneme 3 43 0.488809 + 
+138 Phoneme 4 43 0.384735 + 
+138 Phoneme 5 43 0.258000 + 
+138 Phoneme 6 43 0.104676 + 
+139 Assemble 1s+++++ 0.999771 0.999771 0.999771 0.999771 0.999771 0.999771 0.999771 
+139 Letter 0 0 0.999788 A 
+139 Letter 1 2 0.999788 C 
+139 Letter 2 4 0.999788 E 
+139 Letter 3 26 0.999788 + 
+139 Letter 4 26 0.999788 + 
+139 Letter 5 26 0.999788 + 
+139 Letter 6 26 0.999788 + 
+139 Letter 7 26 0.999788 + 
+139 Orth 0 0.999999 ACE+++++ 
+139 TotalSum  0.999999  
+139 Phon 0 0.971870 1s++++++ 
+139 Phoneme 0 0 0.501040 1 
+139 Phoneme 0 41 0.065756 { 
+139 Phoneme 1 27 0.042550 k 
+139 Phoneme 1 33 0.547692 s 
+139 Phoneme 2 43 0.576904 + 
+139 Phoneme 3 43 0.494431 + 
+139 Phoneme 4 43 0.391502 + 
+139 Phoneme 5 43 0.266160 + 
+139 Phoneme 6 43 0.114522 + 
+140 Assemble 1s+++++ 0.999788 0.999788 0.999788 0.999788 0.999788 0.999788 0.999788 
+140 Letter 0 0 0.999804 A 
+140 Letter 1 2 0.999804 C 
+140 Letter 2 4 0.999804 E 
+140 Letter 3 26 0.999804 + 
+140 Letter 4 26 0.999804 + 
+140 Letter 5 26 0.999804 + 
+140 Letter 6 26 0.999804 + 
+140 Letter 7 26 0.999804 + 
+140 Orth 0 1.000000 ACE+++++ 
+140 TotalSum  1.000000  
+140 Phon 0 0.973351 1s++++++ 
+140 Phoneme 0 0 0.505543 1 
+140 Phoneme 0 41 0.064767 { 
+140 Phoneme 1 27 0.041850 k 
+140 Phoneme 1 33 0.552089 s 
+140 Phoneme 2 43 0.581557 + 
+140 Phoneme 3 43 0.499991 + 
+140 Phoneme 4 43 0.398194 + 
+140 Phoneme 5 43 0.274230 + 
+140 Phoneme 6 43 0.124261 + 
+141 Assemble 1s+++++ 0.999804 0.999804 0.999804 0.999804 0.999804 0.999804 0.999804 
+141 Letter 0 0 0.999818 A 
+141 Letter 1 2 0.999818 C 
+141 Letter 2 4 0.999818 E 
+141 Letter 3 26 0.999818 + 
+141 Letter 4 26 0.999818 + 
+141 Letter 5 26 0.999818 + 
+141 Letter 6 26 0.999818 + 
+141 Letter 7 26 0.999818 + 
+141 Orth 0 1.000000 ACE+++++ 
+141 TotalSum  1.000000  
+141 Phon 0 0.974766 1s++++++ 
+141 Phoneme 0 0 0.510021 1 
+141 Phoneme 0 41 0.063785 { 
+141 Phoneme 1 27 0.041157 k 
+141 Phoneme 1 33 0.556452 s 
+141 Phoneme 2 43 0.586159 + 
+141 Phoneme 3 43 0.505490 + 
+141 Phoneme 4 43 0.404812 + 
+141 Phoneme 5 43 0.282212 + 
+141 Phoneme 6 43 0.133892 + 
+142 Assemble 1s+++++ 0.999818 0.999818 0.999818 0.999818 0.999818 0.999818 0.999818 
+142 Letter 0 0 0.999832 A 
+142 Letter 1 2 0.999832 C 
+142 Letter 2 4 0.999832 E 
+142 Letter 3 26 0.999832 + 
+142 Letter 4 26 0.999832 + 
+142 Letter 5 26 0.999832 + 
+142 Letter 6 26 0.999832 + 
+142 Letter 7 26 0.999832 + 
+142 Orth 0 1.000000 ACE+++++ 
+142 TotalSum  1.000000  
+142 Phon 0 0.976115 1s++++++ 
+142 Phoneme 0 0 0.514472 1 
+142 Phoneme 0 41 0.062809 { 
+142 Phoneme 1 27 0.040470 k 
+142 Phoneme 1 33 0.560783 s 
+142 Phoneme 2 43 0.590711 + 
+142 Phoneme 3 43 0.510929 + 
+142 Phoneme 4 43 0.411358 + 
+142 Phoneme 5 43 0.290107 + 
+142 Phoneme 6 43 0.143417 + 
+143 Assemble 1s+++++ 0.999832 0.999832 0.999832 0.999832 0.999832 0.999832 0.999832 
+143 Letter 0 0 0.999844 A 
+143 Letter 1 2 0.999844 C 
+143 Letter 2 4 0.999844 E 
+143 Letter 3 26 0.999844 + 
+143 Letter 4 26 0.999844 + 
+143 Letter 5 26 0.999844 + 
+143 Letter 6 26 0.999844 + 
+143 Letter 7 26 0.999844 + 
+143 Orth 0 1.000000 ACE+++++ 
+143 TotalSum  1.000000  
+143 Phon 0 0.977402 1s++++++ 
+143 Phoneme 0 0 0.518897 1 
+143 Phoneme 0 41 0.061840 { 
+143 Phoneme 1 27 0.039789 k 
+143 Phoneme 1 33 0.565080 s 
+143 Phoneme 2 43 0.595212 + 
+143 Phoneme 3 43 0.516307 + 
+143 Phoneme 4 43 0.417832 + 
+143 Phoneme 5 43 0.297914 + 
+143 Phoneme 6 43 0.152838 + 
+144 Assemble 1s+++++ 0.999844 0.999844 0.999844 0.999844 0.999844 0.999844 0.999844 
+144 Letter 0 0 0.999856 A 
+144 Letter 1 2 0.999856 C 
+144 Letter 2 4 0.999856 E 
+144 Letter 3 26 0.999856 + 
+144 Letter 4 26 0.999856 + 
+144 Letter 5 26 0.999856 + 
+144 Letter 6 26 0.999856 + 
+144 Letter 7 26 0.999856 + 
+144 Orth 0 1.000000 ACE+++++ 
+144 TotalSum  1.000000  
+144 Phon 0 0.978628 1s++++++ 
+144 Phoneme 0 0 0.523296 1 
+144 Phoneme 0 41 0.060877 { 
+144 Phoneme 1 27 0.039115 k 
+144 Phoneme 1 33 0.569344 s 
+144 Phoneme 2 43 0.599664 + 
+144 Phoneme 3 43 0.521627 + 
+144 Phoneme 4 43 0.424235 + 
+144 Phoneme 5 43 0.305636 + 
+144 Phoneme 6 43 0.162155 + 
+145 Assemble 1s+++++ 0.999856 0.999856 0.999856 0.999856 0.999856 0.999856 0.999856 
+145 Letter 0 0 0.999866 A 
+145 Letter 1 2 0.999866 C 
+145 Letter 2 4 0.999866 E 
+145 Letter 3 26 0.999866 + 
+145 Letter 4 26 0.999866 + 
+145 Letter 5 26 0.999866 + 
+145 Letter 6 26 0.999866 + 
+145 Letter 7 26 0.999866 + 
+145 Orth 0 1.000000 ACE+++++ 
+145 TotalSum  1.000000  
+145 Phon 0 0.979796 1s++++++ 
+145 Phoneme 0 0 0.527668 1 
+145 Phoneme 0 41 0.059921 { 
+145 Phoneme 1 27 0.038447 k 
+145 Phoneme 1 33 0.573576 s 
+145 Phoneme 2 43 0.604067 + 
+145 Phoneme 3 43 0.526889 + 
+145 Phoneme 4 43 0.430568 + 
+145 Phoneme 5 43 0.313273 + 
+145 Phoneme 6 43 0.171370 + 
+146 Assemble 1s+++++ 0.999866 0.999866 0.999866 0.999866 0.999866 0.999866 0.999866 
+146 Letter 0 0 0.999876 A 
+146 Letter 1 2 0.999876 C 
+146 Letter 2 4 0.999876 E 
+146 Letter 3 26 0.999876 + 
+146 Letter 4 26 0.999876 + 
+146 Letter 5 26 0.999876 + 
+146 Letter 6 26 0.999876 + 
+146 Letter 7 26 0.999876 + 
+146 Orth 0 1.000000 ACE+++++ 
+146 TotalSum  1.000000  
+146 Phon 0 0.980908 1s++++++ 
+146 Phoneme 0 0 0.532014 1 
+146 Phoneme 0 41 0.058973 { 
+146 Phoneme 1 27 0.037785 k 
+146 Phoneme 1 33 0.577774 s 
+146 Phoneme 2 43 0.608422 + 
+146 Phoneme 3 43 0.532092 + 
+146 Phoneme 4 43 0.436831 + 
+146 Phoneme 5 43 0.320826 + 
+146 Phoneme 6 43 0.180484 + 
+147 Assemble 1s+++++ 0.999876 0.999876 0.999876 0.999876 0.999876 0.999876 0.999876 
+147 Letter 0 0 0.999885 A 
+147 Letter 1 2 0.999885 C 
+147 Letter 2 4 0.999885 E 
+147 Letter 3 26 0.999885 + 
+147 Letter 4 26 0.999885 + 
+147 Letter 5 26 0.999885 + 
+147 Letter 6 26 0.999885 + 
+147 Letter 7 26 0.999885 + 
+147 Orth 0 1.000000 ACE+++++ 
+147 TotalSum  1.000000  
+147 Phon 0 0.981966 1s++++++ 
+147 Phoneme 0 0 0.536333 1 
+147 Phoneme 0 41 0.058032 { 
+147 Phoneme 1 27 0.037130 k 
+147 Phoneme 1 33 0.581939 s 
+147 Phoneme 2 43 0.612729 + 
+147 Phoneme 3 43 0.537238 + 
+147 Phoneme 4 43 0.443025 + 
+147 Phoneme 5 43 0.328296 + 
+147 Phoneme 6 43 0.189498 + 
+148 Assemble 1s+++++ 0.999885 0.999885 0.999885 0.999885 0.999885 0.999885 0.999885 
+148 Letter 0 0 0.999894 A 
+148 Letter 1 2 0.999894 C 
+148 Letter 2 4 0.999894 E 
+148 Letter 3 26 0.999894 + 
+148 Letter 4 26 0.999894 + 
+148 Letter 5 26 0.999894 + 
+148 Letter 6 26 0.999894 + 
+148 Letter 7 26 0.999894 + 
+148 Orth 0 1.000000 ACE+++++ 
+148 TotalSum  1.000000  
+148 Phon 0 0.982972 1s++++++ 
+148 Phoneme 0 0 0.540626 1 
+148 Phoneme 0 41 0.057098 { 
+148 Phoneme 1 27 0.036482 k 
+148 Phoneme 1 33 0.586071 s 
+148 Phoneme 2 43 0.616988 + 
+148 Phoneme 3 43 0.542328 + 
+148 Phoneme 4 43 0.449151 + 
+148 Phoneme 5 43 0.335684 + 
+148 Phoneme 6 43 0.198412 + 
+149 Assemble 1s+++++ 0.999894 0.999894 0.999894 0.999894 0.999894 0.999894 0.999894 
+149 Letter 0 0 0.999902 A 
+149 Letter 1 2 0.999902 C 
+149 Letter 2 4 0.999902 E 
+149 Letter 3 26 0.999902 + 
+149 Letter 4 26 0.999902 + 
+149 Letter 5 26 0.999902 + 
+149 Letter 6 26 0.999902 + 
+149 Letter 7 26 0.999902 + 
+149 Orth 0 1.000000 ACE+++++ 
+149 TotalSum  1.000000  
+149 Phon 0 0.983928 1s++++++ 
+149 Phoneme 0 0 0.544891 1 
+149 Phoneme 0 41 0.056172 { 
+149 Phoneme 1 27 0.035841 k 
+149 Phoneme 1 33 0.590171 s 
+149 Phoneme 2 43 0.621201 + 
+149 Phoneme 3 43 0.547362 + 
+149 Phoneme 4 43 0.455209 + 
+149 Phoneme 5 43 0.342990 + 
+149 Phoneme 6 43 0.207229 + 
+150 Assemble 1s+++++ 0.999902 0.999902 0.999902 0.999902 0.999902 0.999902 0.999902 
+150 Letter 0 0 0.999909 A 
+150 Letter 1 2 0.999909 C 
+150 Letter 2 4 0.999909 E 
+150 Letter 3 26 0.999909 + 
+150 Letter 4 26 0.999909 + 
+150 Letter 5 26 0.999909 + 
+150 Letter 6 26 0.999909 + 
+150 Letter 7 26 0.999909 + 
+150 Orth 0 1.000000 ACE+++++ 
+150 TotalSum  1.000000  
+150 Phon 0 0.984836 1s++++++ 
+150 Phoneme 0 0 0.549130 1 
+150 Phoneme 0 41 0.055254 { 
+150 Phoneme 1 27 0.035206 k 
+150 Phoneme 1 33 0.594238 s 
+150 Phoneme 2 43 0.625367 + 
+150 Phoneme 3 43 0.552341 + 
+150 Phoneme 4 43 0.461201 + 
+150 Phoneme 5 43 0.350217 + 
+150 Phoneme 6 43 0.215948 + 
+151 Assemble 1s+++++ 0.999909 0.999909 0.999909 0.999909 0.999909 0.999909 0.999909 
+151 Letter 0 0 0.999916 A 
+151 Letter 1 2 0.999916 C 
+151 Letter 2 4 0.999916 E 
+151 Letter 3 26 0.999916 + 
+151 Letter 4 26 0.999916 + 
+151 Letter 5 26 0.999916 + 
+151 Letter 6 26 0.999916 + 
+151 Letter 7 26 0.999916 + 
+151 Orth 0 1.000000 ACE+++++ 
+151 TotalSum  1.000000  
+151 Phon 0 0.985699 1s++++++ 
+151 Phoneme 0 0 0.553342 1 
+151 Phoneme 0 41 0.054343 { 
+151 Phoneme 1 27 0.034578 k 
+151 Phoneme 1 33 0.598273 s 
+151 Phoneme 2 43 0.629488 + 
+151 Phoneme 3 43 0.557264 + 
+151 Phoneme 4 43 0.467128 + 
+151 Phoneme 5 43 0.357364 + 
+151 Phoneme 6 43 0.224572 + 
+152 Assemble 1s+++++ 0.999916 0.999916 0.999916 0.999916 0.999916 0.999916 0.999916 
+152 Letter 0 0 0.999922 A 
+152 Letter 1 2 0.999922 C 
+152 Letter 2 4 0.999922 E 
+152 Letter 3 26 0.999922 + 
+152 Letter 4 26 0.999922 + 
+152 Letter 5 26 0.999922 + 
+152 Letter 6 26 0.999922 + 
+152 Letter 7 26 0.999922 + 
+152 Orth 0 1.000000 ACE+++++ 
+152 TotalSum  1.000000  
+152 Phon 0 0.986518 1s++++++ 
+152 Phoneme 0 0 0.557527 1 
+152 Phoneme 0 41 0.053441 { 
+152 Phoneme 1 27 0.033958 k 
+152 Phoneme 1 33 0.602275 s 
+152 Phoneme 2 43 0.633563 + 
+152 Phoneme 3 43 0.562134 + 
+152 Phoneme 4 43 0.472989 + 
+152 Phoneme 5 43 0.364432 + 
+152 Phoneme 6 43 0.233101 + 
+153 Assemble 1s+++++ 0.999922 0.999922 0.999922 0.999922 0.999922 0.999922 0.999922 
+153 Letter 0 0 0.999928 A 
+153 Letter 1 2 0.999928 C 
+153 Letter 2 4 0.999928 E 
+153 Letter 3 26 0.999928 + 
+153 Letter 4 26 0.999928 + 
+153 Letter 5 26 0.999928 + 
+153 Letter 6 26 0.999928 + 
+153 Letter 7 26 0.999928 + 
+153 Orth 0 1.000000 ACE+++++ 
+153 TotalSum  1.000000  
+153 Phon 0 0.987295 1s++++++ 
+153 Phoneme 0 0 0.561684 1 
+153 Phoneme 0 41 0.052547 { 
+153 Phoneme 1 27 0.033344 k 
+153 Phoneme 1 33 0.606244 s 
+153 Phoneme 2 43 0.637594 + 
+153 Phoneme 3 43 0.566950 + 
+153 Phoneme 4 43 0.478785 + 
+153 Phoneme 5 43 0.371423 + 
+153 Phoneme 6 43 0.241536 + 
+154 Assemble 1s+++++ 0.999928 0.999928 0.999928 0.999928 0.999928 0.999928 0.999928 
+154 Letter 0 0 0.999933 A 
+154 Letter 1 2 0.999933 C 
+154 Letter 2 4 0.999933 E 
+154 Letter 3 26 0.999933 + 
+154 Letter 4 26 0.999933 + 
+154 Letter 5 26 0.999933 + 
+154 Letter 6 26 0.999933 + 
+154 Letter 7 26 0.999933 + 
+154 Orth 0 1.000000 ACE+++++ 
+154 TotalSum  1.000000  
+154 Phon 0 0.988031 1s++++++ 
+154 Phoneme 0 0 0.565814 1 
+154 Phoneme 0 41 0.051662 { 
+154 Phoneme 1 27 0.032738 k 
+154 Phoneme 1 33 0.610181 s 
+154 Phoneme 2 43 0.641580 + 
+154 Phoneme 3 43 0.571714 + 
+154 Phoneme 4 43 0.484518 + 
+154 Phoneme 5 43 0.378337 + 
+154 Phoneme 6 43 0.249879 + 
+155 Assemble 1s+++++ 0.999933 0.999933 0.999933 0.999933 0.999933 0.999933 0.999933 
+155 Letter 0 0 0.999938 A 
+155 Letter 1 2 0.999938 C 
+155 Letter 2 4 0.999938 E 
+155 Letter 3 26 0.999938 + 
+155 Letter 4 26 0.999938 + 
+155 Letter 5 26 0.999938 + 
+155 Letter 6 26 0.999938 + 
+155 Letter 7 26 0.999938 + 
+155 Orth 0 1.000000 ACE+++++ 
+155 TotalSum  1.000000  
+155 Phon 0 0.988729 1s++++++ 
+155 Phoneme 0 0 0.569917 1 
+155 Phoneme 0 41 0.050785 { 
+155 Phoneme 1 27 0.032139 k 
+155 Phoneme 1 33 0.614086 s 
+155 Phoneme 2 43 0.645522 + 
+155 Phoneme 3 43 0.576424 + 
+155 Phoneme 4 43 0.490188 + 
+155 Phoneme 5 43 0.385174 + 
+155 Phoneme 6 43 0.258130 + 
+156 Assemble 1s+++++ 0.999938 0.999938 0.999938 0.999938 0.999938 0.999938 0.999938 
+156 Letter 0 0 0.999943 A 
+156 Letter 1 2 0.999943 C 
+156 Letter 2 4 0.999943 E 
+156 Letter 3 26 0.999943 + 
+156 Letter 4 26 0.999943 + 
+156 Letter 5 26 0.999943 + 
+156 Letter 6 26 0.999943 + 
+156 Letter 7 26 0.999943 + 
+156 Orth 0 1.000000 ACE+++++ 
+156 TotalSum  1.000000  
+156 Phon 0 0.989390 1s++++++ 
+156 Phoneme 0 0 0.573992 1 
+156 Phoneme 0 41 0.049917 { 
+156 Phoneme 1 27 0.031546 k 
+156 Phoneme 1 33 0.617959 s 
+156 Phoneme 2 43 0.649421 + 
+156 Phoneme 3 43 0.581083 + 
+156 Phoneme 4 43 0.495796 + 
+156 Phoneme 5 43 0.391937 + 
+156 Phoneme 6 43 0.266290 + 
+157 Assemble 1s+++++ 0.999943 0.999943 0.999943 0.999943 0.999943 0.999943 0.999943 
+157 Letter 0 0 0.999947 A 
+157 Letter 1 2 0.999947 C 
+157 Letter 2 4 0.999947 E 
+157 Letter 3 26 0.999947 + 
+157 Letter 4 26 0.999947 + 
+157 Letter 5 26 0.999947 + 
+157 Letter 6 26 0.999947 + 
+157 Letter 7 26 0.999947 + 
+157 Orth 0 1.000000 ACE+++++ 
+157 TotalSum  1.000000  
+157 Phon 0 0.990016 1s++++++ 
+157 Phoneme 0 0 0.578040 1 
+157 Phoneme 0 41 0.049057 { 
+157 Phoneme 1 27 0.030962 k 
+157 Phoneme 1 33 0.621799 s 
+157 Phoneme 2 43 0.653277 + 
+157 Phoneme 3 43 0.585691 + 
+157 Phoneme 4 43 0.501342 + 
+157 Phoneme 5 43 0.398625 + 
+157 Phoneme 6 43 0.274360 + 
+158 Assemble 1s+++++ 0.999947 0.999947 0.999947 0.999947 0.999947 0.999947 0.999947 
+158 Letter 0 0 0.999951 A 
+158 Letter 1 2 0.999951 C 
+158 Letter 2 4 0.999951 E 
+158 Letter 3 26 0.999951 + 
+158 Letter 4 26 0.999951 + 
+158 Letter 5 26 0.999951 + 
+158 Letter 6 26 0.999951 + 
+158 Letter 7 26 0.999951 + 
+158 Orth 0 1.000000 ACE+++++ 
+158 TotalSum  1.000000  
+158 Phon 0 0.990609 1s++++++ 
+158 Phoneme 0 0 0.582061 1 
+158 Phoneme 0 41 0.048206 { 
+158 Phoneme 1 27 0.030384 k 
+158 Phoneme 1 33 0.625608 s 
+158 Phoneme 2 43 0.657091 + 
+158 Phoneme 3 43 0.590248 + 
+158 Phoneme 4 43 0.506827 + 
+158 Phoneme 5 43 0.405240 + 
+158 Phoneme 6 43 0.282342 + 
+159 Assemble 1s+++++ 0.999951 0.999951 0.999951 0.999951 0.999951 0.999951 0.999951 
+159 Letter 0 0 0.999955 A 
+159 Letter 1 2 0.999955 C 
+159 Letter 2 4 0.999955 E 
+159 Letter 3 26 0.999955 + 
+159 Letter 4 26 0.999955 + 
+159 Letter 5 26 0.999955 + 
+159 Letter 6 26 0.999955 + 
+159 Letter 7 26 0.999955 + 
+159 Orth 0 1.000000 ACE+++++ 
+159 TotalSum  1.000000  
+159 Phon 0 0.991169 1s++++++ 
+159 Phoneme 0 0 0.586053 1 
+159 Phoneme 0 41 0.047365 { 
+159 Phoneme 1 27 0.029814 k 
+159 Phoneme 1 33 0.629385 s 
+159 Phoneme 2 43 0.660863 + 
+159 Phoneme 3 43 0.594755 + 
+159 Phoneme 4 43 0.512251 + 
+159 Phoneme 5 43 0.411782 + 
+159 Phoneme 6 43 0.290235 + 
+160 Assemble 1s+++++ 0.999955 0.999955 0.999955 0.999955 0.999955 0.999955 0.999955 
+160 Letter 0 0 0.999958 A 
+160 Letter 1 2 0.999958 C 
+160 Letter 2 4 0.999958 E 
+160 Letter 3 26 0.999958 + 
+160 Letter 4 26 0.999958 + 
+160 Letter 5 26 0.999958 + 
+160 Letter 6 26 0.999958 + 
+160 Letter 7 26 0.999958 + 
+160 Orth 0 1.000000 ACE+++++ 
+160 TotalSum  1.000000  
+160 Phon 0 0.991699 1s++++++ 
+160 Phoneme 0 0 0.590018 1 
+160 Phoneme 0 41 0.046532 { 
+160 Phoneme 1 27 0.029251 k 
+160 Phoneme 1 33 0.633130 s 
+160 Phoneme 2 43 0.664593 + 
+160 Phoneme 3 43 0.599213 + 
+160 Phoneme 4 43 0.517616 + 
+160 Phoneme 5 43 0.418252 + 
+160 Phoneme 6 43 0.298043 + 
+161 Assemble 1s+++++ 0.999958 0.999958 0.999958 0.999958 0.999958 0.999958 0.999958 
+161 Letter 0 0 0.999961 A 
+161 Letter 1 2 0.999961 C 
+161 Letter 2 4 0.999961 E 
+161 Letter 3 26 0.999961 + 
+161 Letter 4 26 0.999961 + 
+161 Letter 5 26 0.999961 + 
+161 Letter 6 26 0.999961 + 
+161 Letter 7 26 0.999961 + 
+161 Orth 0 1.000000 ACE+++++ 
+161 TotalSum  1.000000  
+161 Phon 0 0.992200 1s++++++ 
+161 Phoneme 0 0 0.593956 1 
+161 Phoneme 0 41 0.045708 { 
+161 Phoneme 1 27 0.028695 k 
+161 Phoneme 1 33 0.636843 s 
+161 Phoneme 2 43 0.668283 + 
+161 Phoneme 3 43 0.603621 + 
+161 Phoneme 4 43 0.522922 + 
+161 Phoneme 5 43 0.424651 + 
+161 Phoneme 6 43 0.305764 + 
+162 Assemble 1s+++++ 0.999961 0.999961 0.999961 0.999961 0.999961 0.999961 0.999961 
+162 Letter 0 0 0.999964 A 
+162 Letter 1 2 0.999964 C 
+162 Letter 2 4 0.999964 E 
+162 Letter 3 26 0.999964 + 
+162 Letter 4 26 0.999964 + 
+162 Letter 5 26 0.999964 + 
+162 Letter 6 26 0.999964 + 
+162 Letter 7 26 0.999964 + 
+162 Orth 0 1.000000 ACE+++++ 
+162 TotalSum  1.000000  
+162 Phon 0 0.992673 1s++++++ 
+162 Phoneme 0 0 0.597865 1 
+162 Phoneme 0 41 0.044894 { 
+162 Phoneme 1 27 0.028147 k 
+162 Phoneme 1 33 0.640525 s 
+162 Phoneme 2 43 0.671931 + 
+162 Phoneme 3 43 0.607981 + 
+162 Phoneme 4 43 0.528170 + 
+162 Phoneme 5 43 0.430980 + 
+162 Phoneme 6 43 0.313400 + 
+163 Assemble 1s+++++ 0.999964 0.999964 0.999964 0.999964 0.999964 0.999964 0.999964 
+163 Letter 0 0 0.999967 A 
+163 Letter 1 2 0.999967 C 
+163 Letter 2 4 0.999967 E 
+163 Letter 3 26 0.999967 + 
+163 Letter 4 26 0.999967 + 
+163 Letter 5 26 0.999967 + 
+163 Letter 6 26 0.999967 + 
+163 Letter 7 26 0.999967 + 
+163 Orth 0 1.000000 ACE+++++ 
+163 TotalSum  1.000000  
+163 Phon 0 0.993120 1s++++++ 
+163 Phoneme 0 0 0.601747 1 
+163 Phoneme 0 41 0.044089 { 
+163 Phoneme 1 27 0.027606 k 
+163 Phoneme 1 33 0.644176 s 
+163 Phoneme 2 43 0.675540 + 
+163 Phoneme 3 43 0.612293 + 
+163 Phoneme 4 43 0.533360 + 
+163 Phoneme 5 43 0.437239 + 
+163 Phoneme 6 43 0.320952 + 
+164 Assemble 1s+++++ 0.999967 0.999967 0.999967 0.999967 0.999967 0.999967 0.999967 
+164 Letter 0 0 0.999969 A 
+164 Letter 1 2 0.999969 C 
+164 Letter 2 4 0.999969 E 
+164 Letter 3 26 0.999969 + 
+164 Letter 4 26 0.999969 + 
+164 Letter 5 26 0.999969 + 
+164 Letter 6 26 0.999969 + 
+164 Letter 7 26 0.999969 + 
+164 Orth 0 1.000000 ACE+++++ 
+164 TotalSum  1.000000  
+164 Phon 0 0.993542 1s++++++ 
+164 Phoneme 0 0 0.605601 1 
+164 Phoneme 0 41 0.043293 { 
+164 Phoneme 1 27 0.027073 k 
+164 Phoneme 1 33 0.647795 s 
+164 Phoneme 2 43 0.679109 + 
+164 Phoneme 3 43 0.616558 + 
+164 Phoneme 4 43 0.538493 + 
+164 Phoneme 5 43 0.443429 + 
+164 Phoneme 6 43 0.328422 + 
+165 Assemble 1s+++++ 0.999969 0.999969 0.999969 0.999969 0.999969 0.999969 0.999969 
+165 Letter 0 0 0.999971 A 
+165 Letter 1 2 0.999971 C 
+165 Letter 2 4 0.999971 E 
+165 Letter 3 26 0.999971 + 
+165 Letter 4 26 0.999971 + 
+165 Letter 5 26 0.999971 + 
+165 Letter 6 26 0.999971 + 
+165 Letter 7 26 0.999971 + 
+165 Orth 0 1.000000 ACE+++++ 
+165 TotalSum  1.000000  
+165 Phon 0 0.993940 1s++++++ 
+165 Phoneme 0 0 0.609427 1 
+165 Phoneme 0 41 0.042506 { 
+165 Phoneme 1 27 0.026547 k 
+165 Phoneme 1 33 0.651383 s 
+165 Phoneme 2 43 0.682639 + 
+165 Phoneme 3 43 0.620776 + 
+165 Phoneme 4 43 0.543569 + 
+165 Phoneme 5 43 0.449551 + 
+165 Phoneme 6 43 0.335809 + 
+166 Assemble 1s+++++ 0.999971 0.999971 0.999971 0.999971 0.999971 0.999971 0.999971 
+166 Letter 0 0 0.999973 A 
+166 Letter 1 2 0.999973 C 
+166 Letter 2 4 0.999973 E 
+166 Letter 3 26 0.999973 + 
+166 Letter 4 26 0.999973 + 
+166 Letter 5 26 0.999973 + 
+166 Letter 6 26 0.999973 + 
+166 Letter 7 26 0.999973 + 
+166 Orth 0 1.000000 ACE+++++ 
+166 TotalSum  1.000000  
+166 Phon 0 0.994315 1s++++++ 
+166 Phoneme 0 0 0.613225 1 
+166 Phoneme 0 41 0.041729 { 
+166 Phoneme 1 27 0.026028 k 
+166 Phoneme 1 33 0.654940 s 
+166 Phoneme 2 43 0.686129 + 
+166 Phoneme 3 43 0.624947 + 
+166 Phoneme 4 43 0.548590 + 
+166 Phoneme 5 43 0.455606 + 
+166 Phoneme 6 43 0.343115 + 
+167 Assemble 1s+++++ 0.999973 0.999973 0.999973 0.999973 0.999973 0.999973 0.999973 
+167 Letter 0 0 0.999975 A 
+167 Letter 1 2 0.999975 C 
+167 Letter 2 4 0.999975 E 
+167 Letter 3 26 0.999975 + 
+167 Letter 4 26 0.999975 + 
+167 Letter 5 26 0.999975 + 
+167 Letter 6 26 0.999975 + 
+167 Letter 7 26 0.999975 + 
+167 Orth 0 1.000000 ACE+++++ 
+167 TotalSum  1.000000  
+167 Phon 0 0.994669 1s++++++ 
+167 Phoneme 0 0 0.616995 1 
+167 Phoneme 0 41 0.040961 { 
+167 Phoneme 1 27 0.025516 k 
+167 Phoneme 1 33 0.658466 s 
+167 Phoneme 2 43 0.689582 + 
+167 Phoneme 3 43 0.629073 + 
+167 Phoneme 4 43 0.553555 + 
+167 Phoneme 5 43 0.461594 + 
+167 Phoneme 6 43 0.350340 + 
+168 Assemble 1s+++++ 0.999975 0.999975 0.999975 0.999975 0.999975 0.999975 0.999975 
+168 Letter 0 0 0.999977 A 
+168 Letter 1 2 0.999977 C 
+168 Letter 2 4 0.999977 E 
+168 Letter 3 26 0.999977 + 
+168 Letter 4 26 0.999977 + 
+168 Letter 5 26 0.999977 + 
+168 Letter 6 26 0.999977 + 
+168 Letter 7 26 0.999977 + 
+168 Orth 0 1.000000 ACE+++++ 
+168 TotalSum  1.000000  
+168 Phon 0 0.995002 1s++++++ 
+168 Phoneme 0 0 0.620737 1 
+168 Phoneme 0 41 0.040203 { 
+168 Phoneme 1 27 0.025012 k 
+168 Phoneme 1 33 0.661962 s 
+168 Phoneme 2 43 0.692996 + 
+168 Phoneme 3 43 0.633153 + 
+168 Phoneme 4 43 0.558466 + 
+168 Phoneme 5 43 0.467516 + 
+168 Phoneme 6 43 0.357486 + 
+169 Assemble 1s+++++ 0.999977 0.999977 0.999977 0.999977 0.999977 0.999977 0.999977 
+169 Letter 0 0 0.999979 A 
+169 Letter 1 2 0.999979 C 
+169 Letter 2 4 0.999979 E 
+169 Letter 3 26 0.999979 + 
+169 Letter 4 26 0.999979 + 
+169 Letter 5 26 0.999979 + 
+169 Letter 6 26 0.999979 + 
+169 Letter 7 26 0.999979 + 
+169 Orth 0 1.000000 ACE+++++ 
+169 TotalSum  1.000000  
+169 Phon 0 0.995317 1s++++++ 
+169 Phoneme 0 0 0.624452 1 
+169 Phoneme 0 41 0.039454 { 
+169 Phoneme 1 27 0.024516 k 
+169 Phoneme 1 33 0.665426 s 
+169 Phoneme 2 43 0.696373 + 
+169 Phoneme 3 43 0.637188 + 
+169 Phoneme 4 43 0.563323 + 
+169 Phoneme 5 43 0.473374 + 
+169 Phoneme 6 43 0.364554 + 
+170 Assemble 1s+++++ 0.999979 0.999979 0.999979 0.999979 0.999979 0.999979 0.999979 
+170 Letter 0 0 0.999980 A 
+170 Letter 1 2 0.999980 C 
+170 Letter 2 4 0.999980 E 
+170 Letter 3 26 0.999980 + 
+170 Letter 4 26 0.999980 + 
+170 Letter 5 26 0.999980 + 
+170 Letter 6 26 0.999980 + 
+170 Letter 7 26 0.999980 + 
+170 Orth 0 1.000000 ACE+++++ 
+170 TotalSum  1.000000  
+170 Phon 0 0.995612 1s++++++ 
+170 Phoneme 0 0 0.628138 1 
+170 Phoneme 0 41 0.038715 { 
+170 Phoneme 1 27 0.024026 k 
+170 Phoneme 1 33 0.668861 s 
+170 Phoneme 2 43 0.699713 + 
+170 Phoneme 3 43 0.641179 + 
+170 Phoneme 4 43 0.568126 + 
+170 Phoneme 5 43 0.479166 + 
+170 Phoneme 6 43 0.371544 + 
+171 Assemble 1s+++++ 0.999980 0.999980 0.999980 0.999980 0.999980 0.999980 0.999980 
+171 Letter 0 0 0.999982 A 
+171 Letter 1 2 0.999982 C 
+171 Letter 2 4 0.999982 E 
+171 Letter 3 26 0.999982 + 
+171 Letter 4 26 0.999982 + 
+171 Letter 5 26 0.999982 + 
+171 Letter 6 26 0.999982 + 
+171 Letter 7 26 0.999982 + 
+171 Orth 0 1.000000 ACE+++++ 
+171 TotalSum  1.000000  
+171 Phon 0 0.995891 1s++++++ 
+171 Phoneme 0 0 0.631797 1 
+171 Phoneme 0 41 0.037986 { 
+171 Phoneme 1 27 0.023544 k 
+171 Phoneme 1 33 0.672264 s 
+171 Phoneme 2 43 0.703016 + 
+171 Phoneme 3 43 0.645126 + 
+171 Phoneme 4 43 0.572877 + 
+171 Phoneme 5 43 0.484895 + 
+171 Phoneme 6 43 0.378456 + 
+172 Assemble 1s+++++ 0.999982 0.999982 0.999982 0.999982 0.999982 0.999982 0.999982 
+172 Letter 0 0 0.999983 A 
+172 Letter 1 2 0.999983 C 
+172 Letter 2 4 0.999983 E 
+172 Letter 3 26 0.999983 + 
+172 Letter 4 26 0.999983 + 
+172 Letter 5 26 0.999983 + 
+172 Letter 6 26 0.999983 + 
+172 Letter 7 26 0.999983 + 
+172 Orth 0 1.000000 ACE+++++ 
+172 TotalSum  1.000000  
+172 Phon 0 0.996153 1s++++++ 
+172 Phoneme 0 0 0.635427 1 
+172 Phoneme 0 41 0.037266 { 
+172 Phoneme 1 27 0.023069 k 
+172 Phoneme 1 33 0.675638 s 
+172 Phoneme 2 43 0.706283 + 
+172 Phoneme 3 43 0.649029 + 
+172 Phoneme 4 43 0.577575 + 
+172 Phoneme 5 43 0.490561 + 
+172 Phoneme 6 43 0.385293 + 
+173 Assemble 1s+++++ 0.999983 0.999983 0.999983 0.999983 0.999983 0.999983 0.999983 
+173 Letter 0 0 0.999984 A 
+173 Letter 1 2 0.999984 C 
+173 Letter 2 4 0.999984 E 
+173 Letter 3 26 0.999984 + 
+173 Letter 4 26 0.999984 + 
+173 Letter 5 26 0.999984 + 
+173 Letter 6 26 0.999984 + 
+173 Letter 7 26 0.999984 + 
+173 Orth 0 1.000000 ACE+++++ 
+173 TotalSum  1.000000  
+173 Phon 0 0.996399 1s++++++ 
+173 Phoneme 0 0 0.639030 1 
+173 Phoneme 0 41 0.036555 { 
+173 Phoneme 1 27 0.022602 k 
+173 Phoneme 1 33 0.678981 s 
+173 Phoneme 2 43 0.709514 + 
+173 Phoneme 3 43 0.652890 + 
+173 Phoneme 4 43 0.582222 + 
+173 Phoneme 5 43 0.496165 + 
+173 Phoneme 6 43 0.392055 + 
+174 Assemble 1s+++++ 0.999984 0.999984 0.999984 0.999984 0.999984 0.999984 0.999984 
+174 Letter 0 0 0.999986 A 
+174 Letter 1 2 0.999986 C 
+174 Letter 2 4 0.999986 E 
+174 Letter 3 26 0.999986 + 
+174 Letter 4 26 0.999986 + 
+174 Letter 5 26 0.999986 + 
+174 Letter 6 26 0.999986 + 
+174 Letter 7 26 0.999986 + 
+174 Orth 0 1.000000 ACE+++++ 
+174 TotalSum  1.000000  
+174 Phon 0 0.996630 1s++++++ 
+174 Phoneme 0 0 0.642605 1 
+174 Phoneme 0 41 0.035855 { 
+174 Phoneme 1 27 0.022141 k 
+174 Phoneme 1 33 0.682295 s 
+174 Phoneme 2 43 0.712709 + 
+174 Phoneme 3 43 0.656708 + 
+174 Phoneme 4 43 0.586817 + 
+174 Phoneme 5 43 0.501707 + 
+174 Phoneme 6 43 0.398742 + 
+175 Assemble 1s+++++ 0.999986 0.999986 0.999986 0.999986 0.999986 0.999986 0.999986 
+175 Letter 0 0 0.999987 A 
+175 Letter 1 2 0.999987 C 
+175 Letter 2 4 0.999987 E 
+175 Letter 3 26 0.999987 + 
+175 Letter 4 26 0.999987 + 
+175 Letter 5 26 0.999987 + 
+175 Letter 6 26 0.999987 + 
+175 Letter 7 26 0.999987 + 
+175 Orth 0 1.000000 ACE+++++ 
+175 TotalSum  1.000000  
+175 Phon 0 0.996848 1s++++++ 
+175 Phoneme 0 0 0.646151 1 
+175 Phoneme 0 41 0.035163 { 
+175 Phoneme 1 27 0.021688 k 
+175 Phoneme 1 33 0.685579 s 
+175 Phoneme 2 43 0.715869 + 
+175 Phoneme 3 43 0.660484 + 
+175 Phoneme 4 43 0.591362 + 
+175 Phoneme 5 43 0.507188 + 
+175 Phoneme 6 43 0.405356 + 
+176 Assemble 1s+++++ 0.999987 0.999987 0.999987 0.999987 0.999987 0.999987 0.999987 
+176 Letter 0 0 0.999988 A 
+176 Letter 1 2 0.999988 C 
+176 Letter 2 4 0.999988 E 
+176 Letter 3 26 0.999988 + 
+176 Letter 4 26 0.999988 + 
+176 Letter 5 26 0.999988 + 
+176 Letter 6 26 0.999988 + 
+176 Letter 7 26 0.999988 + 
+176 Orth 0 1.000000 ACE+++++ 
+176 TotalSum  1.000000  
+176 Phon 0 0.997053 1s++++++ 
+176 Phoneme 0 0 0.649670 1 
+176 Phoneme 0 41 0.034482 { 
+176 Phoneme 1 27 0.021242 k 
+176 Phoneme 1 33 0.688833 s 
+176 Phoneme 2 43 0.718995 + 
+176 Phoneme 3 43 0.664219 + 
+176 Phoneme 4 43 0.595857 + 
+176 Phoneme 5 43 0.512609 + 
+176 Phoneme 6 43 0.411897 + 
+177 Assemble 1s+++++ 0.999988 0.999988 0.999988 0.999988 0.999988 0.999988 0.999988 
+177 Letter 0 0 0.999989 A 
+177 Letter 1 2 0.999989 C 
+177 Letter 2 4 0.999989 E 
+177 Letter 3 26 0.999989 + 
+177 Letter 4 26 0.999989 + 
+177 Letter 5 26 0.999989 + 
+177 Letter 6 26 0.999989 + 
+177 Letter 7 26 0.999989 + 
+177 Orth 0 1.000000 ACE+++++ 
+177 TotalSum  1.000000  
+177 Phon 0 0.997245 1s++++++ 
+177 Phoneme 0 0 0.653162 1 
+177 Phoneme 0 41 0.033810 { 
+177 Phoneme 1 27 0.020803 k 
+177 Phoneme 1 33 0.692057 s 
+177 Phoneme 2 43 0.722086 + 
+177 Phoneme 3 43 0.667912 + 
+177 Phoneme 4 43 0.600303 + 
+177 Phoneme 5 43 0.517970 + 
+177 Phoneme 6 43 0.418366 + 
+178 Assemble 1s+++++ 0.999989 0.999989 0.999989 0.999989 0.999989 0.999989 0.999989 
+178 Letter 0 0 0.999989 A 
+178 Letter 1 2 0.999989 C 
+178 Letter 2 4 0.999989 E 
+178 Letter 3 26 0.999989 + 
+178 Letter 4 26 0.999989 + 
+178 Letter 5 26 0.999989 + 
+178 Letter 6 26 0.999989 + 
+178 Letter 7 26 0.999989 + 
+178 Orth 0 1.000000 ACE+++++ 
+178 TotalSum  1.000000  
+178 Phon 0 0.997425 1s++++++ 
+178 Phoneme 0 0 0.656625 1 
+178 Phoneme 0 41 0.033147 { 
+178 Phoneme 1 27 0.020371 k 
+178 Phoneme 1 33 0.695252 s 
+178 Phoneme 2 43 0.725143 + 
+178 Phoneme 3 43 0.671565 + 
+178 Phoneme 4 43 0.604699 + 
+178 Phoneme 5 43 0.523273 + 
+178 Phoneme 6 43 0.424764 + 
+179 Assemble 1s+++++ 0.999989 0.999989 0.999989 0.999989 0.999989 0.999989 0.999989 
+179 Letter 0 0 0.999990 A 
+179 Letter 1 2 0.999990 C 
+179 Letter 2 4 0.999990 E 
+179 Letter 3 26 0.999990 + 
+179 Letter 4 26 0.999990 + 
+179 Letter 5 26 0.999990 + 
+179 Letter 6 26 0.999990 + 
+179 Letter 7 26 0.999990 + 
+179 Orth 0 1.000000 ACE+++++ 
+179 TotalSum  1.000000  
+179 Phon 0 0.997594 1s++++++ 
+179 Phoneme 0 0 0.660061 1 
+179 Phoneme 0 41 0.032494 { 
+179 Phoneme 1 33 0.698418 s 
+179 Phoneme 2 43 0.728166 + 
+179 Phoneme 3 43 0.675178 + 
+179 Phoneme 4 43 0.609047 + 
+179 Phoneme 5 43 0.528517 + 
+179 Phoneme 6 43 0.431091 + 
+180 Assemble 1s+++++ 0.999990 0.999990 0.999990 0.999990 0.999990 0.999990 0.999990 
+180 Letter 0 0 0.999991 A 
+180 Letter 1 2 0.999991 C 
+180 Letter 2 4 0.999991 E 
+180 Letter 3 26 0.999991 + 
+180 Letter 4 26 0.999991 + 
+180 Letter 5 26 0.999991 + 
+180 Letter 6 26 0.999991 + 
+180 Letter 7 26 0.999991 + 
+180 Orth 0 1.000000 ACE+++++ 
+180 TotalSum  1.000000  
+180 Phon 0 0.997753 1s++++++ 
+180 Phoneme 0 0 0.663468 1 
+180 Phoneme 0 41 0.031851 { 
+180 Phoneme 1 33 0.701555 s 
+180 Phoneme 2 43 0.731156 + 
+180 Phoneme 3 43 0.678751 + 
+180 Phoneme 4 43 0.613348 + 
+180 Phoneme 5 43 0.533703 + 
+180 Phoneme 6 43 0.437349 + 
+181 Assemble 1s+++++ 0.999991 0.999991 0.999991 0.999991 0.999991 0.999991 0.999991 
+181 Letter 0 0 0.999992 A 
+181 Letter 1 2 0.999992 C 
+181 Letter 2 4 0.999992 E 
+181 Letter 3 26 0.999992 + 
+181 Letter 4 26 0.999992 + 
+181 Letter 5 26 0.999992 + 
+181 Letter 6 26 0.999992 + 
+181 Letter 7 26 0.999992 + 
+181 Orth 0 1.000000 ACE+++++ 
+181 TotalSum  1.000000  
+181 Phon 0 0.997902 1s++++++ 
+181 Phoneme 0 0 0.666849 1 
+181 Phoneme 0 41 0.031217 { 
+181 Phoneme 1 33 0.704663 s 
+181 Phoneme 2 43 0.734113 + 
+181 Phoneme 3 43 0.682285 + 
+181 Phoneme 4 43 0.617601 + 
+181 Phoneme 5 43 0.538832 + 
+181 Phoneme 6 43 0.443538 + 
+182 Assemble 1s+++++ 0.999992 0.999992 0.999992 0.999992 0.999992 0.999992 0.999992 
+182 Letter 0 0 0.999992 A 
+182 Letter 1 2 0.999992 C 
+182 Letter 2 4 0.999992 E 
+182 Letter 3 26 0.999992 + 
+182 Letter 4 26 0.999992 + 
+182 Letter 5 26 0.999992 + 
+182 Letter 6 26 0.999992 + 
+182 Letter 7 26 0.999992 + 
+182 Orth 0 1.000000 ACE+++++ 
+182 TotalSum  1.000000  
+182 Phon 0 0.998041 1s++++++ 
+182 Phoneme 0 0 0.670201 1 
+182 Phoneme 0 41 0.030592 { 
+182 Phoneme 1 33 0.707743 s 
+182 Phoneme 2 43 0.737038 + 
+182 Phoneme 3 43 0.685780 + 
+182 Phoneme 4 43 0.621807 + 
+182 Phoneme 5 43 0.543905 + 
+182 Phoneme 6 43 0.449659 + 
+183 Assemble 1s+++++ 0.999992 0.999992 0.999992 0.999992 0.999992 0.999992 0.999992 
+183 Letter 0 0 0.999993 A 
+183 Letter 1 2 0.999993 C 
+183 Letter 2 4 0.999993 E 
+183 Letter 3 26 0.999993 + 
+183 Letter 4 26 0.999993 + 
+183 Letter 5 26 0.999993 + 
+183 Letter 6 26 0.999993 + 
+183 Letter 7 26 0.999993 + 
+183 Orth 0 1.000000 ACE+++++ 
+183 TotalSum  1.000000  
+183 Phon 0 0.998172 1s++++++ 
+183 Phoneme 0 0 0.673526 1 
+183 Phoneme 0 41 0.029977 { 
+183 Phoneme 1 33 0.710793 s 
+183 Phoneme 2 43 0.739931 + 
+183 Phoneme 3 43 0.689236 + 
+183 Phoneme 4 43 0.625967 + 
+183 Phoneme 5 43 0.548922 + 
+183 Phoneme 6 43 0.455713 + 
+184 Assemble 1s+++++ 0.999993 0.999993 0.999993 0.999993 0.999993 0.999993 0.999993 
+184 Letter 0 0 0.999993 A 
+184 Letter 1 2 0.999993 C 
+184 Letter 2 4 0.999993 E 
+184 Letter 3 26 0.999993 + 
+184 Letter 4 26 0.999993 + 
+184 Letter 5 26 0.999993 + 
+184 Letter 6 26 0.999993 + 
+184 Letter 7 26 0.999993 + 
+184 Orth 0 1.000000 ACE+++++ 
+184 TotalSum  1.000000  
+184 Phon 0 0.998294 1s++++++ 
+184 Phoneme 0 0 0.676824 1 
+184 Phoneme 0 41 0.029372 { 
+184 Phoneme 1 33 0.713816 s 
+184 Phoneme 2 43 0.742791 + 
+184 Phoneme 3 43 0.692654 + 
+184 Phoneme 4 43 0.630082 + 
+184 Phoneme 5 43 0.553884 + 
+184 Phoneme 6 43 0.461700 + 
+185 Assemble 1s+++++ 0.999993 0.999993 0.999993 0.999993 0.999993 0.999993 0.999993 
+185 Letter 0 0 0.999994 A 
+185 Letter 1 2 0.999994 C 
+185 Letter 2 4 0.999994 E 
+185 Letter 3 26 0.999994 + 
+185 Letter 4 26 0.999994 + 
+185 Letter 5 26 0.999994 + 
+185 Letter 6 26 0.999994 + 
+185 Letter 7 26 0.999994 + 
+185 Orth 0 1.000000 ACE+++++ 
+185 TotalSum  1.000000  
+185 Phon 0 0.998409 1s++++++ 
+185 Phoneme 0 0 0.680094 1 
+185 Phoneme 0 41 0.028775 { 
+185 Phoneme 1 33 0.716810 s 
+185 Phoneme 2 43 0.745621 + 
+185 Phoneme 3 43 0.696035 + 
+185 Phoneme 4 43 0.634151 + 
+185 Phoneme 5 43 0.558791 + 
+185 Phoneme 6 43 0.467622 + 
+186 Assemble 1s+++++ 0.999994 0.999994 0.999994 0.999994 0.999994 0.999994 0.999994 
+186 Letter 0 0 0.999994 A 
+186 Letter 1 2 0.999994 C 
+186 Letter 2 4 0.999994 E 
+186 Letter 3 26 0.999994 + 
+186 Letter 4 26 0.999994 + 
+186 Letter 5 26 0.999994 + 
+186 Letter 6 26 0.999994 + 
+186 Letter 7 26 0.999994 + 
+186 Orth 0 1.000000 ACE+++++ 
+186 TotalSum  1.000000  
+186 Phon 0 0.998517 1s++++++ 
+186 Phoneme 0 0 0.683337 1 
+186 Phoneme 0 41 0.028188 { 
+186 Phoneme 1 33 0.719776 s 
+186 Phoneme 2 43 0.748419 + 
+186 Phoneme 3 43 0.699379 + 
+186 Phoneme 4 43 0.638175 + 
+186 Phoneme 5 43 0.563644 + 
+186 Phoneme 6 43 0.473478 + 
+187 Assemble 1s+++++ 0.999994 0.999994 0.999994 0.999994 0.999994 0.999994 0.999994 
+187 Letter 0 0 0.999995 A 
+187 Letter 1 2 0.999995 C 
+187 Letter 2 4 0.999995 E 
+187 Letter 3 26 0.999995 + 
+187 Letter 4 26 0.999995 + 
+187 Letter 5 26 0.999995 + 
+187 Letter 6 26 0.999995 + 
+187 Letter 7 26 0.999995 + 
+187 Orth 0 1.000000 ACE+++++ 
+187 TotalSum  1.000000  
+187 Phon 0 0.998617 1s++++++ 
+187 Phoneme 0 0 0.686552 1 
+187 Phoneme 0 41 0.027610 { 
+187 Phoneme 1 33 0.722714 s 
+187 Phoneme 2 43 0.751186 + 
+187 Phoneme 3 43 0.702686 + 
+187 Phoneme 4 43 0.642155 + 
+187 Phoneme 5 43 0.568444 + 
+187 Phoneme 6 43 0.479269 + 
+188 Assemble 1s+++++ 0.999995 0.999995 0.999995 0.999995 0.999995 0.999995 0.999995 
+188 Letter 0 0 0.999995 A 
+188 Letter 1 2 0.999995 C 
+188 Letter 2 4 0.999995 E 
+188 Letter 3 26 0.999995 + 
+188 Letter 4 26 0.999995 + 
+188 Letter 5 26 0.999995 + 
+188 Letter 6 26 0.999995 + 
+188 Letter 7 26 0.999995 + 
+188 Orth 0 1.000000 ACE+++++ 
+188 TotalSum  1.000000  
+188 Phon 0 0.998711 1s++++++ 
+188 Phoneme 0 0 0.689741 1 
+188 Phoneme 0 41 0.027042 { 
+188 Phoneme 1 33 0.725624 s 
+188 Phoneme 2 43 0.753923 + 
+188 Phoneme 3 43 0.705956 + 
+188 Phoneme 4 43 0.646092 + 
+188 Phoneme 5 43 0.573191 + 
+188 Phoneme 6 43 0.484997 + 
+189 Assemble 1s+++++ 0.999995 0.999995 0.999995 0.999995 0.999995 0.999995 0.999995 
+189 Letter 0 0 0.999995 A 
+189 Letter 1 2 0.999995 C 
+189 Letter 2 4 0.999995 E 
+189 Letter 3 26 0.999995 + 
+189 Letter 4 26 0.999995 + 
+189 Letter 5 26 0.999995 + 
+189 Letter 6 26 0.999995 + 
+189 Letter 7 26 0.999995 + 
+189 Orth 0 1.000000 ACE+++++ 
+189 TotalSum  1.000000  
+189 Phon 0 0.998799 1s++++++ 
+189 Phoneme 0 0 0.692902 1 
+189 Phoneme 0 41 0.026482 { 
+189 Phoneme 1 33 0.728507 s 
+189 Phoneme 2 43 0.756630 + 
+189 Phoneme 3 43 0.709191 + 
+189 Phoneme 4 43 0.649984 + 
+189 Phoneme 5 43 0.577886 + 
+189 Phoneme 6 43 0.490662 + 
+190 Assemble 1s+++++ 0.999995 0.999995 0.999995 0.999995 0.999995 0.999995 0.999995 
+190 Letter 0 0 0.999996 A 
+190 Letter 1 2 0.999996 C 
+190 Letter 2 4 0.999996 E 
+190 Letter 3 26 0.999996 + 
+190 Letter 4 26 0.999996 + 
+190 Letter 5 26 0.999996 + 
+190 Letter 6 26 0.999996 + 
+190 Letter 7 26 0.999996 + 
+190 Orth 0 1.000000 ACE+++++ 
+190 TotalSum  1.000000  
+190 Phon 0 0.998881 1s++++++ 
+190 Phoneme 0 0 0.696036 1 
+190 Phoneme 0 41 0.025932 { 
+190 Phoneme 1 33 0.731363 s 
+190 Phoneme 2 43 0.759307 + 
+190 Phoneme 3 43 0.712389 + 
+190 Phoneme 4 43 0.653835 + 
+190 Phoneme 5 43 0.582529 + 
+190 Phoneme 6 43 0.496265 + 
+191 Assemble 1s+++++ 0.999996 0.999996 0.999996 0.999996 0.999996 0.999996 0.999996 
+191 Letter 0 0 0.999996 A 
+191 Letter 1 2 0.999996 C 
+191 Letter 2 4 0.999996 E 
+191 Letter 3 26 0.999996 + 
+191 Letter 4 26 0.999996 + 
+191 Letter 5 26 0.999996 + 
+191 Letter 6 26 0.999996 + 
+191 Letter 7 26 0.999996 + 
+191 Orth 0 1.000000 ACE+++++ 
+191 TotalSum  1.000000  
+191 Phon 0 0.998958 1s++++++ 
+191 Phoneme 0 0 0.699143 1 
+191 Phoneme 0 41 0.025390 { 
+191 Phoneme 1 33 0.734191 s 
+191 Phoneme 2 43 0.761955 + 
+191 Phoneme 3 43 0.715553 + 
+191 Phoneme 4 43 0.657642 + 
+191 Phoneme 5 43 0.587122 + 
+191 Phoneme 6 43 0.501806 + 
+192 Assemble 1s+++++ 0.999996 0.999996 0.999996 0.999996 0.999996 0.999996 0.999996 
+192 Letter 0 0 0.999996 A 
+192 Letter 1 2 0.999996 C 
+192 Letter 2 4 0.999996 E 
+192 Letter 3 26 0.999996 + 
+192 Letter 4 26 0.999996 + 
+192 Letter 5 26 0.999996 + 
+192 Letter 6 26 0.999996 + 
+192 Letter 7 26 0.999996 + 
+192 Orth 0 1.000000 ACE+++++ 
+192 TotalSum  1.000000  
+192 Phon 0 0.999030 1s++++++ 
+192 Phoneme 0 0 0.702223 1 
+192 Phoneme 0 41 0.024858 { 
+192 Phoneme 1 33 0.736992 s 
+192 Phoneme 2 43 0.764573 + 
+192 Phoneme 3 43 0.718682 + 
+192 Phoneme 4 43 0.661408 + 
+192 Phoneme 5 43 0.591663 + 
+192 Phoneme 6 43 0.507286 + 
+193 Assemble 1s+++++ 0.999996 0.999996 0.999996 0.999996 0.999996 0.999996 0.999996 
+193 Letter 0 0 0.999997 A 
+193 Letter 1 2 0.999997 C 
+193 Letter 2 4 0.999997 E 
+193 Letter 3 26 0.999997 + 
+193 Letter 4 26 0.999997 + 
+193 Letter 5 26 0.999997 + 
+193 Letter 6 26 0.999997 + 
+193 Letter 7 26 0.999997 + 
+193 Orth 0 1.000000 ACE+++++ 
+193 TotalSum  1.000000  
+193 Phon 0 0.999097 1s++++++ 
+193 Phoneme 0 0 0.705277 1 
+193 Phoneme 0 41 0.024334 { 
+193 Phoneme 1 33 0.739767 s 
+193 Phoneme 2 43 0.767163 + 
+193 Phoneme 3 43 0.721776 + 
+193 Phoneme 4 43 0.665133 + 
+193 Phoneme 5 43 0.596155 + 
+193 Phoneme 6 43 0.512706 + 
+194 Assemble 1s+++++ 0.999997 0.999997 0.999997 0.999997 0.999997 0.999997 0.999997 
+194 Letter 0 0 0.999997 A 
+194 Letter 1 2 0.999997 C 
+194 Letter 2 4 0.999997 E 
+194 Letter 3 26 0.999997 + 
+194 Letter 4 26 0.999997 + 
+194 Letter 5 26 0.999997 + 
+194 Letter 6 26 0.999997 + 
+194 Letter 7 26 0.999997 + 
+194 Orth 0 1.000000 ACE+++++ 
+194 TotalSum  1.000000  
+194 Phon 0 0.999160 1s++++++ 
+194 Phoneme 0 0 0.708304 1 
+194 Phoneme 0 41 0.023819 { 
+194 Phoneme 1 33 0.742514 s 
+194 Phoneme 2 43 0.769724 + 
+194 Phoneme 3 43 0.724837 + 
+194 Phoneme 4 43 0.668816 + 
+194 Phoneme 5 43 0.600597 + 
+194 Phoneme 6 43 0.518066 + 
+195 Assemble 1s+++++ 0.999997 0.999997 0.999997 0.999997 0.999997 0.999997 0.999997 
+195 Letter 0 0 0.999997 A 
+195 Letter 1 2 0.999997 C 
+195 Letter 2 4 0.999997 E 
+195 Letter 3 26 0.999997 + 
+195 Letter 4 26 0.999997 + 
+195 Letter 5 26 0.999997 + 
+195 Letter 6 26 0.999997 + 
+195 Letter 7 26 0.999997 + 
+195 Orth 0 1.000000 ACE+++++ 
+195 TotalSum  1.000000  
+195 Phon 0 0.999218 1s++++++ 
+195 Phoneme 0 0 0.711304 1 
+195 Phoneme 0 41 0.023313 { 
+195 Phoneme 1 33 0.745236 s 
+195 Phoneme 2 43 0.772257 + 
+195 Phoneme 3 43 0.727864 + 
+195 Phoneme 4 43 0.672459 + 
+195 Phoneme 5 43 0.604991 + 
+195 Phoneme 6 43 0.523368 + 
+196 Assemble 1s+++++ 0.999997 0.999997 0.999997 0.999997 0.999997 0.999997 0.999997 
+196 Letter 0 0 0.999997 A 
+196 Letter 1 2 0.999997 C 
+196 Letter 2 4 0.999997 E 
+196 Letter 3 26 0.999997 + 
+196 Letter 4 26 0.999997 + 
+196 Letter 5 26 0.999997 + 
+196 Letter 6 26 0.999997 + 
+196 Letter 7 26 0.999997 + 
+196 Orth 0 1.000000 ACE+++++ 
+196 TotalSum  1.000000  
+196 Phon 0 0.999273 1s++++++ 
+196 Phoneme 0 0 0.714278 1 
+196 Phoneme 0 41 0.022815 { 
+196 Phoneme 1 33 0.747931 s 
+196 Phoneme 2 43 0.774762 + 
+196 Phoneme 3 43 0.730857 + 
+196 Phoneme 4 43 0.676062 + 
+196 Phoneme 5 43 0.609336 + 
+196 Phoneme 6 43 0.528610 + 
+197 Assemble 1s+++++ 0.999997 0.999997 0.999997 0.999997 0.999997 0.999997 0.999997 
+197 Letter 0 0 0.999998 A 
+197 Letter 1 2 0.999998 C 
+197 Letter 2 4 0.999998 E 
+197 Letter 3 26 0.999998 + 
+197 Letter 4 26 0.999998 + 
+197 Letter 5 26 0.999998 + 
+197 Letter 6 26 0.999998 + 
+197 Letter 7 26 0.999998 + 
+197 Orth 0 1.000000 ACE+++++ 
+197 TotalSum  1.000000  
+197 Phon 0 0.999324 1s++++++ 
+197 Phoneme 0 0 0.717225 1 
+197 Phoneme 0 41 0.022326 { 
+197 Phoneme 1 33 0.750600 s 
+197 Phoneme 2 43 0.777240 + 
+197 Phoneme 3 43 0.733818 + 
+197 Phoneme 4 43 0.679626 + 
+197 Phoneme 5 43 0.613633 + 
+197 Phoneme 6 43 0.533796 + 
+198 Assemble 1s+++++ 0.999998 0.999998 0.999998 0.999998 0.999998 0.999998 0.999998 
+198 Letter 0 0 0.999998 A 
+198 Letter 1 2 0.999998 C 
+198 Letter 2 4 0.999998 E 
+198 Letter 3 26 0.999998 + 
+198 Letter 4 26 0.999998 + 
+198 Letter 5 26 0.999998 + 
+198 Letter 6 26 0.999998 + 
+198 Letter 7 26 0.999998 + 
+198 Orth 0 1.000000 ACE+++++ 
+198 TotalSum  1.000000  
+198 Phon 0 0.999371 1s++++++ 
+198 Phoneme 0 0 0.720146 1 
+198 Phoneme 0 41 0.021846 { 
+198 Phoneme 1 33 0.753242 s 
+198 Phoneme 2 43 0.779690 + 
+198 Phoneme 3 43 0.736746 + 
+198 Phoneme 4 43 0.683150 + 
+198 Phoneme 5 43 0.617883 + 
+198 Phoneme 6 43 0.538924 + 
+199 Assemble 1s+++++ 0.999998 0.999998 0.999998 0.999998 0.999998 0.999998 0.999998 
+199 Letter 0 0 0.999998 A 
+199 Letter 1 2 0.999998 C 
+199 Letter 2 4 0.999998 E 
+199 Letter 3 26 0.999998 + 
+199 Letter 4 26 0.999998 + 
+199 Letter 5 26 0.999998 + 
+199 Letter 6 26 0.999998 + 
+199 Letter 7 26 0.999998 + 
+199 Orth 0 1.000000 ACE+++++ 
+199 TotalSum  1.000000  
+199 Phon 0 0.999416 1s++++++ 
+199 Phoneme 0 0 0.723041 1 
+199 Phoneme 0 41 0.021374 { 
+199 Phoneme 1 33 0.755859 s 
+199 Phoneme 2 43 0.782114 + 
+199 Phoneme 3 43 0.739642 + 
+199 Phoneme 4 43 0.686635 + 
+199 Phoneme 5 43 0.622086 + 
+199 Phoneme 6 43 0.543996 + 
+200 Assemble 1s+++++ 0.999998 0.999998 0.999998 0.999998 0.999998 0.999998 0.999998 
+200 Letter 0 0 0.999998 A 
+200 Letter 1 2 0.999998 C 
+200 Letter 2 4 0.999998 E 
+200 Letter 3 26 0.999998 + 
+200 Letter 4 26 0.999998 + 
+200 Letter 5 26 0.999998 + 
+200 Letter 6 26 0.999998 + 
+200 Letter 7 26 0.999998 + 
+200 Orth 0 1.000000 ACE+++++ 
+200 TotalSum  1.000000  
+200 Phon 0 0.999457 1s++++++ 
+200 Phoneme 0 0 0.725910 1 
+200 Phoneme 0 41 0.020910 { 
+200 Phoneme 1 33 0.758451 s 
+200 Phoneme 2 43 0.784510 + 
+200 Phoneme 3 43 0.742505 + 
+200 Phoneme 4 43 0.690082 + 
+200 Phoneme 5 43 0.626243 + 
+200 Phoneme 6 43 0.549012 + 
