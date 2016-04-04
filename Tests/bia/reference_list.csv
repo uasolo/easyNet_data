@@ -1,0 +1,6 @@
+Test,ReferenceFile
+1,Tests/bia/word.features.act.csv
+2,Tests/bia/word.letters.act.csv
+3,Tests/bia/word.english.words.act.csv
+4,Tests/bia/word.dutch.words.act.csv
+5,Tests/bia/word.languages.act.csv
