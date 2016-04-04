@@ -1,0 +1,5 @@
+Test,ReferenceFile
+1,Tests/ia/word.features.act.csv
+2,Tests/ia/word.letters.act.csv
+3,Tests/ia/word.words.act.csv
+4,Tests/ia/word.words.act.csv
