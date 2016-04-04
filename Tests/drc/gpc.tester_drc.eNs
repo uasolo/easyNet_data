@@ -1,0 +1,4 @@
+R << source("Tests/test.R")
+(drc parameters) set thresholded_best_phonemes::threshold 0.65
+R << run.tests("Tests/drc/gpc.tester.cmd_list.csv","Tests/drc/gpc.tester.reference_list.csv","Tests/drc/gpc.tester.object_list.csv",.001)
+(drc parameters) set thresholded_best_phonemes::threshold 0.43

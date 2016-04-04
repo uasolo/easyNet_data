@@ -1,0 +1,7 @@
+Basic_letter_activity_check,Basic_word_activity_check
+(letters default_observer) enable,(orth_lex default_observer) enable
+(letters default_observer) clear,(orth_lex default_observer) clear
+poc lesion,poc lesion
+quietly Read_Aloud step stimulus=WORD,quietly Read_Aloud step stimulus=WORD
+(letters default_observer) disable,(orth_lex default_observer) disable
+poc unlesion,poc unlesion

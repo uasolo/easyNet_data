@@ -1,0 +1,6 @@
+Test,ReferenceFile
+1,Tests/drc/ace.pure.lex.letters.act.csv
+2,Tests/drc/ace.pure.lex.orth.act.csv
+3,Tests/drc/ace.pure.lex.phon.act.csv
+4,Tests/drc/ace.pure.lex.phoneme_out.act.csv
+5,Tests/drc/ace.pure.lex.total.act.csv
