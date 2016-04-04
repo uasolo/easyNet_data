@@ -1,0 +1,4 @@
+R << source("Tests/test.R")
+(ia parameters) set olc::excitation 0.0
+R << run.tests("Tests/ia/cmd_list3.csv","Tests/ia/reference_list3.csv","Tests/ia/object_list3.csv",.001)
+(ia parameters) set olc::excitation 0.3

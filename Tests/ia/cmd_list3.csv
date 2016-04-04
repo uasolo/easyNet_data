@@ -1,0 +1,9 @@
+Basic_feature_activity_check,Basic_letter_activity_check_no_TDF,Basic_word_activity_check_no_TDF
+(features default_observer) enable,(letters default_observer) disable,(words default_observer) disable
+(features default_observer) clear,,
+(letters default_observer) enable,,
+(letters default_observer) clear,,
+(words default_observer) enable,,
+(words default_observer) clear,,
+quietly present step stimulus=WORD stimulus_duration=30,,
+(features default_observer) disable,,

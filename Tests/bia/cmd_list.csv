@@ -1,0 +1,13 @@
+Basic_feature_activity_check,Basic_letter_activity_check,Basic_english_word_activity_check,Basic_dutch_word_activity_check,Basic_language_activity_check
+(features default_observer) enable,(letters default_observer) enable,(english_words default_observer) disable,(dutch_words default_observer) disable,(languages default_observer) disable
+(features default_observer) clear,,,,
+(letters default_observer) enable,,,,
+(letters default_observer) clear,,,,
+(english_words default_observer) enable,,,,
+(english_words default_observer) clear,,,,
+(dutch_words default_observer) enable,,,,
+(dutch_words default_observer) clear,,,,
+(languages default_observer) enable,,,,
+(languages default_observer) clear,,,,
+quietly present step stimulus=WORD stimulus_duration=30,,,,
+(features default_observer) disable,,,,
