@@ -1,5 +1,3 @@
-create model bia
-
 # LOAD DATABASES
 
 # ## LETTER FEATURE REPRESENTATION
@@ -13,9 +11,6 @@ create dataframe_for_reps languages_df
 english_vocab load Databases/Vocab_files/english4U.eNd
 dutch_vocab load Databases/Vocab_files/dutch4U.eNd
 languages_df load Databases/Vocab_files/languages.eNd
-#vocab load Databases/Vocab_files/clam.eNd
-#vocab load Databases/Vocab_files/iaBLP.eNd
-#vocab load Databases/Vocab_files/ia_AoA1.eNd
 
 
 # LEXICAL ROUTE LAYERS
@@ -51,6 +46,10 @@ english_words represent (english_vocab column_rep Word)
 create iac_layer languages
 languages represent (languages_df column_rep Language)
 
+dutch_words set_resting_level (dutch_vocab column_rep Rest)
+english_words set_resting_level (english_vocab column_rep Rest)
+languages set_resting_level (languages_df column_rep Rest)
+
 # LEXICAL ROUTE CONNECTIONS
 
 # ## FEATURE-LETTER
@@ -60,8 +59,6 @@ flc autoconnect features letters
 # ## LETTER-ORTH
 create string_split english_orth_str
 create string_split dutch_orth_str
-english_orth_str set_blank "
-dutch_orth_str set_blank "
 english_orth_str set_source (english_vocab column_rep Word string_representation)
 dutch_orth_str set_source (dutch_vocab column_rep Word string_representation)
 
@@ -114,7 +111,9 @@ create parallel_conversion dutch_lopc2
 dutch_lopc2 set_source (dutch_orth_str get_target)
 dutch_lopc2 set_target letter_rep
 
-
+create parallel_conversion bananas
+bananas set_source (dutch_orth_str get_target)
+bananas set_target feat_rep
 
 
 
@@ -214,10 +213,9 @@ dutch_english_lato autoconnect dutch_words english_words
 
 bia define_input orthographic (dutch_vocab column_rep Word string_representation) features
 
-dutch_words set_resting_level (dutch_vocab column_rep Rest)
-english_words set_resting_level (english_vocab column_rep Rest)
-languages set_resting_level (languages_df column_rep Rest)
 
 
 ((features_db column_rep features) find_conversion (dutch_orth_str inner)) add_fallback caser_plus
 ((features_db column_rep features) find_conversion (dutch_orth_str inner)) set_weight -1
+
+(bia parameters) load $parameter_file
