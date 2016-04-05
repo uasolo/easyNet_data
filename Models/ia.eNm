@@ -8,3 +8,4 @@ ia change_setting_type numslots numeric
 
 ia add_script Models/ia.eNs
 ia add_script Trials/Brief_Masked_No_Task.eNs
+include Trials/Presentation_No_Task.eNs
