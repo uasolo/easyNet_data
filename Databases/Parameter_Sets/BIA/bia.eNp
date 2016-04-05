@@ -23,9 +23,9 @@ english_langc::excitation 0.28
 english_langc::inhibition 0.0
 dutch_langc::excitation 0.28
 dutch_langc::inhibition 0.0
-dutch_words::resting_multiplier .95
-english_words::resting_multiplier .95
-languages::resting_multiplier .5
+dutch_words::resting_multiplier .05
+english_words::resting_multiplier .05
+languages::resting_multiplier .05
 letters::decay 0.07
 english_words::decay 0.07
 dutch_words::decay 0.07

@@ -8,8 +8,8 @@ features_db load Databases/letter_features_no_blank.eNd
 create dataframe_for_reps dutch_vocab
 create dataframe_for_reps english_vocab
 create dataframe_for_reps languages_df
-english_vocab load Databases/Vocab_files/english4U.eNd
-dutch_vocab load Databases/Vocab_files/dutch4U.eNd
+english_vocab load Databases/Vocab_files/english4.eNd
+dutch_vocab load Databases/Vocab_files/dutch4.eNd
 languages_df load Databases/Vocab_files/languages.eNd
 
 
