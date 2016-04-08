@@ -3,4 +3,5 @@ pldt add_stimulus_event prime orthographic START +$prime_duration $prime
 pldt add_stimulus_event target orthographic prime/end END $target
 pldt set_end_condition lexical_decision
 pldt set_cap 300
-set prime_duration=50
+#set prime_duration=50
+pldt set_default_value prime_duration 50
