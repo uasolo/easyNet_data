@@ -48,7 +48,8 @@ run.tests <- function(cmd.file, ref.file, object.file, tolerance = .000999, cuto
     
     print(names(observed))
     print("Comparing observation with reference")
-#    eN["tmp"] <- merge(eN[as.character(object.list[test])],ref.data,by="time")
+#    eN["tmp"] <- merge(eN[as.character(object.list[test])],ref.data,by="time",
+       suffixes=c(".lazyNut",".reference"))
     tmp <- merge(observed,ref.data,by="time")
 #    write.csv(tmp,paste(as.character(object.list[test]),"merged.csv"))
     print(paste("nrow tmp after merge",nrow(tmp)))
