@@ -304,7 +304,7 @@ most_letter set_lag 0
 #fast_letters set_lag 0
 decision set_use_hard_cap 0
 id_layer set_lag 0
-flc set_lag 0
+decision set_lag 0
 
 # SET PARAMETERS
 
