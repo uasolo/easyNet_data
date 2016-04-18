@@ -297,6 +297,7 @@ resetter add_target decision
 initial set_lag 0
 spatial_code set_lag 0
 final set_lag 0
+#words set_lag 0
 most_letter set_lag 0
 #best_letters_bin set_lag 0
 #best_letters_str set_lag 0
@@ -305,6 +306,7 @@ most_letter set_lag 0
 decision set_use_hard_cap 0
 id_layer set_lag 0
 decision set_lag 0
+decision_lat set_lag 1
 
 # SET PARAMETERS
 
