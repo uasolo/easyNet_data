@@ -9,7 +9,13 @@ run.tests <- function(cmd.file, ref.file, object.file, tolerance = .000999, cuto
     test_results$Result=as.character(test_results$Result)
     
     print(paste("nrows",nrow(ref.data),nrow(replic)))
-    test_results$Error[1] <- max(colMeans(abs(ref.data - replic[1:nrow(ref.data),1:ncol(ref.data)]),na.rm=T))
+    test_results$Error[1] <- max(
+      as.vector(
+        as.matrix(
+          abs(ref.data - replic[1:nrow(ref.data),1:ncol(ref.data)])
+        )
+      )
+      ,na.rm=T)
     if (test_results$Error[1] < tolerance) test_results$Result[1]="Passed" else  
       test_results$Result[1]="Failed"
     
