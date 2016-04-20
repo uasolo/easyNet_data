@@ -1,3 +1,4 @@
 Test,ReferenceFile
 1,Tests/scm/no.tdf.blue_BLUR.letters.csv
 2,Tests/scm/no.tdf.blue_BLUR.words.csv
+3,Tests/scm/no.tdf.blue_BLUR.decision.csv
