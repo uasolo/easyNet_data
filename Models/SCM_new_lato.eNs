@@ -303,7 +303,8 @@ most_letter set_lag 0
 #fast_letters set_lag 0
 decision set_use_hard_cap 0
 id_layer set_lag 0
-flc set_lag 0
+decision set_lag 0
+decision_lat set_lag 1
 
 # SET PARAMETERS
 
@@ -322,4 +323,3 @@ caser_plus add_fallback extras
 (scm parameters) load $parameter_file
 
 (scm parameters) set lato::extra_inhibition 0
-(scm parameters) set lato::inhibition -0.34
