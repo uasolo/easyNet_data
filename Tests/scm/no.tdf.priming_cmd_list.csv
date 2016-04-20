@@ -1,4 +1,7 @@
-Word_layer_activity_check
-(words default_observer) enable
-(words default_observer) clear
-quietly pldt step prime=blue target=blur prime_duration=50
+Letter_layer_activity_check,Word_layer_activity_check
+(letters default_observer) enable,(words default_observer) disable
+(letters default_observer) clear,
+(words default_observer) enable,
+(words default_observer) clear,
+quietly pldt step prime=blue target=blur prime_duration=50,
+(letters default_observer) disable,
