@@ -9,12 +9,11 @@ run.tests <- function(cmd.file, ref.file, object.file, tolerance = .000999, cuto
     test_results$Result=as.character(test_results$Result)
     
     print(paste("nrows",nrow(ref.data),nrow(replic)))
+      refref<-as.vector(as.matrix(ref.data))
+      rpl<-as.vector(as.matrix(replic[1:nrow(ref.data),1:ncol(ref.data)]))
+    rpl[is.na(rpl)]<- Inf
     test_results$Error[1] <- max(
-      as.vector(
-        as.matrix(
-          abs(ref.data - replic[1:nrow(ref.data),1:ncol(ref.data)])
-        )
-      )
+          abs(refref - rpl)      
       ,na.rm=T)
     if (test_results$Error[1] < tolerance) test_results$Result[1]="Passed" else  
       test_results$Result[1]="Failed"
@@ -55,8 +54,8 @@ run.tests <- function(cmd.file, ref.file, object.file, tolerance = .000999, cuto
     print(names(observed))
     print("Comparing observation with reference")
 #    eN["tmp"] <- merge(eN[as.character(object.list[test])],ref.data,by="time",
-#       suffixes=c(".lazyNut",".reference"))
-    tmp <- merge(observed,ref.data,by="time",suffixes=c(".lazyNut",".reference"))
+#       suffixes=c(".lazyNut",".reference")) 
+   tmp <-    merge(observed,ref.data,by="time",suffixes=c(".lazyNut",".reference"),all.y=T)
 #    write.csv(tmp,paste(as.character(object.list[test]),"merged.csv"))
     print(paste("nrow tmp after merge",nrow(tmp)))
 #    tmp <- tmp %>% distinct(time)
