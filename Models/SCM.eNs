@@ -1,4 +1,4 @@
-load spatial_hub_connection spatial_hub_connection.so
+load spatial_hub_with_cache_connection spatial_hub_with_cache_connection.so
 
 # LOAD LIBRARY FILES
 
@@ -140,10 +140,18 @@ create blocked_localist_to_spatial_conversion llspco
 llspco set_source letter_rep
 llspco set_target spo
 
-create connection spoc_i
-spoc_i autoconnect spatial_code words inhibitory
-create spatial_hub_connection spoc
-spoc autoconnect spatial_code words
+create spatial_hub_with_cache_connection spoc_i
+spoc_i set_autoconnect 0
+spoc_i attach spatial_code 
+words attach spoc_i inhibitory
+spoc_i conv_fill (spo find_conversion (vocab column_rep Word)) 
+
+create spatial_hub_with_cache_connection spoc
+spoc set_autoconnect 0
+spoc attach spatial_code 
+words attach spoc
+spoc conv_fill (spo find_conversion (vocab column_rep Word)) 
+
 #spoc share_lookup spoc_i
 
 create select_block_conversion initial_conv
@@ -297,12 +305,7 @@ resetter add_target decision
 initial set_lag 0
 spatial_code set_lag 0
 final set_lag 0
-#words set_lag 0
 most_letter set_lag 0
-#best_letters_bin set_lag 0
-#best_letters_str set_lag 0
-#letcount set_lag 0
-#fast_letters set_lag 0
 decision set_use_hard_cap 0
 id_layer set_lag 0
 decision set_lag 0
