@@ -1,0 +1,47 @@
+quietly include C:/Users/Davis_Tecra/Dropbox/easyNet_data/easyNet_data/Models/SCM_new_lato.eNm
+scm setting vocabulary_file Databases/Vocab_files/scm/SCM-CELEX.eNd
+quietly scm stage
+
+(scm parameters) set lato::extra_inhibition -0.3
+(scm parameters) set lato::inhibition 0
+(scm parameters) set spoc::excitation 2
+
+(scm parameters) set id_conn::threshold 0.4
+(scm parameters) set spoc::excitation 1.5
+(scm parameters) set word_yes_conn::excitation .025
+(scm parameters) set mostletno::excitation 0.46
+
+create stimulus_set Forster_Shen_Exp2_nonwords
+Forster_Shen_Exp2_nonwords load Databases/Stimulus_files/Forster_Shen_Exp2_nonwords.eNd
+(ldt default_observer) clear
+set  stimulus=$Stimuli
+quietly  ldt run_set Forster_Shen_Exp2_nonwords
+unset stimulus
+
+create dataframe_view ldt_default_observer.merge.1
+ldt_default_observer.merge.1 set_type merge.R
+ldt_default_observer.merge.1 setting_object df (ldt default_observer)
+ldt_default_observer.merge.1 setting_object df (ldt default_observer)
+ldt_default_observer.merge.1 setting df_key eN_dollar_set(df)
+ldt_default_observer.merge.1 setting_object y 
+ldt_default_observer.merge.1 setting y_key eN_dollar_arg(df)
+ldt_default_observer.merge.1 set_type merge.R
+ldt_default_observer.merge.1 setting_object df (ldt default_observer)
+ldt_default_observer.merge.1 setting_object df (ldt default_observer)
+ldt_default_observer.merge.1 setting df_key eN_dollar_set(df)
+ldt_default_observer.merge.1 setting_object y 
+ldt_default_observer.merge.1 setting y_key eN_dollar_arg(df)
+ldt_default_observer.merge.1 setting df_key c("stimulus")
+ldt_default_observer.merge.1 setting_object y Forster_Shen_Exp2_nonwords
+ldt_default_observer.merge.1 setting y_key c("Stimuli")
+
+ldt_default_observer.merge.1 save_csv Output/FS_nonword.results.1.csv
+(ldt default_observer) clear
+
+(scm parameters) set word_yes_conn::excitation .026
+(scm parameters) set mostletno::excitation 0.43
+
+set  stimulus=$Stimuli
+quietly  ldt run_set Forster_Shen_Exp2_nonwords
+ldt_default_observer.merge.1 save_csv Output/FS_nonword.results.2.csv
+unset stimulus
