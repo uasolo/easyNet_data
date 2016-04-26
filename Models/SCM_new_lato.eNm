@@ -9,5 +9,6 @@ scm add_script Trials/Lexical_Decision.eNs
 scm add_script Trials/Primed_Lexical_Decision.eNs
 scm add_script Trials/Sandwich_Primed_Lexical_Decision.eNs
 scm add_script Trials/Presentation_No_Task.eNs
+scm add_script Trials/Identification.eNs
 
 

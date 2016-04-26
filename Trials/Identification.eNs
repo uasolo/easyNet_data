@@ -1,5 +1,5 @@
-create trial lid
-lid add_stimulus_event stimulus orthographic START END $stimulus
-lid set_end_condition identification
-lid set_cap 300
+create trial id
+id add_stimulus_event stimulus orthographic START END $stimulus
+id set_end_condition identification
+id set_cap 300
 

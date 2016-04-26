@@ -320,9 +320,11 @@ words set_resting_level (vocab column_rep Rest)
 
 scm define_input orthographic (vocab column_rep Word string_representation) features letcount
 scm define_output lexical_decision decision_obs
+scm define_output identification identification_obs
 include Models/extras.eNs
 caser_plus add_fallback extras
 ((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
 (feat_rep find_conversion (orth_str get_target)) set_weight -1
 
 (scm parameters) load $parameter_file
+(scm parameters) set identification_obs::threshold 0.68
