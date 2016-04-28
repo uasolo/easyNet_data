@@ -1,8 +1,9 @@
 create model scm
 #scm add_setting vocabulary_file Databases/Vocab_files/scm/SCM-CELEX.eNd
-scm add_setting vocabulary_file Databases/Vocab_files/scm/ia-SCM.eNd
+#scm add_setting vocabulary_file Databases/Vocab_files/scm/ia-SCM.eNd
+scm add_setting vocabulary_file Databases/Vocab_files/scm/mf.0.45.SCM-CELEX.eNd
 scm change_setting_type vocabulary_file filename
-scm add_setting parameter_file Databases/Parameter_Sets/SCM/SCM.eNp
+scm add_setting parameter_file Databases/Parameter_Sets/SCM/SCM_2.eNp
 scm change_setting_type parameter_file filename
 scm add_script Models/SCM_new_lato.eNs
 scm add_script Trials/Lexical_Decision.eNs

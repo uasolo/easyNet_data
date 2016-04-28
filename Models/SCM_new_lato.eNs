@@ -85,7 +85,7 @@ create bias_layer freql
 freql represent (vocab column_rep Rest)
 #words set_match_dependency spoc
 
-create binary_layer id_layer
+create latch_layer id_layer
 id_layer represent (vocab column_rep Word)
 
 create iac_layer_extended decision
@@ -332,6 +332,4 @@ caser_plus add_fallback extras
 
 (scm parameters) load $parameter_file
 
-(scm parameters) set lato::extra_inhibition 0
-(scm parameters) set identification_obs::threshold 0.4
 
