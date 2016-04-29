@@ -1,0 +1,50 @@
+quietly  include Models/SCM_new_lato.eNm
+#scm setting vocabulary_file Databases/Vocab_files/scm/SCM-CELEX.eNd
+quietly scm stage
+
+
+(words default_observer) enable
+
+
+create dataframe_view d
+d set_type number_of_active_nodes.R
+d setting_object df (words default_observer)
+#d setting delta_activity_threshold c(seq(0, 0.1, by=0.01), seq(0.15, 0.6, by=0.05), 0.7, 0.8, 0.9, 1)
+#d setting delta_activity_threshold c(seq(0, 0.05, by=0.01), seq(0.1, 0.5, by=0.1))
+d setting delta_activity_threshold 0.05 # c(0, 0.01, 0.05, 0.1)
+
+
+
+R << set.seed(1)
+#R << words = as.character(eN["vocab"][round(runif(100, 1, 30000)) ,1])
+R << words = as.character(eN["vocab"][sample(dim(eN["vocab"])[1], 1000), 1])
+
+
+
+#(scm parameters) set lato::inhibition 0
+#(scm parameters) set lato::extra_inhibition -0.3
+R << spoc.excitation =  2.0 #    round((1.5)^(seq(0,1.5,by=0.5)),2 )
+
+
+
+R << eN["trial_params"] <-  expand.grid( Word = words, SpocExcitation = spoc.excitation,  stringsAsFactors =FALSE)
+
+
+create steps in_trial_loop
+in_trial_loop add (scm parameters) set spoc::excitation $SpocExcitation
+in_trial_loop add  (present default_observer) clear
+in_trial_loop add   (words default_observer) clear
+in_trial_loop add  quietly present step stimulus=$Word stimulus_duration=200
+in_trial_loop add R << eN["res_temp"] =  eN["d"] 
+in_trial_loop add R << eN["res_temp"]  = cbind(list(spoc.excitation = rep($SpocExcitation ,  dim(eN["d"] )[1]),  word =  rep("$Word ", dim(eN["d"] )[1])), eN["res_temp"],  stringsAsFactors =FALSE)
+in_trial_loop add R << eN["active_units_results"] = rbind(eN["active_units_results"], eN["res_temp"])
+
+
+
+R << eN["active_units_results"] = data.frame()
+
+
+trial_params for_each_row in_trial_loop step
+active_units_results save_csv  au_SCM_new_lato_changes_deltay0.05_spoc2.0_1000words.csv
+
+
