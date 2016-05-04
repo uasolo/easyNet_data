@@ -197,7 +197,6 @@ lspc autoconnect letters spatial_code
 #olc rename_parameter inhibition orth_letter_inhibition
 
 # ## ORTH-ORTH
-xmllint 1
 create connection lato
 lato type prepostdiag_connection
 lato set_autoconnect 0
