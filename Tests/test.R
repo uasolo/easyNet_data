@@ -23,8 +23,12 @@ run.tests <- function(cmd.file, ref.file, object.file, tolerance = .000999, cuto
 
   colMax <- function(data) sapply(data, max, na.rm = TRUE)
   
+  print("Starting test")
+  print("Reading command file")
   cmd.list <- read.csv(cmd.file,stringsAsFactors = F)
+  print("Reading reference file list")
   ref.file.list <- read.csv(ref.file,stringsAsFactors = F)$ReferenceFile
+  print("Reading object list")
   object.list <- read.csv(object.file,stringsAsFactors = F)$Object
   
   results <- NULL
@@ -32,8 +36,8 @@ run.tests <- function(cmd.file, ref.file, object.file, tolerance = .000999, cuto
   
   for (test in 1:ncol(cmd.list))
   {
-    lazyNut_exec(paste(cmd.list[,test],"\n"))
     print(paste("Running",names(cmd.list)[test]))
+    lazyNut_exec(paste(cmd.list[,test],"\n"))
     print(paste("Loading reference data:",ref.file.list[test]))
     ref.data <- read.csv(ref.file.list[test],quote="",comment.char = "")
     # some fiddling to allow parenthetical headers
