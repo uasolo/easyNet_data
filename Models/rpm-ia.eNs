@@ -14,7 +14,6 @@ create dataframe_for_reps bigramf
 bigramf load Databases/bigrams_lowercase.eNd
 create dataframe_for_reps vocab
 vocab load $vocabulary_file
-#vocab load Databases/Vocab_files/ia_8LW.eNd
 
 #REPRESENTATIONS
 create string_representation str_rep
@@ -74,6 +73,6 @@ wbc autoconnect  words bigrams
 
 
 #OTHER STUFF
-ia define_input orthographic str_rep in_layer
+rpm-ia define_input orthographic str_rep in_layer
 include Trials/Presentation_No_Task.eNs
-(ia parameters) load Databases/Parameter_Sets/RPM-IA/rpm-ia.eNp
+

@@ -7,7 +7,7 @@ max_act 1
 moving_average 0.0500000
 bwc::excitation 0.28
 bwc::inhibition -0.015
-wbc::excitation 0
+wbc::excitation 0.3
 wbc::inhibition 0
 ext_inhib::scale 0
 words::resting_multiplier 0.05000
