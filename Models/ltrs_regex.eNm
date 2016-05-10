@@ -29,7 +29,7 @@ underscore set (prechunk_spl inner) =
 
 create const_conversion underscore_cc
 underscore_cc set underscore
-wunk add_fallback underscore_cc
+#wunk add_fallback underscore_cc
 
 create flatten_string_conversion flat
 flat set_source (orth_str get_target)
@@ -38,8 +38,8 @@ flat set_target (vocab column_rep Word string_representation)
 create regex_side_effect_conversion fillin
 fillin set_source (prechunk_spl inner) 
 fillin set_target (chunk_spl inner)
-fillin add ^$ _ _
-fillin add ^=$ _ _
+#fillin add ^$ _ _
+#fillin add ^=$ _ _
 fillin add ([a-z]) _ \1
 
 create string_representation normal
@@ -52,9 +52,10 @@ nflat set_target normal
 create regex_side_effect_conversion normalize
 normalize set_source (chunk_spl get_target) 
 normalize set_target normalw
-normalize add __ ~ #
-normalize add (.)\1 ~ \1
-normalize add (.)_ ~ .*\1.*
+#normalize add __ ~ #
+normalize add ^$ ~ #
+normalize add ([^_~])\1 ~ \1
+normalize add ([^_~])$ ~ .*\1.*
 
 create string_representation regex
 create regex_conversion regexize
