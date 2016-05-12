@@ -1,3 +1,5 @@
 Test,ReferenceFile
 1,Tests/rpm-ia/rpm_ABACK-out.bigrams.csv
 2,Tests/rpm-ia/rpm_ABACK-out.lexicon.csv
+3,Tests/rpm-ia/rpm_BLACK-out.bigrams.csv
+4,Tests/rpm-ia/rpm_BLACK-out.lexicon.csv
