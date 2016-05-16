@@ -1,5 +1,6 @@
 parameter value
-bigrams::rate 0.070000000
+rescale::scale 0.070000000
+bigrams::rate 1
 words::rate 1
 decay 0.070000000
 min_act -0.2000000

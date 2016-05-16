@@ -19,9 +19,16 @@ vocab load $vocabulary_file
 create string_representation str_rep
 create string_representation bg_str_rep
 
+create scale_conversion rescale
+rescale set_source (bigramf column_rep bigram keyed_representation)
+
+#create equiv_conversion igscale
+#igscale set_source (rescale get_target)
+#igscale set_target (bigramf column_rep bigram keyed_representation)
+
 #ASSIGN LAYER REPRESENTATIONS
 in_layer represent str_rep
-bigrams represent (bigramf column_rep bigram keyed_representation)
+bigrams represent (rescale get_target)
 words represent (vocab column_rep Word keyed_representation)
 words set_resting_level (vocab column_rep Rest)
 
@@ -67,12 +74,13 @@ lato autoconnect words words
 bwc set_autoconnect 0
 bwc attach bigrams
 words attach bwc 
-bwc conv_fill ((bigramf column_rep bigram) find_conversion (vocab column_rep Word))
+bwc conv_fill ((rescale get_target) find_conversion (vocab column_rep Word))
 
 wbc autoconnect  words bigrams
 
 
 #OTHER STUFF
+rpm-ia add rescale
 rpm-ia define_input orthographic str_rep in_layer
 include Trials/Presentation_No_Task.eNs
 
