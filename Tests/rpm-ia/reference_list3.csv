@@ -3,3 +3,5 @@ Test,ReferenceFile
 2,Tests/rpm-ia/abackx-out.lexicon.csv
 3,Tests/rpm-ia/abackxy-out.bigrams.csv
 4,Tests/rpm-ia/abackxy-out.lexicon.csv
+5,Tests/rpm-ia/abac-out.bigrams.csv
+6,Tests/rpm-ia/abac-out.lexicon.csv
