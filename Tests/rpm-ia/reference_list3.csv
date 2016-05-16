@@ -1,0 +1,5 @@
+Test,ReferenceFile
+1,Tests/rpm-ia/abackx-out.bigrams.csv
+2,Tests/rpm-ia/abackx-out.lexicon.csv
+3,Tests/rpm-ia/abackxy-out.bigrams.csv
+4,Tests/rpm-ia/abackxy-out.lexicon.csv
