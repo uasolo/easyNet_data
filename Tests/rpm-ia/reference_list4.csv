@@ -1,0 +1,7 @@
+Test,ReferenceFile
+1,Tests/rpm-ia/blackx-out.bigrams.csv
+2,Tests/rpm-ia/blackx-out.lexicon.csv
+3,Tests/rpm-ia/blacx-out.bigrams.csv
+4,Tests/rpm-ia/blacx-out.lexicon.csv
+5,Tests/rpm-ia/blac-out.bigrams.csv
+6,Tests/rpm-ia/blac-out.lexicon.csv
