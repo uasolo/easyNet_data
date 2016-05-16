@@ -1,5 +1,0 @@
-Basic_bigram_activity_check
-(bigrams default_observer) enable
-(bigrams default_observer) clear
-quietly present step stimulus=aback stimulus_duration=100
-(bigrams default_observer) disable

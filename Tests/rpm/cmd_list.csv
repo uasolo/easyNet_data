@@ -1,7 +1,0 @@
-Basic_bigram_activity_check,Basic_word_activity_check
-(words default_observer) enable,(words default_observer) disable
-(words default_observer) clear,
-(bigrams default_observer) enable,
-(bigrams default_observer) clear,
-quietly present step stimulus=aback stimulus_duration=40,
-(bigrams default_observer) disable,

@@ -1,8 +1,8 @@
 create model rpm-ia 
 rpm-ia add_setting vocabulary_file Databases/Vocab_files/ew5.eNd
 rpm-ia change_setting_type vocabulary_file filename
-rpm-ia add_setting numslots 5
-rpm-ia change_setting_type numslots numeric
+#rpm-ia add_setting numslots 5
+#rpm-ia change_setting_type numslots numeric
 
 rpm-ia add_script Models/rpm-ia.eNs
 rpm-ia add_script Trials/Brief_Masked_No_Task.eNs

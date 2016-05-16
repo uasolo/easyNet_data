@@ -1,4 +1,0 @@
-R << source("Tests/test.R")
-(ia parameters) set wbc::excitation 0.0
-R << run.tests("Tests/rpm/cmd_list2.csv","Tests/rpm/reference_list2.csv","Tests/rpm/object_list2.csv",.001)
-(ia parameters) set wbc::excitation 0.3
