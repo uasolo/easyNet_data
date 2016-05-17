@@ -10,9 +10,11 @@ phon_freq_db load Databases/Vocab_files/drc.phon.eNd
 
 create string_split orth_str
 orth_str set_source (vocab column_rep orthography string_representation)
-orth_str set_blank "
+#orth_str set_blank "
 orth_str create_block_keyed letter_rep
+orth_str set_min 0
 (letter_rep element) add_symbol "
+(letter_rep element) add_symbol #
 
 create string_representation constraint_rep
 create string_split chunk_spl
@@ -51,7 +53,7 @@ create regex_side_effect_conversion normalize
 normalize set_source (chunk_spl get_target) 
 normalize set_target normalw
 #normalize add __ ~ #
-normalize add " ~ 
+normalize add " ~ "
 normalize add ^$ ~ #
 normalize add ([^_~])\1 ~ \1
 normalize add ([^_~])$ ~ .*\1.*
@@ -60,6 +62,7 @@ create string_representation regex
 create regex_conversion regexize
 regexize set_source normal
 regexize set_target regex
+regexize add ".*
 regexize add ([a-z])#+([a-z]) \1.+\2
 regexize add \*# *
 regexize add #\. .  
@@ -86,8 +89,20 @@ create latch_layer where
 where represent letter_rep 
 where set_lag 0
 
+create string_representation input_rep
+
+create equiv_conversion inputter
+inputter set_target (vocab column_rep orthography string_representation)
+inputter set_source input_rep
+
+create string_representation input_rep2
+
+create equiv_conversion inputter2
+inputter2 set_target (vocab column_rep orthography string_representation)
+inputter2 set_source input_rep2
+
 create string_layer input
-input represent (vocab column_rep orthography string_representation)
+input represent input_rep
 input set_lag 0
 
 create fire_layer attention
@@ -98,6 +113,24 @@ attention set_lag 0
 create connection attend
 attend autoconnect input attention
 
+create regex_conversion marker
+marker set_auto_use 0
+marker set_source input_rep
+marker set_target input_rep2
+marker add [a-z] #
+marker add #$ #"
+
+create conversion_chain markchain
+markchain add_link_back marker
+markchain add_link_back inputter2
+markchain add_link_back orth_str
+markchain add_link_back (orth_str parallel)
+
+create connection mark_end
+mark_end set_autoconnect 0
+mark_end attach input
+where attach mark_end 
+mark_end conv_connect markchain
 
 create fire_layer locable
 locable represent letter_rep
@@ -201,7 +234,7 @@ reset add_target reset
 #reset add_target checker 
 reset add_target locable
 
-ltrs_drc define_input orthographic (vocab column_rep orthography string_representation) input
+ltrs_drc define_input orthographic input_rep input
 ltrs_drc define_output lexical_decision yes_decider
 #ltrs_drc define_output lexical_decision no_decider
 
