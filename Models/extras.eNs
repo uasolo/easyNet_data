@@ -24,8 +24,8 @@ blank_feats set (features_db column_rep features)
 create pattern space_letter
 space_letter set (orth_str inner) "
 
-create pattern space_feats 1A 2A 3A 4A 5A 6A 7A 8A 9A 10A 11A 12A 13A 14A
-space_feats set (features_db column_rep features)
+create pattern space_feats 
+space_feats set (features_db column_rep features) 1A 2A 3A 4A 5A 6A 7A 8A 9A 10A 11A 12A 13A 14A
 
 
 create manual_conversion extras
