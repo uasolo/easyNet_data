@@ -73,6 +73,7 @@ run.tests <- function(cmd.file, ref.file, object.file, tolerance = .000999, cuto
   }
   
   eN["test_results"] <<- results
+  lazyNut_exec("test_results add_hint show 1")
   print(eN["test_results"])
 }
 
