@@ -45,7 +45,7 @@ graph_hid_conn set_autoconnect 0
 graph_hid_conn attach graphemes
 hidden attach graph_hid_conn
 create dataframe ghc_mat
-ghc_mat load Databases/PMSP_1_ghc.eNd
+ghc_mat load Models/pmsp/PMSP_1_ghc.eNd
 graph_hid_conn fill_from_dataframe ghc_mat
 
 create matrix_connection hid_phon_conn
@@ -53,7 +53,7 @@ hid_phon_conn set_autoconnect 0
 hid_phon_conn attach hidden
 phonemes attach hid_phon_conn
 create dataframe hpc_mat
-hpc_mat load Databases/PMSP_1_hpc.eNd
+hpc_mat load Models/pmsp/PMSP_1_hpc.eNd
 hid_phon_conn fill_from_dataframe hpc_mat
 
 create matrix_connection bias_hid_conn
@@ -61,7 +61,7 @@ bias_hid_conn set_autoconnect 0
 bias_hid_conn attach bias
 hidden attach bias_hid_conn
 create dataframe bhc_mat
-bhc_mat load Databases/PMSP_1_bhc.eNd
+bhc_mat load Models/pmsp/PMSP_1_bhc.eNd
 bias_hid_conn fill_from_dataframe bhc_mat
 
 create matrix_connection bias_phon_conn
@@ -69,7 +69,7 @@ bias_phon_conn set_autoconnect 0
 bias_phon_conn attach bias
 phonemes attach bias_phon_conn
 create dataframe bpc_mat
-bpc_mat load Databases/PMSP_1_bpc.eNd
+bpc_mat load Models/pmsp/PMSP_1_bpc.eNd
 bias_phon_conn fill_from_dataframe bpc_mat
 
 pmsp1 define_input orthographic unparsed_mixed_orthography graphemes
