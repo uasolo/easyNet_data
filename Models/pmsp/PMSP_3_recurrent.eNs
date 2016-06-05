@@ -95,12 +95,7 @@ thresholded_phonemes target phonemes
 thresholded_phonemes add_mark 3 19 23 37 38 39 42 45 48 50 54 55 61
 thresholded_phonemes add_exemption 37
 
-(pmsp3 parameters) set active .5
-(pmsp3 parameters) set inactive .00005
-
-(pmsp3 parameters) set shift 0
-(pmsp3 parameters) set temp 1
-(pmsp3 parameters) set rate .01
+(pmsp3 parameters) load $parameter_file
 
 pmsp3 add thresholded_phonemes
 create regex_observer drop_onset_tag

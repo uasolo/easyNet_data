@@ -1,4 +1,6 @@
 create model pmsp3
 pmsp3 add_script Models/pmsp/PMSP_3_recurrent.eNs
 pmsp3 add_script Trials/Read_Aloud.eNs
+pmsp3 add_setting parameter_file Models/pmsp/Parameters/PMSP3.eNp
+pmsp3 change_setting_type parameter_file filename
 pmsp3 add_script Models/pmsp/PMSP_3_cap.eNs

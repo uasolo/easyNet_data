@@ -1,6 +1,6 @@
 create model bia
 bia add_script Models/bia/bia.eNs
 
-bia add_setting parameter_file Databases/Parameter_Sets/BIA/bia.eNp
+bia add_setting parameter_file Models/bia/Parameters/bia.eNp
 bia change_setting_type parameter_file filename
 bia add_script Trials/Presentation_No_Task.eNs

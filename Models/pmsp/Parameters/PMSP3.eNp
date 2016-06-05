@@ -1,0 +1,6 @@
+parameter value
+active .5
+inactive .00005
+shift 0
+temp 1
+rate .01

@@ -84,3 +84,4 @@ rpm-ia add rescale
 rpm-ia define_input orthographic str_rep in_layer
 
 
+(rpm-ia parameters) load $parameter_file

@@ -1,6 +1,6 @@
 drc add_script Models/drc/drc.eNs
 
-drc add_setting parameter_file Databases/Parameter_Sets/DRC/drc.eNp
+drc add_setting parameter_file Models/drc/Parameters/drc.eNp
 drc change_setting_type parameter_file filename
 
 drc add_script Trials/Lexical_Decision.eNs
