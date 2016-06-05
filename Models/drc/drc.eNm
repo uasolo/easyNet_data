@@ -1,7 +1,8 @@
-include Models/drc.eNs
+drc add_script Models/drc/drc.eNs
 
-(drc parameters) load Databases/Parameter_Sets/DRC/drc.eNp
+drc add_setting parameter_file Databases/Parameter_Sets/DRC/drc.eNp
+drc change_setting_type parameter_file filename
 
-include Trials/Lexical_Decision.eNs
-include Trials/Read_Aloud.eNs
+drc add_script Trials/Lexical_Decision.eNs
+drc add_script Trials/Read_Aloud.eNs
 

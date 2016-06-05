@@ -127,7 +127,7 @@ create parallel_conversion lopc2
 lopc2 set_source (orth_str get_target)
 lopc2 set_target letter_rep
 
-include Models/lowerupper.eNs
+include Models/shared_scripts/lowerupper.eNs
 ((features_db column_rep letter) find_conversion (orth_str inner)) add_fallback caser
 
 create connection loc
@@ -325,7 +325,7 @@ cdpplus define_input orthographic (vocab column_rep orthography string_represent
 
 cdpplus add cdp_naming
 
-include Models/extras.eNs
+include Models/shared_scripts/extras.eNs
 caser_plus add_fallback extras
 ((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
 ((features_db column_rep features) find_conversion (orth_str inner)) set_weight -1

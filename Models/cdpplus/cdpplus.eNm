@@ -1,6 +1,6 @@
 create model cdpplus
 
-cdpplus add_script Models/cdpplus.eNs
+cdpplus add_script Models/cdpplus/cdpplus.eNs
 
 cdpplus add_script Trials/Read_Aloud.eNs
 

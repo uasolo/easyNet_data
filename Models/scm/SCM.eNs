@@ -133,7 +133,7 @@ lopc2 set_source (orth_str get_target)
 lopc2 set_target letter_rep
 
 (letter_rep find_conversion (vocab column_rep Word)) set_weight -1
-include Models/lowerupper.eNs
+include Models/shared_scripts/lowerupper.eNs
 ((features_db column_rep letter) find_conversion (orth_str inner)) add_fallback caser
 
 create blocked_localist_to_spatial_conversion llspco
@@ -323,7 +323,7 @@ words set_resting_level (vocab column_rep Rest)
 scm define_input orthographic (vocab column_rep Word string_representation) features letcount
 scm define_output lexical_decision decision_obs
 scm define_output identification identification_obs
-include Models/extras.eNs
+include Models/shared_scripts/extras.eNs
 caser_plus add_fallback extras
 ((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
 (feat_rep find_conversion (orth_str get_target)) set_weight -1

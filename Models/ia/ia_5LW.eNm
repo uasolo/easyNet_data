@@ -1,4 +1,4 @@
-include Models/ia.eNm
+include Models/ia/ia.eNm
 ia setting vocabulary_file Databases/Vocab_files/ia_5LW.eNd
 ia setting numslots 5
 

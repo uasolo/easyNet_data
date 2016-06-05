@@ -1,3 +1,3 @@
 create model pmsp1
-pmsp1 add_script Models/PMSP_1_feedforward.eNs
+pmsp1 add_script Models/pmsp/PMSP_1_feedforward.eNs
 pmsp1 add_script Trials/Read_Aloud.eNs
