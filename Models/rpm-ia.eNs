@@ -82,5 +82,5 @@ wbc autoconnect  words bigrams
 #OTHER STUFF
 rpm-ia add rescale
 rpm-ia define_input orthographic str_rep in_layer
-include Trials/Presentation_No_Task.eNs
+
 

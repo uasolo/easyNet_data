@@ -6,6 +6,7 @@ rpm-ia change_setting_type vocabulary_file filename
 
 rpm-ia add_script Models/rpm-ia.eNs
 rpm-ia add_script Trials/Brief_Masked_No_Task.eNs
+rpm-ia add_script Trials/Presentation_No_Task.eNs
 
 (rpm-ia parameters) load Databases/Parameter_Sets/RPM-IA/rpm-ia.eNp
 
