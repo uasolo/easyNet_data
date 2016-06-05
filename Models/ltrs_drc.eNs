@@ -5,9 +5,16 @@ vocab load Databases/Vocab_files/drc.op.eNd
 orth_freq_db load Databases/Vocab_files/drc.orth.eNd
 phon_freq_db load Databases/Vocab_files/drc.phon.eNd
 
+
+
+
 create string_split orth_str
 orth_str set_source (vocab column_rep orthography string_representation)
+#orth_str set_blank "
 orth_str create_block_keyed letter_rep
+orth_str set_min 0
+(letter_rep element) add_symbol "
+(letter_rep element) add_symbol #
 
 create string_representation constraint_rep
 create string_split chunk_spl
@@ -17,20 +24,12 @@ create string_representation prechunk
 create string_split prechunk_spl
 prechunk_spl set_source prechunk
 
-
-
-
 load wtstring_representation wtstring_representation.so
 create wtunkey_conversion wunk
 wunk set_source (letter_rep element)
 wunk set_target (prechunk_spl inner)
 
-create pattern underscore
-underscore set (prechunk_spl inner) =
 
-create const_conversion underscore_cc
-underscore_cc set underscore
-#wunk add_fallback underscore_cc
 
 create flatten_string_conversion flat
 flat set_source (orth_str get_target)
@@ -41,7 +40,7 @@ fillin set_source (prechunk_spl inner)
 fillin set_target (chunk_spl inner)
 #fillin add ^$ _ _
 #fillin add ^=$ _ _
-fillin add ([a-z]) _ \1
+fillin add ([a-z"]) _ \1
 
 create string_representation normal
 create string_representation normalw
@@ -54,6 +53,7 @@ create regex_side_effect_conversion normalize
 normalize set_source (chunk_spl get_target) 
 normalize set_target normalw
 #normalize add __ ~ #
+normalize add " ~ "
 normalize add ^$ ~ #
 normalize add ([^_~])\1 ~ \1
 normalize add ([^_~])$ ~ .*\1.*
@@ -62,6 +62,7 @@ create string_representation regex
 create regex_conversion regexize
 regexize set_source normal
 regexize set_target regex
+regexize add ".*
 regexize add ([a-z])#+([a-z]) \1.+\2
 regexize add \*# *
 regexize add #\. .  
@@ -80,11 +81,6 @@ create parallel_conversion bananas2
 bananas2 set_source letter_rep
 bananas2 set_target (prechunk_spl get_target)
 
-#create parallel_conversion bananas3
-#bananas3 set_source (prechunk_spl get_target)
-#bananas3 set_target (chunk_spl get_target)
-
-
 create latch_layer what
 what represent letter_rep 
 what set_lag 0
@@ -93,8 +89,20 @@ create latch_layer where
 where represent letter_rep 
 where set_lag 0
 
-create latch_layer input
-input represent letter_rep
+create string_representation input_rep
+
+create equiv_conversion inputter
+inputter set_target (vocab column_rep orthography string_representation)
+inputter set_source input_rep
+
+create string_representation input_rep2
+
+create equiv_conversion inputter2
+inputter2 set_target (vocab column_rep orthography string_representation)
+inputter2 set_source input_rep2
+
+create string_layer input
+input represent input_rep
 input set_lag 0
 
 create fire_layer attention
@@ -105,6 +113,24 @@ attention set_lag 0
 create connection attend
 attend autoconnect input attention
 
+create regex_conversion marker
+marker set_auto_use 0
+marker set_source input_rep
+marker set_target input_rep2
+marker add [a-z] #
+marker add #$ #"
+
+create conversion_chain markchain
+markchain add_link_back marker
+markchain add_link_back inputter2
+markchain add_link_back orth_str
+markchain add_link_back (orth_str parallel)
+
+create connection mark_end
+mark_end set_autoconnect 0
+mark_end attach input
+where attach mark_end 
+mark_end conv_connect markchain
 
 create fire_layer locable
 locable represent letter_rep
@@ -130,10 +156,13 @@ create string_layer constraint
 constraint represent regex
 constraint set_lag 0
 
+xmllint 1
+xml (((chunk_spl get_target) find_conversion letter_rep) inner)
+xml letter_rep
+xml (chunk_spl get_target)
+
 create connection stringer
 stringer autoconnect what chunks
-
-xml stringer
 
 create connection stringer2
 stringer2 autoconnect where chunks
@@ -157,8 +186,9 @@ phon_lex represent (vocab column_rep phonology)
 create string_split phon_str_conv
 phon_str_conv set_blank "
 phon_str_conv set_source (vocab column_rep phonology string_representation)
-#phon_str_conv set_min 8
+#phon_str_conv set_min 10
 phon_str_conv create_block_keyed phon_str_bk
+
 
 create string_split phon_str_no_blank
 phon_str_no_blank set_source (vocab column_rep phonology string_representation)
@@ -166,6 +196,10 @@ phon_str_no_blank set_source (vocab column_rep phonology string_representation)
 create equiv_conversion phonstrbl
 phonstrbl set_source (phon_str_no_blank get_target)
 phonstrbl set_target (phon_str_conv get_target)
+
+create parallel_conversion pbananas
+pbananas set_source (phon_str_conv get_target)
+pbananas set_target phon_str_bk
 
 create iac_layer phoneme_out
 #phoneme_out represent phoneme_chars
@@ -200,7 +234,7 @@ reset add_target reset
 #reset add_target checker 
 reset add_target locable
 
-ltrs_drc define_input orthographic (vocab column_rep orthography string_representation) input
+ltrs_drc define_input orthographic input_rep input
 ltrs_drc define_output lexical_decision yes_decider
 #ltrs_drc define_output lexical_decision no_decider
 
@@ -279,38 +313,26 @@ dflat set_source osgt
 dflat set_target pregraphemic
 
 
-load wtstring_representation wtstring_representation.so
-
-
-#create parallel_conversion osgt_punkey
-#osgt_punkey set_source letter_rep
-#osgt_punkey set_target osgt
-#osgt_punkey set_weight 0.1
-
-create wtkey_conversion psgt_key
-psgt_key set_target (phon_str_bk element)
-psgt_key set_source (phon_str_no_blank inner)
-psgt_key set_weight 0.1
-
-create parallel_conversion psgt_pkey
-psgt_pkey set_target phon_str_bk
-psgt_pkey set_source (phon_str_no_blank get_target)
-psgt_pkey set_weight 0.1
-
-#create wtstring_layer pre_graph 
-#pre_graph represent pregraphemic
-
-create wtstring_layer graphemes
+create string_layer graphemes
 graphemes represent grapheme_reps
 
-#create wtstring_layer phon_str
-#phon_str represent (phon_str_no_blank get_target)
-
-create strength_layer phonemes
+create binary_layer phonemes
 phonemes represent phon_str_bk
 
-create wtregex_side_effect_conversion graphemize
-graphemize set_source pregraphemic
+create string_representation regex_upper
+
+create dataframe uplow
+uplow load Databases/uplow.eNd
+
+create regex_conversion upize
+uplow for_each_row upize add $lower $upper
+upize add ([A-Z])$ \1"
+upize set_source regex
+upize set_target regex_upper
+
+
+create regex_side_effect_conversion graphemize
+graphemize set_source regex_upper
 graphemize set_target grapheme_reps
 
 create dataframe parse_graphemes_db
@@ -333,13 +355,15 @@ create dataframe phonotactic_db
 phonotactic_db load Databases/Vocab_files/DRC_phonotac.eNd
 phonotactic_db for_each_row phonotactic add $search $replace
 
-create wtregex_side_effect_conversion gpc
+create regex_side_effect_conversion gpc
 gpc set_target amphons
 gpc set_source grapheme_reps
 
 create dataframe grapheme_phoneme_db
 
 grapheme_phoneme_db load Databases/Vocab_files/RC99_grapheme_phoneme.eNd
+
+
 
 grapheme_phoneme_db for_each_row gpc add $search $replace $phoneme
 create connection graphemizer
