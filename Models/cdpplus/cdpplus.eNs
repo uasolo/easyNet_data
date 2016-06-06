@@ -308,7 +308,7 @@ graphemizer conv_fill (grapheme_reps find_conversion letter_rep)
 #graphemizer autoconnect best_letters_str graphemes_str
 
 create dataframe EZW
-EZW load Databases/EZW.eNd
+EZW load $model_path$$/EZW.eNd
 create matrix_connection gpcer
 gpcer set_autoconnect 0
 gpcer attach graphemes 
