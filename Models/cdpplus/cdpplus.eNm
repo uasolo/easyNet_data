@@ -1,8 +1,8 @@
 create model cdpplus
 
-cdpplus add_script Models/cdpplus/cdpplus.eNs
+cdpplus add_relative_script cdpplus.eNs
 
 cdpplus add_script Trials/Read_Aloud.eNs
 
-cdpplus add_setting parameter_file Models/cdpplus/Parameters/cdpplus.eNp
-cdpplus change_setting_type parameter_file filename
+cdpplus add_setting parameter_file Parameters/cdpplus.eNp
+cdpplus make_setting_relative_filename parameter_file

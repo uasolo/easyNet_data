@@ -1,7 +1,7 @@
-drc add_script Models/drc/drc.eNs
+drc add_relative_script drc.eNs
 
-drc add_setting parameter_file Models/drc/Parameters/drc.eNp
-drc change_setting_type parameter_file filename
+drc add_setting parameter_file Parameters/drc.eNp
+drc make_setting_relative_filename parameter_file
 
 drc add_script Trials/Lexical_Decision.eNs
 drc add_script Trials/Read_Aloud.eNs
