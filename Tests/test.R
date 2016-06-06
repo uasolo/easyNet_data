@@ -66,7 +66,8 @@ run.tests <- function(cmd.file, ref.file, object.file, tolerance = .000999, cuto
     tmp <- subset(tmp, !duplicated(time)) 
     print(paste("nrow tmp after removal of duplicate times",nrow(tmp)))
 #    write.csv(observed,paste(as.character(object.list[test]),"observed.csv"))
-    write.csv(tmp,paste0("test",idx,".",as.character(object.list[test]),"observed.and.target.csv"))
+    easyNetUserHome=Sys.getenv("EASYNET_USER_HOME")
+    write.csv(tmp,paste0(easyNetUserHome,"/Outputs/test",idx,".",as.character(object.list[test]),"observed.and.target.csv"))
     
     results <- rbind(results,eval.fit(idx,names(cmd.list)[idx],ref.data,tmp,tolerance))
     idx <- idx+1
