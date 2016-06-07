@@ -12,10 +12,9 @@ no load Databases/no.eNd
 create dataframe_for_reps vocab
 create dataframe_for_reps orth_freq_db
 create dataframe_for_reps phon_freq_db
-#vocab load Databases/Vocab_files/vocabulary_full.eNd
-vocab load Databases/Vocab_files/drc.op.eNd
-orth_freq_db load Databases/Vocab_files/drc.orth.eNd
-phon_freq_db load Databases/Vocab_files/drc.phon.eNd
+vocab load $orth_phon_file
+orth_freq_db load $orth_freq_file
+phon_freq_db load $phon_freq_file
 
 # LEXICAL ROUTE LAYERS
 
