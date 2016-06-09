@@ -1,0 +1,4 @@
+R << source("Tests/test.R")
+(rpm-ia parameters) set bwc::inhibition 0.0
+R << run.tests("Tests/rpm-ia/cmd_list4.csv","Tests/rpm-ia/reference_list6.csv","Tests/rpm-ia/object_list4.csv",.001)
+#(rpm-ia parameters) set bwc::inhibition -0.09
