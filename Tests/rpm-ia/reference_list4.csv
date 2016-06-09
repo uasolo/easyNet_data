@@ -5,3 +5,5 @@ Test,ReferenceFile
 4,Tests/rpm-ia/blacx-out.lexicon.csv
 5,Tests/rpm-ia/blac-out.bigrams.csv
 6,Tests/rpm-ia/blac-out.lexicon.csv
+7,Tests/rpm-ia/black-out.bigrams.csv
+8,Tests/rpm-ia/black-out.lexicon.csv
