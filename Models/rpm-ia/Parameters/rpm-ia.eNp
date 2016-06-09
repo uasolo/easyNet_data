@@ -1,5 +1,6 @@
 parameter value
-rescale::scale 0.070000000
+rescale::scale 2.170000000
+rescale::intercept -2.10000000
 bigrams::rate 1
 words::rate 1
 decay 0.070000000
