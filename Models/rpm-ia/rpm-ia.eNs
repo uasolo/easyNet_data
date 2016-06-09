@@ -4,7 +4,7 @@ create iac_layer bigrams
 create iac_layer words
 
 create connection ibc
-create sparse_fan_connection bwc
+create sparse_excitation_fan_connection bwc
 create connection wbc
 create connection lato
 
