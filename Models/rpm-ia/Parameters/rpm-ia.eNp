@@ -14,4 +14,5 @@ wbc::inhibition 0
 ext_inhib::scale 0
 words::resting_multiplier 0.05000
 lato::inhibition -0.21
-lexical_decider::threshold 0.35
+lexical_decider::threshold 0.68
+identifier::threshold 0.68
