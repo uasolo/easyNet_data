@@ -1,5 +1,4 @@
 orthography phonology
-strength strENT
 ace 1s
 ache 1k
 ached 1kt
@@ -2476,10 +2475,10 @@ gats g{ts
 gauche g5S
 gaud g9d
 gauds g9dz
+gauge g1_
 gaul g9l
 gauls g9lz
 gaunt g9nt
-gauge g1_
 gauze g9z
 gave g1v
 gawk g9k
@@ -6604,6 +6603,7 @@ streamed strimd
 streams strimz
 street strit
 streets strits
+strength strENT
 stress strEs
 stressed strEst
 stretch strEJ
