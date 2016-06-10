@@ -1,3 +1,4 @@
+create model drc
 drc add_relative_script drc.eNs
 
 drc add_setting parameter_file Parameters/drc.eNp
