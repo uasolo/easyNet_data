@@ -83,5 +83,13 @@ wbc autoconnect  words bigrams
 rpm-ia add rescale
 rpm-ia define_input orthographic str_rep in_layer
 
+create best_above_threshold_observer identifier
+identifier target words
+rpm-ia add identifier
+create regex_observer lexical_decider
+lexical_decider target identifier
+lexical_decider add [^?]+ yes
+
+rpm-ia define_output lexical_decision lexical_decider
 
 (rpm-ia parameters) load $parameter_file
