@@ -50,7 +50,7 @@ phon_lex represent (vocab column_rep phonology)
 create string_split phon_str_conv
 phon_str_conv set_blank "
 phon_str_conv set_source (vocab column_rep phonology string_representation)
-#phon_str_conv set_min 8
+phon_str_conv set_min 8
 phon_str_conv create_block_keyed phon_str_bk
 
 create string_split phon_str_no_blank
