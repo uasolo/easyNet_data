@@ -1,7 +1,7 @@
-Bigram_activity_check_blac,Basic_word_activity_check
-(bigrams default_observer) enable,(words default_observer) disable
-(bigrams default_observer) clear,
-(words default_observer) enable,
-(words default_observer) clear,
-quietly present step stimulus=blac stimulus_duration=100,
-(bigrams default_observer) disable,
+Bigram_activity_check_blac,Word_activity_check_blac,Bigram_activity_check_black,Basic_word_activity_check_black,Bigram_activity_check_blacx,Word_activity_check_blacx
+(bigrams default_observer) enable,(words default_observer) disable,(bigrams default_observer) enable,(words default_observer) disable,(bigrams default_observer) enable,(words default_observer) disable
+(bigrams default_observer) clear,,(bigrams default_observer) clear,,(bigrams default_observer) clear,
+(words default_observer) enable,,(words default_observer) enable,,(words default_observer) enable,
+(words default_observer) clear,,(words default_observer) clear,,(words default_observer) clear,
+quietly present step stimulus=blac stimulus_duration=100,,quietly present step stimulus=black stimulus_duration=100,,quietly present step stimulus=blacx stimulus_duration=100,
+(bigrams default_observer) disable,,(bigrams default_observer) disable,,(bigrams default_observer) disable,

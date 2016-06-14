@@ -1,3 +1,7 @@
 Test,Object
 1,(bigrams default_observer)
 2,(words default_observer)
+3,(bigrams default_observer)
+4,(words default_observer)
+5,(bigrams default_observer)
+6,(words default_observer)
