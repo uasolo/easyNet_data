@@ -1,0 +1,7 @@
+Bigram_activity_check_blac,Basic_word_activity_check
+(bigrams default_observer) enable,(words default_observer) disable
+(bigrams default_observer) clear,
+(words default_observer) enable,
+(words default_observer) clear,
+quietly present step stimulus=blac stimulus_duration=100,
+(bigrams default_observer) disable,

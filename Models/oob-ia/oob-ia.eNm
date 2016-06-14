@@ -1,0 +1,13 @@
+create model oob-ia 
+oob-ia add_setting vocabulary_file Databases/Vocab_files/ew5.eNd
+oob-ia change_setting_type vocabulary_file filename
+
+oob-ia add_relative_script oob-ia.eNs
+oob-ia add_script Trials/Brief_Masked_No_Task.eNs
+oob-ia add_script Trials/Presentation_No_Task.eNs
+oob-ia add_script Trials/Lexical_Decision.eNs
+oob-ia add_script Trials/Primed_Lexical_Decision.eNs
+oob-ia add_script Trials/Sandwich_Primed_Lexical_Decision.eNs
+
+oob-ia add_setting parameter_file Parameters/oob-ia.eNp
+oob-ia make_setting_relative_filename parameter_file
