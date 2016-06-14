@@ -1,29 +1,22 @@
 {
-    "boxWidth": 120,
-    "diagramItems": [
+    "QGraphicsItems": [
         {
             "lazyNutType": "layer",
-            "name": "total",
-            "x": 60,
-            "y": -450
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "graphemes",
-            "x": 200,
+            "name": "orth_freq",
+            "x": -360,
             "y": -340
         },
         {
             "lazyNutType": "layer",
-            "name": "phonemes",
-            "x": 200,
-            "y": -500
+            "name": "features",
+            "x": -80,
+            "y": -20
         },
         {
             "lazyNutType": "layer",
-            "name": "best_letters",
-            "x": 200,
-            "y": -220
+            "name": "phon_freq",
+            "x": -360,
+            "y": -500
         },
         {
             "lazyNutType": "layer",
@@ -51,21 +44,28 @@
         },
         {
             "lazyNutType": "layer",
-            "name": "features",
-            "x": -80,
-            "y": -20
+            "name": "total",
+            "x": 128.51181102362204,
+            "y": -660.72572178477685
         },
         {
             "lazyNutType": "layer",
-            "name": "orth_freq",
-            "x": -360,
-            "y": -340
+            "name": "best_letters",
+            "x": 200,
+            "y": -220
         },
         {
             "lazyNutType": "layer",
-            "name": "phon_freq",
-            "x": -360,
+            "name": "graphemes",
+            "x": 197.92388451443568,
+            "y": -358.68503937007875
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "phonemes",
+            "x": 200,
             "y": -500
         }
-    ]
+    ],
+    "boxWidth": 150
 }
