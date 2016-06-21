@@ -282,10 +282,14 @@ lcolc autoconnect letcount words inhibitory
 letcounter set_fixed 1
 #loglevel warning 
 
-#create spatial_tdf_connection olc
-#olc set_autoconnect 0
-#olc alignments_from spoc
-#letters attach olc 
+create spatial_tdf_connection olc
+olc set_autoconnect 0
+olc alignments_from spoc
+letters attach olc 
+olc attach words
+
+olc set_lag 0
+
 
 # DECISION RULE
 
