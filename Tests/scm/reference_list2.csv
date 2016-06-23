@@ -1,3 +1,4 @@
 Test,ReferenceFile
 1,Tests/scm/abcd.test.no_tdf.csv
-
+2,Tests/scm/abef.test.no_tdf.csv
+3,Tests/scm/abef.test.no_tdf.no.self.ex.csv
