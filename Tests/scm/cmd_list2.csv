@@ -1,0 +1,5 @@
+abcd_word_activity_check
+(words default_observer) enable
+(words default_observer) clear
+quietly present step stimulus=ABCD stimulus_duration=50
+(words default_observer) disable
