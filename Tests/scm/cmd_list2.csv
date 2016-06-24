@@ -1,6 +1,6 @@
 abef_word_activity_check,cdef_word_activity_check
 (scm parameters) set olc::excitation 0,(words default_observer) enable
 (words default_observer) enable,(words default_observer) clear
-(words default_observer) clear,quietly pldt  step prime=CDEF prime_duration=50 target=ABCDEF
-quietly pldt  step prime=ABEF prime_duration=50 target=ABCDEF,(words default_observer) disable
+(words default_observer) clear,quietly scm_pldt  step prime=CDEF prime_duration=50 target=ABCDEF
+quietly scm_pldt  step prime=ABEF prime_duration=50 target=ABCDEF,(words default_observer) disable
 (words default_observer) disable,(scm parameters) set olc::excitation 0.3

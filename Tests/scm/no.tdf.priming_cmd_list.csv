@@ -5,5 +5,5 @@ Letter_layer_activity_check,Word_layer_activity_check,Decision_layer_activity_ch
 (words default_observer) clear,,
 (decision default_observer) enable,,
 (decision default_observer) clear,,
-quietly pldt step prime=blue target=blur prime_duration=50,,
+quietly scm_pldt step prime=blue target=blur prime_duration=50,,
 (letters default_observer) disable,,

@@ -1,0 +1,6 @@
+create trial scm_id
+scm_id add_stimulus_event stimulus orthographic START END $stimulus
+scm_id add_stimulus_event stimulus_for_length prescient_orthographic START END $stimulus
+scm_id set_end_condition identification
+scm_id set_cap 300
+
