@@ -1,0 +1,71 @@
+{
+    "boxWidth": 166.79999999999998,
+    "diagramItems": [
+        {
+            "lazyNutType": "layer",
+            "name": "id_layer",
+            "x": -115.81608089398335,
+            "y": -359.18407460581136
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "decision",
+            "x": 496.10886596752187,
+            "y": -597.66049463639752
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "features",
+            "x": 34.201673492752292,
+            "y": 374.75317766741392
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "final",
+            "x": 248.82414959627204,
+            "y": 20.937136019791453
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "spatial_code",
+            "x": 37.54851936377289,
+            "y": 18.002210500946596
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "initial",
+            "x": -151.93634729453109,
+            "y": 20.227447345387048
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "most_letter",
+            "x": 489.58787891443092,
+            "y": 121.14970490425722
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "letcount",
+            "x": -466.71090792711277,
+            "y": 35.127814628683403
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "letters",
+            "x": 31.57601213068655,
+            "y": 218.34855704420946
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "words",
+            "x": -12.633240981607514,
+            "y": -140.09383974796219
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "freql",
+            "x": -338.68322238074143,
+            "y": -131.85556886448796
+        }
+    ]
+}

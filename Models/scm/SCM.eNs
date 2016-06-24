@@ -323,6 +323,8 @@ decision_lat set_lag 1
 words set_resting_level (vocab column_rep Rest)
 
 # CREATE CYCLE TO RUN THE MODEL
+scm add spo
+
 
 scm define_input orthographic (vocab column_rep Word string_representation) features 
 scm define_input prescient_orthographic (vocab column_rep Word string_representation) letcount
@@ -334,4 +336,3 @@ caser_plus add_fallback extras
 (feat_rep find_conversion (orth_str get_target)) set_weight -1
 
 (scm parameters) load $parameter_file
-(scm parameters) set identification_obs::threshold 0.68
