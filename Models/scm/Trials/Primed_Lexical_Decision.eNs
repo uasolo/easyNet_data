@@ -1,0 +1,7 @@
+create trial scm_pldt
+scm_pldt add_stimulus_event prime orthographic START +$prime_duration $prime
+scm_pldt add_stimulus_event target orthographic prime/end END $target
+scm_pldt add_stimulus_event target_for_length prescient_orthographic START END $target
+scm_pldt set_end_condition lexical_decision
+scm_pldt set_cap 300
+scm_pldt set_default_value prime_duration 50
