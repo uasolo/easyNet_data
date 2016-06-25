@@ -49,8 +49,15 @@ most_letter represent letter_rep
 
 #create binary_layer best_letters_bin
 #best_letters_bin represent letter_rep
+create string_representation shifted
+
+create regex_conversion shifter
+shifter set_source (vocab column_rep Word string_representation)
+shifter set_target shifted
+shifter add ^([^_]) ___\1
+
 create string_split orth_str
-orth_str set_source (vocab column_rep Word string_representation)
+orth_str set_source shifted
 orth_str set_min 10
 
 #create string_layer best_letters_str
@@ -68,8 +75,9 @@ create spatial_layer spatial_code
 spatial_code represent spo
 spatial_code add_hint plot_type signal.weight.difference.R
 
+
 create count_characters_conversion letcounter
-letcounter set_source (orth_str get_target)
+letcounter set_source (vocab column_rep Word string_representation)
 create binary_layer letcount
 letcount represent (letcounter get_target)
 
