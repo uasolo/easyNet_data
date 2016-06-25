@@ -5,13 +5,31 @@ create dataframe_for_reps features_db
 features_db load Databases/letter_features_no_blank.eNd
 
 # ## ORTHOGRAPHY, PHONOLOGY, FREQUENCIES
-create dataframe_for_reps dutch_vocab
-create dataframe_for_reps english_vocab
-create dataframe_for_reps languages_df
-english_vocab load Databases/Vocab_files/english4.eNd
-dutch_vocab load Databases/Vocab_files/dutch4.eNd
-languages_df load Databases/Vocab_files/languages.eNd
+create dataframe_for_reps l2_vocab
+create dataframe_for_reps l1_vocab
+l1_vocab load $L1_vocab_file
+l2_vocab load $L2_vocab_file 
+create keyed_representation language_kr
+language_kr add_symbol $L1_name
+language_kr add_symbol $L2_name
+create pattern L1
+L1 set language_kr $L1_name
+create pattern L2
+L2 set language_kr $L2_name
 
+create vector_representation language_rest
+language_rest add_dimension Rest
+create pattern L1_rest
+L1_rest set language_rest $L1_resting
+create pattern L2_rest
+L2_rest set language_rest $L2_resting
+
+
+create manual_conversion rester
+rester set_source language_kr
+rester set_target language_rest
+rester add L1 L1_rest
+rester add L2 L2_rest
 
 # LEXICAL ROUTE LAYERS
 
@@ -37,18 +55,19 @@ create iac_layer letters
 letters represent letter_rep
 
 # ## ORTHOGRAPHIC LEXICON (LAYER)
-create iac_layer dutch_words
-dutch_words represent (dutch_vocab column_rep Word)
-
-create iac_layer english_words
-english_words represent (english_vocab column_rep Word)
+create iac_layer l2_words
+l2_words represent (l2_vocab column_rep Word)
+l2_words set_pretty_name $L2_name Words
+create iac_layer l1_words
+l1_words represent (l1_vocab column_rep Word)
+l1_words set_pretty_name $L1_name Words
 
 create iac_layer languages
-languages represent (languages_df column_rep Language)
+languages represent language_kr 
 
-dutch_words set_resting_level (dutch_vocab column_rep Rest)
-english_words set_resting_level (english_vocab column_rep Rest)
-languages set_resting_level (languages_df column_rep Rest)
+l2_words set_resting_level (l2_vocab column_rep Rest)
+l1_words set_resting_level (l1_vocab column_rep Rest)
+languages set_resting_level language_rest 
 
 # LEXICAL ROUTE CONNECTIONS
 
@@ -57,20 +76,20 @@ create connection flc
 flc autoconnect features letters
 
 # ## LETTER-ORTH
-create string_split english_orth_str
-create string_split dutch_orth_str
-english_orth_str set_source (english_vocab column_rep Word string_representation)
-dutch_orth_str set_source (dutch_vocab column_rep Word string_representation)
+create string_split l1_orth_str
+create string_split l2_orth_str
+l1_orth_str set_source (l1_vocab column_rep Word string_representation)
+l2_orth_str set_source (l2_vocab column_rep Word string_representation)
 
 create dataframe_for_reps uplow
 uplow load Databases/uplow.eNd
 
 create equiv_conversion ortho_is_lower_b
 ortho_is_lower_b set_source (uplow column_rep lower string_representation)
-ortho_is_lower_b set_target (dutch_orth_str inner)
+ortho_is_lower_b set_target (l2_orth_str inner)
 create equiv_conversion ortho_is_lower_f
 ortho_is_lower_f set_target (uplow column_rep lower string_representation)
-ortho_is_lower_f set_source (dutch_orth_str inner)
+ortho_is_lower_f set_source (l2_orth_str inner)
 
 create equiv_conversion features_are_upper_f
 features_are_upper_f set_source (features_db column_rep letter)
@@ -79,40 +98,40 @@ create equiv_conversion features_are_upper_b
 features_are_upper_b set_target (features_db column_rep letter)
 features_are_upper_b set_source (uplow column_rep upper)
 
-create equiv_conversion english_lettersc
-english_lettersc set_target (uplow column_rep upper string_representation)
-english_lettersc set_source (english_orth_str inner)
+create equiv_conversion l1_lettersc
+l1_lettersc set_target (uplow column_rep upper string_representation)
+l1_lettersc set_source (l1_orth_str inner)
 
-create equiv_conversion english_lettersc2
-english_lettersc2 set_source (uplow column_rep upper string_representation)
-english_lettersc2 set_target (english_orth_str inner)
+create equiv_conversion l1_lettersc2
+l1_lettersc2 set_source (uplow column_rep upper string_representation)
+l1_lettersc2 set_target (l1_orth_str inner)
 
-create equiv_conversion dutch_lettersc
-dutch_lettersc set_target (uplow column_rep upper string_representation)
-dutch_lettersc set_source (dutch_orth_str inner)
+create equiv_conversion l2_lettersc
+l2_lettersc set_target (uplow column_rep upper string_representation)
+l2_lettersc set_source (l2_orth_str inner)
 
-create equiv_conversion dutch_lettersc2
-dutch_lettersc2 set_source (uplow column_rep upper string_representation)
-dutch_lettersc2 set_target (dutch_orth_str inner)
+create equiv_conversion l2_lettersc2
+l2_lettersc2 set_source (uplow column_rep upper string_representation)
+l2_lettersc2 set_target (l2_orth_str inner)
 
 # these are the old solution to the problem of ensuring we can map from the string_rep to the feature
 #    binary patterns; I suspect unnecessary with the above [UPDATE: CD -- tested script without the following, and conversions failed]
-create parallel_conversion english_lopc
-english_lopc set_source letter_rep
-english_lopc set_target (english_orth_str get_target)
-create parallel_conversion english_lopc2
-english_lopc2 set_source (english_orth_str get_target)
-english_lopc2 set_target letter_rep
+create parallel_conversion l1_lopc
+l1_lopc set_source letter_rep
+l1_lopc set_target (l1_orth_str get_target)
+create parallel_conversion l1_lopc2
+l1_lopc2 set_source (l1_orth_str get_target)
+l1_lopc2 set_target letter_rep
 
-create parallel_conversion dutch_lopc
-dutch_lopc set_source letter_rep
-dutch_lopc set_target (dutch_orth_str get_target)
-create parallel_conversion dutch_lopc2
-dutch_lopc2 set_source (dutch_orth_str get_target)
-dutch_lopc2 set_target letter_rep
+create parallel_conversion l2_lopc
+l2_lopc set_source letter_rep
+l2_lopc set_target (l2_orth_str get_target)
+create parallel_conversion l2_lopc2
+l2_lopc2 set_source (l2_orth_str get_target)
+l2_lopc2 set_target letter_rep
 
 create parallel_conversion bananas
-bananas set_source (dutch_orth_str get_target)
+bananas set_source (l2_orth_str get_target)
 bananas set_target feat_rep
 
 
@@ -128,94 +147,88 @@ create conversion_chain caser_plus
 caser_plus set_manual 1
 caser_plus add_link_back caser
 caser_plus add_link_back (features_db conversion letter features)
-((features_db column_rep letter) find_conversion (dutch_orth_str inner)) add_fallback caser
+((features_db column_rep letter) find_conversion (l2_orth_str inner)) add_fallback caser
 
-#create pattern english_pattern
-#english_pattern set (dutch_vocab column_rep Language keyed_representation) English
+#create pattern l1_pattern
+#l1_pattern set (l2_vocab column_rep Language keyed_representation) English
 
-#create pattern dutch_pattern
-#dutch_pattern set (english_vocab column_rep Language keyed_representation) Dutch
+#create pattern l2_pattern
+#l2_pattern set (l1_vocab column_rep Language keyed_representation) Dutch
 
-create equiv_conversion dutch_lang_conv
-dutch_lang_conv set_target (languages_df column_rep Language)
-dutch_lang_conv set_source (dutch_vocab column_rep Language)
+create const_conversion l2_lang_conv
+l2_lang_conv set_target language_kr
+l2_lang_conv set_source (l2_vocab column_rep Word)
+l2_lang_conv set L2
 
-create equiv_conversion english_lang_conv
-english_lang_conv set_target (languages_df column_rep Language)
-english_lang_conv set_source (english_vocab column_rep Language)
-
-create equiv_conversion dutch_langc2
-dutch_langc2 set_source (languages_df column_rep Language)
-dutch_langc2 set_target (dutch_vocab column_rep Language)
-
-create equiv_conversion english_langc2
-english_langc2 set_source (languages_df column_rep Language)
-english_langc2 set_target (english_vocab column_rep Language)
+create const_conversion l1_lang_conv
+l1_lang_conv set_target language_kr
+l1_lang_conv set_source (l1_vocab column_rep Word)
+l1_lang_conv set L1
 
 ##CONNECTIONS
 #loglevel debug
-create connection english_loc
-english_loc autoconnect letters english_words
+create connection l1_loc
+l1_loc autoconnect letters l1_words
 
-create connection dutch_loc
-dutch_loc autoconnect letters dutch_words
+create connection l2_loc
+l2_loc autoconnect letters l2_words
 
 
 
 #loc details
 
-create connection dutch_olc
-dutch_olc autoconnect dutch_words letters
+create connection l2_olc
+l2_olc autoconnect l2_words letters
 
-create connection english_olc
-english_olc autoconnect english_words letters
+create connection l1_olc
+l1_olc autoconnect l1_words letters
 
 
 
-create connection english_langc
-english_langc autoconnect english_words languages
+create connection l1_langc
+l1_langc autoconnect l1_words languages
 
-create connection dutch_langc
-dutch_langc autoconnect dutch_words languages
+create connection l2_langc
+l2_langc autoconnect l2_words languages
 
-create connection lang_englishc
-lang_englishc autoconnect languages english_words 
+create connection lang_l1c
+lang_l1c autoconnect languages l1_words 
 
-create connection lang_dutchc
-lang_dutchc autoconnect languages dutch_words  
+create connection lang_l2c
+lang_l2c autoconnect languages l2_words  
 
 
 
 
 # ## ORTH-ORTH
-create connection dutch_lato
-dutch_lato autoconnect dutch_words dutch_words
+create connection l2_lato
+l2_lato autoconnect l2_words l2_words
 
-create connection english_lato
-english_lato autoconnect english_words english_words
+create connection l1_lato
+l1_lato autoconnect l1_words l1_words
 
-# It’s certainly critical that lat_ed and lat_de are created AFTER english_loc and dutch_loc are connected 
+# It’s certainly critical that lat_ed and lat_de are created AFTER l1_loc and l2_loc are connected 
 # (or that you do a set_weight on them to increase their “length”).
 create manual_conversion lat_ed 
-lat_ed set_target (dutch_vocab column_rep Word keyed_representation)
-lat_ed set_source (english_vocab column_rep Word keyed_representation)
+lat_ed set_target (l2_vocab column_rep Word keyed_representation)
+lat_ed set_source (l1_vocab column_rep Word keyed_representation)
 
 create manual_conversion lat_de 
-lat_de set_source (dutch_vocab column_rep Word keyed_representation)
-lat_de set_target (english_vocab column_rep Word keyed_representation)
+lat_de set_source (l2_vocab column_rep Word keyed_representation)
+lat_de set_target (l1_vocab column_rep Word keyed_representation)
 
-create connection english_dutch_lato
-english_dutch_lato autoconnect english_words dutch_words
+create connection l1_l2_lato
+l1_l2_lato autoconnect l1_words l2_words
 
-create connection dutch_english_lato
-dutch_english_lato autoconnect dutch_words english_words 
-
-
-bia define_input orthographic (dutch_vocab column_rep Word string_representation) features
+create connection l2_l1_lato
+l2_l1_lato autoconnect l2_words l1_words 
 
 
+bia define_input orthographic (l2_vocab column_rep Word string_representation) features
 
-((features_db column_rep features) find_conversion (dutch_orth_str inner)) add_fallback caser_plus
-((features_db column_rep features) find_conversion (dutch_orth_str inner)) set_weight -1
+
+
+((features_db column_rep features) find_conversion (l2_orth_str inner)) add_fallback caser_plus
+((features_db column_rep features) find_conversion (l2_orth_str inner)) set_weight -1
 
 (bia parameters) load $parameter_file

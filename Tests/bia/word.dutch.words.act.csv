@@ -1,4 +1,4 @@
-time,(dutch_words state).BORD,(dutch_words state).FORD,(dutch_words state).GOED,(dutch_words state).LORD,(dutch_words state).OORD,(dutch_words state).WOND,(dutch_words state).WORM,(dutch_words state).WORP,(dutch_words state).WOUD
+time,(l2_words state).BORD,(l2_words state).FORD,(l2_words state).GOED,(l2_words state).LORD,(l2_words state).OORD,(l2_words state).WOND,(l2_words state).WORM,(l2_words state).WORP,(l2_words state).WOUD
 1,-0.0281,-0.0377,-0.0105,-0.0377,-0.0382,-0.0344,-0.0377,-0.0413,-0.0344
 2,-0.0159,-0.0254,-0.0062,-0.0254,-0.0259,-0.0221,-0.0254,-0.0289,-0.0221
 3,0.0053,-0.004,9e-04,-0.004,-0.0045,-8e-04,-0.004,-0.0075,-8e-04

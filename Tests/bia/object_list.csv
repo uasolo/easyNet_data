@@ -1,6 +1,6 @@
 Test,Object
 1,(features default_observer)
 2,(letters default_observer)
-3,(english_words default_observer)
-4,(dutch_words default_observer)
+3,(l1_words default_observer)
+4,(l2_words default_observer)
 5,(languages default_observer)
