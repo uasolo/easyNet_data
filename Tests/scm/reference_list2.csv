@@ -1,3 +1,4 @@
 Test,ReferenceFile
 1,Tests/scm/abef.ABCDEF.test.no_tdf.csv
 2,Tests/scm/cdef.ABCDEF.test.no_tdf.csv
+3,Tests/scm/cdef.ABCDEF.test.tdf.csv
