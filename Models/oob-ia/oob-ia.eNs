@@ -1,12 +1,18 @@
 #LAYERS AND CONNECTIONS
 create string_layer in_layer
-create iac_layer bigrams
-create iac_layer words
+in_layer set_pretty_name String Input
 
-#create connection ibc1
-#create connection ibc2
-#create connection ibc3
-#create connection ibc4
+create strength_layer normalized_bigrams
+normalized_bigrams add_facet layer_mem_nonzero_count_2is_t
+normalized_bigrams add_facet copy_transfer
+normalized_bigrams set_lag 0
+normalized_bigrams set_pretty_name Bigram Input
+
+create iac_layer bigrams
+bigrams set_pretty_name Bigrams IAC
+
+create iac_layer words
+words set_pretty_name Words IAC
 
 create sparse_excitation_fan_connection bwc
 create connection wbc
@@ -36,6 +42,7 @@ rescale set_target (rescale get_base_target)
 
 #ASSIGN LAYER REPRESENTATIONS
 in_layer represent str_rep
+normalized_bigrams represent (rescale get_target)
 bigrams represent (rescale get_target)
 words represent (vocab column_rep Word keyed_representation)
 words set_resting_level (vocab column_rep Rest)
@@ -177,7 +184,7 @@ chain1 add_link_back rescale1
 create connection ibc1
 ibc1 set_autoconnect 0
 ibc1 attach in_layer
-bigrams attach ibc1
+normalized_bigrams attach ibc1
 ibc1 conv_connect chain1
 
 create conversion_chain chain2
@@ -190,7 +197,7 @@ chain2 add_link_back rescale2
 create connection ibc2
 ibc2 set_autoconnect 0
 ibc2 attach in_layer
-bigrams attach ibc2
+normalized_bigrams attach ibc2
 ibc2 conv_connect chain2
 
 create conversion_chain chain3
@@ -203,7 +210,7 @@ chain3 add_link_back rescale3
 create connection ibc3
 ibc3 set_autoconnect 0
 ibc3 attach in_layer
-bigrams attach ibc3
+normalized_bigrams attach ibc3
 ibc3 conv_connect chain3
 
 create conversion_chain chain4
@@ -216,7 +223,7 @@ chain4 add_link_back rescale4
 create connection ibc4
 ibc4 set_autoconnect 0
 ibc4 attach in_layer
-bigrams attach ibc4
+normalized_bigrams attach ibc4
 ibc4 conv_connect chain4
 
 
@@ -275,7 +282,8 @@ bwc conv_fill extra
 
 wbc autoconnect  words bigrams
 
-
+create connection diag
+diag autoconnect normalized_bigrams bigrams
 
 #OTHER STUFF
 oob-ia add rescale rescale1 rescale2 rescale3 rescale4
