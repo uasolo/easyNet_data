@@ -1,0 +1,7 @@
+Test,ReferenceFile
+1,Tests/oob-ia/blac_OOB-out.bigrams.csv
+2,Tests/oob-ia/blac_OOB-out.lexicon.csv
+3,Tests/oob-ia/black_OOB-out.bigrams.csv
+4,Tests/oob-ia/black_OOB-out.lexicon.csv
+5,Tests/oob-ia/blacx_OOB-out.bigrams.csv
+6,Tests/oob-ia/blacx_OOB-out.lexicon.csv

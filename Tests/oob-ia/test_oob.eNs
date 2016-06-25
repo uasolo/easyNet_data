@@ -1,0 +1,4 @@
+R << source("Tests/test.R")
+(oob-ia parameters) set bwc::inhibition -0.005
+R << run.tests("Tests/oob-ia/cmd_list.csv","Tests/oob-ia/reference_list2.csv","Tests/oob-ia/object_list.csv",.001)
+(oob-ia parameters) set bwc::inhibition -0.015

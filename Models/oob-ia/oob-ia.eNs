@@ -241,14 +241,18 @@ list_OBs add ^(.)(.)(.)(.) \2\3\4 \1\2\1\3\1\4
 list_OBs add ^(.)(.)(.) \2\3 \1\2\1\3
 list_OBs add ^(.)(.) \2 \1\2
 
-# with reversed OBs
-#list_OBs add ^(.)(.)(.)(.)(.)(.)(.)(.) \2\3\4\5\6\7\8 \1\2\1\3\1\4\2\1
-#list_OBs add ^(.)(.)(.)(.)(.)(.)(.) \2\3\4\5\6\7 \1\2\1\3\1\4\2\1
-#list_OBs add ^(.)(.)(.)(.)(.)(.) \2\3\4\5\6 \1\2\1\3\1\4\2\1
-#list_OBs add ^(.)(.)(.)(.)(.) \2\3\4\5 \1\2\1\3\1\4\2\1
-#list_OBs add ^(.)(.)(.)(.) \2\3\4 \1\2\1\3\1\4\2\1
-#list_OBs add ^(.)(.)(.) \2\3 \1\2\1\3\2\1
-#list_OBs add ^(.)(.) \2 \1\2\2\1
+# create regex_side_effect_conversion list_all_OBs
+# list_all_OBs set_source str_rep
+# list_all_OBs set_target bg_str_rep
+# # with reversed OBs
+# list_all_OBs add ^(.)(.)(.)(.)(.)(.)(.)(.) \2\3\4\5\6\7\8 \1\2\1\3\1\4\2\1
+# list_all_OBs add ^(.)(.)(.)(.)(.)(.)(.) \2\3\4\5\6\7 \1\2\1\3\1\4\2\1
+# list_all_OBs add ^(.)(.)(.)(.)(.)(.) \2\3\4\5\6 \1\2\1\3\1\4\2\1
+# list_all_OBs add ^(.)(.)(.)(.)(.) \2\3\4\5 \1\2\1\3\1\4\2\1
+# list_all_OBs add ^(.)(.)(.)(.) \2\3\4 \1\2\1\3\1\4\2\1
+# list_all_OBs add ^(.)(.)(.) \2\3 \1\2\1\3\2\1
+# list_all_OBs add ^(.)(.) \2 \1\2\2\1
+
  
 #2 - from  bg_str_rep to (bgsplit get_target)
 create string_split bgsplit
@@ -280,7 +284,35 @@ words attach bwc
 bwc conv_fill extra
 # ((rescale get_base_target) find_conversion (vocab column_rep Word keyed_representation))
 
-wbc autoconnect  words bigrams
+#create equiv_conversion linkback
+#linkback set_source (rescale get_base_target)
+#linkback set_target (rescale get_target)
+
+#create conversion_chain tdfchain
+#tdfchain add_link_back link
+#tdfchain add_link_back rescale
+#tdfchain add_link_back ((bigramf column_rep bigram keyed_representation) conversion_key)
+#tdfchain add_link_back bg1tobg2
+#tdfchain add_link_back bgsplit
+#tdfchain add_link_back list_OBs
+#tdfchain add_link_back strtowordc 
+#tdfchain add_link_back ((vocab column_rep Word keyed_representation) conversion_key)
+
+list_OB1s set_auto_use 0
+list_OB2s set_auto_use 0
+list_OB3s set_auto_use 0
+list_OB4s set_auto_use 0
+#list_OBs set_auto_use 0
+wbc autoconnect words bigrams
+list_OB1s set_auto_use 1
+list_OB2s set_auto_use 1
+list_OB3s set_auto_use 1
+list_OB4s set_auto_use 1
+#list_OBs set_auto_use 1
+#wbc set_autoconnect 0
+#wbc attach words
+#bigrams attach wbc 
+#wbc conv_fill tdfchain
 
 create connection diag
 diag autoconnect normalized_bigrams bigrams
