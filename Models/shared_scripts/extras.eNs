@@ -7,13 +7,13 @@ create pattern rk_letter
 rk_letter set (orth_str inner) *
 
 create pattern rk_feats
-rk_feats set (features_db column_rep features) 2P 3A 4A 7P 9P 10A 11A 12P 13A 14A
+rk_feats set (features_db column_rep features) 1P 2P 5A 6A 7P 10A 11A 13P 14A
 
 create pattern mask_letter
 mask_letter set (orth_str inner) #
 
 create pattern mask_feats
-mask_feats set (features_db column_rep features) 1P 2P 3P 4A 5P 6P 7A 8A 9P 10P 11A 12P 13P 14P
+mask_feats set (features_db column_rep features) 1P 2P 3P 4P 5P 6P 7A 8A 9A 10A 11P 12P 13P 14P
 
 create pattern blank_letter
 blank_letter set (orth_str inner) _ 
