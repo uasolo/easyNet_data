@@ -19,7 +19,7 @@ tla_yes target total
 create mrom_no_observer mrom_no
 mrom_no target total
 
-create above_threshold_observer unit_decider
+create best_above_threshold_observer unit_decider
 unit_decider target words
 ia add unit_decider
 

@@ -1,185 +1,185 @@
-TCon target cond prime
-HFW able RW axle
-HFW also RW alto
-HFW away RW awry
-HFW blue RW blur
-HFW club RW clue
-HFW deny RW defy
-HFW drug RW drum
-HFW duty RW duly
-HFW even RW oven
-HFW hurt RW hurl
-HFW inch RW itch
-HFW jury RW fury
-HFW lady RW lazy
-HFW only RW oily
-HFW open RW omen
-HFW sign RW sigh
-HFW skin RW skid
-HFW step RW stew
-HFW term RW germ
-HFW thus RW thud
-HFW turn RW turf
-HFW unit RW knit
-HFW very RW verb
-LFW alto RW also
-LFW awry RW away
-LFW axle RW able
-LFW blur RW blue
-LFW clue RW club
-LFW defy RW deny
-LFW drum RW drug
-LFW duly RW duty
-LFW fury RW jury
-LFW germ RW term
-LFW hurl RW hurt
-LFW itch RW inch
-LFW knit RW unit
-LFW lazy RW lady
-LFW oily RW only
-LFW omen RW open
-LFW oven RW even
-LFW sigh RW sign
-LFW skid RW skin
-LFW stew RW step
-LFW thud RW thus
-LFW turf RW turn
-LFW verb RW very
-HFW able URW thug
-HFW also URW quiz
-HFW away URW edit
-HFW blue URW gasp
-HFW club URW pond
-HFW deny URW prim
-HFW drug URW jazz
-HFW duty URW veil
-HFW even URW folk
-HFW hurt URW scan
-HFW inch URW meek
-HFW jury URW twin
-HFW lady URW stem
-HFW only URW aura
-HFW open URW flux
-HFW sign URW atom
-HFW skin URW puff
-HFW step URW curl
-HFW term URW wavy
-HFW thus URW fern
-HFW turn URW chew
-HFW unit URW chef
-HFW very URW yolk
-LFW alto URW such
-LFW awry URW used
-LFW axle URW door
-LFW blur URW yeah
-LFW clue URW desk
-LFW defy URW goal
-LFW drum URW sofa
-LFW duly URW join
-LFW fury URW knee
-LFW germ URW plan
-LFW hurl URW eggs
-LFW itch URW vary
-LFW knit URW glad
-LFW lazy URW huge
-LFW oily URW them
-LFW omen URW girl
-LFW oven URW much
-LFW sigh URW army
-LFW skid URW grow
-LFW stew URW fair
-LFW thud URW baby
-LFW turf URW view
-LFW verb URW into
-HFW able RN ible
-HFW also RN anso
-HFW away RN anay
-HFW blue RN blae
-HFW club RN clab
-HFW deny RN feny
-HFW drug RN crug
-HFW duty RN luty
-HFW even RN evon
-HFW hurt RN lurt
-HFW inch RN unch
-HFW jury RN jory
-HFW lady RN ludy
-HFW only RN ondy
-HFW open RN opan
-HFW sign RN lign
-HFW skin RN skun
-HFW step RN snep
-HFW term RN tarm
-HFW thus RN phus
-HFW turn RN tuln
-HFW unit RN unid
-HFW very RN vedy
-LFW alto RN elto
-LFW awry RN ewry
-LFW axle RN axue
-LFW blur RN glur
-LFW clue RN clie
-LFW defy RN dify
-LFW drum RN prum
-LFW duly RN dily
-LFW fury RN fuby
-LFW germ RN gelm
-LFW hurl RN nurl
-LFW itch RN otch
-LFW knit RN krit
-LFW lazy RN lozy
-LFW oily RN oiby
-LFW omen RN omep
-LFW oven RN ovin
-LFW sigh RN sogh
-LFW skid RN skud
-LFW stew RN otew
-LFW thud RN chud
-LFW turf RN tarf
-LFW verb RN velb
-HFW able URN shug
-HFW also URN quoz
-HFW away URN erit
-HFW blue URN gisp
-HFW club URN pand
-HFW deny URN pril
-HFW drug URN jozz
-HFW duty URN veel
-HFW even URN filk
-HFW hurt URN scap
-HFW inch URN mees
-HFW jury URN twan
-HFW lady URN spem
-HFW only URN auta
-HFW open URN frux
-HFW sign URN alom
-HFW skin URN poff
-HFW step URN corl
-HFW term URN waly
-HFW thus URN cern
-HFW turn URN shew
-HFW unit URN ches
-HFW very URN yolt
-LFW alto URN sush
-LFW awry URN usel
-LFW axle URN doir
-LFW blur URN yeap
-LFW clue URN desh
-LFW defy URN gial
-LFW drum URN nofa
-LFW duly URN joen
-LFW fury URN kwee
-LFW germ URN slan
-LFW hurl URN egge
-LFW itch URN vory
-LFW knit URN flad
-LFW lazy URN buge
-LFW oily URN chem
-LFW omen URN pirl
-LFW oven URN mich
-LFW sigh URN almy
-LFW skid URN trow
-LFW stew URN foir
-LFW thud URN biby
-LFW turf URN vien
-LFW verb URN isto
+prime	target	target.frequency	prime.lexicality	relatedness
+axle	able	High	Word	Related
+alto	also	High	Word	Related
+awry	away	High	Word	Related
+blur	blue	High	Word	Related
+clue	club	High	Word	Related
+defy	deny	High	Word	Related
+drum	drug	High	Word	Related
+duly	duty	High	Word	Related
+oven	even	High	Word	Related
+hurl	hurt	High	Word	Related
+itch	inch	High	Word	Related
+fury	jury	High	Word	Related
+lazy	lady	High	Word	Related
+oily	only	High	Word	Related
+omen	open	High	Word	Related
+sigh	sign	High	Word	Related
+skid	skin	High	Word	Related
+stew	step	High	Word	Related
+germ	term	High	Word	Related
+thud	thus	High	Word	Related
+turf	turn	High	Word	Related
+knit	unit	High	Word	Related
+verb	very	High	Word	Related
+also	alto	Low	Word	Related
+away	awry	Low	Word	Related
+able	axle	Low	Word	Related
+blue	blur	Low	Word	Related
+club	clue	Low	Word	Related
+deny	defy	Low	Word	Related
+drug	drum	Low	Word	Related
+duty	duly	Low	Word	Related
+jury	fury	Low	Word	Related
+term	germ	Low	Word	Related
+hurt	hurl	Low	Word	Related
+inch	itch	Low	Word	Related
+unit	knit	Low	Word	Related
+lady	lazy	Low	Word	Related
+only	oily	Low	Word	Related
+open	omen	Low	Word	Related
+even	oven	Low	Word	Related
+sign	sigh	Low	Word	Related
+skin	skid	Low	Word	Related
+step	stew	Low	Word	Related
+thus	thud	Low	Word	Related
+turn	turf	Low	Word	Related
+very	verb	Low	Word	Related
+thug	able	High	Word	Unrelated
+quiz	also	High	Word	Unrelated
+edit	away	High	Word	Unrelated
+gasp	blue	High	Word	Unrelated
+pond	club	High	Word	Unrelated
+prim	deny	High	Word	Unrelated
+jazz	drug	High	Word	Unrelated
+veil	duty	High	Word	Unrelated
+folk	even	High	Word	Unrelated
+scan	hurt	High	Word	Unrelated
+meek	inch	High	Word	Unrelated
+twin	jury	High	Word	Unrelated
+stem	lady	High	Word	Unrelated
+aura	only	High	Word	Unrelated
+flux	open	High	Word	Unrelated
+atom	sign	High	Word	Unrelated
+puff	skin	High	Word	Unrelated
+curl	step	High	Word	Unrelated
+wavy	term	High	Word	Unrelated
+fern	thus	High	Word	Unrelated
+chew	turn	High	Word	Unrelated
+chef	unit	High	Word	Unrelated
+yolk	very	High	Word	Unrelated
+such	alto	Low	Word	Unrelated
+used	awry	Low	Word	Unrelated
+door	axle	Low	Word	Unrelated
+yeah	blur	Low	Word	Unrelated
+desk	clue	Low	Word	Unrelated
+goal	defy	Low	Word	Unrelated
+sofa	drum	Low	Word	Unrelated
+join	duly	Low	Word	Unrelated
+knee	fury	Low	Word	Unrelated
+plan	germ	Low	Word	Unrelated
+eggs	hurl	Low	Word	Unrelated
+vary	itch	Low	Word	Unrelated
+glad	knit	Low	Word	Unrelated
+huge	lazy	Low	Word	Unrelated
+them	oily	Low	Word	Unrelated
+girl	omen	Low	Word	Unrelated
+much	oven	Low	Word	Unrelated
+army	sigh	Low	Word	Unrelated
+grow	skid	Low	Word	Unrelated
+fair	stew	Low	Word	Unrelated
+baby	thud	Low	Word	Unrelated
+view	turf	Low	Word	Unrelated
+into	verb	Low	Word	Unrelated
+ible	able	High	Nonword	Related
+anso	also	High	Nonword	Related
+anay	away	High	Nonword	Related
+blae	blue	High	Nonword	Related
+clab	club	High	Nonword	Related
+feny	deny	High	Nonword	Related
+crug	drug	High	Nonword	Related
+luty	duty	High	Nonword	Related
+evon	even	High	Nonword	Related
+lurt	hurt	High	Nonword	Related
+unch	inch	High	Nonword	Related
+jory	jury	High	Nonword	Related
+ludy	lady	High	Nonword	Related
+ondy	only	High	Nonword	Related
+opan	open	High	Nonword	Related
+lign	sign	High	Nonword	Related
+skun	skin	High	Nonword	Related
+snep	step	High	Nonword	Related
+tarm	term	High	Nonword	Related
+phus	thus	High	Nonword	Related
+tuln	turn	High	Nonword	Related
+unid	unit	High	Nonword	Related
+vedy	very	High	Nonword	Related
+elto	alto	Low	Nonword	Related
+ewry	awry	Low	Nonword	Related
+axue	axle	Low	Nonword	Related
+glur	blur	Low	Nonword	Related
+clie	clue	Low	Nonword	Related
+dify	defy	Low	Nonword	Related
+prum	drum	Low	Nonword	Related
+dily	duly	Low	Nonword	Related
+fuby	fury	Low	Nonword	Related
+gelm	germ	Low	Nonword	Related
+nurl	hurl	Low	Nonword	Related
+otch	itch	Low	Nonword	Related
+krit	knit	Low	Nonword	Related
+lozy	lazy	Low	Nonword	Related
+oiby	oily	Low	Nonword	Related
+omep	omen	Low	Nonword	Related
+ovin	oven	Low	Nonword	Related
+sogh	sigh	Low	Nonword	Related
+skud	skid	Low	Nonword	Related
+otew	stew	Low	Nonword	Related
+chud	thud	Low	Nonword	Related
+tarf	turf	Low	Nonword	Related
+velb	verb	Low	Nonword	Related
+shug	able	High	Nonword	Unrelated
+quoz	also	High	Nonword	Unrelated
+erit	away	High	Nonword	Unrelated
+gisp	blue	High	Nonword	Unrelated
+pand	club	High	Nonword	Unrelated
+pril	deny	High	Nonword	Unrelated
+jozz	drug	High	Nonword	Unrelated
+veel	duty	High	Nonword	Unrelated
+filk	even	High	Nonword	Unrelated
+scap	hurt	High	Nonword	Unrelated
+mees	inch	High	Nonword	Unrelated
+twan	jury	High	Nonword	Unrelated
+spem	lady	High	Nonword	Unrelated
+auta	only	High	Nonword	Unrelated
+frux	open	High	Nonword	Unrelated
+alom	sign	High	Nonword	Unrelated
+poff	skin	High	Nonword	Unrelated
+corl	step	High	Nonword	Unrelated
+waly	term	High	Nonword	Unrelated
+cern	thus	High	Nonword	Unrelated
+shew	turn	High	Nonword	Unrelated
+ches	unit	High	Nonword	Unrelated
+yolt	very	High	Nonword	Unrelated
+sush	alto	Low	Nonword	Unrelated
+usel	awry	Low	Nonword	Unrelated
+doir	axle	Low	Nonword	Unrelated
+yeap	blur	Low	Nonword	Unrelated
+desh	clue	Low	Nonword	Unrelated
+gial	defy	Low	Nonword	Unrelated
+nofa	drum	Low	Nonword	Unrelated
+joen	duly	Low	Nonword	Unrelated
+kwee	fury	Low	Nonword	Unrelated
+slan	germ	Low	Nonword	Unrelated
+egge	hurl	Low	Nonword	Unrelated
+vory	itch	Low	Nonword	Unrelated
+flad	knit	Low	Nonword	Unrelated
+buge	lazy	Low	Nonword	Unrelated
+chem	oily	Low	Nonword	Unrelated
+pirl	omen	Low	Nonword	Unrelated
+mich	oven	Low	Nonword	Unrelated
+almy	sigh	Low	Nonword	Unrelated
+trow	skid	Low	Nonword	Unrelated
+foir	stew	Low	Nonword	Unrelated
+biby	thud	Low	Nonword	Unrelated
+vien	turf	Low	Nonword	Unrelated
+isto	verb	Low	Nonword	Unrelated
