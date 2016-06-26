@@ -63,6 +63,7 @@ phonstrbl set_target (phon_str_conv get_target)
 create iac_layer phoneme_out
 #phoneme_out represent phoneme_chars
 phoneme_out represent phon_str_bk
+phoneme_out add_hint plot_type decision.R
 
 create bias_layer orth_freq 
 orth_freq represent (orth_freq_db column_rep bias)
