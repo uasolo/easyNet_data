@@ -21,7 +21,7 @@ letters::decay 0.0
 orth_lex::decay 0.0
 phon_lex::decay 0.0
 phoneme_out::decay 0.0
-thresholded_best_phonemes::threshold .43
+threshold .43
 bester::threshold 0.0
 nlpl::excitation .055
 bester::first 9
