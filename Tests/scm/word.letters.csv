@@ -1,4 +1,4 @@
-time,(letters state).W/0,(letters state).O/1,(letters state).R/2,(letters state).W/3
+time,(letters state).W/3,(letters state).O/4,(letters state).R/5,(letters state).W/6
 0,0,0,0,0
 1,0.195999995,0.195999995,0.195999995,-0.200000003
 2,0.353583992,0.353583992,0.353583992,-0.200000003

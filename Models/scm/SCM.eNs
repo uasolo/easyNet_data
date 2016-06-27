@@ -400,3 +400,12 @@ scm define_output lexical_decision decision_obs
 scm define_output identification identification_obs
 
 (scm parameters) load $parameter_file
+
+# pretty names
+filtered_letters set_pretty_name filtered letters
+length_filter set_pretty_name length filter
+letcount set_pretty_name letter count
+most_letter set_pretty_name most active letter
+id_layer set_pretty_name id layer
+spatial_code set_pretty_name spatial code
+long_stim set_pretty_name length estimator

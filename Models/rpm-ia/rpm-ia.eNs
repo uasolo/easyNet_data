@@ -83,6 +83,8 @@ wbc autoconnect  words bigrams
 rpm-ia add rescale
 rpm-ia define_input orthographic str_rep in_layer
 
+bigrams add_hint plot_type bigram_match.R
+
 create best_above_threshold_observer identifier
 identifier target words
 rpm-ia add identifier
