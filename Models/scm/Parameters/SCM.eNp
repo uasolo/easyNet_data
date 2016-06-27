@@ -42,3 +42,11 @@ moster::threshold 0
 decay_delay 5
 tolerance .02
 identification_obs::threshold 0.68
+letcopy::excitation 1
+flc_filter::excitation 0
+flc_filter::inhibition -1000
+flc_slot_filter::inhibition -1000
+length_slot_filter::inhibition -1000
+spark::excitation 1
+spark::inhibition 0
+

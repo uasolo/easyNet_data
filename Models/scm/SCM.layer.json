@@ -2,8 +2,8 @@
     "QGraphicsItems": [
         {
             "lazyNutType": "layer",
-            "name": "spatial_code",
-            "x": 503.24947897051595,
+            "name": "letcount",
+            "x": 1040.727655266591,
             "y": -504.73867762667862
         },
         {
@@ -14,15 +14,27 @@
         },
         {
             "lazyNutType": "layer",
-            "name": "final",
-            "x": 786.04947897051602,
-            "y": -504.73867762667862
+            "name": "long_stim",
+            "x": 807.22934997834102,
+            "y": -214.50849859564309
         },
         {
             "lazyNutType": "layer",
-            "name": "letters",
-            "x": 503.24947897051612,
-            "y": -270.89870089370504
+            "name": "length_filter",
+            "x": 767.71462655282789,
+            "y": -354.22127070727902
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "decision",
+            "x": 94.526988112834502,
+            "y": -1187.3717006802005
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "all_stim",
+            "x": 894.3105684851472,
+            "y": -43.624905779763282
         },
         {
             "lazyNutType": "layer",
@@ -32,27 +44,39 @@
         },
         {
             "lazyNutType": "layer",
-            "name": "most_letter",
-            "x": -128.58650352531316,
-            "y": -504.73867762667862
+            "name": "filtered_letters",
+            "x": 170.76005480311059,
+            "y": -302.005386180708
         },
         {
             "lazyNutType": "layer",
-            "name": "letcount",
-            "x": 1040.727655266591,
-            "y": -504.73867762667862
+            "name": "final",
+            "x": 382.43480398134557,
+            "y": -472.28015481286423
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "spatial_code",
+            "x": 727.63665842253749,
+            "y": -507.56115787135809
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "letters",
+            "x": 503.24947897051612,
+            "y": -270.89870089370504
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "most_letter",
+            "x": -82.015579488101167,
+            "y": -160.39608777577791
         },
         {
             "lazyNutType": "layer",
             "name": "id_layer",
             "x": 577.88910855336826,
             "y": -951.29489714077317
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "decision",
-            "x": 94.526988112834502,
-            "y": -1187.3717006802005
         },
         {
             "lazyNutType": "layer",

@@ -32,12 +32,20 @@ features represent feat_rep
 features add_hint plot_type plot_features.R
 
 
+
 # ## LETTER LAYER
 
 create representation letter_rep
 letter_rep type blocked_representation
 letter_rep set_element (features_db column_rep letter)
 letter_rep number 10
+
+create flap_mirror length_filter
+length_filter represent feat_rep
+length_filter set_lag 0
+#length_filter add_facet layer_mem_1_3_t
+#length_filter add_facet copy_transfer
+#length_filter add_facet clip_out
 
 create iac_layer letters
 letters represent letter_rep
@@ -88,7 +96,7 @@ create count_characters_conversion letcounter
 letcounter set_source (vocab column_rep Word string_representation)
 create binary_layer letcount
 letcount represent (letcounter get_target)
-
+letcount set_pretty_name Target Length
 
 
 
@@ -134,6 +142,13 @@ flc_slot_filter set_target_inner_rep (features_db column_rep letter)
 flc_slot_filter attach features
 flc_slot_filter set_lag 1
 
+create blocked_connection length_slot_filter
+length_slot_filter set_autoconnect 0
+letters attach length_slot_filter
+length_slot_filter set_inner_type inhibit_all_if_null_connection
+length_slot_filter set_target_inner_rep (features_db column_rep letter)
+length_slot_filter attach length_filter
+length_slot_filter set_lag 1
 
 create parallel_conversion lfpc
 lfpc set_source letter_rep
@@ -350,53 +365,42 @@ decision_lat set_lag 1
 words set_resting_level (vocab column_rep Rest)
 
 # CREATE CYCLE TO RUN THE MODEL
-
 scm add spo
 
-include Models/shared_scripts/extras.eNs
-caser_plus add_fallback extras
-((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
-(feat_rep find_conversion (orth_str get_target)) set_weight -1
-feat_rep find_conversion (vocab column_rep Word string_representation)
-
 create string_representation all_rep
-#create string_layer all_stim
-#all_stim represent all_rep
-#all_stim set_lag 0
-
 create string_representation long_rep
 create select_longest_string_conversion longer
 longer set_source all_rep
 longer set_target (vocab column_rep Word string_representation)
-
-create string_layer long_stim
 long_stim represent (vocab column_rep Word string_representation)
-long_stim set_lag 0
 
-create flap_mirror length_filter
-length_filter represent feat_rep
-length_filter set_lag 0
-
-
+#create conversion_chain spanker
+#spanker add_link_back shifter
+#spanker add_link_back orth_str
+#spanker add_link_back lopc2
+#spanker add_link_back lfpc
 
 create connection spank
-spank autoconnect long_stim length_filter 
+spank autoconnect long_stim length_filter
+#spank set_autoconnect 0
+#spank attach long_stim 
+#length_filter attach spank
+#spank conv_connect spanker
+create string_layer long_stim
+
+long_stim set_pretty_name Longest Stimulus
 
 create connection spark
 spark autoconnect features length_filter
-
-create blocked_connection length_slot_filter
-length_slot_filter set_autoconnect 0
-letters attach length_slot_filter
-length_slot_filter set_inner_type inhibit_all_if_null_connection
-length_slot_filter set_target_inner_rep (features_db column_rep letter)
-length_slot_filter attach length_filter
-length_slot_filter set_lag 1
 
 scm define_input orthographic (vocab column_rep Word string_representation) features 
 scm define_input prescient_orthographic (vocab column_rep Word string_representation) letcount
 scm define_input all_stimuli_orthographic all_rep long_stim
 scm define_output lexical_decision decision_obs
 scm define_output identification identification_obs
+include Models/shared_scripts/extras.eNs
+caser_plus add_fallback extras
+((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
+(feat_rep find_conversion (orth_str get_target)) set_weight -1
 
 (scm parameters) load $parameter_file
