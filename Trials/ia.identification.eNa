@@ -1,0 +1,10 @@
+include Trials/Identification.eNs
+
+create best_above_threshold_observer identification_obs
+identification_obs target words
+
+(default_model) define_output identification identification_obs
+((default_model) parameters) set identification_obs::threshold 0.68
+
+
+
