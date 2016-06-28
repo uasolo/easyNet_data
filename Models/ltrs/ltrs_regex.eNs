@@ -26,7 +26,7 @@ underscore set (prechunk_spl inner) =
 
 create const_conversion underscore_cc
 underscore_cc set underscore
-#wunk add_fallback underscore_cc
+wunk add_fallback underscore_cc
 
 create flatten_string_conversion flat
 flat set_source (orth_str get_target)
@@ -35,8 +35,8 @@ flat set_target (vocab column_rep Word string_representation)
 create regex_side_effect_conversion fillin
 fillin set_source (prechunk_spl inner) 
 fillin set_target (chunk_spl inner)
-#fillin add ^$ _ _
-#fillin add ^=$ _ _
+fillin add ^$ _ _
+fillin add ^=$ _ _
 fillin add ([a-z]) _ \1
 
 create string_representation normal
@@ -49,10 +49,10 @@ nflat set_target normal
 create regex_side_effect_conversion normalize
 normalize set_source (chunk_spl get_target) 
 normalize set_target normalw
-#normalize add __ ~ #
+normalize add __ ~ #
 normalize add ^$ ~ #
-normalize add ([^_~])\1 ~ \1
-normalize add ([^_~])$ ~ .*\1.*
+normalize add ^([^_~])\1$ ~ \1
+normalize add ^([^_~])_?$ ~ .*\1.*
 
 create string_representation regex
 create regex_conversion regexize
@@ -87,10 +87,12 @@ xml bananas2
 create latch_layer what
 what represent letter_rep 
 what set_lag 0
+what change_hint plot_type by_time_heat.R
 
 create latch_layer where
 where represent letter_rep 
 where set_lag 0
+where change_hint plot_type by_time_heat.R
 
 create latch_layer input
 input represent letter_rep
@@ -122,8 +124,8 @@ locating autoconnect locable where
 create string_layer chunks
 chunks represent (chunk_spl get_target)
 chunks set_lag 0
-chunks add_hint plot_type LTRS_chunk_layer.R
-chunks add_hint plot_type LTRS_chunk_layer_2.R
+#chunks change_hint plot_type LTRS_chunk_layer_2.R
+#chunks add_hint plot_type LTRS_chunk_layer_2.R
 
 create string_layer constraint
 constraint represent regex
@@ -148,6 +150,7 @@ dechunk autoconnect chunks constraint
 create accumulator_layer lexicon
 lexicon represent (vocab column_rep Word)
 lexicon set_lag 0
+lexicon change_hint plot_type by_time_grouped.R
 
 create grep_connection matcher
 matcher set_autoconnect 0
@@ -178,7 +181,7 @@ yes_decider add .+ yes
 create reset_nobserver reset
 reset add_trigger (input state)
 reset add_sync input
-#reset add_target attention
+reset add_target attention
 reset add_target what
 reset add_target where
 reset add_target reset
