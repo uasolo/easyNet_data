@@ -4,3 +4,5 @@ inactive .00005
 shift 0
 temp 1
 rate .01
+min_act 0
+max_act 1

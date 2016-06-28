@@ -40,10 +40,12 @@ letters represent letter_rep
 
 # ## ORTHOGRAPHIC LEXICON (LAYER)
 create conrad_layer orth_lex
+orth_lex set_pretty_name Orthographic Lexicon
 orth_lex represent (vocab column_rep orthography)
 
 # ## PHONOLOGICAL LEXICON (LAYER)
 create conrad_layer phon_lex
+phon_lex set_pretty_name Phonological Lexicon
 phon_lex represent (vocab column_rep phonology)
 
 create dataframe_for_reps phoneme_db
@@ -87,11 +89,14 @@ phono set_source spaced_phonology
 phono set_target phon_str_bk
 
 create iac_layer phoneme_out
+phoneme_out set_pretty_name Output Buffer
 phoneme_out represent phon_str_bk
 
-create bias_layer orth_freq 
+create bias_layer orth_freq
+orth_freq set_pretty_name Orthographic Frequency 
 orth_freq represent (orth_freq_db column_rep bias)
 create bias_layer phon_freq
+phon_freq set_pretty_name phonological Frequency 
 phon_freq represent (phon_freq_db column_rep bias)
 
 
@@ -209,6 +214,7 @@ grapheme_str_reps set_element grapheme_instr_reps
 grapheme_str_reps number 8
 
 create binary_layer best_letters
+best_letters set_pretty_name Most Active Letters
 best_letters represent letter_rep
 
 create threshold_staggered_blocked_connection bester

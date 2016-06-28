@@ -7,5 +7,5 @@ ia add_setting numslots 4
 ia change_setting_type numslots numeric
 
 ia add_relative_script ia.eNs
+ia add_script Trials/Presentation_No_Task.eNs
 ia add_script Trials/Brief_Masked_No_Task.eNs
-include Trials/Presentation_No_Task.eNs
