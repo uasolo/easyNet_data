@@ -1,5 +1,6 @@
 create model scm
-scm add_setting vocabulary_file Databases/Vocab_files/scm/ia-SCM.eNd
+scm add_setting vocabulary_file Vocabularies/ia-SCM.eNd
+scm make_setting_relative_filename vocabulary_file
 
 scm change_setting_type vocabulary_file filename
 
