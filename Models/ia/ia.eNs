@@ -22,7 +22,7 @@ create representation feat_rep
 feat_rep type blocked_representation
 feat_rep set_element (features_db column_rep features)
 feat_rep number $numslots 
-create iac_layer features
+create strength_layer features
 features represent feat_rep
 features add_hint_plus port state plot_type plot_features.R
 
