@@ -31,6 +31,7 @@ l1_words::decay 0.07
 l2_words::decay 0.07
 languages::decay 0.07
 lexical_decider::threshold 0.35
+language_obs::threshold .68
 l1_words::min_act -0.2
 l2_words::min_act -0.2
 languages::min_act -0.2

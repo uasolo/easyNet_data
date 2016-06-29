@@ -231,4 +231,9 @@ bia define_input orthographic (l2_vocab column_rep Word string_representation) f
 ((features_db column_rep features) find_conversion (l2_orth_str inner)) add_fallback caser_plus
 ((features_db column_rep features) find_conversion (l2_orth_str inner)) set_weight -1
 
+create best_above_threshold_observer language_obs
+language_obs target languages
+bia define_output language_decision language_obs
+
+
 (bia parameters) load $parameter_file

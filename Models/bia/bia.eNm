@@ -27,3 +27,4 @@ bia make_setting_relative_filename parameter_file
 bia change_setting_group parameter_file Parameters
 
 bia add_script Trials/Presentation_No_Task.eNs
+bia add_script Trials/Language_Decision.eNs
