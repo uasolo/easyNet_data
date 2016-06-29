@@ -37,6 +37,7 @@ letter_rep number $numslots
 
 create iac_layer letters
 letters represent letter_rep
+letters change_hint plot_type by_time_grouped.R
 
 # ## ORTHORAPHIC LEXICON (LAYER)
 create iac_layer words
