@@ -8,7 +8,7 @@ features_db load Databases/letter_features_no_blank.eNd
 create dataframe_for_reps l2_vocab
 create dataframe_for_reps l1_vocab
 l1_vocab load $L1_vocab_file
-l2_vocab load $L2_vocab_file 
+l2_vocab load $L2_vocab_file
 create keyed_representation language_kr
 language_kr add_symbol $L1_name
 language_kr add_symbol $L2_name
