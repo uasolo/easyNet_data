@@ -18,7 +18,7 @@ create regex_side_effect_conversion parse_graphemes
 parse_graphemes set_source unparsed_upper_orthography
 parse_graphemes set_target (graphemes_db column_rep grapheme string_representation)
 create dataframe parse_db
-parse_db load Databases/Vocab_files/PMSP_parse_graphemes.eNd
+parse_db load Models/pmsp/Representations//PMSP_parse_graphemes.eNd
 parse_db for_each_row parse_graphemes add $search $replace $output
 parse_graphemes set_restart 2
 
