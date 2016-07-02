@@ -372,6 +372,8 @@ longer set_target (vocab column_rep Word string_representation)
 create string_layer long_stim
 long_stim represent (vocab column_rep Word string_representation)
 long_stim set_lag 0
+spoc_i peek_at_maxlen long_stim
+spoc peek_at_maxlen long_stim
 
 create flap_mirror length_filter
 length_filter represent feat_rep
