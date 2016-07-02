@@ -25,7 +25,7 @@ letterlist load Databases/lettersno.eNd
 create representation feat_rep
 feat_rep type blocked_representation
 feat_rep set_element (features_db column_rep features)
-feat_rep number 10
+feat_rep number 13
 
 create strength_layer features
 features represent feat_rep
@@ -37,7 +37,7 @@ features add_hint plot_type plot_features.R
 create representation letter_rep
 letter_rep type blocked_representation
 letter_rep set_element (features_db column_rep letter)
-letter_rep number 10
+letter_rep number 13
 
 create iac_layer letters
 letters represent letter_rep
@@ -66,7 +66,7 @@ shifter add ^([^_]) ___\1
 
 create string_split orth_str
 orth_str set_source shifted
-orth_str set_min 10
+orth_str set_min 13
 
 #create string_layer best_letters_str
 #best_letters_str represent (orth_str get_target)
