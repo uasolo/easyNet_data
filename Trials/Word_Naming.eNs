@@ -1,0 +1,4 @@
+create trial Word_Naming
+Word_Naming add_stimulus_event stimulus orthographic START END $stimulus
+Word_Naming set_end_condition pronunciation
+Word_Naming set_cap 300

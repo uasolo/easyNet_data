@@ -7,5 +7,5 @@ spldt set_end_condition lexical_decision
 spldt set_cap 300
 #set preprime_duration=33
 #set main_prime_duration=50
-spldt set_default_value preprime_duration 33
-spldt set_default_value main_prime_duration 50
+#spldt set_default_value preprime_duration 33
+#spldt set_default_value main_prime_duration 50

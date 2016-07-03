@@ -12,5 +12,5 @@ drc add_setting phon_freq_file Vocabularies/drc.phon-freq.eNd
 drc make_setting_relative_filename phon_freq_file
 
 drc add_script Trials/Lexical_Decision.eNs
-drc add_script Trials/Read_Aloud.eNs
+drc add_script Trials/Word_Naming.eNs
 

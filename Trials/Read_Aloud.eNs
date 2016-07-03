@@ -1,4 +1,0 @@
-create trial Read_Aloud
-Read_Aloud add_stimulus_event stimulus orthographic START END $stimulus
-Read_Aloud set_end_condition pronunciation
-Read_Aloud set_cap 300

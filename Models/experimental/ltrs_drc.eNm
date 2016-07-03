@@ -8,4 +8,4 @@ ltrs_drc add_script Models/ltrs_drc.eNs
 ltrs_drc add_script Trials/Presentation_No_Task.eNs
 ltrs_drc add_script Trials/Lexical_Decision.eNs
 ltrs_drc add_script Trials/Primed_Lexical_Decision.eNs
-ltrs_drc add_script Trials/Read_Aloud.eNs
+ltrs_drc add_script Trials/Word_Naming.eNs
