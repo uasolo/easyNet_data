@@ -1,6 +1,6 @@
 create model ltrs
 
-ltrs add_setting vocabulary_file Databases/Vocab_files/ia.eNd
+ltrs add_setting vocabulary_file Models/scm/Vocabularies/SCM-CELEX.eNd
 ltrs change_setting_type vocabulary_file filename
 ltrs add_setting parameter_file Parameters/LTRS.eNd
 ltrs make_setting_relative_filename parameter_file 

@@ -41,10 +41,12 @@ letters  represent letter_rep
 # ## ORTHOGRAPHIC LEXICON (LAYER)
 create iac_layer orth_lex
 orth_lex represent (vocab column_rep orthography)
+orth_lex set_pretty_name Orthographic Lexicon
 
 # ## PHONOLOGICAL LEXICON (LAYER)
 create iac_layer phon_lex
 phon_lex represent (vocab column_rep phonology)
+phon_lex set_pretty_name Phonological Lexicon
 
 #OB ## PHONEME LAYER (OUTPUT BUFFER)
 create string_split phon_str_conv
@@ -64,10 +66,12 @@ create iac_layer phoneme_out
 #phoneme_out represent phoneme_chars
 phoneme_out represent phon_str_bk
 phoneme_out add_hint plot_type decision.R
-
-create bias_layer orth_freq 
+phoneme_out set_pretty_name Output Buffer
+create bias_layer orth_freq
+orth_freq set_pretty_name Orthographic Frequency 
 orth_freq represent (orth_freq_db column_rep bias)
 create bias_layer phon_freq
+phon_freq set_pretty_name phonological Frequency 
 phon_freq represent (phon_freq_db column_rep bias)
 
 
@@ -163,6 +167,7 @@ pfreqb autoconnect phon_freq phon_lex
 
 create strength_layer total
 total represent (no column_rep no)
+total set_pretty_name Total Lexical Act.
 
 create pattern no_pat
 no_pat set (no column_rep no) no
@@ -234,6 +239,7 @@ grapheme_reps number 8
 
 create strength_layer best_letters
 best_letters represent letter_rep
+best_letters set_pretty_name Most Active Letters
 
 create staggered_blocked_connection bester
 bester attach letters 
@@ -280,13 +286,14 @@ psgt_pkey set_weight 0.1
 
 create wtstring_layer graphemes
 graphemes represent grapheme_reps
+graphemes set_pretty_name GPC Graphemes
 
 #create wtstring_layer phon_str
 #phon_str represent (phon_str_no_blank get_target)
 
 create strength_layer phonemes
 phonemes represent phon_str_bk
-
+phonemes set_pretty_name GPC Phonemes
 create wtregex_side_effect_conversion graphemize
 graphemize set_source pregraphemic
 graphemize set_target grapheme_reps

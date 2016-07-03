@@ -267,11 +267,11 @@ gr_pc set_target grapheme_reps
 
 create strength_layer graphemes
 graphemes represent grapheme_reps
-
+graphemes set_pretty_name TLA Graphemes
 
 create zorzi_layer phonemes
 phonemes represent phon_str_bk
-
+phonemes set_pretty_name TLA Phonemes
 create string_representation onset_parsed
 create string_representation vowel_parsed
 create string_representation coda_parsed
