@@ -3,6 +3,12 @@
     "diagramItems": [
         {
             "lazyNutType": "layer",
+            "name": "final",
+            "x": 786.04947897051602,
+            "y": -500.74402436814086
+        },
+        {
+            "lazyNutType": "layer",
             "name": "letcount",
             "x": 1040.727655266591,
             "y": -503.76652340596337
@@ -48,6 +54,12 @@
             "name": "decision",
             "x": 136.90390625000001,
             "y": -1212.7978515625
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "initial",
+            "x": 154.21349647468679,
+            "y": -500.74402436814086
         },
         {
             "lazyNutType": "layer",

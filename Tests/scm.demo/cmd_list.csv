@@ -1,0 +1,5 @@
+Basic_letter_activity_check,Basic_word_activity_check,Decision_activity_check
+(letters default_observer) enable,(words default_observer) enable,(decision default_observer) enable
+(letters default_observer) clear,(words default_observer) clear,(decision default_observer) clear
+quietly ldt step stimulus=WORD stimulus_duration=50,quietly ldt step stimulus=WORD stimulus_duration=50,quietly ldt step stimulus=WORD stimulus_duration=50
+(letters default_observer) disable,(words default_observer) disable,(decision default_observer) disable

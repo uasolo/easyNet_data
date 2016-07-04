@@ -56,6 +56,11 @@ orth_str set_min 10
 #create string_layer best_letters_str
 #best_letters_str represent (orth_str get_target)
 
+create strength_layer initial
+initial represent (features_db column_rep letter)
+
+create strength_layer final
+final represent (features_db column_rep letter)
 
 create spatial_representation spo
 spo set_keys (features_db column_rep letter)
@@ -64,8 +69,7 @@ spatial_code represent spo
 spatial_code add_hint plot_type signal.weight.difference.R
 
 create count_characters_conversion letcounter
-#letcounter set_source (orth_str get_target)
-letcounter set_source (vocab column_rep Word string_representation)
+letcounter set_source (orth_str get_target)
 create binary_layer letcount
 letcount represent (letcounter get_target)
 
@@ -155,16 +159,32 @@ initial_conv set_source letter_rep
 initial_conv set_position 0
 
 
+create connection letinitialc
+letinitialc set_autoconnect 1
+letinitialc attach letters 
+initial attach letinitialc
+#letinitialc conversion_connect initial_conv
 
-
-
+#loglevel debug
+create connection initialolc
+initialolc autoconnect initial words
+initial_conv set_auto_use 0
+#loglevel info
 
 create select_block_conversion final_conv
 final_conv set_source letter_rep
 final_conv set_position -1
 
 
+create connection letfinalc
+letfinalc set_autoconnect 1
+letfinalc attach letters 
+final attach letfinalc
+#letfinalc conversion_connect final_conv
 
+create connection finalolc
+finalolc autoconnect final words
+final_conv set_auto_use 0
 
 
 create connection lspc
@@ -284,9 +304,9 @@ resetter add_target letters
 resetter add_target words
 resetter add_target decision
 
-
+initial set_lag 0
 spatial_code set_lag 0
-
+final set_lag 0
 most_letter set_lag 0
 decision set_use_hard_cap 0
 id_layer set_lag 0
