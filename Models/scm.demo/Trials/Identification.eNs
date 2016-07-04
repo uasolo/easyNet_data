@@ -1,0 +1,5 @@
+create trial id
+id add_stimulus_event stimulus orthographic START END $stimulus
+id set_end_condition identification
+id set_cap 300
+
