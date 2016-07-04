@@ -1,0 +1,53 @@
+{
+    "QGraphicsItems": [
+        {
+            "lazyNutType": "layer",
+            "name": "what",
+            "x": 252.86840721764315,
+            "y": -293.61398084205842
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "input",
+            "x": 549.0504967698821,
+            "y": 17.436765426598356
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "attention",
+            "x": 244.35198930719525,
+            "y": -113.48562263310311
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "where",
+            "x": 521.67437736689703,
+            "y": -303.68562263310304
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "locable",
+            "x": 438.3698997549568,
+            "y": -142.2109957674316
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "constraint",
+            "x": 369.32512363555361,
+            "y": -630.82293606593907
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "chunks",
+            "x": 369.32512363555361,
+            "y": -430.82293606593902
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "lexicon",
+            "x": 369.32512363555361,
+            "y": -830.82293606593907
+        }
+    ],
+    "boxWidth": 150
+}
