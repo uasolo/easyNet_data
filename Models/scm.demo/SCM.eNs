@@ -29,7 +29,8 @@ feat_rep number 10
 
 create strength_layer features
 features represent feat_rep
-features add_hint_plus port state plot_type plot_features.R
+#features add_hint_plus port state plot_type plot_features.R
+features change_hint plot_type plot_features.R
 
 # ## LETTER LAYER
 
@@ -40,6 +41,8 @@ letter_rep number 10
 
 create iac_layer letters
 letters represent letter_rep
+letters change_hint plot_type by_time_grouped.R
+
 
 #create iac_layer fast_letters
 #fast_letters represent letter_rep
