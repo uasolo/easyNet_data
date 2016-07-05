@@ -50,7 +50,7 @@ features represent feat_rep
 # No particular number of slots is set
 
 # Hint to the GUI that plot_features.R is relevant
-features add_hint_plus port state plot_type plot_features.R
+features add_hint_plus port state plot_type layers/plot_features.R
 
 
 # Mark the letter column in the feature file as being useable as

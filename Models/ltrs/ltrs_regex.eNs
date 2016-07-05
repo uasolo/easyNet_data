@@ -93,12 +93,12 @@ bananas2 set_target (prechunk_spl get_target)
 create latch_layer what
 what represent letter_rep 
 what set_lag 0
-what change_hint plot_type by_time_heat.R
+what change_hint plot_type layers/by_time_heat.R
 
 create latch_layer where
 where represent letter_rep 
 where set_lag 0
-where change_hint plot_type by_time_heat.R
+where change_hint plot_type layers/by_time_heat.R
 
 create string_representation input_rep
 
@@ -120,6 +120,7 @@ create fire_layer attention
 attention add_facet ltrs_block_attention_weight_transfer
 attention represent letter_rep
 attention set_lag 0
+attention change_hint plot_type layers/by_time_heat.R
 
 create connection attend
 attend autoconnect input attention
@@ -161,8 +162,8 @@ locating autoconnect locable where
 create string_layer chunks
 chunks represent (chunk_spl get_target)
 chunks set_lag 0
-chunks change_hint plot_type LTRS_chunk_layer.R
-#chunks add_hint plot_type LTRS_chunk_layer_2.R
+chunks change_hint plot_type layers/LTRS_chunk_layer.R
+#chunks add_hint plot_type layers/LTRS_chunk_layer_2.R
 
 create string_layer constraint
 constraint represent regex
@@ -187,7 +188,7 @@ dechunk autoconnect chunks constraint
 create accumulator_layer lexicon
 lexicon represent (vocab column_rep Word)
 lexicon set_lag 0
-lexicon change_hint plot_type by_time_grouped.R
+lexicon change_hint plot_type layers/by_time_grouped.R
 
 create grep_connection matcher
 matcher set_autoconnect 0

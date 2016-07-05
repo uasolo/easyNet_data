@@ -1,0 +1,5 @@
+create model m
+m add_script Trials/Word_Naming.eNs
+create rplot plo
+plo set_type test.R
+plo add_hint show 1
