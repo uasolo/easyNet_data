@@ -24,7 +24,7 @@ feat_rep number 8
 
 create strength_layer features
 features represent feat_rep
-features add_hint plot_type plot_features.R
+features change_hint plot_type plot_features.R
 
 
 
@@ -65,7 +65,7 @@ phonstrbl set_target (phon_str_conv get_target)
 create iac_layer phoneme_out
 #phoneme_out represent phoneme_chars
 phoneme_out represent phon_str_bk
-phoneme_out add_hint plot_type decision.R
+phoneme_out change_hint plot_type decision.R
 phoneme_out set_pretty_name Output Buffer
 create bias_layer orth_freq
 orth_freq set_pretty_name Orthographic Frequency 
@@ -287,7 +287,7 @@ psgt_pkey set_weight 0.1
 create wtstring_layer graphemes
 graphemes represent grapheme_reps
 graphemes set_pretty_name GPC Graphemes
-
+graphemes change_hint plot_type wtstring_layer2.R
 #create wtstring_layer phon_str
 #phon_str represent (phon_str_no_blank get_target)
 
