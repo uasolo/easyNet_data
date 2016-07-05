@@ -72,7 +72,7 @@ create count_characters_conversion letcounter
 letcounter set_source (orth_str get_target)
 create binary_layer letcount
 letcount represent (letcounter get_target)
-
+letcount change_hint plot_type layers/by_time_step.R
 
 
 
