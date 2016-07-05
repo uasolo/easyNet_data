@@ -10,7 +10,7 @@ orth_str create_block_keyed letter_rep
 create latch_layer what
 what represent letter_rep 
 what set_lag 0
-what change_hint plot_type by_time_heat.R
+what change_hint plot_type layers/by_time_heat.R
 
 create latch_layer input
 input represent letter_rep
@@ -20,7 +20,7 @@ create fire_layer attention
 attention add_facet ltrs_block_attention_weight_transfer
 attention represent letter_rep
 attention set_lag 0
-attention change_hint plot_type by_time_heat.R
+attention change_hint plot_type layers/by_time_heat.R
 
 create connection attend
 attend autoconnect input attention
@@ -29,12 +29,12 @@ create latch_layer checker
 checker represent (vocab column_rep Word)
 checker set_lag 0
 checker add_facet clip_out
-checker change_hint plot_type by_time_heat.R
+checker change_hint plot_type layers/by_time_heat.R
 
 create accumulator_layer lexicon
 lexicon represent (vocab column_rep Word)
 lexicon set_lag 0
-lexicon change_hint plot_type by_time_grouped.R
+lexicon change_hint plot_type layers/by_time_grouped.R
 
 create connection perception
 perception autoconnect attention what

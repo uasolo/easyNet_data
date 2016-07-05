@@ -29,7 +29,7 @@ feat_rep number 10
 
 create strength_layer features
 features represent feat_rep
-features add_hint_plus port state plot_type plot_features.R
+features add_hint_plus port state plot_type layers/plot_features.R
 
 # ## LETTER LAYER
 
@@ -66,7 +66,7 @@ create spatial_representation spo
 spo set_keys (features_db column_rep letter)
 create spatial_layer spatial_code
 spatial_code represent spo
-spatial_code add_hint plot_type signal.weight.difference.R
+spatial_code add_hint plot_type layers/signal.weight.difference.R
 
 create count_characters_conversion letcounter
 letcounter set_source (orth_str get_target)
@@ -80,7 +80,7 @@ letcount represent (letcounter get_target)
 create scm_layer words
 words represent (vocab column_rep Word)
 #words set_match_dependency spatial_code
-words add_hint_plus port net_input plot_type match_map.R
+words add_hint_plus port net_input plot_type layers/match_map.R
 
 create bias_layer freql
 freql represent (vocab column_rep Rest)
