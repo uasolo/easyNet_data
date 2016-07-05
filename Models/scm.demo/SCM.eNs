@@ -27,9 +27,9 @@ feat_rep type blocked_representation
 feat_rep set_element (features_db column_rep features)
 feat_rep number 10
 
-create iac_layer features
+create strength_layer features
 features represent feat_rep
-features add_hint plot_type plot_features.R
+features add_hint_plus port state plot_type plot_features.R
 
 # ## LETTER LAYER
 
@@ -80,6 +80,7 @@ letcount represent (letcounter get_target)
 create scm_layer words
 words represent (vocab column_rep Word)
 #words set_match_dependency spatial_code
+words add_hint_plus port net_input plot_type match_map.R
 
 create bias_layer freql
 freql represent (vocab column_rep Rest)
