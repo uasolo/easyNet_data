@@ -119,7 +119,7 @@ input set_lag 0
 create fire_layer attention
 attention add_facet ltrs_block_attention_weight_transfer
 attention represent letter_rep
-#attention set_lag 0
+attention set_lag 0
 attention change_hint plot_type layers/by_time_heat.R
 
 create connection attend
