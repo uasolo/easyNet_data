@@ -99,6 +99,7 @@ create scm_layer words
 words represent (vocab column_rep Word)
 #words set_match_dependency spatial_code
 words add_hint_plus port net_input plot_type layers/match_map.R
+words add_hint plot_type layers/id_conn_decision.R
 
 create bias_layer freql
 freql represent (vocab column_rep Rest)
@@ -109,6 +110,7 @@ id_layer represent (vocab column_rep Word)
 
 create iac_layer_extended decision
 decision represent (decisions column_rep Decision)
+decision add_hint plot_type layers/decision.R
 
 # letters rename_parameter min_act letters_min_act
 

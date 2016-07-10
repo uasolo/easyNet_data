@@ -66,13 +66,13 @@ no_decider add \? no
 create reset_nobserver reset
 reset add_trigger (input state)
 reset add_sync input
-reset add_target attention
+#reset add_target attention
 reset add_target what
 reset add_target checker 
 
 ltrs define_input orthographic (vocab column_rep Word string_representation) input
 ltrs define_output lexical_decision yes_decider
-ltrs define_output lexical_decision no_decider
+#ltrs define_output lexical_decision no_decider
 
 (ltrs parameters) set perception::excitation 1
 (ltrs parameters) set matcher::excitation 1

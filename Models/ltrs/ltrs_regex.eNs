@@ -219,7 +219,7 @@ yes_decider add .+ yes
 create reset_nobserver reset
 reset add_trigger (input state)
 reset add_sync input
-reset add_target attention
+#reset add_target attention
 reset add_target what
 reset add_target where
 reset add_target reset

@@ -37,7 +37,7 @@ word_yes_conn::excitation .4
 bester::threshold 0
 lcolc::excitation 0 
 lcolc::inhibition -.06
-decision_obs::threshold .8
+threshold .8
 moster::threshold 0
 decay_delay 5
 tolerance .02
