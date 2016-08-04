@@ -83,6 +83,7 @@ letcount change_hint plot_type layers/by_time_step.R
 create scm_layer words
 words represent (vocab column_rep Word)
 #words set_match_dependency spatial_code
+words add_hint_plus port net_input plot_type layers/match.R
 words add_hint_plus port net_input plot_type layers/match_map.R
 words add_hint plot_type layers/id_conn_decision.R
 
@@ -327,6 +328,7 @@ words set_resting_level (vocab column_rep Rest)
 # CREATE CYCLE TO RUN THE MODEL
 
 scm define_input orthographic (vocab column_rep Word string_representation) features letcount
+scm define_input letter_in (vocab column_rep Word string_representation) letters letcount
 scm define_output lexical_decision decision_obs
 scm define_output identification identification_obs
 include Models/shared_scripts/extras.eNs
