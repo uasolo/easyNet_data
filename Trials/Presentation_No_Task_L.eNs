@@ -1,0 +1,6 @@
+create trial presentl
+presentl add_stimulus_event stimulus letter_in START +$stimulus_duration $stimulus
+presentl set_end_condition stimulus/end
+#set stimulus_duration=15
+presentl set_default_value stimulus_duration 15
+

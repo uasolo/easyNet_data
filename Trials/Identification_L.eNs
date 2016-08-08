@@ -1,0 +1,5 @@
+create trial idl
+idl add_stimulus_event stimulus letter_in START END $stimulus
+idl set_end_condition identification
+idl set_cap 300
+

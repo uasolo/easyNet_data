@@ -118,7 +118,7 @@ identifier target words
 ia add identifier
 
 ia define_input orthographic (vocab column_rep Word string_representation) features
-
+ia define_input letter_in (vocab column_rep Word string_representation) letters
 words set_resting_level (vocab column_rep Rest)
 
 
