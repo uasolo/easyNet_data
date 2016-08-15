@@ -1,50 +1,46 @@
-quietly  include Models/SCM_new_lato.eNm
-#scm setting vocabulary_file Databases/Vocab_files/scm/SCM-CELEX.eNd
-quietly scm stage
-
+## This script collects data from multiple runs of the script number_of_active_nodes.R
+#
+## you can use this script to reproduce the simulation results in the paper:
+## Gubian et al. "Comparing single-unit recordings taken from a localist model to single-cell recording data: a good match"
+## Language, Cognition and Neuroscience, Special Issue
+#
+#
+## uncomment if you haven't loaded the model (original SCM or modified one)
+# quietly include Models/scm_new_lato/SCM_new_lato.eNm
+## in the paper the CELEX vocab was used
+# scm setting vocabulary_file Databases/Vocab_files/scm/SCM-CELEX.eNd
+# quietly scm stage
 
 (words default_observer) enable
-
 
 create dataframe_view d
 d set_type number_of_active_nodes.R
 d setting_object df (words default_observer)
-#d setting delta_activity_threshold c(seq(0, 0.1, by=0.01), seq(0.15, 0.6, by=0.05), 0.7, 0.8, 0.9, 1)
-#d setting delta_activity_threshold c(seq(0, 0.05, by=0.01), seq(0.1, 0.5, by=0.1))
-d setting delta_activity_threshold 0.05 # c(0, 0.01, 0.05, 0.1)
+## the activity threshold used to compute the number of active units (theta_y in eq. (1) in the paper)
+d setting activity_threshold 0.05 #  c(0, 0.01, 0.03, 0.05, 0.1, 0.2, 0.5)
 
 
-
+## in the paper, this random selection of 1000 words from the model vocab was used
 R << set.seed(1)
-#R << words = as.character(eN["vocab"][round(runif(100, 1, 30000)) ,1])
 R << words = as.character(eN["vocab"][sample(dim(eN["vocab"])[1], 1000), 1])
-
-
-
-#(scm parameters) set lato::inhibition 0
-#(scm parameters) set lato::extra_inhibition -0.3
-R << spoc.excitation =  2.0 #    round((1.5)^(seq(0,1.5,by=0.5)),2 )
-
-
+## explore multiple values of bottom-up letter-word excitation strength (alpha in the paper)
+## 1 if SCM, 2 if SCM modified
+R << spoc.excitation = 2 # c(1, 1.5, 2, 2.5, 3)
 
 R << eN["trial_params"] <-  expand.grid( Word = words, SpocExcitation = spoc.excitation,  stringsAsFactors =FALSE)
 
-
 create steps in_trial_loop
 in_trial_loop add (scm parameters) set spoc::excitation $SpocExcitation
-in_trial_loop add  (present default_observer) clear
-in_trial_loop add   (words default_observer) clear
-in_trial_loop add  quietly present step stimulus=$Word stimulus_duration=200
+in_trial_loop add (present default_observer) clear
+in_trial_loop add (words default_observer) clear
+in_trial_loop add quietly present step stimulus=$Word stimulus_duration=200
 in_trial_loop add R << eN["res_temp"] =  eN["d"] 
 in_trial_loop add R << eN["res_temp"]  = cbind(list(spoc.excitation = rep($SpocExcitation ,  dim(eN["d"] )[1]),  word =  rep("$Word ", dim(eN["d"] )[1])), eN["res_temp"],  stringsAsFactors =FALSE)
-in_trial_loop add R << eN["active_units_results"] = rbind(eN["active_units_results"], eN["res_temp"])
+in_trial_loop add R << eN["active_nodes_results"] = rbind(eN["active_nodes_results"], eN["res_temp"])
 
-
-
-R << eN["active_units_results"] = data.frame()
-
+R << eN["active_nodes_results"] = data.frame()
 
 trial_params for_each_row in_trial_loop step
-active_units_results save_csv  au_SCM_new_lato_changes_deltay0.05_spoc2.0_1000words.csv
-
+## save your results (they can be used to construct ECDF curves in the paper)
+active_nodes_results save_csv active_nodes_results.csv
 

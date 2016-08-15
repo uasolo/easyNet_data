@@ -27,9 +27,9 @@ feat_rep type blocked_representation
 feat_rep set_element (features_db column_rep features)
 feat_rep number 10
 
-create iac_layer features
+create strength_layer features
 features represent feat_rep
-features add_hint plot_type layers/plot_features.R
+features change_hint plot_type plot_features.R
 
 # ## LETTER LAYER
 
@@ -40,6 +40,7 @@ letter_rep number 10
 
 create iac_layer letters
 letters represent letter_rep
+letters change_hint plot_type by_time_grouped.R
 
 #create iac_layer fast_letters
 #fast_letters represent letter_rep
@@ -72,7 +73,7 @@ create count_characters_conversion letcounter
 letcounter set_source (orth_str get_target)
 create binary_layer letcount
 letcount represent (letcounter get_target)
-
+letcount change_hint plot_type layers/by_time_step.R
 
 
 
@@ -80,7 +81,8 @@ letcount represent (letcounter get_target)
 create scm_layer words
 words represent (vocab column_rep Word)
 #words set_match_dependency spatial_code
-
+words add_hint_plus port net_input plot_type layers/match_map.R
+words add_hint plot_type layers/id_conn_decision.R
 create bias_layer freql
 freql represent (vocab column_rep Rest)
 #words set_match_dependency spoc
@@ -90,6 +92,7 @@ id_layer represent (vocab column_rep Word)
 
 create iac_layer_extended decision
 decision represent (decisions column_rep Decision)
+decision add_hint plot_type layers/decision.R
 
 # letters rename_parameter min_act letters_min_act
 
@@ -133,7 +136,7 @@ lopc2 set_source (orth_str get_target)
 lopc2 set_target letter_rep
 
 (letter_rep find_conversion (vocab column_rep Word)) set_weight -1
-include Models/lowerupper.eNs
+include Models/shared_scripts/lowerupper.eNs
 ((features_db column_rep letter) find_conversion (orth_str inner)) add_fallback caser
 
 create blocked_localist_to_spatial_conversion llspco
@@ -198,6 +201,7 @@ lspc autoconnect letters spatial_code
 
 # ## ORTH-ORTH
 create connection lato
+### this is the self-shunting inhibition
 lato type selfweight_prepostdiag_connection
 lato set_autoconnect 0
 lato attach words
@@ -324,11 +328,16 @@ words set_resting_level (vocab column_rep Rest)
 scm define_input orthographic (vocab column_rep Word string_representation) features letcount
 scm define_output lexical_decision decision_obs
 scm define_output identification identification_obs
-include Models/extras.eNs
+include Models/shared_scripts/extras.eNs
 caser_plus add_fallback extras
 ((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
 (feat_rep find_conversion (orth_str get_target)) set_weight -1
 
 (scm parameters) load $parameter_file
 
+# pretty names
+letcount set_pretty_name letter count
+most_letter set_pretty_name most active letter
+id_layer set_pretty_name id layer
+spatial_code set_pretty_name spatial code
 

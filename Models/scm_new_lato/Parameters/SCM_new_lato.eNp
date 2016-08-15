@@ -7,7 +7,7 @@ flc_fast::inhibition -6
 letter_spat_excitation 1
 letter_spat_inhibition 0
 words::inweight .4
-spoc::excitation 1.8
+spoc::excitation 2.0
 spoc::inhibition 0
 spoc_i::excitation 0
 spoc_i::inhibition -0.04
