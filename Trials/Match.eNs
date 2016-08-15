@@ -1,0 +1,21 @@
+create trial match
+#match add_stimulus_event reference letter_in START START $reference
+#match add_stimulus_event stimulus letter_in START +$stimulus_duration $stimulus 
+match add_stimulus_event reference orthographic START START $reference
+match add_stimulus_event stimulus orthographic START +$stimulus_duration $stimulus 
+match set_end_condition stimulus/end
+match set_cap 50
+#set stimulus_duration=50
+match set_default_value stimulus_duration 2
+
+(match default_observer) set_pretty_name match
+(match default_observer) clear
+(match default_observer) add_hint show 0
+((words input_channel net_input) default_observer) enable
+create dataframe_view words_input_channel_net_input_default_observer.match.1
+words_input_channel_net_input_default_observer.match.1 set_type match.R
+words_input_channel_net_input_default_observer.match.1 set_pretty_name Match Table
+words_input_channel_net_input_default_observer.match.1 setting_object df ((words input_channel net_input) default_observer)
+words_input_channel_net_input_default_observer.match.1 setting elm c("TRUE")
+words_input_channel_net_input_default_observer.match.1 add_hint show 1
+
