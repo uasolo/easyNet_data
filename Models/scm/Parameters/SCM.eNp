@@ -49,4 +49,4 @@ flc_slot_filter::inhibition -1000
 length_slot_filter::inhibition -1000
 spark::excitation 1
 spark::inhibition 0
-
+denom 2

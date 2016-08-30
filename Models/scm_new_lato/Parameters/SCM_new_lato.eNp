@@ -43,3 +43,4 @@ identification_obs::threshold 0.25
 moster::threshold 0
 decay_delay 5
 tolerance .02
+denom 2
