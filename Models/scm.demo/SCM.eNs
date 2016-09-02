@@ -335,6 +335,15 @@ caser_plus add_fallback extras
 ((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
 (feat_rep find_conversion (orth_str get_target)) set_weight -1
 
+# add the following fall_back to enable input to letters level
+create conversion_chain letters_direct
+letters_direct set_manual 1
+letters_direct add_link_back orth_str
+letters_direct add_link_back lopc2
+
+(letter_rep find_conversion (vocab column_rep Word string_representation)) add_fallback letters_direct
+(letter_rep find_conversion (vocab column_rep Word string_representation)) set_weight -1
+
 (scm parameters) load $parameter_file
 
 # pretty names
