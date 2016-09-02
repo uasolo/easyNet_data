@@ -16,6 +16,11 @@ features_db load Databases/letter_features_no_blank.eNd
 create dataframe_for_reps decisions
 decisions load Databases/decisions.eNd
 
+create dataframe_for_reps yes_df
+yes_df load Models/denseSCM/Vocabularies/yes.eNd
+
+create dataframe_for_reps no_df
+no_df load Models/denseSCM/Vocabularies/no.eNd
 
 create dataframe_for_reps letterlist
 letterlist load Databases/lettersno.eNd
@@ -41,6 +46,7 @@ letter_rep number 10
 create iac_layer letters
 letters represent letter_rep
 letters change_hint plot_type by_time_grouped.R
+
 
 #create iac_layer fast_letters
 #fast_letters represent letter_rep
@@ -81,8 +87,10 @@ letcount change_hint plot_type layers/by_time_step.R
 create scm_layer words
 words represent (vocab column_rep Word)
 #words set_match_dependency spatial_code
+words add_hint_plus port net_input plot_type layers/match.R
 words add_hint_plus port net_input plot_type layers/match_map.R
 words add_hint plot_type layers/id_conn_decision.R
+
 create bias_layer freql
 freql represent (vocab column_rep Rest)
 #words set_match_dependency spoc
@@ -90,9 +98,22 @@ freql represent (vocab column_rep Rest)
 create latch_layer id_layer
 id_layer represent (vocab column_rep Word)
 
+
 create iac_layer_extended decision
 decision represent (decisions column_rep Decision)
 decision add_hint plot_type layers/decision.R
+
+create layer decision_yes
+decision_yes add_facet layer_mem_1_1_t
+decision_yes add_facet layer_alloc_strength
+decision_yes represent (yes_df column_rep yes)
+decision_yes add_hint plot_type layers/decision.R
+
+create layer decision_no
+decision_no add_facet layer_mem_1_1_t
+decision_no add_facet layer_alloc_strength
+decision_no represent (no_df column_rep no)
+decision_no add_hint plot_type layers/decision.R
 
 # letters rename_parameter min_act letters_min_act
 
@@ -201,6 +222,7 @@ lspc autoconnect letters spatial_code
 
 # ## ORTH-ORTH
 create connection lato
+#lato type prepostdiag_connection
 ### this is the self-shunting inhibition
 lato type selfweight_prepostdiag_connection
 lato set_autoconnect 0
@@ -227,21 +249,46 @@ create equiv_conversion lettering
 lettering set_source letter_rep
 lettering set_target (letterlist column_rep letter)
 
+create equiv_conversion yes_yes_conv
+yes_yes_conv set_source (decisions column_rep Decision)
+yes_yes_conv set_target (yes_df column_rep yes)
 
+create equiv_conversion yes_yes_conv_rev
+yes_yes_conv set_target (decisions column_rep Decision)
+yes_yes_conv set_source (yes_df column_rep yes)
+
+create equiv_conversion no_no_conv
+no_no_conv set_source (decisions column_rep Decision)
+no_no_conv set_target (no_df column_rep no)
+
+create equiv_conversion no_no_conv_rev
+no_no_conv set_target (decisions column_rep Decision)
+no_no_conv set_source (no_df column_rep no)
 
 
 create selfweight_diag_connection decision_lat
 decision_lat set_autoconnect 0
-decision_lat attach decision 
+decision_lat attach decision
 decision attach decision_lat unshunted
+
+
+
 
 create best_above_threshold_connection id_conn
 id_conn set_autoconnect 0
 id_conn attach words
 id_layer attach id_conn
 
+
+
+
 create pattern yes_patt
 yes_patt set (decisions column_rep Decision) yes
+
+
+
+
+
 
 create summate_connection id_yes_conn
 id_yes_conn set_autoconnect 0
@@ -257,6 +304,20 @@ decision attach word_yes_conn
 word_yes_conn answer_pattern yes_patt
 #create connection word_yes_conn
 #word_yes_conn autoconnect words decision
+#
+
+# optional: monitor words sum signal
+#create layer words_sum
+#words_sum add_facet layer_mem_1_1_t
+#words_sum add_facet layer_alloc_strength
+#words_sum represent (decisions column_rep Decision)
+#create summate_connection words_sum_conn
+#words_sum_conn set_autoconnect 0
+#words_sum_conn attach words 
+#words_sum attach words_sum_conn
+#words_sum_conn answer_pattern yes_patt
+
+
 
 create connection mostletno
 mostletno autoconnect most_letter decision
@@ -264,6 +325,13 @@ mostletno autoconnect most_letter decision
 create connection freqb
 freqb attach freql 
 words attach freqb frequency_bias
+
+
+create connection decision_yes_conn
+decision_yes_conn autoconnect decision decision_yes
+
+create connection decision_no_conn
+decision_no_conn autoconnect decision decision_no
 
 
 #create blocked_connection bester
@@ -293,12 +361,15 @@ letcounter set_fixed 1
 
 # DECISION RULE
 
-create best_above_threshold_observer decision_obs
-decision_obs target decision
+create best_above_threshold_observer decision_obs_yes
+decision_obs_yes target decision_yes
+
+
+create best_above_threshold_observer decision_obs_no
+decision_obs_no target decision_no
 
 create best_above_threshold_observer identification_obs
 identification_obs target words
-
 
 # ASSEMBLE MODEL
 
@@ -308,6 +379,8 @@ resetter add_sync features
 resetter add_target letters
 resetter add_target words
 resetter add_target decision
+resetter add_target decision_yes
+resetter add_target decision_no
 
 initial set_lag 0
 spatial_code set_lag 0
@@ -326,7 +399,10 @@ words set_resting_level (vocab column_rep Rest)
 # CREATE CYCLE TO RUN THE MODEL
 
 scm define_input orthographic (vocab column_rep Word string_representation) features letcount
-scm define_output lexical_decision decision_obs
+scm define_input letter_in (vocab column_rep Word string_representation) letters letcount
+# lexical_decision = decision_obs_yes OR decision_obs_no
+scm define_output lexical_decision decision_obs_yes
+scm define_output lexical_decision decision_obs_no
 scm define_output identification identification_obs
 include Models/shared_scripts/extras.eNs
 caser_plus add_fallback extras
@@ -334,6 +410,7 @@ caser_plus add_fallback extras
 (feat_rep find_conversion (orth_str get_target)) set_weight -1
 
 (scm parameters) load $parameter_file
+#(scm parameters) set words_sum_conn::excitation 1
 
 # pretty names
 letcount set_pretty_name letter count
