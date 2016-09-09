@@ -17,10 +17,10 @@ create dataframe_for_reps decisions
 decisions load Databases/decisions.eNd
 
 create dataframe_for_reps yes_df
-yes_df load Models/denseSCM/Vocabularies/yes.eNd
+yes_df load Models/Shunted-SCM/Vocabularies/yes.eNd
 
 create dataframe_for_reps no_df
-no_df load Models/denseSCM/Vocabularies/no.eNd
+no_df load Models/Shunted-SCM/Vocabularies/no.eNd
 
 create dataframe_for_reps letterlist
 letterlist load Databases/lettersno.eNd
@@ -398,19 +398,19 @@ words set_resting_level (vocab column_rep Rest)
 
 # CREATE CYCLE TO RUN THE MODEL
 
-scm define_input orthographic (vocab column_rep Word string_representation) features letcount
-scm define_input letter_in (vocab column_rep Word string_representation) letters letcount
+Shunted-SCM define_input orthographic (vocab column_rep Word string_representation) features letcount
+Shunted-SCM define_input letter_in (vocab column_rep Word string_representation) letters letcount
 # lexical_decision = decision_obs_yes OR decision_obs_no
-scm define_output lexical_decision decision_obs_yes
-scm define_output lexical_decision decision_obs_no
-scm define_output identification identification_obs
+Shunted-SCM define_output lexical_decision decision_obs_yes
+Shunted-SCM define_output lexical_decision decision_obs_no
+Shunted-SCM define_output identification identification_obs
 include Models/shared_scripts/extras.eNs
 caser_plus add_fallback extras
 ((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
 (feat_rep find_conversion (orth_str get_target)) set_weight -1
 
-(scm parameters) load $parameter_file
-#(scm parameters) set words_sum_conn::excitation 1
+(Shunted-SCM parameters) load $parameter_file
+#(Shunted-SCM parameters) set words_sum_conn::excitation 1
 
 # pretty names
 letcount set_pretty_name letter count
