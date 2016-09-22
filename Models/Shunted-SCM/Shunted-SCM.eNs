@@ -90,6 +90,7 @@ words represent (vocab column_rep Word)
 words add_hint_plus port net_input plot_type layers/match.R
 words add_hint_plus port net_input plot_type layers/match_map.R
 words add_hint plot_type layers/id_conn_decision.R
+words add_hint_plus port state dataframe_view_type layers/number_of_responses.R
 
 create bias_layer freql
 freql represent (vocab column_rep Rest)

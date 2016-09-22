@@ -20,7 +20,12 @@ and embedded in easyNet.
 INSTRUCTIONS
 The original SCM is available from the standard easyNet installation.
 The modified SCM described in Simulation 2 in the paper, here called Shunted-SCM, is
-available in this folder. From easyNet, load the model script Shunted-SCM.eNm, which will load
+available in this folder.
+IMPORTANT: in order to let easyNet run the model correctly, copy the main
+Shunted-SCM folder in $EASYNET_HOME/Models, where $EASYNET_HOME is the top directory of easyNet, i.e. where you start the
+program (e.g. on Windows, where the file easyNet.exe is located). 
+
+From easyNet, load the model script Shunted-SCM.eNm, which will load
 the right vocabulary and will set the parameters as described in the paper.
 
 Fig. 1 and 5 can be obtained by simply running a 'present' trial on the words
@@ -34,8 +39,6 @@ Eq. (1) is implemented in the R script number_of_responses.R.
 IMPORTANT: in order to let easyNet retrieve this script you have to copy it
 into the directory:
 $EASYNET_HOME/bin/R-library/dataframe_views/
-where $EASYNET_HOME is the top directory of easyNet, i.e. where you start the
-program (e.g. on Windows, where the file easyNet.exe is located). 
 
 The script number_of_responses.R computes Eq. (1) for a single stimulus,
 for all nodes and for your choice of activity thresholds theta_y.

@@ -5,18 +5,11 @@ function(                                                      # EXTRACT NODES R
   tryCatch(
     {  
       if (nrow(df) < 1) stop ("input table is empty")
-      if ("trial_counter" %in% colnames(df)) stop("this function works for single trials only")
-      df = df[!is.na(df$time), colnames(df) != "time"]
-      res <- as.data.frame(matrix(data=NA, nrow=length(activity_threshold), ncol=ncol(df)))
-      colnames(res) <- colnames(df)
-      
+#      if ("trial_counter" %in% colnames(df)) stop("this function works for single trials only")
       # Eq. (1) in the paper
       response = function(x, thr) {max(x) - x[1] > thr}
-      for (i in 1:length(activity_threshold))
-      {
-        res[i,] <- apply(df, 2, response, thr=activity_threshold[i])
-      }
-      return (res)
+      res <- apply(df[!is.na(df$time),-1], 2, response, thr=activity_threshold)
+      if (is.null(dim(res))) {return(as.data.frame(t(res)))} else {return (as.data.frame(res))}
     }, warning = function(w) { print(w); 
       
     }, error = function(e) { print(e); err<-data.frame(error=as.character(e$message));err$error=as.character(err$error); return(err)
