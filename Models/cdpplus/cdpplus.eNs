@@ -66,17 +66,17 @@ spaced_phonology number 8
 create regex_side_effect_conversion phon_str_conv
 phon_str_conv set_source (vocab column_rep phonology string_representation)
 phon_str_conv set_target spaced_phonology
-phon_str_conv add ^([^123456789EIQUViu#{_0]) 0 \1
-phon_str_conv add ^0([^123456789EIQUViu#{_0]) 00 \1
-phon_str_conv add ^00([^123456789EIQUViu#{_0]) 000 \1
-phon_str_conv add ^0000([^123456789EIQUViu#{_0]) 00000 \1
-phon_str_conv add ^00000([^123456789EIQUViu#{_0]) 000000 \1
-phon_str_conv add ^000000([^123456789EIQUViu#{_0]) 0000000 \1
-phon_str_conv add ^0000000([^123456789EIQUViu#{_0]) 00000000 \1
-phon_str_conv add ^([123456789EIQUViu#{_]) 0\1 >
-phon_str_conv add ^0([123456789EIQUViu#{_]) 00\1 >
-phon_str_conv add ^00([123456789EIQUViu#{_]) 000\1 >
-phon_str_conv add ^000([123456789EIQUViu#{_]) 0000 \1 >
+phon_str_conv add ^([^123456789EIQUViu#{0]) 0 \1
+phon_str_conv add ^0([^123456789EIQUViu#{0]) 00 \1
+phon_str_conv add ^00([^123456789EIQUViu#{0]) 000 \1
+phon_str_conv add ^0000([^123456789EIQUViu#{0]) 00000 \1
+phon_str_conv add ^00000([^123456789EIQUViu#{0]) 000000 \1
+phon_str_conv add ^000000([^123456789EIQUViu#{0]) 0000000 \1
+phon_str_conv add ^0000000([^123456789EIQUViu#{0]) 00000000 \1
+phon_str_conv add ^([123456789EIQUViu#{]) 0\1 >
+phon_str_conv add ^0([123456789EIQUViu#{]) 00\1 >
+phon_str_conv add ^00([123456789EIQUViu#{]) 000\1 >
+phon_str_conv add ^000([123456789EIQUViu#{]) 0000 \1 >
 
 
 

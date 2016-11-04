@@ -1,0 +1,130 @@
+
+load wtstring_representation wtstring_representation.so
+
+#if (not (exists id_layer)) include Models/shared_scripts/attach.id.layer.eNs
+if (not (exists id_layer)) create latch_layer id_layer
+id_layer represent ($vocab_name column_rep Word)
+id_layer set_lag 0
+id_layer set_pretty_name id layer
+
+if (not (exists candidate)) create binary_layer candidate
+candidate represent ($vocab_name column_rep Word)
+
+if (not (exists matched)) create latch_layer matched
+matched represent ($vocab_name column_rep Word)
+
+if (not (exists mismatched)) create latch_layer mismatched
+mismatched represent ($vocab_name column_rep Word)
+
+candidate set_lag 0
+matched set_lag 0
+mismatched set_lag 0
+
+if (not (exists best_letters)) create strength_layer best_letters
+best_letters represent letter_rep
+
+best_letters set_lag 0
+
+if (not (exists bester)) create threshold_staggered_blocked_connection bester
+bester attach letters 
+bester set_inner_type best_above_threshold_connection
+bester set_target_inner_rep (features_db column_rep letter)
+best_letters attach bester
+ 
+if (not (exists picker)) create best_above_threshold_connection picker
+picker set_autoconnect 0
+picker attach $words_layer_name
+candidate attach picker
+if (not (exists wt_word)) create string_representation wt_word
+#if (not (exists osgt)) create blocked_representation osgt
+#if (not (exists osgt_inner)) create string_representation osgt_inner
+#osgt set_element osgt_inner
+#osgt number 10
+
+######################
+# We will use the length and letters of the vocabulary to set up the (identical)
+#   blocks (slots) of the letter layer, so we need to create a 
+#   (blocked - string) representation to process individual characters
+#   of the word strings
+create string_split osgt_str
+osgt_str set_source ($vocab_name column_rep Word string_representation)
+# And create a corresponding localist ("keyed") representation
+osgt_str create_block_keyed osgt_rep
+#######################
+
+if (not (exists flat)) create flatten_string_conversion flat
+#flat set_source osgt
+flat set_source (osgt_str get_target)
+flat set_target wt_word
+
+if (not (exists osgt_unkey)) create wtunkey_conversion osgt_unkey
+osgt_unkey set_source (features_db column_rep letter)
+#osgt_unkey set_target osgt_inner
+osgt_unkey set_target (osgt_str inner)
+
+if (not (exists wtlopc)) create parallel_conversion wtlopc
+wtlopc set_source letter_rep
+#wtlopc set_target osgt
+wtlopc set_target (osgt_str get_target)
+
+
+
+if (not (exists verify)) create verification_layer verify
+verify represent wt_word
+
+verify set_lag 0
+
+if (exists id_conn) id_conn lesion
+#id_yes_conn attach retain_yes
+if (not (exists match_id_conn)) create connection match_id_conn
+match_id_conn autoconnect matched id_layer
+
+
+if (not (exists lvc)) create connection lvc
+lvc autoconnect best_letters verify
+
+if (not (exists wordz)) create wtunkey_conversion wordz
+wordz set_source ($vocab_name column_rep Word)
+wordz set_target wt_word
+
+if (not (exists wordzz)) create wtkey_conversion wordzz
+wordzz set_target ($vocab_name column_rep Word)
+wordzz set_source wt_word
+
+#create equiv_conversion wordy
+#wordy set_source ($vocab_name column_rep Word string_representation)
+#wordy set_target wt_word
+#create equiv_conversion wordy2
+#wordy2 set_target ($vocab_name column_rep Word string_representation)
+#wordy2 set_source wt_word
+
+if (not (exists ovc)) create connection ovc
+ovc autoconnect candidate verify query
+
+if (not (exists voc)) create connection voc
+if (exists ($words_layer_name input_channel inhibitory))) voc autoconnect mismatched $words_layer_name inhibitory
+if (not (exists ($words_layer_name input_channel inhibitory))) voc autoconnect mismatched $words_layer_name
+
+if (not (exists retainer_yes)) create connection retainer_yes
+retainer_yes autoconnect verify matched
+
+if (not (exists retainer_no)) create connection retainer_no
+retainer_no autoconnect verify mismatched
+
+# ((default_model) parameters) load $parameter_file
+#((default_model) parameters) set picker::threshold .68
+((default_model) parameters) set picker::threshold .3
+((default_model) parameters) set retain::high_value .4
+((default_model) parameters) set retain::low_value -1
+((default_model) parameters) set voc::excitation 1
+((default_model) parameters) set matched::high_value .4
+((default_model) parameters) set matched::low_value 0
+((default_model) parameters) set mismatched::high_value 0
+((default_model) parameters) set mismatched::low_value -1
+
+candidate add_hint color $layer_color
+best_letters add_hint color $layer_color
+verify add_hint color $layer_color
+matched add_hint color $layer_color
+mismatched add_hint color $layer_color
+id_layer add_hint color $layer_color

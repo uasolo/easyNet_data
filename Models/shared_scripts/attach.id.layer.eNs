@@ -1,0 +1,10 @@
+create latch_layer id_layer
+id_layer represent (vocab column_rep Word)
+
+create best_above_threshold_connection id_conn
+id_conn set_autoconnect 0
+id_conn attach words
+id_layer attach id_conn
+
+id_layer set_lag 0
+id_layer set_pretty_name id layer
