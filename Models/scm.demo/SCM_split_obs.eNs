@@ -93,12 +93,38 @@ words add_hint_plus port net_input plot_type layers/match.R
 words add_hint_plus port net_input plot_type layers/match_map.R
 words add_hint plot_type layers/id_conn_decision.R
 
+create pattern yes_patt
+yes_patt set (decisions column_rep Decision) yes
+
+create layer words_sum
+words_sum add_facet layer_mem_1_1_t
+words_sum add_facet layer_alloc_strength
+words_sum represent (decisions column_rep Decision)
+create summate_connection words_sum_conn
+words_sum_conn set_autoconnect 0
+words_sum_conn attach words 
+words_sum attach words_sum_conn
+words_sum_conn answer_pattern yes_patt
+
+
+
+
 create bias_layer freql
 freql represent (vocab column_rep Rest)
 #words set_match_dependency spoc
 
 create latch_layer id_layer
 id_layer represent (vocab column_rep Word)
+
+create layer id_sum
+id_sum add_facet layer_mem_1_1_t
+id_sum add_facet layer_alloc_strength
+id_sum represent (decisions column_rep Decision)
+create summate_connection id_sum_conn
+id_sum_conn set_autoconnect 0
+id_sum_conn attach id_layer
+id_sum attach id_sum_conn
+id_sum_conn answer_pattern yes_patt
 
 create iac_layer_extended decision
 decision represent (decisions column_rep Decision)
@@ -274,23 +300,23 @@ id_conn set_autoconnect 0
 id_conn attach words
 id_layer attach id_conn
 
-create pattern yes_patt
-yes_patt set (decisions column_rep Decision) yes
 
-create summate_connection id_yes_conn
-id_yes_conn set_autoconnect 0
-id_yes_conn attach id_layer
-decision attach id_yes_conn
-id_yes_conn answer_pattern yes_patt
-#id_yes_conn autoconnect id_layer decision
 
-create summate_connection word_yes_conn
-word_yes_conn set_autoconnect 0
-word_yes_conn attach words 
-decision attach word_yes_conn
-word_yes_conn answer_pattern yes_patt
-#create connection word_yes_conn
-#word_yes_conn autoconnect words decision
+#create summate_connection id_yes_conn
+#id_yes_conn set_autoconnect 0
+#id_yes_conn attach id_layer
+#decision attach id_yes_conn
+#id_yes_conn answer_pattern yes_patt
+create connection id_yes_conn
+id_yes_conn autoconnect id_sum decision
+
+#create summate_connection word_yes_conn
+#word_yes_conn set_autoconnect 0
+#word_yes_conn attach words 
+#decision attach word_yes_conn
+#word_yes_conn answer_pattern yes_patt
+create connection word_yes_conn
+word_yes_conn autoconnect words_sum decision
 
 
 
@@ -392,6 +418,9 @@ letters_direct add_link_back lopc2
 (letter_rep find_conversion (vocab column_rep Word string_representation)) set_weight -1
 
 (scm parameters) load $parameter_file
+(scm parameters) set words_sum_conn::excitation 1
+(scm parameters) set id_sum_conn::excitation 1
+
 
 # pretty names
 letcount set_pretty_name letter count
