@@ -1,0 +1,10 @@
+if (not (exists most_letter)) create strength_layer most_letter
+most_letter represent letter_rep
+
+if (not (exists moster)) create best_above_threshold_connection moster
+moster set_autoconnect 0
+moster attach letters
+most_letter attach moster
+
+most_letter set_lag 0
+most_letter set_pretty_name most active letter
