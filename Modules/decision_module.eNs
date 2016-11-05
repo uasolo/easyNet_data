@@ -1,0 +1,115 @@
+# dataframes
+if (not (exists decisions)) create dataframe_for_reps decisions
+if (not (exists letterlist)) create dataframe_for_reps letterlist
+
+
+# patterns
+if (not (exists yes_patt)) create pattern yes_patt
+
+# layers
+if (not (exists id_layer)) include Models/shared_scripts/attach.id.layer.eNs
+if (not (exists most_letter)) include Models/shared_scripts/attach.most_active_letter.layer.eNs
+if (not (exists decision)) create iac_layer_extended decision
+
+# conversions
+#if (not (exists yes_conv)) create equiv_conversion yes_conv
+if (not (exists no_conv)) create equiv_conversion no_conv
+if (not (exists no_conv_rev)) create equiv_conversion no_conv_rev
+if (not (exists lettering)) create equiv_conversion lettering
+
+# connections
+if (not (exists mostletno)) create connection mostletno
+if (not (exists id_yes_conn)) create summate_connection id_yes_conn
+if (not (exists word_yes_conn)) create summate_connection word_yes_conn
+if (not (exists decision_lat)) create selfweight_diag_connection decision_lat
+
+# observers
+if (not (exists decision_obs)) create best_above_threshold_observer decision_obs
+if (not (exists identification_obs)) create best_above_threshold_observer identification_obs
+if (not (exists resetter)) create reset_nobserver resetter
+
+
+letterlist load Databases/lettersno.eNd
+decisions load Databases/decisions.eNd
+
+decision represent (decisions column_rep Decision)
+decision add_hint plot_type layers/decision.R
+
+
+
+#############################
+yes_patt set (decisions column_rep Decision) yes
+
+create const_conversion yes_conv
+yes_conv set_target (decisions column_rep Decision)
+yes_conv set_source ($vocab_name column_rep $word_column_name)
+yes_conv set yes_patt
+
+#create equiv_conversion yes_conv
+#yes_conv set_source decision_kr
+#yes_conv set_target (decisions column_rep Decision)
+###############################
+
+#yes_conv set_source ($vocab_name column_rep Decision)
+#yes_conv set_target (decisions column_rep Decision)
+
+
+no_conv set_source (letterlist column_rep Decision)
+no_conv set_target (decisions column_rep Decision)
+
+
+no_conv_rev set_target (letterlist column_rep Decision)
+no_conv_rev set_source (decisions column_rep Decision)
+
+lettering set_source letter_rep
+lettering set_target (letterlist column_rep letter)
+
+decision_lat set_autoconnect 0
+decision_lat attach decision 
+decision attach decision_lat unshunted
+
+mostletno autoconnect most_letter decision
+
+
+
+
+id_yes_conn set_autoconnect 0
+id_yes_conn attach id_layer
+decision attach id_yes_conn
+id_yes_conn answer_pattern yes_patt
+#id_yes_conn autoconnect id_layer decision
+
+
+word_yes_conn set_autoconnect 0
+word_yes_conn attach $words_layer_name 
+decision attach word_yes_conn
+word_yes_conn answer_pattern yes_patt
+#create connection word_yes_conn
+#word_yes_conn autoconnect $words_layer_name decision
+
+# DECISION RULE
+
+
+decision_obs target decision
+
+
+identification_obs target $words_layer_name
+
+#resetter add_trigger (features state)
+#resetter add_target decision
+decision set_use_hard_cap 0
+decision set_lag 0
+decision_lat set_lag 1
+
+(default_model) define_output lexical_decision decision_obs
+
+((default_model) parameters)  set mostletno::excitation .36
+((default_model) parameters)  set id_conn::threshold .68
+((default_model) parameters)  set id_yes_conn::excitation 1
+((default_model) parameters)  set word_yes_conn::excitation .4
+((default_model) parameters)  set bester::threshold 0
+((default_model) parameters)  set moster::threshold 0
+((default_model) parameters)  set decision::min_act 0
+((default_model) parameters)  set decision::max_act 1
+((default_model) parameters)  set decision_lat::inhibition -.06
+((default_model) parameters)  set extra_inhibition -.06
