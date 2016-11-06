@@ -36,36 +36,38 @@ picker set_autoconnect 0
 picker attach $words_layer_name
 candidate attach picker
 if (not (exists wt_word)) create string_representation wt_word
-#if (not (exists osgt)) create blocked_representation osgt
-#if (not (exists osgt_inner)) create string_representation osgt_inner
-#osgt set_element osgt_inner
+if (not (exists osgt)) create blocked_representation osgt
+if (not (exists osgt_inner)) create string_representation osgt_inner
+osgt set_element osgt_inner
 #osgt number 10
+# leave number of blocks unspecified (default 0),
+# the right number will be figured out at creation
 
 ######################
-# We will use the length and letters of the vocabulary to set up the (identical)
+# This approach uses the length and letters of the vocabulary to set up the (identical)
 #   blocks (slots) of the letter layer, so we need to create a 
 #   (blocked - string) representation to process individual characters
 #   of the word strings
-create string_split osgt_str
-osgt_str set_source ($vocab_name column_rep $word_column_name string_representation)
+#create string_split osgt_str
+#osgt_str set_source ($vocab_name column_rep $word_column_name string_representation)
 # And create a corresponding localist ("keyed") representation
-osgt_str create_block_keyed osgt_rep
+#osgt_str create_block_keyed osgt_rep
 #######################
 
 if (not (exists flat)) create flatten_string_conversion flat
-#flat set_source osgt
-flat set_source (osgt_str get_target)
+flat set_source osgt
+#flat set_source (osgt_str get_target)
 flat set_target wt_word
 
 if (not (exists osgt_unkey)) create wtunkey_conversion osgt_unkey
 osgt_unkey set_source (features_db column_rep letter)
-#osgt_unkey set_target osgt_inner
-osgt_unkey set_target (osgt_str inner)
+osgt_unkey set_target osgt_inner
+#osgt_unkey set_target (osgt_str inner)
 
 if (not (exists wtlopc)) create parallel_conversion wtlopc
 wtlopc set_source letter_rep
-#wtlopc set_target osgt
-wtlopc set_target (osgt_str get_target)
+wtlopc set_target osgt
+#wtlopc set_target (osgt_str get_target)
 
 
 
@@ -122,9 +124,9 @@ retainer_no autoconnect verify mismatched
 ((default_model) parameters) set mismatched::high_value 0
 ((default_model) parameters) set mismatched::low_value -1
 
-candidate add_hint color $layer_color
-best_letters add_hint color $layer_color
-verify add_hint color $layer_color
-matched add_hint color $layer_color
-mismatched add_hint color $layer_color
-id_layer add_hint color $layer_color
+candidate add_hint color $verification_layer_color
+best_letters add_hint color $verification_layer_color
+verify add_hint color $verification_layer_color
+matched add_hint color $verification_layer_color
+mismatched add_hint color $verification_layer_color
+id_layer add_hint color $verification_layer_color

@@ -104,13 +104,21 @@ decision_lat set_lag 1
 
 (default_model) define_output lexical_decision decision_obs
 
-((default_model) parameters)  set mostletno::excitation .25
+#((default_model) parameters)  set mostletno::excitation .25
 ((default_model) parameters)  set id_conn::threshold .68
-((default_model) parameters)  set id_yes_conn::excitation 1
-((default_model) parameters)  set word_yes_conn::excitation .3
+#((default_model) parameters)  set id_yes_conn::excitation 1
+((default_model) parameters) set id_yes_conn::excitation .3
+#((default_model) parameters)  set word_yes_conn::excitation .3
+((default_model) parameters)  set word_yes_conn::excitation .2
+((default_model) parameters) set mostletno::excitation .1
 ((default_model) parameters)  set bester::threshold 0
 ((default_model) parameters)  set moster::threshold 0
 ((default_model) parameters)  set decision::min_act 0
 ((default_model) parameters)  set decision::max_act 1
 ((default_model) parameters)  set decision_lat::inhibition -.3
 ((default_model) parameters)  set extra_inhibition -.06
+((default_model) parameters)  set decision::rate .5
+
+id_layer add_hint color $layer_color
+most_letter add_hint color $layer_color
+decision add_hint color $layer_color

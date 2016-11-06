@@ -1,11 +1,11 @@
 (default_model) add_setting words_layer_name words
 (default_model) add_setting vocab_name vocab
 (default_model) add_setting word_column_name Word
-(default_model) change_setting_group words_layer_name object_names
-(default_model) change_setting_group vocab_name object_names
-(default_model) change_setting_group word_column_name object_names
+(default_model) add_setting verification_layer_color mediumaquamarine	
 
-(default_model) add_setting layer_color mediumaquamarine	
-(default_model) change_setting_group layer_color layer_color
+(default_model) change_setting_group words_layer_name verification_settings
+(default_model) change_setting_group vocab_name verification_settings
+(default_model) change_setting_group word_column_name verification_settings
+(default_model) change_setting_group verification_layer_color verification_settings
 
 (default_model) add_script Modules/verification_module.eNs
