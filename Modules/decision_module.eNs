@@ -9,7 +9,8 @@ if (not (exists yes_patt)) create pattern yes_patt
 # layers
 if (not (exists id_layer)) include Models/shared_scripts/attach.id.layer.eNs
 if (not (exists most_letter)) include Models/shared_scripts/attach.most_active_letter.layer.eNs
-if (not (exists decision)) create iac_layer_extended decision
+#if (not (exists decision)) create iac_layer_extended decision
+if (not (exists decision)) create scm_decision_layer decision
 
 # conversions
 #if (not (exists yes_conv)) create equiv_conversion yes_conv
@@ -103,13 +104,13 @@ decision_lat set_lag 1
 
 (default_model) define_output lexical_decision decision_obs
 
-((default_model) parameters)  set mostletno::excitation .36
+((default_model) parameters)  set mostletno::excitation .25
 ((default_model) parameters)  set id_conn::threshold .68
 ((default_model) parameters)  set id_yes_conn::excitation 1
-((default_model) parameters)  set word_yes_conn::excitation .4
+((default_model) parameters)  set word_yes_conn::excitation .3
 ((default_model) parameters)  set bester::threshold 0
 ((default_model) parameters)  set moster::threshold 0
 ((default_model) parameters)  set decision::min_act 0
 ((default_model) parameters)  set decision::max_act 1
-((default_model) parameters)  set decision_lat::inhibition -.06
+((default_model) parameters)  set decision_lat::inhibition -.3
 ((default_model) parameters)  set extra_inhibition -.06
