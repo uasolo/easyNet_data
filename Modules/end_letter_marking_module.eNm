@@ -1,0 +1,14 @@
+(default_model) add_setting letters_layer_name letters
+(default_model) add_setting words_layer_name words
+
+(default_model) add_setting elm_layer_color gray	
+
+(default_model) change_setting_group letters_layer_name end_letter_marking_settings
+(default_model) change_setting_group words_layer_name end_letter_marking_settings
+(default_model) change_setting_group elm_layer_color end_letter_marking_settings
+
+(default_model) add_script Modules/end_letter_marking_module.eNs
+
+((default_model) parameters) set initialolc::excitation 1
+((default_model) parameters) set finalolc::excitation 1
+

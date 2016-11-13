@@ -21,7 +21,8 @@ matched set_lag 0
 mismatched set_lag 0
 
 if (not (exists best_letters)) create strength_layer best_letters
-best_letters represent letter_rep
+#best_letters represent letter_rep
+best_letters represent (letters rep)
 
 best_letters set_lag 0
 
@@ -40,6 +41,7 @@ if (not (exists osgt)) create blocked_representation osgt
 if (not (exists osgt_inner)) create string_representation osgt_inner
 osgt set_element osgt_inner
 #osgt number 10
+#osgt number 4
 # leave number of blocks unspecified (default 0),
 # the right number will be figured out at creation
 

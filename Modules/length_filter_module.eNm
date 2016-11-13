@@ -1,0 +1,13 @@
+#(default_model) add_setting letters_layer_name letters
+#(default_model) add_setting words_layer_name words
+
+(default_model) add_setting length_filter_color lightsteelblue
+
+#(default_model) change_setting_group letters_layer_name end_letter_marking_settings
+#(default_model) change_setting_group words_layer_name end_letter_marking_settings
+(default_model) change_setting_group length_filter_color length_filter_module
+
+(default_model) add_script Modules/length_filter_module.eNs
+
+#((default_model) parameters) set initialolc::excitation 1
+#((default_model) parameters) set finalolc::excitation 1

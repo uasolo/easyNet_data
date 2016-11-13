@@ -1,0 +1,8 @@
+(default_model) add_setting words_layer_name words
+(default_model) add_setting freq_layer_color orange	
+
+(default_model) change_setting_group words_layer_name word_settings
+(default_model) change_setting_group freq_layer_color word_settings
+
+(default_model) add_script Modules/frequency_bias_module.eNs
+

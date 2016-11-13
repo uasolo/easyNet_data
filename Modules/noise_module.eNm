@@ -1,0 +1,20 @@
+(default_model) add_setting noise_layer_name noise_layer
+
+(default_model) add_setting recipient_layer_name decision
+
+(default_model) add_setting noise_connection_name noise_conn_1
+(default_model) add_setting noise_level 0.1
+(default_model) add_setting noise_layer_color gold
+
+(default_model) change_setting_group noise_layer_name noise_settings
+
+(default_model) change_setting_group recipient_layer_name noise_settings
+
+(default_model) change_setting_group noise_connection_name noise_settings
+
+(default_model) change_setting_group noise_level noise_settings
+
+	
+(default_model) change_setting_group noise_layer_color noise_settings
+
+(default_model) add_script Modules/noise_test.eNs
