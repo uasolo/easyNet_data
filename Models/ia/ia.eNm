@@ -1,4 +1,4 @@
-create model ia 
+if (not (exists ia)) create model ia 
 ia add_setting vocabulary_file Databases/Vocab_files/ia.eNd
 ia change_setting_type vocabulary_file filename
 ia add_setting parameter_file Parameters/ia.eNp

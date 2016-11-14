@@ -149,10 +149,10 @@ words set_resting_level (vocab column_rep Rest)
 
 # CREATE CYCLE TO RUN THE MODEL
 
-
-caser_plus add_fallback extras
-((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
-(feat_rep find_conversion (orth_str get_target)) set_weight -1
+# commenting out due to error
+#caser_plus add_fallback extras
+#((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
+#(feat_rep find_conversion (orth_str get_target)) set_weight -1
 
 # add the following fall_back to enable input to letters level
 create conversion_chain letters_direct
@@ -166,6 +166,5 @@ letters_direct add_link_back lopc2
 (scm parameters) load $parameter_file
 
 # pretty names
-letcount set_pretty_name letter count
 spatial_code set_pretty_name spatial code
 

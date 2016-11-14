@@ -3,7 +3,8 @@ freql represent (vocab column_rep Rest)
 freql set_pretty_name freq bias
 freql add_hint color $freq_layer_color
 if (not (exists freqb)) create connection freqb
-freqb set_autoconnect 0 
 freqb attach freql
 if (exists (words input_channel frequency_bias)) $words_layer_name attach freqb frequency_bias
 if (not (exists (words input_channel frequency_bias)))  $words_layer_name attach freqb
+$words_layer_name attach freqb
+((default_model) parameters) set freql::scale 0.09
