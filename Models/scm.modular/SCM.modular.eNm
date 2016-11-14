@@ -1,0 +1,38 @@
+create model scm
+
+(default_model) add_setting words_layer_name words
+(default_model) add_setting words_layer_color pink
+(default_model) add_setting vocabulary_file Models/scm/Vocabularies/SCM-5000-words.eNd
+
+(default_model) change_setting_type vocabulary_file filename
+
+(default_model) change_setting_group vocabulary_file model_settings
+(default_model) change_setting_group words_layer_name model_settings
+(default_model) change_setting_group input_layer_name model_settings
+(default_model) change_setting_group words_layer_color model_settings
+
+#create dataframe_for_reps vocab
+#vocab load Models/scm/Vocabularies/SCM-5000-words.eNd
+#vocab load $vocabulary_file 
+
+#include Modules/load_vocab.eNs
+
+(default_model) add_setting parameter_file Models/scm.demo/Parameters/SCM.eNp
+
+#(default_model) add_script Modules/letter_features_module.eNm
+(default_model) add_script Modules/letter_features_module.eNs
+
+(default_model) add_relative_script SCM.core.eNs
+(default_model) add_script Modules/end_letter_marking_module.eNm
+(default_model) add_script Modules/frequency_bias_module.eNm
+(default_model) add_script Modules/opponent_decision_module.eNm
+(default_model) add_script Modules/length_filter_module.eNm
+
+(default_model) add_relative_script define_inputs.eNm
+
+
+(default_model) add_script Trials/Primed_Lexical_Decision.eNs
+(default_model) add_script Trials/Sandwich_Primed_Lexical_Decision.eNs
+(default_model) add_script Trials/Presentation_No_Task.eNs
+(default_model) add_script Trials/Identification.eNs
+
