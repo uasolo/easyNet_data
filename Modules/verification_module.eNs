@@ -125,6 +125,7 @@ retainer_no autoconnect verify mismatched
 ((default_model) parameters) set matched::low_value 0
 ((default_model) parameters) set mismatched::high_value 0
 ((default_model) parameters) set mismatched::low_value -1
+((default_model) parameters) set match_id_conn::excitation 1
 
 candidate add_hint color $verification_layer_color
 best_letters add_hint color $verification_layer_color
