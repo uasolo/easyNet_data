@@ -25,6 +25,13 @@ letinitialc set_autoconnect 1
 letinitialc attach letters 
 initial attach letinitialc
 
+## HOOK UP initial letter bank to words layer
+
+if (not (exists initialolc)) create connection initialolc
+initialolc autoconnect initial words
+initial_conv set_auto_use 0
+#loglevel info
+
 if (not (exists final_conv)) create select_block_conversion final_conv
 #final_conv set_source ($letters_layer_name rep)
 final_conv set_source letter_rep
@@ -35,19 +42,14 @@ letfinalc set_autoconnect 1
 letfinalc attach letters 
 final attach letfinalc
 
-initial set_lag 0
-final set_lag 0
-
-## HOOK UP init/fin letter banks to words layer
-
-if (not (exists initialolc)) create connection initialolc
-initialolc autoconnect initial words
-initial_conv set_auto_use 0
-#loglevel info
+## HOOK UP final letter bank to words layer
 
 if (not (exists finalolc)) create connection finalolc
 finalolc autoconnect final words
 final_conv set_auto_use 0
+
+initial set_lag 0
+final set_lag 0
 
 ((default_model) parameters) set initialolc::excitation 1
 ((default_model) parameters) set finalolc::excitation 1

@@ -8,9 +8,10 @@ letcount change_hint plot_type layers/by_time_step.R
 letcount set_pretty_name letter count
 
 create connection lcolc
-if (exists (words input_channel inhibitory)) lcolc autoconnect letcount words inhibitory
+if (exists ($words_layer_name input_channel inhibitory)) lcolc autoconnect letcount $words_layer_name inhibitory
 
-if (not (exists (words input_channel inhibitory))) lcolc autoconnect letcount words
+if (not (exists ($words_layer_name input_channel inhibitory))) lcolc autoconnect letcount $words_layer_name 
+letcounter set_auto_use 0
 
 letcounter set_fixed 1
 letcount add_hint color $length_filter_color
