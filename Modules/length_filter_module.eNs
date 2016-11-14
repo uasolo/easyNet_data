@@ -10,7 +10,30 @@ letcount set_pretty_name letter count
 create connection lcolc
 if (exists ($words_layer_name input_channel inhibitory)) lcolc autoconnect letcount $words_layer_name inhibitory
 
-if (not (exists ($words_layer_name input_channel inhibitory))) lcolc autoconnect letcount $words_layer_name 
+if (not (exists ($words_layer_name input_channel inhibitory))) lcolc autoconnect letcount $words_layer_name
+
+# explicitly create a variety of length nodes 
+create pattern moo
+moo set (orth_str get_target) a
+letcounter apply moo
+moo set (orth_str get_target) ab
+letcounter apply moo
+moo set (orth_str get_target) abc
+letcounter apply moo
+moo set (orth_str get_target) abcd
+letcounter apply moo
+moo set (orth_str get_target) abcde
+letcounter apply moo
+moo set (orth_str get_target) abcdef
+letcounter apply moo
+moo set (orth_str get_target) abcdefg
+letcounter apply moo
+moo set (orth_str get_target) abcdefgh
+letcounter apply moo
+moo set (orth_str get_target) abcdefghi
+letcounter apply moo
+moo set (orth_str get_target) abcdefghij
+letcounter apply moo
 
 letcounter set_fixed 1
 letcount add_hint color $length_filter_color
