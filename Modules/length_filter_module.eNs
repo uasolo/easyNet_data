@@ -1,18 +1,42 @@
 
 create count_characters_conversion letcounter
-letcounter set_source (orth_str get_target)
-create binary_layer letcount
+letcounter set_source ($vocab_name column_rep $word_column string_representation)
+if (not (exists letcount)) create binary_layer letcount
 letcount represent (letcounter get_target)
 letcount change_hint plot_type layers/by_time_step.R
 
-letcount set_pretty_name letter count
+letcount set_pretty_name length filter
 
 create connection lcolc
 if (exists ($words_layer_name input_channel inhibitory)) lcolc autoconnect letcount $words_layer_name inhibitory
 
-if (not (exists ($words_layer_name input_channel inhibitory))) lcolc autoconnect letcount $words_layer_name 
-letcounter set_auto_use 0
+if (not (exists ($words_layer_name input_channel inhibitory))) lcolc autoconnect letcount $words_layer_name
+
+# explicitly create a variety of length nodes 
+create pattern moo
+moo set ($vocab_name column_rep $word_column string_representation) a
+letcounter apply moo
+moo set ($vocab_name column_rep $word_column string_representation) ab
+letcounter apply moo
+moo set ($vocab_name column_rep $word_column string_representation) abc
+letcounter apply moo
+moo set ($vocab_name column_rep $word_column string_representation) abcd
+letcounter apply moo
+moo set ($vocab_name column_rep $word_column string_representation) abcde
+letcounter apply moo
+moo set ($vocab_name column_rep $word_column string_representation) abcdef
+letcounter apply moo
+moo set ($vocab_name column_rep $word_column string_representation) abcdefg
+letcounter apply moo
+moo set ($vocab_name column_rep $word_column string_representation) abcdefgh
+letcounter apply moo
+moo set ($vocab_name column_rep $word_column string_representation) abcdefghi
+letcounter apply moo
+moo set ($vocab_name column_rep $word_column string_representation) abcdefghij
+letcounter apply moo
 
 letcounter set_fixed 1
 letcount add_hint color $length_filter_color
+# modify input so that letcount layer gets set
+if (exists letcount) (default_model) define_input orthographic ($vocab_name column_rep $word_column string_representation) $input_layer letcount
 

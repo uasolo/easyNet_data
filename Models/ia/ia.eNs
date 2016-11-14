@@ -57,7 +57,7 @@ create string_split orth_str
 #   (orth_str target) is a block_rep of (orth_str inner)
 #   (orth_str inner) is a string_representation that is the single letters used in
 #      (vocab column_rep Word string_representation)
-orth_str set_blank "
+#orth_str set_blank "
 orth_str set_source (vocab column_rep Word string_representation)
 #   (vocab column_rep Word) == (vocab column_rep Word keyed_representation) which is a keyed_representation
 #   (vocab column_rep Word string_representation) is the "dog" string_rep rather than the binary keyed_rep
@@ -115,10 +115,10 @@ lato autoconnect words words
 
 create best_above_threshold_observer identifier
 identifier target words
-ia add identifier
+(default_model) add identifier
 
-ia define_input orthographic (vocab column_rep Word string_representation) features
-ia define_input letter_in (vocab column_rep Word string_representation) letters
+(default_model) define_input orthographic (vocab column_rep Word string_representation) features
+(default_model) define_input letter_in (vocab column_rep Word string_representation) letters
 words set_resting_level (vocab column_rep Rest)
 
 
@@ -127,4 +127,4 @@ caser_plus add_fallback extras
 ((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
 ((features_db column_rep features) find_conversion (orth_str inner)) set_weight -1
 
-(ia parameters) load $parameter_file
+((default_model) parameters) load $parameter_file
