@@ -1,0 +1,7 @@
+if (not (exists freql)) create bias_layer freql
+freql represent (vocab column_rep Rest)
+freql set_pretty_name freq bias
+freql add_hint color $freq_layer_color
+if (not (exists freqb)) create connection freqb
+freqb attach freql 
+$words_layer_name attach freqb frequency_bias

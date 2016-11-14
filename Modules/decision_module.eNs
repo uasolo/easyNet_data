@@ -1,0 +1,109 @@
+# dataframes
+if (not (exists decisions)) create dataframe_for_reps decisions
+decisions load Databases/decisions.eNd
+
+# patterns
+if (not (exists yes_patt)) create pattern yes_patt
+if (not (exists no_patt)) create pattern no_patt
+
+# layers
+if (not (exists id_layer)) create latch_layer id_layer
+id_layer represent ($words_layer_name rep)
+id_layer set_pretty_name id layer
+
+if (not (exists input_detector)) create strength_layer input_detector
+input_detector represent ($input_layer_name rep)
+input_detector set_pretty_name input detector
+
+if (not (exists decision)) create scm_decision_layer decision
+
+# connections
+if (not (exists id_conn)) create best_above_threshold_connection id_conn
+
+if (not (exists moster)) create best_above_threshold_connection moster
+if (not (exists mostletno)) create summate_connection mostletno
+if (not (exists id_yes_conn)) create summate_connection id_yes_conn
+if (not (exists word_yes_conn)) create summate_connection word_yes_conn
+if (not (exists decision_lat)) create selfweight_diag_connection decision_lat
+
+# observers
+if (not (exists decision_obs)) create best_above_threshold_observer decision_obs
+if (not (exists identification_obs)) create best_above_threshold_observer identification_obs
+if (not (exists resetter)) create reset_nobserver resetter
+
+id_conn set_autoconnect 0
+id_conn attach $words_layer_name
+id_layer attach id_conn
+
+decision represent (decisions column_rep Decision)
+decision add_hint plot_type layers/decision.R
+
+yes_patt set (decisions column_rep Decision) yes
+create const_conversion yes_conv
+yes_conv set_target (decisions column_rep Decision)
+yes_conv set_source ($words_layer_name rep)
+yes_conv set yes_patt
+
+no_patt set (decisions column_rep Decision) no
+create const_conversion no_conv
+no_conv set_target (decisions column_rep Decision)
+no_conv set_source ($input_layer_name rep)
+no_conv set no_patt
+
+decision_lat set_autoconnect 0
+decision_lat attach decision 
+decision attach decision_lat unshunted
+
+moster set_autoconnect 0
+moster attach $input_layer_name
+input_detector attach moster
+
+mostletno set_autoconnect 0
+mostletno attach input_detector
+decision attach mostletno 
+mostletno answer_pattern no_patt
+
+id_yes_conn set_autoconnect 0
+id_yes_conn attach id_layer
+decision attach id_yes_conn
+id_yes_conn answer_pattern yes_patt
+
+word_yes_conn set_autoconnect 0
+word_yes_conn attach $words_layer_name 
+decision attach word_yes_conn
+word_yes_conn answer_pattern yes_patt
+
+# DECISION RULE
+
+decision_obs target decision
+
+identification_obs target $words_layer_name
+
+#resetter add_trigger (features state)
+#resetter add_target decision
+decision set_use_hard_cap 0
+decision set_lag 0
+decision_lat set_lag 1
+input_detector set_lag 0
+id_layer set_lag 0
+
+(default_model) define_output lexical_decision decision_obs
+
+#((default_model) parameters)  set mostletno::excitation .25
+((default_model) parameters)  set id_conn::threshold .74
+#((default_model) parameters)  set id_yes_conn::excitation 1
+((default_model) parameters) set id_yes_conn::excitation .1
+#((default_model) parameters)  set word_yes_conn::excitation .3
+((default_model) parameters)  set word_yes_conn::excitation .06
+((default_model) parameters) set mostletno::excitation .1
+((default_model) parameters)  set bester::threshold 0
+((default_model) parameters)  set moster::threshold 0
+((default_model) parameters)  set decision::min_act 0
+((default_model) parameters)  set decision::max_act 1
+((default_model) parameters)  set decision_lat::inhibition -.06
+((default_model) parameters)  set extra_inhibition -.06
+((default_model) parameters)  set decision::rate .5
+
+id_layer add_hint color $decision_layer_color
+input_detector add_hint color $decision_layer_color
+decision add_hint color $decision_layer_color

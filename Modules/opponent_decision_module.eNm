@@ -1,0 +1,10 @@
+(default_model) add_setting words_layer_name words
+(default_model) add_setting input_layer_name letters
+(default_model) add_setting decision_layer_color lightcyan	
+
+(default_model) change_setting_group words_layer_name decision_settings
+(default_model) change_setting_group input_layer_name decision_settings
+(default_model) change_setting_group decision_layer_color decision_settings
+
+(default_model) add_script Modules/decision_module.eNs
+if (not (exists ldt)) (default_model) add_script Trials/Lexical_Decision.eNs

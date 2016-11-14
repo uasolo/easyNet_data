@@ -1,0 +1,11 @@
+create noise_layer $noise_layer_name
+
+$noise_layer_name represent ($recipient_layer_name rep)
+
+create connection $noise_connection_name
+
+$noise_connection_name autoconnect $noise_layer_name $recipient_layer_name
+
+((default_model) parameters) set $noise_connection_name$$::excitation $noise_level
+
+$noise_layer_name add_hint color $noise_layer_color

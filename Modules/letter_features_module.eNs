@@ -1,0 +1,41 @@
+# LOAD DATABASES
+
+# ## LETTER FEATURE REPRESENTATION
+create dataframe_for_reps features_db
+features_db load Databases/letter_features_no_blank.eNd
+
+# ## FEATURE LAYER
+create representation feat_rep
+feat_rep type blocked_representation
+feat_rep set_element (features_db column_rep features)
+feat_rep number 10
+
+create strength_layer features
+features represent feat_rep
+features change_hint plot_type plot_features.R
+#features add_hint color $features_layer_color
+features add_hint color yellow
+
+# ## LETTER LAYER
+
+create representation letter_rep
+letter_rep type blocked_representation
+letter_rep set_element (features_db column_rep letter)
+letter_rep number 10
+
+create iac_layer letters
+letters represent letter_rep
+letters change_hint plot_type layers/by_time_grouped.R
+#letters add_hint color $features_layer_color
+letters add_hint color yellow
+
+create parallel_conversion lfpc
+lfpc set_source letter_rep
+lfpc set_target feat_rep
+
+# ## FEATURE-LETTER
+create connection flc
+flc autoconnect features letters
+
+#(default_model) define_input orthographic (letters rep) features
+#(default_model) define_input orthographic (vocab column_rep Word string_representation) features

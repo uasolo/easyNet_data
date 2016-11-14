@@ -1,0 +1,171 @@
+load spatial_hub_with_cache_connection spatial_hub_with_cache_connection.so
+
+# LOAD LIBRARY FILES
+
+#create dataframe_for_reps vocab
+#vocab load $vocabulary_file
+
+# LOAD DATABASES
+
+
+
+
+# LEXICAL ROUTE LAYERS
+
+#create binary_layer best_letters_bin
+#best_letters_bin represent letter_rep
+create string_split orth_str
+orth_str set_source (vocab column_rep Word string_representation)
+orth_str set_min 10
+
+#create string_layer best_letters_str
+#best_letters_str represent (orth_str get_target)
+
+
+
+create spatial_representation spo
+spo set_keys (features_db column_rep letter)
+create spatial_layer spatial_code
+spatial_code represent spo
+spatial_code add_hint plot_type layers/signal.weight.difference.R
+
+
+# ## ORTHOGRAPHIC LEXICON (LAYER)
+create scm_layer words
+words represent (vocab column_rep Word)
+#words set_match_dependency spatial_code
+words add_hint_plus port net_input plot_type layers/match.R
+words add_hint_plus port net_input plot_type layers/match_map.R
+words add_hint plot_type layers/id_conn_decision.R
+
+#words set_match_dependency spoc
+
+# letters rename_parameter min_act letters_min_act
+
+# LEXICAL ROUTE CONNECTIONS
+
+
+
+# ## LETTER-ORTH
+
+create equiv_conversion letters_conv
+letters_conv set_target (features_db column_rep letter string_representation)
+letters_conv set_source (orth_str inner) 
+
+create equiv_conversion letters2
+letters2 set_source (features_db column_rep letter string_representation)
+letters2 set_target (orth_str inner) 
+
+create parallel_conversion lopc
+lopc set_source letter_rep
+lopc set_target (orth_str get_target)
+
+create parallel_conversion lopc2
+lopc2 set_source (orth_str get_target)
+lopc2 set_target letter_rep
+
+(letter_rep find_conversion (vocab column_rep Word)) set_weight -1
+include Models/shared_scripts/lowerupper.eNs
+((features_db column_rep letter) find_conversion (orth_str inner)) add_fallback caser
+
+create blocked_localist_to_spatial_conversion llspco
+llspco set_source letter_rep
+llspco set_target spo
+
+create spatial_hub_with_cache_connection spoc_i
+spoc_i set_autoconnect 0
+spoc_i attach spatial_code 
+words attach spoc_i inhibitory
+spoc_i conv_fill (spo find_conversion (vocab column_rep Word)) 
+
+create spatial_hub_with_cache_connection spoc
+spoc set_autoconnect 0
+spoc attach spatial_code 
+words attach spoc
+spoc conv_fill (spo find_conversion (vocab column_rep Word)) 
+
+#spoc share_lookup spoc_i
+
+
+
+create connection lspc
+lspc autoconnect letters spatial_code
+
+# ## ORTH-LETTER
+#create connection olc
+#olc autoconnect words letters
+#olc rename_parameter excitation orth_letter_excitation
+#olc rename_parameter inhibition orth_letter_inhibition
+
+# ## ORTH-ORTH
+create connection lato
+lato type prepostdiag_connection
+lato set_autoconnect 0
+lato attach words
+words attach lato inhibitory
+
+lato set_input_multipliers (vocab column_rep MF)
+lato set_output_multipliers (vocab column_rep RMF)
+
+
+#create blocked_connection bester
+#bester attach fast_letters
+#bester set_inner_type best_above_threshold_connection
+#bester set_target_inner_rep (features_db column_rep letter)
+#best_letters_bin attach bester
+
+
+#create connection bestlls
+#bestlls autoconnect best_letters_bin best_letters_str
+
+
+#create connection blslcc
+#blslcc autoconnect best_letters_str letcount
+
+#create spatial_tdf_connection olc
+#olc set_autoconnect 0
+#olc alignments_from spoc
+#letters attach olc 
+
+# DECISION RULE
+
+create best_above_threshold_observer identification_obs
+identification_obs target words
+
+# ASSEMBLE MODEL
+
+create reset_nobserver resetter
+resetter add_trigger (features state)
+resetter add_sync features
+resetter add_target letters
+resetter add_target words
+
+spatial_code set_lag 0
+
+# SET PARAMETERS
+
+
+words set_resting_level (vocab column_rep Rest)
+
+# CREATE CYCLE TO RUN THE MODEL
+
+
+caser_plus add_fallback extras
+((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
+(feat_rep find_conversion (orth_str get_target)) set_weight -1
+
+# add the following fall_back to enable input to letters level
+create conversion_chain letters_direct
+letters_direct set_manual 1
+letters_direct add_link_back orth_str
+letters_direct add_link_back lopc2
+
+(letter_rep find_conversion (vocab column_rep Word string_representation)) add_fallback letters_direct
+(letter_rep find_conversion (vocab column_rep Word string_representation)) set_weight -1
+
+(scm parameters) load $parameter_file
+
+# pretty names
+letcount set_pretty_name letter count
+spatial_code set_pretty_name spatial code
+
