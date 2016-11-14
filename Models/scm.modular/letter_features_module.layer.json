@@ -1,0 +1,71 @@
+{
+    "QGraphicsItems": [
+        {
+            "lazyNutType": "layer",
+            "name": "decision",
+            "x": 1111.8085106382982,
+            "y": -863.563829787234
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "input_detector",
+            "x": 1111.8085106382982,
+            "y": -263.56382978723406
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "letcount",
+            "x": 209.20212765957442,
+            "y": -685.21276595744655
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "id_layer",
+            "x": 680,
+            "y": -800
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "freql",
+            "x": 206.59574468085106,
+            "y": -548.77659574468066
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "final",
+            "x": 917.34042553191466,
+            "y": -403.03191489361706
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "initial",
+            "x": 450,
+            "y": -406.06382978723406
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "words",
+            "x": 680,
+            "y": -600
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "spatial_code",
+            "x": 680,
+            "y": -400
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "letters",
+            "x": 680,
+            "y": -200
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "features",
+            "x": 679.99999999999989,
+            "y": -28.207987372426917
+        }
+    ],
+    "boxWidth": 170
+}
