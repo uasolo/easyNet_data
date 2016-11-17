@@ -1,1 +1,4 @@
+(default_model) add_setting orth_input_layer features
+(default_model) change_setting_group orth_input_layer model_settings
+
 (default_model) add_relative_script define_inputs.eNs

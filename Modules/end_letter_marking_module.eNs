@@ -1,19 +1,19 @@
 if (not (exists initial)) create strength_layer initial
 #initial represent ($letters_layer_name rep)
-initial represent (features_db column_rep letter)
+initial represent ($features_db_name column_rep $letter_column_name)
 initial add_hint color $elm_layer_color
 
 if (not (exists final)) create strength_layer final
 #final represent ($letters_layer_name rep)
-final represent (features_db column_rep letter)
+final represent ($features_db_name column_rep $letter_column_name)
 final add_hint color $elm_layer_color
 # CONVERSIONS
 if (not (exists letters_conv)) create equiv_conversion letters_conv
-letters_conv set_target (features_db column_rep letter string_representation)
+letters_conv set_target ($features_db_name column_rep $letter_column_name string_representation)
 letters_conv set_source (orth_str inner) 
 
 if (not (exists letters2)) create equiv_conversion letters2
-letters2 set_source (features_db column_rep letter string_representation)
+letters2 set_source ($features_db_name column_rep $letter_column_name string_representation)
 letters2 set_target (orth_str inner) 
 if (not (exists initial_conv)) create select_block_conversion initial_conv
 #initial_conv set_source ($letters_layer_name rep)
@@ -22,13 +22,13 @@ initial_conv set_position 0
 
 if (not (exists letinitialc)) create connection letinitialc
 letinitialc set_autoconnect 1
-letinitialc attach letters 
+letinitialc attach $letters_layer_name
 initial attach letinitialc
 
 ## HOOK UP initial letter bank to words layer
 
 if (not (exists initialolc)) create connection initialolc
-initialolc autoconnect initial words
+initialolc autoconnect initial $words_layer_name
 initial_conv set_auto_use 0
 #loglevel info
 
@@ -39,13 +39,13 @@ final_conv set_position -1
 
 if (not (exists letfinalc)) create connection letfinalc
 letfinalc set_autoconnect 1
-letfinalc attach letters 
+letfinalc attach $letters_layer_name
 final attach letfinalc
 
 ## HOOK UP final letter bank to words layer
 
 if (not (exists finalolc)) create connection finalolc
-finalolc autoconnect final words
+finalolc autoconnect final $words_layer_name
 final_conv set_auto_use 0
 
 initial set_lag 0

@@ -1,11 +1,15 @@
 (default_model) add_setting letters_layer_name letters
 (default_model) add_setting words_layer_name words
+(default_model) add_setting elm_layer_color lightgray	
+(default_model) add_setting features_db_name features_db
+(default_model) add_setting letter_column_name letter
 
-(default_model) add_setting elm_layer_color gray	
+(default_model) change_setting_group letters_layer_name layer_names
+(default_model) change_setting_group words_layer_name layer_names
 
-(default_model) change_setting_group letters_layer_name end_letter_marking_settings
-(default_model) change_setting_group words_layer_name end_letter_marking_settings
-(default_model) change_setting_group elm_layer_color end_letter_marking_settings
+(default_model) change_setting_group elm_layer_color layer_colors 
+(default_model) change_setting_group features_db_name letter_features
+(default_model) change_setting_group letter_column_name letter_features
 
 (default_model) add_script Modules/end_letter_marking_module.eNs
 

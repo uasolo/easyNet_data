@@ -1,8 +1,10 @@
 (default_model) add_setting features_layer_name features
 (default_model) add_setting features_layer_color yellow	
 
-(default_model) change_setting_group features_layer_name letter_features_settings
-(default_model) change_setting_group features_layer_color letter_features_settings
+(default_model) change_setting_group features_layer_name layer_names
+(default_model) change_setting_group features_layer_color layer_colors 
 
 (default_model) add_script Modules/letter_features_module.eNs
+
+(default_model) add_script Trials/Presentation_No_Task.eNs
 

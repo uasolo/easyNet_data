@@ -38,5 +38,5 @@ letcounter apply moo
 letcounter set_fixed 1
 letcount add_hint color $length_filter_color
 # modify input so that letcount layer gets set
-if (exists letcount) (default_model) define_input orthographic ($vocab_name column_rep $word_column string_representation) $input_layer letcount
+if (exists letcount) (default_model) define_input orthographic ($vocab_name column_rep $word_column string_representation) $orth_input_layer letcount
 
