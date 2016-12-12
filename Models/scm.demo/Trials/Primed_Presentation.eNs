@@ -1,0 +1,5 @@
+create trial primed_present
+primed_present add_stimulus_event prime orthographic START +$prime_duration $prime
+primed_present add_stimulus_event target orthographic prime/end +$target_duration $target
+primed_present set_end_condition target/end
+primed_present set_default_value prime_duration 55
