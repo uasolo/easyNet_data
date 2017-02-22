@@ -33,7 +33,6 @@ run.tests <- function(cmd.file, ref.file, object.file, tolerance = .000999, cuto
   
   results <- NULL
   idx <- 1
-  
   for (test in 1:ncol(cmd.list))
   {
     print(paste("Running",names(cmd.list)[test]))
@@ -80,8 +79,10 @@ run.tests <- function(cmd.file, ref.file, object.file, tolerance = .000999, cuto
             )
     print(fn)
     # check that folder exists
-    ifelse(!dir.exists(easyNetUserHome), dir.create(easyNetUserHome), FALSE)
-    ifelse(!dir.exists(file.path(easyNetUserHome, "Outputs")), dir.create(file.path(easyNetUserHome, "Outputs")), FALSE)
+    dir.create(easyNetUserHome, showWarnings = FALSE)
+    dir.create(file.path(easyNetUserHome, "Outputs"), showWarnings = FALSE)
+    #ifelse(!dir.exists(easyNetUserHome), dir.create(easyNetUserHome), FALSE)
+    #ifelse(!dir.exists(file.path(easyNetUserHome, "Outputs")), dir.create(file.path(easyNetUserHome, "Outputs")), FALSE)
     write.csv(tmp,fn)
     
     results <- rbind(results,eval.fit(idx,names(cmd.list)[idx],ref.data,tmp,tolerance))

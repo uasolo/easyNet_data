@@ -7,7 +7,7 @@ Shunted-SCM change_setting_type vocabulary_file filename
 Shunted-SCM add_setting parameter_file Parameters/Shunted-SCM.eNp
 Shunted-SCM make_setting_relative_filename parameter_file
 
-Shunted-SCM add_relative_script Shunted-SCM.eNs
+Shunted-SCM add_relative_script Shunted-SCM_sums.eNs
 Shunted-SCM add_relative_script Trials/Lexical_Decision.eNs
 Shunted-SCM add_relative_script Trials/Primed_Lexical_Decision.eNs
 Shunted-SCM add_relative_script Trials/Sandwich_Primed_Lexical_Decision.eNs
