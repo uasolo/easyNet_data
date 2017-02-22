@@ -2,94 +2,70 @@
     "QGraphicsItems": [
         {
             "lazyNutType": "layer",
-            "name": "letcount",
-            "x": 1040.727655266591,
-            "y": -504.73867762667862
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "features",
-            "x": 503.24947897051612,
-            "y": -51.808466035855872
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "long_stim",
-            "x": 807.22934997834102,
-            "y": -214.50849859564309
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "length_filter",
-            "x": 767.71462655282789,
-            "y": -354.22127070727902
-        },
-        {
-            "lazyNutType": "layer",
             "name": "decision",
-            "x": 94.526988112834502,
-            "y": -1187.3717006802005
+            "x": 1035.0730670911889,
+            "y": -945.35920750119669
         },
         {
             "lazyNutType": "layer",
-            "name": "all_stim",
-            "x": 894.3105684851472,
-            "y": -43.624905779763282
+            "name": "input_detector",
+            "x": 1032.8164770350684,
+            "y": -270.1698853097468
         },
         {
             "lazyNutType": "layer",
-            "name": "initial",
-            "x": 154.21349647468679,
-            "y": -504.73867762667862
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "filtered_letters",
-            "x": 170.76005480311059,
-            "y": -302.005386180708
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "final",
-            "x": 382.43480398134557,
-            "y": -472.28015481286423
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "spatial_code",
-            "x": 727.63665842253749,
-            "y": -507.56115787135809
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "letters",
-            "x": 503.24947897051612,
-            "y": -270.89870089370504
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "most_letter",
-            "x": -82.015579488101167,
-            "y": -160.39608777577791
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "id_layer",
-            "x": 577.88910855336826,
-            "y": -951.29489714077317
-        },
-        {
-            "lazyNutType": "layer",
-            "name": "words",
-            "x": 689.70791877404429,
-            "y": -721.51859514951343
+            "name": "letcount",
+            "x": 814.65426730224033,
+            "y": -683.73194855198642
         },
         {
             "lazyNutType": "layer",
             "name": "freql",
             "x": 154.21349647468679,
-            "y": -721.51859514951343
+            "y": -681.36429973004954
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "id_layer",
+            "x": 524.32921889106763,
+            "y": -943.37642736503051
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "words",
+            "x": 524.32921889106763,
+            "y": -710.96063544852325
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "spatial_code",
+            "x": 521.68972896582022,
+            "y": -505.90800924144946
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "initial",
+            "x": 151.57400654943922,
+            "y": -505.90800924144946
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "final",
+            "x": 812.67166179669289,
+            "y": -505.90800924144946
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "letters",
+            "x": 524.32921889106763,
+            "y": -270.89870089370504
+        },
+        {
+            "lazyNutType": "layer",
+            "name": "features",
+            "x": 524.32921889106763,
+            "y": -51.808466035855872
         }
     ],
-    "boxWidth": 150
+    "boxWidth": 170
 }

@@ -1,13 +1,12 @@
-if (not (exists letcount)) (default_model) define_input orthographic (vocab column_rep Word string_representation) features
+if (not (exists letcount)) (default_model) define_input orthographic (vocab column_rep Word string_representation) $orth_input_layer 
 
-if (exists letcount) (default_model) define_input orthographic (vocab column_rep Word string_representation) features letcount
+if (exists letcount) (default_model) define_input orthographic (vocab column_rep Word string_representation) $orth_input_layer letcount
 
 if (not (exists letcount)) (default_model) define_input letter_in (vocab column_rep Word string_representation) letters
 
 if (exists letcount) (default_model) define_input letter_in (vocab column_rep Word string_representation) letters letcount
 
 (default_model) define_output identification identification_obs
+
 include Models/shared_scripts/extras.eNs
 
-#(scm parameters) load $parameter_file
-(scm parameters) load Models/scm.demo/Parameters/SCM.eNp

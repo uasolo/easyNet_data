@@ -1,5 +1,5 @@
 create model rpm-ia 
-rpm-ia add_setting vocabulary_file Databases/Vocab_files/ew5.eNd
+rpm-ia add_setting vocabulary_file Databases/Vocab_files/ew4.eNd
 rpm-ia change_setting_type vocabulary_file filename
 
 rpm-ia add_relative_script rpm-ia.eNs

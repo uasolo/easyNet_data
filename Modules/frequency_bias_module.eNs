@@ -6,5 +6,4 @@ if (not (exists freqb)) create connection freqb
 freqb attach freql
 if (exists (words input_channel frequency_bias)) $words_layer_name attach freqb frequency_bias
 if (not (exists (words input_channel frequency_bias)))  $words_layer_name attach freqb
-$words_layer_name attach freqb
 ((default_model) parameters) set freql::scale 0.09

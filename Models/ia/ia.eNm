@@ -1,11 +1,13 @@
 if (not (exists ia)) create model ia 
 ia add_setting vocabulary_file Databases/Vocab_files/ia.eNd
 ia change_setting_type vocabulary_file filename
-ia add_setting parameter_file Parameters/ia.eNp
-ia make_setting_relative_filename parameter_file
+ia add_setting parameter_file Models/ia/Parameters/ia.eNp
+#ia add_setting parameter_file Parameters/ia.eNp
+#ia make_setting_relative_filename parameter_file
 ia add_setting numslots 4
 ia change_setting_type numslots numeric
 
-ia add_relative_script ia.eNs
+#ia add_relative_script ia.eNs
+ia add_script Models/ia/ia.eNs
 ia add_script Trials/Presentation_No_Task.eNs
 ia add_script Trials/Brief_Masked_No_Task.eNs
