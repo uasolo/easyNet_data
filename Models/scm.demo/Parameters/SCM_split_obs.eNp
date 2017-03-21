@@ -34,6 +34,8 @@ mostletno::excitation .36
 id_conn::threshold .68
 id_yes_conn::excitation 1
 word_yes_conn::excitation .4
+id_sum_conn::excitation 1
+words_sum_conn::excitation 1
 bester::threshold 0
 lcolc::excitation 0 
 lcolc::inhibition -.06
@@ -44,5 +46,8 @@ tolerance .02
 denom 2
 decision_yes_conn::excitation 1
 decision_no_conn::excitation 1
-decision_obs_yes::threshold .8
+decision_no_no_diff_conn::excitation 1
+decision_yes_no_diff_conn::excitation -1
+decision_obs_yes::threshold .3
 decision_obs_no::threshold .8
+decision_obs_no_diff::threshold .8

@@ -279,16 +279,18 @@ yes_yes_conv set_source (decisions column_rep Decision)
 yes_yes_conv set_target (yes_df column_rep yes)
 
 create equiv_conversion yes_yes_conv_rev
-yes_yes_conv set_target (decisions column_rep Decision)
-yes_yes_conv set_source (yes_df column_rep yes)
+yes_yes_conv_rev set_target (decisions column_rep Decision)
+yes_yes_conv_rev set_source (yes_df column_rep yes)
 
 create equiv_conversion no_no_conv
 no_no_conv set_source (decisions column_rep Decision)
 no_no_conv set_target (no_df column_rep no)
 
 create equiv_conversion no_no_conv_rev
-no_no_conv set_target (decisions column_rep Decision)
-no_no_conv set_source (no_df column_rep no)
+no_no_conv_rev set_target (decisions column_rep Decision)
+no_no_conv_rev set_source (no_df column_rep no)
+
+
 
 create selfweight_diag_connection decision_lat
 decision_lat set_autoconnect 0
@@ -333,19 +335,7 @@ decision_yes_conn autoconnect decision decision_yes
 
 create connection decision_no_conn
 decision_no_conn autoconnect decision decision_no
-#create blocked_connection bester
-#bester attach fast_letters
-#bester set_inner_type best_above_threshold_connection
-#bester set_target_inner_rep (features_db column_rep letter)
-#best_letters_bin attach bester
 
-
-#create connection bestlls
-#bestlls autoconnect best_letters_bin best_letters_str
-
-
-#create connection blslcc
-#blslcc autoconnect best_letters_str letcount
 
 #loglevel debug
 create connection lcolc
@@ -362,7 +352,6 @@ letcounter set_fixed 1
 
 create best_above_threshold_observer decision_obs_yes
 decision_obs_yes target decision_yes
-
 
 create best_above_threshold_observer decision_obs_no
 decision_obs_no target decision_no
@@ -403,6 +392,7 @@ words set_resting_level (vocab column_rep Rest)
 (default_model) define_output lexical_decision decision_obs_yes
 (default_model) define_output lexical_decision decision_obs_no
 (default_model) define_output identification identification_obs
+
 include Models/shared_scripts/extras.eNs
 caser_plus add_fallback extras
 ((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
@@ -427,4 +417,6 @@ letcount set_pretty_name letter count
 most_letter set_pretty_name most active letter
 id_layer set_pretty_name id layer
 spatial_code set_pretty_name spatial code
+decision_yes set_pretty_name decision yes
+decision_no set_pretty_name decision no
 
