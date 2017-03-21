@@ -224,7 +224,7 @@ create connection l2_l1_lato
 l2_l1_lato autoconnect l2_words l1_words 
 
 
-bia define_input orthographic (l2_vocab column_rep Word string_representation) features
+(default_model) define_input orthographic (l2_vocab column_rep Word string_representation) features
 
 
 
@@ -233,7 +233,7 @@ bia define_input orthographic (l2_vocab column_rep Word string_representation) f
 
 create best_above_threshold_observer language_obs
 language_obs target languages
-bia define_output language_decision language_obs
+(default_model) define_output language_decision language_obs
 
 
-(bia parameters) load $parameter_file
+((default_model) parameters) load $parameter_file

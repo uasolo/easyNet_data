@@ -203,7 +203,7 @@ pronouncer add .*\?.*
 pronouncer add ^[^"]*$
 pronouncer add " 
 
-drc define_output pronunciation pronouncer
+(default_model) define_output pronunciation pronouncer
 
 #create time_observer time
 #time target phoneme_out
@@ -212,7 +212,7 @@ drc define_output pronunciation pronouncer
 
 create best_above_threshold_observer unit_decider
 unit_decider target orth_lex
-drc add unit_decider
+(default_model) add unit_decider
 
 create regex_observer word_yes
 word_yes target unit_decider
@@ -220,9 +220,9 @@ word_yes add \?
 word_yes add .+ yes
 
 
-drc define_output lexical_decision word_yes
-drc define_output lexical_decision tla_yes
-drc define_output lexical_decision mrom_no
+(default_model) define_output lexical_decision word_yes
+(default_model) define_output lexical_decision tla_yes
+(default_model) define_output lexical_decision mrom_no
 
 
 
@@ -348,10 +348,10 @@ nlpl autoconnect phonemes phoneme_out
 #create connection blspg
 #blspg autoconnect best_letters_str pre_graph 
 
-drc define_input orthographic (vocab column_rep orthography string_representation) features
+(default_model) define_input orthographic (vocab column_rep orthography string_representation) features
 
 
-drc add thresholded_best_phonemes
+(default_model) add thresholded_best_phonemes
 
 include Models/shared_scripts/extras.eNs
 caser_plus add_fallback extras
@@ -365,5 +365,5 @@ best_letters set_lag 0
 #best_letters_str set_lag 0
 #pre_graph set_lag 0
 
-(drc parameters) load $parameter_file
+((default_model) parameters) load $parameter_file
 

@@ -1,3 +1,4 @@
+if (exists spldt) stop
 create trial spldt
 spldt declare_argument preprime_duration
 spldt add_stimulus_event prime orthographic preprime/end +$main_prime_duration $prime

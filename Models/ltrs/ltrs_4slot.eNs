@@ -47,7 +47,7 @@ builder autoconnect checker lexicon
 
 create best_above_threshold_observer word_id
 word_id target lexicon
-ltrs add word_id
+(default_model) add word_id
 
 create regex_observer yes_decider
 yes_decider target word_id
@@ -56,7 +56,7 @@ yes_decider add .+ yes
 
 create all_above_threshold_observer word_ok
 word_ok target checker
-ltrs add word_ok
+(default_model) add word_ok
 
 create regex_observer no_decider
 no_decider target word_ok
@@ -70,18 +70,18 @@ reset add_sync input
 reset add_target what
 reset add_target checker 
 
-ltrs define_input orthographic (vocab column_rep Word string_representation) input
-ltrs define_output lexical_decision yes_decider
-#ltrs define_output lexical_decision no_decider
+(default_model) define_input orthographic (vocab column_rep Word string_representation) input
+(default_model) define_output lexical_decision yes_decider
+#(default_model) define_output lexical_decision no_decider
 
-(ltrs parameters) set perception::excitation 1
-(ltrs parameters) set matcher::excitation 1
-(ltrs parameters) set matcher::inhibition -1000
-(ltrs parameters) set builder::excitation 1
-(ltrs parameters) set attend::excitation 1
-(ltrs parameters) set attention::rate 1
-(ltrs parameters) set attention::total_attention .198
-(ltrs parameters) set attention::initial_advantage .362
-(ltrs parameters) set word_id::threshold 100
-(ltrs parameters) set word_ok::threshold -.9
+((default_model) parameters) set perception::excitation 1
+((default_model) parameters) set matcher::excitation 1
+((default_model) parameters) set matcher::inhibition -1000
+((default_model) parameters) set builder::excitation 1
+((default_model) parameters) set attend::excitation 1
+((default_model) parameters) set attention::rate 1
+((default_model) parameters) set attention::total_attention .198
+((default_model) parameters) set attention::initial_advantage .362
+((default_model) parameters) set word_id::threshold 100
+((default_model) parameters) set word_ok::threshold -.9
 

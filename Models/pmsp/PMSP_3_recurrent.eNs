@@ -88,16 +88,16 @@ create dataframe ppc_mat
 ppc_mat load Models/pmsp/Weights/PMSP_3_ppc.eNd
 phon_phon_conn fill_from_dataframe ppc_mat
 
-pmsp3 define_input orthographic unparsed_mixed_orthography graphemes
+(default_model) define_input orthographic unparsed_mixed_orthography graphemes
 
 create pmsp_naming_observer thresholded_phonemes
 thresholded_phonemes target phonemes
 thresholded_phonemes add_mark 3 19 23 37 38 39 42 45 48 50 54 55 61
 thresholded_phonemes add_exemption 37
 
-(pmsp3 parameters) load $parameter_file
+((default_model) parameters) load $parameter_file
 
-pmsp3 add thresholded_phonemes
+(default_model) add thresholded_phonemes
 create regex_observer drop_onset_tag
 drop_onset_tag target thresholded_phonemes
 drop_onset_tag add _ps_sp ps
@@ -112,7 +112,7 @@ drop_onset_tag add (.)~o \1
 drop_onset_tag add (.)~o \1
 
 
-pmsp3 define_output pronunciation drop_onset_tag
+(default_model) define_output pronunciation drop_onset_tag
 
 phonemes set_lag .01
 hidden set_lag .01

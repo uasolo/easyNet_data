@@ -356,7 +356,7 @@ words set_resting_level (vocab column_rep Rest)
 
 # CREATE CYCLE TO RUN THE MODEL
 
-scm add spo
+(default_model) add spo
 
 include Models/shared_scripts/extras.eNs
 caser_plus add_fallback extras
@@ -400,13 +400,13 @@ length_slot_filter set_target_inner_rep (features_db column_rep letter)
 length_slot_filter attach length_filter
 length_slot_filter set_lag 1
 
-scm define_input orthographic (vocab column_rep Word string_representation) features 
-scm define_input prescient_orthographic (vocab column_rep Word string_representation) letcount
-scm define_input all_stimuli_orthographic all_rep long_stim
-scm define_output lexical_decision decision_obs
-scm define_output identification identification_obs
+(default_model) define_input orthographic (vocab column_rep Word string_representation) features 
+(default_model) define_input prescient_orthographic (vocab column_rep Word string_representation) letcount
+(default_model) define_input all_stimuli_orthographic all_rep long_stim
+(default_model) define_output lexical_decision decision_obs
+(default_model) define_output identification identification_obs
 
-(scm parameters) load $parameter_file
+((default_model) parameters) load $parameter_file
 
 # pretty names
 filtered_letters set_pretty_name filtered letters

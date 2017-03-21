@@ -1,30 +1,29 @@
-create model bia
-bia add_relative_script bia.eNs
+(default_model) add_relative_script bia.eNs
 
 
-bia add_setting L1_name English
-bia change_setting_type L1_name string
-bia add_setting L1_vocab_file Databases/Vocab_files/english4.eNd
-bia change_setting_type L1_vocab_file filename
-bia add_setting L1_resting -.046
-bia change_setting_type L1_resting numeric
-bia change_setting_group L1_name L1
-bia change_setting_group L1_vocab_file L1
-bia change_setting_group L1_resting L1
+(default_model) add_setting L1_name English
+(default_model) change_setting_type L1_name string
+(default_model) add_setting L1_vocab_file Databases/Vocab_files/english4.eNd
+(default_model) change_setting_type L1_vocab_file filename
+(default_model) add_setting L1_resting -.046
+(default_model) change_setting_type L1_resting numeric
+(default_model) change_setting_group L1_name L1
+(default_model) change_setting_group L1_vocab_file L1
+(default_model) change_setting_group L1_resting L1
 
-bia add_setting L2_name Dutch
-bia change_setting_type L2_name string
-bia add_setting L2_vocab_file Databases/Vocab_files/dutch4.eNd
-bia change_setting_type L2_vocab_file filename
-bia add_setting L2_resting -.046
-bia change_setting_type L2_resting numeric
-bia change_setting_group L2_name L2
-bia change_setting_group L2_vocab_file L2
-bia change_setting_group L2_resting L2
+(default_model) add_setting L2_name Dutch
+(default_model) change_setting_type L2_name string
+(default_model) add_setting L2_vocab_file Databases/Vocab_files/dutch4.eNd
+(default_model) change_setting_type L2_vocab_file filename
+(default_model) add_setting L2_resting -.046
+(default_model) change_setting_type L2_resting numeric
+(default_model) change_setting_group L2_name L2
+(default_model) change_setting_group L2_vocab_file L2
+(default_model) change_setting_group L2_resting L2
 
-bia add_setting parameter_file Parameters/bia.eNp
-bia make_setting_relative_filename parameter_file
-bia change_setting_group parameter_file Parameters
+(default_model) add_setting parameter_file Parameters/bia.eNp
+(default_model) make_setting_relative_filename parameter_file
+(default_model) change_setting_group parameter_file Parameters
 
-bia add_script Trials/Presentation_No_Task.eNs
-bia add_script Trials/Language_Decision.eNs
+(default_model) add_script Trials/Presentation_No_Task.eNs
+(default_model) add_script Trials/Language_Decision.eNs

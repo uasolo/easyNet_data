@@ -318,16 +318,16 @@ create connection diag
 diag autoconnect normalized_bigrams bigrams
 
 #OTHER STUFF
-oob-ia add rescale rescale1 rescale2 rescale3 rescale4
-oob-ia define_input orthographic str_rep in_layer
+(default_model) add rescale rescale1 rescale2 rescale3 rescale4
+(default_model) define_input orthographic str_rep in_layer
 
 create best_above_threshold_observer identifier
 identifier target words
-oob-ia add identifier
+(default_model) add identifier
 create regex_observer lexical_decider
 lexical_decider target identifier
 lexical_decider add [^?]+ yes
  
-oob-ia define_output lexical_decision lexical_decider
+(default_model) define_output lexical_decision lexical_decider
 
-(oob-ia parameters) load $parameter_file
+((default_model) parameters) load $parameter_file

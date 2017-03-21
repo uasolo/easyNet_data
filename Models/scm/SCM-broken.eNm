@@ -1,15 +1,14 @@
-create model scm
-scm add_setting vocabulary_file Databases/Vocab_files/scm/ia-SCM.eNd
+(default_model) add_setting vocabulary_file Databases/Vocab_files/scm/ia-SCM.eNd
 
-scm change_setting_type vocabulary_file filename
+(default_model) change_setting_type vocabulary_file filename
 
-scm add_setting parameter_file Parameters/SCM.eNp
-scm make_setting_relative_filename parameter_file
+(default_model) add_setting parameter_file Parameters/SCM.eNp
+(default_model) make_setting_relative_filename parameter_file
 
-scm add_relative_script SCM.eNs
-scm add_relative_script Trials/Lexical_Decision.eNs
-scm add_relative_script Trials/Primed_Lexical_Decision.eNs
-scm add_relative_script Trials/Sandwich_Primed_Lexical_Decision.eNs
-scm add_relative_script Trials/Presentation_No_Task.eNs
-scm add_relative_script Trials/Identification.eNs
+(default_model) add_relative_script SCM.eNs
+(default_model) add_relative_script Trials/Lexical_Decision.eNs
+(default_model) add_relative_script Trials/Primed_Lexical_Decision.eNs
+(default_model) add_relative_script Trials/Sandwich_Primed_Lexical_Decision.eNs
+(default_model) add_relative_script Trials/Presentation_No_Task.eNs
+(default_model) add_relative_script Trials/Identification.eNs
 

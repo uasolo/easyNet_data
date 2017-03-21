@@ -1,3 +1,4 @@
+if (exists present) stop
 create trial present
 present add_stimulus_event stimulus orthographic START +$stimulus_duration $stimulus
 present set_end_condition stimulus/end

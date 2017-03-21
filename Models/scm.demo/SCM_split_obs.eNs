@@ -397,12 +397,12 @@ words set_resting_level (vocab column_rep Rest)
 
 # CREATE CYCLE TO RUN THE MODEL
 
-scm define_input orthographic (vocab column_rep Word string_representation) features letcount
-scm define_input letter_in (vocab column_rep Word string_representation) letters letcount
+(default_model) define_input orthographic (vocab column_rep Word string_representation) features letcount
+(default_model) define_input letter_in (vocab column_rep Word string_representation) letters letcount
 # lexical_decision = decision_obs_yes OR decision_obs_no
-scm define_output lexical_decision decision_obs_yes
-scm define_output lexical_decision decision_obs_no
-scm define_output identification identification_obs
+(default_model) define_output lexical_decision decision_obs_yes
+(default_model) define_output lexical_decision decision_obs_no
+(default_model) define_output identification identification_obs
 include Models/shared_scripts/extras.eNs
 caser_plus add_fallback extras
 ((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
@@ -417,9 +417,9 @@ letters_direct add_link_back lopc2
 (letter_rep find_conversion (vocab column_rep Word string_representation)) add_fallback letters_direct
 (letter_rep find_conversion (vocab column_rep Word string_representation)) set_weight -1
 
-(scm parameters) load $parameter_file
-(scm parameters) set words_sum_conn::excitation 1
-(scm parameters) set id_sum_conn::excitation 1
+((default_model) parameters) load $parameter_file
+((default_model) parameters) set words_sum_conn::excitation 1
+((default_model) parameters) set id_sum_conn::excitation 1
 
 
 # pretty names

@@ -200,7 +200,7 @@ create regex_observer pronouncer
 pronouncer target cdp_naming
 pronouncer add .*\?.* 
 
-cdpplus define_output pronunciation pronouncer
+(default_model) define_output pronunciation pronouncer
 
 
 
@@ -327,9 +327,9 @@ gpcer fill_from_dataframe EZW
 create connection gpc_apply
 gpc_apply autoconnect phonemes phoneme_out
 
-cdpplus define_input orthographic (vocab column_rep orthography string_representation) features
+(default_model) define_input orthographic (vocab column_rep orthography string_representation) features
 
-cdpplus add cdp_naming
+(default_model) add cdp_naming
 
 include Models/shared_scripts/extras.eNs
 caser_plus add_fallback extras
@@ -342,5 +342,5 @@ phonemes set_lag 0
 best_letters set_lag 0
 #best_letters_str set_lag 0
 
-(cdpplus parameters) load $parameter_file
+((default_model) parameters) load $parameter_file
 

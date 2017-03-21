@@ -1,3 +1,4 @@
+if (exists match) stop
 create trial match
 #match add_stimulus_event reference letter_in START START $reference
 #match add_stimulus_event stimulus letter_in START +$stimulus_duration $stimulus 

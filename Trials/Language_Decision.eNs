@@ -1,3 +1,4 @@
+if (exists langdt) stop
 create trial langdt
 langdt add_stimulus_event stimulus orthographic START END $stimulus
 langdt set_end_condition language_decision

@@ -1,5 +1,3 @@
-create model scm
-
 (default_model) add_setting words_layer_name words
 (default_model) add_setting words_layer_color pink
 (default_model) add_setting vocabulary_file Models/scm/Vocabularies/SCM-5000-words.eNd
