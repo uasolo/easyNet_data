@@ -11,7 +11,8 @@ create connection lato
 #DATAFRAME
 #this will create column_rep representations for each column
 create dataframe_for_reps bigramf
-bigramf load Databases/bigrams_lowercase.eNd
+#bigramf load Databases/bigrams_lowercase.eNd
+bigramf load Databases/bigrams.eNd
 create dataframe_for_reps vocab
 vocab load $vocabulary_file
 
