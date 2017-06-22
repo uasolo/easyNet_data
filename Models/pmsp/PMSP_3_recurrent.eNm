@@ -1,6 +1,5 @@
-create model pmsp3
-pmsp3 add_relative_script PMSP_3_recurrent.eNs
-pmsp3 add_script Trials/Word_Naming.eNs
-pmsp3 add_setting parameter_file Parameters/PMSP3.eNp
-pmsp3 make_setting_relative_filename parameter_file
-pmsp3 add_relative_script PMSP_3_cap.eNs
+(default_model) add_relative_script PMSP_3_recurrent.eNs
+(default_model) add_script Trials/Word_Naming.eNs
+(default_model) add_setting parameter_file Parameters/PMSP3.eNp
+(default_model) make_setting_relative_filename parameter_file
+(default_model) add_relative_script PMSP_3_cap.eNs

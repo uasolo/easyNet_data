@@ -1,16 +1,15 @@
-create model drc
-drc add_relative_script drc.eNs
+(default_model) add_relative_script drc.eNs
 
-drc add_setting parameter_file Parameters/drc.eNp
-drc make_setting_relative_filename parameter_file
+(default_model) add_setting parameter_file Parameters/drc.eNp
+(default_model) make_setting_relative_filename parameter_file
 
-drc add_setting orth_phon_file Vocabularies/drc.orth-phon.eNd
-drc make_setting_relative_filename orth_phon_file
-drc add_setting orth_freq_file Vocabularies/drc.orth-freq.eNd
-drc make_setting_relative_filename orth_freq_file
-drc add_setting phon_freq_file Vocabularies/drc.phon-freq.eNd
-drc make_setting_relative_filename phon_freq_file
+(default_model) add_setting orth_phon_file Vocabularies/drc.orth-phon.eNd
+(default_model) make_setting_relative_filename orth_phon_file
+(default_model) add_setting orth_freq_file Vocabularies/drc.orth-freq.eNd
+(default_model) make_setting_relative_filename orth_freq_file
+(default_model) add_setting phon_freq_file Vocabularies/drc.phon-freq.eNd
+(default_model) make_setting_relative_filename phon_freq_file
 
-drc add_script Trials/Lexical_Decision.eNs
-drc add_script Trials/Word_Naming.eNs
+(default_model) add_script Trials/Lexical_Decision.eNs
+(default_model) add_script Trials/Word_Naming.eNs
 

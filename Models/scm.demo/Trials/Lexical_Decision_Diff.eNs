@@ -1,4 +1,0 @@
-create trial ldt_diff
-ldt_diff add_stimulus_event stimulus orthographic START END $stimulus
-ldt_diff set_end_condition lexical_decision_diff
-ldt_diff set_cap 300

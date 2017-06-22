@@ -200,7 +200,7 @@ lexicon attach matcher
 
 create best_above_threshold_observer word_id
 word_id target lexicon
-ltrs add word_id
+(default_model) add word_id
 
 create regex_observer yes_decider
 yes_decider target word_id
@@ -226,9 +226,9 @@ reset add_target reset
 #reset add_target checker 
 reset add_target locable
 
-ltrs define_input orthographic input_rep input
-ltrs define_output lexical_decision yes_decider
+(default_model) define_input orthographic input_rep input
+(default_model) define_output lexical_decision yes_decider
 #ltrs define_output lexical_decision no_decider
 
-(ltrs parameters) load $parameter_file
+((default_model) parameters) load $parameter_file
 

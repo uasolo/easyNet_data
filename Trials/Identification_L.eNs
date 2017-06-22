@@ -1,3 +1,4 @@
+if (exists idl) stop
 create trial idl
 idl add_stimulus_event stimulus letter_in START END $stimulus
 idl set_end_condition identification

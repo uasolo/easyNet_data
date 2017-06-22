@@ -1,7 +1,5 @@
-create model ltrs
+(default_model) add_relative_script ltrs_4slot.eNs
 
-ltrs add_relative_script ltrs_4slot.eNs
-
-ltrs add_script Trials/Presentation_No_Task.eNs
-ltrs add_script Trials/Lexical_Decision.eNs
-ltrs add_script Trials/Primed_Lexical_Decision.eNs
+(default_model) add_script Trials/Presentation_No_Task.eNs
+(default_model) add_script Trials/Lexical_Decision.eNs
+(default_model) add_script Trials/Primed_Lexical_Decision.eNs

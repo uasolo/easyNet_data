@@ -1,12 +1,10 @@
-create model ltrs
-
-ltrs add_setting vocabulary_file Models/scm/Vocabularies/SCM-CELEX.eNd
-ltrs change_setting_type vocabulary_file filename
-ltrs add_setting parameter_file Parameters/LTRS.eNd
-ltrs make_setting_relative_filename parameter_file 
+(default_model) add_setting vocabulary_file Models/scm/Vocabularies/SCM-CELEX.eNd
+(default_model) change_setting_type vocabulary_file filename
+(default_model) add_setting parameter_file Parameters/LTRS.eNd
+(default_model) make_setting_relative_filename parameter_file 
 
 
-ltrs add_relative_script ltrs_regex.eNs
-ltrs add_script Trials/Presentation_No_Task.eNs
-ltrs add_script Trials/Lexical_Decision.eNs
-ltrs add_script Trials/Primed_Lexical_Decision.eNs
+(default_model) add_relative_script ltrs_regex.eNs
+(default_model) add_script Trials/Presentation_No_Task.eNs
+(default_model) add_script Trials/Lexical_Decision.eNs
+(default_model) add_script Trials/Primed_Lexical_Decision.eNs

@@ -143,12 +143,6 @@ decision_no represent (no_df column_rep no)
 decision_no add_hint plot_type layers/decision.R
 # letters rename_parameter min_act letters_min_act
 
-create layer decision_no_diff
-decision_no_diff add_facet layer_mem_1_1_t
-decision_no_diff add_facet layer_alloc_strength
-decision_no_diff represent (decisions column_rep No_diff)
-decision_no_diff add_hint plot_type layers/decision.R
-
 create best_above_threshold_connection moster
 moster set_autoconnect 0
 moster attach letters
@@ -342,12 +336,6 @@ decision_yes_conn autoconnect decision decision_yes
 create connection decision_no_conn
 decision_no_conn autoconnect decision decision_no
 
-create connection decision_no_no_diff_conn
-decision_no_no_diff_conn autoconnect decision_no decision_no_diff
-
-create connection decision_yes_no_diff_conn
-decision_yes_no_diff_conn autoconnect decision_yes decision_no_diff
-
 
 #loglevel debug
 create connection lcolc
@@ -368,9 +356,6 @@ decision_obs_yes target decision_yes
 create best_above_threshold_observer decision_obs_no
 decision_obs_no target decision_no
 
-create best_above_threshold_observer decision_obs_no_diff
-decision_obs_no_diff target decision_no_diff
-
 create best_above_threshold_observer identification_obs
 identification_obs target words
 
@@ -384,7 +369,6 @@ resetter add_target words
 resetter add_target decision
 resetter add_target decision_yes
 resetter add_target decision_no
-resetter add_target decision_no_diff
 
 initial set_lag 0
 spatial_code set_lag 0
@@ -402,15 +386,13 @@ words set_resting_level (vocab column_rep Rest)
 
 # CREATE CYCLE TO RUN THE MODEL
 
-scm define_input orthographic (vocab column_rep Word string_representation) features letcount
-scm define_input letter_in (vocab column_rep Word string_representation) letters letcount
+(default_model) define_input orthographic (vocab column_rep Word string_representation) features letcount
+(default_model) define_input letter_in (vocab column_rep Word string_representation) letters letcount
 # lexical_decision = decision_obs_yes OR decision_obs_no
-scm define_output lexical_decision decision_obs_yes
-scm define_output lexical_decision decision_obs_no
-scm define_output lexical_decision_diff decision_obs_yes
-scm define_output lexical_decision_diff decision_obs_no_diff
+(default_model) define_output lexical_decision decision_obs_yes
+(default_model) define_output lexical_decision decision_obs_no
+(default_model) define_output identification identification_obs
 
-scm define_output identification identification_obs
 include Models/shared_scripts/extras.eNs
 caser_plus add_fallback extras
 ((features_db column_rep features) find_conversion (orth_str inner)) add_fallback caser_plus
@@ -425,7 +407,10 @@ letters_direct add_link_back lopc2
 (letter_rep find_conversion (vocab column_rep Word string_representation)) add_fallback letters_direct
 (letter_rep find_conversion (vocab column_rep Word string_representation)) set_weight -1
 
-(scm parameters) load $parameter_file
+((default_model) parameters) load $parameter_file
+((default_model) parameters) set words_sum_conn::excitation 1
+((default_model) parameters) set id_sum_conn::excitation 1
+
 
 # pretty names
 letcount set_pretty_name letter count
@@ -434,6 +419,4 @@ id_layer set_pretty_name id layer
 spatial_code set_pretty_name spatial code
 decision_yes set_pretty_name decision yes
 decision_no set_pretty_name decision no
-decision_no_diff set_pretty_name decision no-yes
-
 

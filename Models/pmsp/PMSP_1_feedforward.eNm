@@ -1,3 +1,2 @@
-create model pmsp1
-pmsp1 add_relative_script PMSP_1_feedforward.eNs
-pmsp1 add_script Trials/Word_Naming.eNs
+(default_model) add_relative_script PMSP_1_feedforward.eNs
+(default_model) add_script Trials/Word_Naming.eNs

@@ -163,7 +163,7 @@ letters_direct add_link_back lopc2
 (letter_rep find_conversion (vocab column_rep Word string_representation)) add_fallback letters_direct
 (letter_rep find_conversion (vocab column_rep Word string_representation)) set_weight -1
 
-(scm parameters) load $parameter_file
+((default_model) parameters) load $parameter_file
 
 # pretty names
 spatial_code set_pretty_name spatial code

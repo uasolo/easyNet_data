@@ -72,15 +72,15 @@ create dataframe bpc_mat
 bpc_mat load Models/psmp/Weights/PMSP_1_bpc.eNd
 bias_phon_conn fill_from_dataframe bpc_mat
 
-pmsp1 define_input orthographic unparsed_mixed_orthography graphemes
+(default_model) define_input orthographic unparsed_mixed_orthography graphemes
 
 create all_above_threshold_observer thresholded_phonemes
 thresholded_phonemes target phonemes
-(pmsp1 parameters) set threshold .50001
-(pmsp1 parameters) set shift 0
-(pmsp1 parameters) set temp 1
+((default_model) parameters) set threshold .50001
+((default_model) parameters) set shift 0
+((default_model) parameters) set temp 1
 
-pmsp1 add thresholded_phonemes
+(default_model) add thresholded_phonemes
 create regex_observer drop_onset_tag
 drop_onset_tag target thresholded_phonemes
 drop_onset_tag add (.)~o \1
@@ -90,5 +90,5 @@ drop_onset_tag add (.)~o \1
 drop_onset_tag add (.)~o \1
 
 
-pmsp1 define_output pronunciation drop_onset_tag
+(default_model) define_output pronunciation drop_onset_tag
 

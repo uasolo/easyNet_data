@@ -1,3 +1,4 @@
+if (exists pldt) stop
 create trial pldt
 pldt add_stimulus_event prime orthographic START +$prime_duration $prime
 pldt add_stimulus_event target orthographic prime/end END $target

@@ -1,8 +1,6 @@
-create model cdpplus
+(default_model) add_relative_script cdpplus.eNs
 
-cdpplus add_relative_script cdpplus.eNs
+(default_model) add_script Trials/Word_Naming.eNs
 
-cdpplus add_script Trials/Word_Naming.eNs
-
-cdpplus add_setting parameter_file Parameters/cdpplus.eNp
-cdpplus make_setting_relative_filename parameter_file
+(default_model) add_setting parameter_file Parameters/cdpplus.eNp
+(default_model) make_setting_relative_filename parameter_file
