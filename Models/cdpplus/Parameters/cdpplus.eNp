@@ -33,3 +33,4 @@ phonemes::shift -1
 phonemes::gap_max .05
 phonemes::gap_min 0
 phonemes::gap_reassign 0
+bla2bl::excitation 1
